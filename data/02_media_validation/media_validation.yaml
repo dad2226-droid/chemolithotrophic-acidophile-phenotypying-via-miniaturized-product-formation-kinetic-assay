@@ -1,0 +1,543 @@
+# Media-validation metadata and well assignments
+# Units and reference-table fields are defined within this file.
+
+metadata_format: media_validation
+format_version: 1
+title: Endpoint pH and iron(III) indicator validation in acidophile media
+reading_guide:
+  purpose: Experimental metadata, well maps and reference associations for twelve abiotic endpoint plates.
+  experiments: Four experimental families sharing calibration stocks. Each family has three physical plate replicates.
+  media: Medium identities, recipes, stock strengths and preparation pH.
+  groups: One medium and dye condition occupying a three-column block on three plates. Rows A-H identify the dilution
+    levels.
+  acquisitions: One measured export per physical plate; source_filename is the exact included filename.
+  reference_sets: Ordered identifiers linking dilution levels to the accompanying reference_measurements.csv.
+  reference_sharing: Each medium has separately measured pH references. Equal numeric values across media remain separate
+    records. Within one medium, a before-dye reference is associated with the matched dye conditions and replicate
+    plates.
+  unknown_values: null means the information is not established or is inapplicable, as explained by the accompanying
+    field; it never means zero.
+  editing: Use spaces for indentation, true or false for yes/no fields, and preserve identifier strings and ordered
+    lists.
+  units:
+    M: mol per litre
+    uM: micromol per litre
+    uL: microlitre
+    g_per_L: gram per litre
+    mL_per_L: millilitre per litre
+    nm: nanometre
+    C: degrees Celsius
+    pH: dimensionless
+    AU: absorbance units
+study_design:
+  organisms_present: false
+  measurement_schedule: single_endpoint
+  physical_plate_count: 12
+  condition_group_count: 13
+  dilution_levels_per_group: 8
+  technical_wells_per_level_per_plate: 3
+  plate_replicates_per_experiment: 3
+  independent_preparations_per_experiment: 1
+  independent_biological_replicates: 0
+  measured_well_count: 936
+  measured_absorbance_count: 5616
+  preparation_sharing_between_experiments: same_calibration_stocks
+  replicate_unit: physical_plate
+  shared_stock_set_id: media_calibration_stocks
+  plate_rows: [A, B, C, D, E, F, G, H]
+preparation:
+  medium_stock_strength_relative_to_standard_recipe: 2
+  medium_volume_uL: 100
+  calibration_solution_volume_uL: 100
+  well_preparations:
+    no_dye:
+      dye_added_volume_uL: 0
+      final_well_volume_uL: 200
+      thymol_blue_concentration_uM: 0
+    with_dye:
+      dye_added_volume_uL: 10
+      dye_stock_concentration_uM: 200
+      final_well_volume_uL: 210
+      nominal_thymol_blue_concentration_uM: 10
+      calculated_thymol_blue_concentration_uM: 9.523809523809524
+      calculation: 200 uM * 10 uL / 210 uL
+  dye_addition_scope: Dye-containing pH groups only. Every ferric-addition group is undyed.
+  medium_strength_calculation: 2 * medium_volume_uL / final_well_volume_uL
+  medium_strength_in_no_dye_wells: 1
+  medium_strength_in_with_dye_wells: 0.9523809523809523
+  concentration_basis: Standard-medium recipes describe the 200 uL medium-plus-standard mixture. Extra dye solution
+    dilutes medium components by 200/210 in dyed wells.
+  sulfur_suspension_mixing: Aggressively vortex the 2x sulfur-containing medium before dispensing.
+  vortex_mixer: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/vortex_mixer"}
+  temperature_before_reading_C: 23
+  incubation_before_reading_minutes: 30
+  incubation_temperature_description: approximately 23 C
+stock_sets:
+  media_calibration_stocks:
+    description: Common calibration stocks used across all four experimental families; replicate plates were dispensed
+      from these stocks.
+    acid_stock:
+      chemical: H2SO4
+      nominal_concentration_M: 1
+    ferric_stock:
+      reference_id: media_ferric_stock_Fe
+      solvent: 1 M H2SO4
+    thymol_blue_stock:
+      concentration_uM: 200
+reference_methods:
+  pH_meter:
+    {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/pH_meter"}
+  total_Fe_ICP_OES:
+    {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/total_Fe_ICP_OES"}
+  iron_reference_sample_preparation:
+    {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/iron_reference_sample_preparation"}
+reference_table:
+  filename: reference_measurements.csv
+  encoding: UTF-8
+  delimiter: ','
+  primary_key: reference_ID
+  record_count: 49
+  record_definition: One measured reference value. Different media have separate pH records even when their values
+    are numerically identical; repeated use within a medium does not create additional reference measurements.
+  column_names_are_case_sensitive: true
+  missing_value: NA
+  missing_value_meaning: NA in level_ID and plate_row identifies an inapplicable field for the ferric-stock reference.
+  missing_value_handling: Preserve NA as inapplicable; never replace it with numeric zero.
+  columns:
+    reference_ID: Unique reference value identifier; exact lookup key.
+    reference_set_ID: Identifier for an ordered pH series or the ferric-stock reference.
+    level_ID: Dilution level_01 to level_08; NA for the undiluted ferric-stock reference.
+    plate_row: A-H for the associated dilution; NA for the ferric-stock reference.
+    quantity: pH or total_Fe. ICP-OES measures total Fe in the ferric stock.
+    value: Numeric measured reference value at the precision provided in this CSV; Fe is represented in M.
+      Do not infer measurement precision from the presence or absence of trailing zeros.
+    unit: pH or M, as defined in reading_guide.units.
+    measurement_basis: Which solution was measured; stock and final-mixture values are distinct.
+    method_ID: Exact key in reference_methods.
+  Fe_unit_conversion: The reported stock value of 209.4 mM is represented as 0.2094 M; no additional dilution correction
+    is applied to that reported result.
+  final_mixture_pH_scope: pH was measured separately for each medium and dilution level before dye addition. These
+    medium-specific measurements are associated with both dye conditions and the three replicate plates. No post-dye
+    pH measurement is implied.
+  pH_reference_mixture_basis: 100 uL of 2x medium plus 100 uL of acid standard, before dye addition; this describes
+    composition rather than the volume placed in the pH-meter vessel.
+  pH_reference_dye_state: no_dye
+  pH_adjustment: Do not apply a linear volume correction to pH or substitute stock-acid pH for final-mixture pH.
+reference_sets:
+  media_ph_AFM4:
+    plate_rows: [A, B, C, D, E, F, G, H]
+    reference_ids_by_row: [media_ph_AFM4_A, media_ph_AFM4_B, media_ph_AFM4_C, media_ph_AFM4_D, media_ph_AFM4_E, media_ph_AFM4_F,
+      media_ph_AFM4_G, media_ph_AFM4_H]
+  media_ph_AFM5:
+    plate_rows: [A, B, C, D, E, F, G, H]
+    reference_ids_by_row: [media_ph_AFM5_A, media_ph_AFM5_B, media_ph_AFM5_C, media_ph_AFM5_D, media_ph_AFM5_E, media_ph_AFM5_F,
+      media_ph_AFM5_G, media_ph_AFM5_H]
+  media_ph_Starkey_brown:
+    plate_rows: [A, B, C, D, E, F, G, H]
+    reference_ids_by_row:
+      - media_ph_Starkey_brown_A
+      - media_ph_Starkey_brown_B
+      - media_ph_Starkey_brown_C
+      - media_ph_Starkey_brown_D
+      - media_ph_Starkey_brown_E
+      - media_ph_Starkey_brown_F
+      - media_ph_Starkey_brown_G
+      - media_ph_Starkey_brown_H
+  media_ph_Starkey_colloidal:
+    plate_rows: [A, B, C, D, E, F, G, H]
+    reference_ids_by_row:
+      - media_ph_Starkey_colloidal_A
+      - media_ph_Starkey_colloidal_B
+      - media_ph_Starkey_colloidal_C
+      - media_ph_Starkey_colloidal_D
+      - media_ph_Starkey_colloidal_E
+      - media_ph_Starkey_colloidal_F
+      - media_ph_Starkey_colloidal_G
+      - media_ph_Starkey_colloidal_H
+  media_ph_F2S:
+    plate_rows: [A, B, C, D, E, F, G, H]
+    reference_ids_by_row: [media_ph_F2S_A, media_ph_F2S_B, media_ph_F2S_C, media_ph_F2S_D, media_ph_F2S_E, media_ph_F2S_F,
+      media_ph_F2S_G, media_ph_F2S_H]
+  media_ph_acid_stock:
+    plate_rows: [A, B, C, D, E, F, G, H]
+    reference_ids_by_row:
+      - media_ph_acid_stock_A
+      - media_ph_acid_stock_B
+      - media_ph_acid_stock_C
+      - media_ph_acid_stock_D
+      - media_ph_acid_stock_E
+      - media_ph_acid_stock_F
+      - media_ph_acid_stock_G
+      - media_ph_acid_stock_H
+  media_ferric_stock:
+    reference_ids: [media_ferric_stock_Fe]
+    description: One starting-stock reference before serial dilution; no individual plate-row assignment.
+dilution_series:
+  acid:
+    level_ids: [level_01, level_02, level_03, level_04, level_05, level_06, level_07, level_08]
+    plate_rows: [A, B, C, D, E, F, G, H]
+    relative_stock_fractions_by_row: [1, 0.5, 0.25, 0.125, 0.0625, 0.03125, 0.015625, 0]
+    starting_H2SO4_nominal_M: 1
+    dilution_solvent: water
+    stock_H2SO4_nominal_M_by_row: [1, 0.5, 0.25, 0.125, 0.0625, 0.03125, 0.015625, 0]
+    nominal_added_H2SO4_M_in_200_uL_by_row: [0.5, 0.25, 0.125, 0.0625, 0.03125, 0.015625, 0.0078125, 0.0]
+    stock_pH_reference_set_id: media_ph_acid_stock
+    calculation: stock_H2SO4_nominal_M * calibration_solution_volume_uL / final_well_volume_uL
+    quantity_scope: Nominal added H2SO4 only; excludes acid already in the medium and is not a measured H+ concentration.
+    row_H: Water in place of the acid dilution; no added H2SO4 from this series.
+  ferric:
+    level_ids: [level_01, level_02, level_03, level_04, level_05, level_06, level_07, level_08]
+    plate_rows: [A, B, C, D, E, F, G, H]
+    relative_stock_fractions_by_row: [1, 0.5, 0.25, 0.125, 0.0625, 0.03125, 0.015625, 0]
+    stock_reference_id: media_ferric_stock_Fe
+    stock_reagent: iron(III) sulfate hydrate
+    nominal_starting_Fe_M: 0.2
+    dilution_solvent: 1 M H2SO4
+    derived_added_Fe_M_in_200_uL_by_row: [0.1047, 0.05235, 0.026175, 0.0130875, 0.00654375, 0.003271875, 0.0016359375,
+      0.0]
+    added_H2SO4_nominal_M_in_200_uL: 0.5
+    calculation: reference value in M * relative_stock_fraction * 100 uL / 200 uL
+    quantity_scope: Added Fe calculated from measured total Fe in the ferric stock; excludes background Fe in the
+      medium.
+    oxidation_state_assignment: Assigned as added Fe(III) from the ferric reagent identity. ICP-OES itself does not
+      distinguish oxidation state.
+    whole_mixture_Fe_speciation_reference_available: false
+    row_H: 1 M H2SO4 without ferric addition; not an iron-free medium blank.
+media:
+  {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/media_by_context/media_validation"}
+experiments:
+  media_F2S:
+    stock_set_id: media_calibration_stocks
+    replicate_unit: physical_plate
+    group_ids: [F2S_FeIII, F2S_pH_TB, F2S_pH_noTB]
+    physical_plate_ids: [media_plate_01, media_plate_02, media_plate_03]
+  media_AFM1_AFM3:
+    stock_set_id: media_calibration_stocks
+    replicate_unit: physical_plate
+    group_ids: [AFM1_FeIII, AFM3_FeIII]
+    physical_plate_ids: [media_plate_04, media_plate_05, media_plate_06]
+  media_AFM4_AFM5:
+    stock_set_id: media_calibration_stocks
+    replicate_unit: physical_plate
+    group_ids: [AFM4_pH_noTB, AFM4_pH_TB, AFM5_pH_noTB, AFM5_pH_TB]
+    physical_plate_ids: [media_plate_07, media_plate_08, media_plate_09]
+  media_Starkey:
+    stock_set_id: media_calibration_stocks
+    replicate_unit: physical_plate
+    group_ids: [Starkey_brown_pH_noTB, Starkey_brown_pH_TB, Starkey_colloidal_pH_noTB, Starkey_colloidal_pH_TB]
+    physical_plate_ids: [media_plate_10, media_plate_11, media_plate_12]
+groups:
+  F2S_FeIII:
+    medium_id: F2S
+    experiment_id: media_F2S
+    assay: ferric_addition
+    condition_role: ferric_addition_calibration
+    plate_rows: [A, B, C, D, E, F, G, H]
+    technical_replicate_columns: [1, 2, 3]
+    dilution_series_id: ferric
+    well_preparation_id: no_dye
+    stock_reference_id: media_ferric_stock_Fe
+  F2S_pH_TB:
+    medium_id: F2S
+    experiment_id: media_F2S
+    assay: pH
+    condition_role: dye_response
+    plate_rows: [A, B, C, D, E, F, G, H]
+    technical_replicate_columns: [4, 5, 6]
+    dilution_series_id: acid
+    well_preparation_id: with_dye
+    reference_set_id: media_ph_F2S
+    matched_group_id: F2S_pH_noTB
+  F2S_pH_noTB:
+    medium_id: F2S
+    experiment_id: media_F2S
+    assay: pH
+    condition_role: no_dye_matrix_control
+    plate_rows: [A, B, C, D, E, F, G, H]
+    technical_replicate_columns: [7, 8, 9]
+    dilution_series_id: acid
+    well_preparation_id: no_dye
+    reference_set_id: media_ph_F2S
+    matched_group_id: F2S_pH_TB
+  AFM1_FeIII:
+    medium_id: AFM1
+    experiment_id: media_AFM1_AFM3
+    assay: ferric_addition
+    condition_role: ferric_addition_calibration
+    plate_rows: [A, B, C, D, E, F, G, H]
+    technical_replicate_columns: [1, 2, 3]
+    dilution_series_id: ferric
+    well_preparation_id: no_dye
+    stock_reference_id: media_ferric_stock_Fe
+  AFM3_FeIII:
+    medium_id: AFM3
+    experiment_id: media_AFM1_AFM3
+    assay: ferric_addition
+    condition_role: ferric_addition_calibration
+    plate_rows: [A, B, C, D, E, F, G, H]
+    technical_replicate_columns: [4, 5, 6]
+    dilution_series_id: ferric
+    well_preparation_id: no_dye
+    stock_reference_id: media_ferric_stock_Fe
+  AFM4_pH_noTB:
+    medium_id: AFM4
+    experiment_id: media_AFM4_AFM5
+    assay: pH
+    condition_role: no_dye_matrix_control
+    plate_rows: [A, B, C, D, E, F, G, H]
+    technical_replicate_columns: [1, 2, 3]
+    dilution_series_id: acid
+    well_preparation_id: no_dye
+    reference_set_id: media_ph_AFM4
+    matched_group_id: AFM4_pH_TB
+  AFM4_pH_TB:
+    medium_id: AFM4
+    experiment_id: media_AFM4_AFM5
+    assay: pH
+    condition_role: dye_response
+    plate_rows: [A, B, C, D, E, F, G, H]
+    technical_replicate_columns: [4, 5, 6]
+    dilution_series_id: acid
+    well_preparation_id: with_dye
+    reference_set_id: media_ph_AFM4
+    matched_group_id: AFM4_pH_noTB
+  AFM5_pH_noTB:
+    medium_id: AFM5
+    experiment_id: media_AFM4_AFM5
+    assay: pH
+    condition_role: no_dye_matrix_control
+    plate_rows: [A, B, C, D, E, F, G, H]
+    technical_replicate_columns: [7, 8, 9]
+    dilution_series_id: acid
+    well_preparation_id: no_dye
+    reference_set_id: media_ph_AFM5
+    matched_group_id: AFM5_pH_TB
+  AFM5_pH_TB:
+    medium_id: AFM5
+    experiment_id: media_AFM4_AFM5
+    assay: pH
+    condition_role: dye_response
+    plate_rows: [A, B, C, D, E, F, G, H]
+    technical_replicate_columns: [10, 11, 12]
+    dilution_series_id: acid
+    well_preparation_id: with_dye
+    reference_set_id: media_ph_AFM5
+    matched_group_id: AFM5_pH_noTB
+  Starkey_brown_pH_noTB:
+    medium_id: Starkey_brown
+    experiment_id: media_Starkey
+    assay: pH
+    condition_role: no_dye_matrix_control
+    plate_rows: [A, B, C, D, E, F, G, H]
+    technical_replicate_columns: [1, 2, 3]
+    dilution_series_id: acid
+    well_preparation_id: no_dye
+    reference_set_id: media_ph_Starkey_brown
+    matched_group_id: Starkey_brown_pH_TB
+  Starkey_brown_pH_TB:
+    medium_id: Starkey_brown
+    experiment_id: media_Starkey
+    assay: pH
+    condition_role: dye_response
+    plate_rows: [A, B, C, D, E, F, G, H]
+    technical_replicate_columns: [4, 5, 6]
+    dilution_series_id: acid
+    well_preparation_id: with_dye
+    reference_set_id: media_ph_Starkey_brown
+    matched_group_id: Starkey_brown_pH_noTB
+  Starkey_colloidal_pH_noTB:
+    medium_id: Starkey_colloidal
+    experiment_id: media_Starkey
+    assay: pH
+    condition_role: no_dye_matrix_control
+    plate_rows: [A, B, C, D, E, F, G, H]
+    technical_replicate_columns: [7, 8, 9]
+    dilution_series_id: acid
+    well_preparation_id: no_dye
+    reference_set_id: media_ph_Starkey_colloidal
+    matched_group_id: Starkey_colloidal_pH_TB
+  Starkey_colloidal_pH_TB:
+    medium_id: Starkey_colloidal
+    experiment_id: media_Starkey
+    assay: pH
+    condition_role: dye_response
+    plate_rows: [A, B, C, D, E, F, G, H]
+    technical_replicate_columns: [10, 11, 12]
+    dilution_series_id: acid
+    well_preparation_id: with_dye
+    reference_set_id: media_ph_Starkey_colloidal
+    matched_group_id: Starkey_colloidal_pH_noTB
+reader_settings:
+  manufacturer: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_manufacturer_molecular_devices"}
+  instrument_family: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_family_spectramax"}
+  instrument_model: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_model_m2"}
+  mode: endpoint_absorbance
+  wavelengths_nm_in_export_order: [380, 430, 485, 545, 428, 750]
+  plate_format: 96_well
+  plate_optical_material: non_UV_transparent
+  plate_product: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/nonuv_plate_unspecified"}
+  lid_present_during_reading: false
+  reported_room_temperature_C: 23
+  recorded_reader_temperature_range_C: [23.8, 24.2]
+  timestamp_field: Date Last Saved
+  timestamp_interpretation: Recorded endpoint measurement time, identified by the experimenter.
+  timestamp_timezone_status: unknown_to_experimenter
+  timestamp_handling: Preserve the recorded clock values without assigning a time zone or converting to UTC.
+  elapsed_time_from_preparation_minutes: 30
+export_format:
+  file_extension: .xls
+  content_format: tab_delimited_text
+  encoding: UTF-16LE_with_BOM
+  measurement_quantity: raw_absorbance
+  unit: AU
+  internal_plate_header: Plate1
+  plate_identity_rule: The repeated internal Plate1 header is not the physical plate identifier. Use source_filename
+    and physical_plate_id from acquisitions; Original Filename in the export also distinguishes plates.
+  measured_regions: Use each acquisition measured_rows and measured_columns. Unexported columns outside those regions
+    are not missing measurements or blank controls.
+acquisitions:
+  - acquisition_id: media_endpoint_01
+    physical_plate_id: media_plate_01
+    experiment_id: media_F2S
+    plate_replicate_number: 1
+    source_filename: Plate1-4-1-2026.xls
+    size_bytes: 7172
+    sha256: d0c6f8e6bd4b20286b5f668a30d5c91928eb65bf1e7ec86016954c90a33732ff
+    measured_rows: [A, B, C, D, E, F, G, H]
+    measured_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    measured_well_count: 72
+    reader_temperature_C: 24.1
+    recorded_datetime: '2026-04-01T18:07:09'
+  - acquisition_id: media_endpoint_02
+    physical_plate_id: media_plate_02
+    experiment_id: media_F2S
+    plate_replicate_number: 2
+    source_filename: Plate2-4-1-2026.xls
+    size_bytes: 7196
+    sha256: 8b0cf2b592c6aba2fae36ac6b67f50a6f9055692cfb19f34ca11404d5b9c0b45
+    measured_rows: [A, B, C, D, E, F, G, H]
+    measured_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    measured_well_count: 72
+    reader_temperature_C: 23.9
+    recorded_datetime: '2026-04-01T18:10:29'
+  - acquisition_id: media_endpoint_03
+    physical_plate_id: media_plate_03
+    experiment_id: media_F2S
+    plate_replicate_number: 3
+    source_filename: Plate3-4-1-2026.xls
+    size_bytes: 7208
+    sha256: ddd94d333fedeab1c4b4704f139d474d8c14faec4770fb99deabcadaea39d60d
+    measured_rows: [A, B, C, D, E, F, G, H]
+    measured_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    measured_well_count: 72
+    reader_temperature_C: 23.8
+    recorded_datetime: '2026-04-01T18:13:01'
+  - acquisition_id: media_endpoint_04
+    physical_plate_id: media_plate_04
+    experiment_id: media_AFM1_AFM3
+    plate_replicate_number: 1
+    source_filename: Plate4-4-1-2026.xls
+    size_bytes: 5506
+    sha256: 01850a68a940e764a6a53852bdd1e26e6410d038f81aaf4145328f05bb73f401
+    measured_rows: [A, B, C, D, E, F, G, H]
+    measured_columns: [1, 2, 3, 4, 5, 6]
+    measured_well_count: 48
+    reader_temperature_C: 24.2
+    recorded_datetime: '2026-04-01T18:51:57'
+  - acquisition_id: media_endpoint_05
+    physical_plate_id: media_plate_05
+    experiment_id: media_AFM1_AFM3
+    plate_replicate_number: 2
+    source_filename: Plate5-4-1-2026.xls
+    size_bytes: 5492
+    sha256: a428b19358f15abbe10689ef09f876c1e98b6809782619e78b736aad79168d97
+    measured_rows: [A, B, C, D, E, F, G, H]
+    measured_columns: [1, 2, 3, 4, 5, 6]
+    measured_well_count: 48
+    reader_temperature_C: 24.2
+    recorded_datetime: '2026-04-01T18:54:16'
+  - acquisition_id: media_endpoint_06
+    physical_plate_id: media_plate_06
+    experiment_id: media_AFM1_AFM3
+    plate_replicate_number: 3
+    source_filename: Plate6-4-1-2026.xls
+    size_bytes: 5498
+    sha256: f173812611cc420817b1fb95dfe17282fdad32681562d0e7535c4a5ec3b984f8
+    measured_rows: [A, B, C, D, E, F, G, H]
+    measured_columns: [1, 2, 3, 4, 5, 6]
+    measured_well_count: 48
+    reader_temperature_C: 24.1
+    recorded_datetime: '2026-04-01T18:56:27'
+  - acquisition_id: media_endpoint_07
+    physical_plate_id: media_plate_07
+    experiment_id: media_AFM4_AFM5
+    plate_replicate_number: 1
+    source_filename: Plate7-4-1-2026.xls
+    size_bytes: 8884
+    sha256: 57e34c6c0b053b18a99271d9539891051a0baf9b79cc63995f73aca512404c92
+    measured_rows: [A, B, C, D, E, F, G, H]
+    measured_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    measured_well_count: 96
+    reader_temperature_C: 24.2
+    recorded_datetime: '2026-04-01T19:45:40'
+  - acquisition_id: media_endpoint_08
+    physical_plate_id: media_plate_08
+    experiment_id: media_AFM4_AFM5
+    plate_replicate_number: 2
+    source_filename: Plate8-4-1-2026.xls
+    size_bytes: 8874
+    sha256: fb400a6e26065bfcfacd160d36a89887247bec10cf0e5311a5d526b73032be53
+    measured_rows: [A, B, C, D, E, F, G, H]
+    measured_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    measured_well_count: 96
+    reader_temperature_C: 24.1
+    recorded_datetime: '2026-04-01T19:49:23'
+  - acquisition_id: media_endpoint_09
+    physical_plate_id: media_plate_09
+    experiment_id: media_AFM4_AFM5
+    plate_replicate_number: 3
+    source_filename: Plate9-4-1-2026.xls
+    size_bytes: 8874
+    sha256: b3ce62108e9d33b69b37dd2e8fbb0ddf24a3f9eb0f619c73ac40d4037641f8a9
+    measured_rows: [A, B, C, D, E, F, G, H]
+    measured_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    measured_well_count: 96
+    reader_temperature_C: 23.9
+    recorded_datetime: '2026-04-01T19:52:35'
+  - acquisition_id: media_endpoint_10
+    physical_plate_id: media_plate_10
+    experiment_id: media_Starkey
+    plate_replicate_number: 1
+    source_filename: Plate10-4-1-2026.xls
+    size_bytes: 8886
+    sha256: b17bc591552019912faef8850dd2593d99d8b2a9887b60f616667af1cf0c7123
+    measured_rows: [A, B, C, D, E, F, G, H]
+    measured_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    measured_well_count: 96
+    reader_temperature_C: 24.2
+    recorded_datetime: '2026-04-01T21:36:22'
+  - acquisition_id: media_endpoint_11
+    physical_plate_id: media_plate_11
+    experiment_id: media_Starkey
+    plate_replicate_number: 2
+    source_filename: Plate11-4-1-2026.xls
+    size_bytes: 8900
+    sha256: ed3f893c09a5f083f3a62f2d3707fbfcacbda13ff6d849050fcfcd3322646980
+    measured_rows: [A, B, C, D, E, F, G, H]
+    measured_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    measured_well_count: 96
+    reader_temperature_C: 24.1
+    recorded_datetime: '2026-04-01T21:39:26'
+  - acquisition_id: media_endpoint_12
+    physical_plate_id: media_plate_12
+    experiment_id: media_Starkey
+    plate_replicate_number: 3
+    source_filename: Plate12-4-1-2026.xls
+    size_bytes: 8886
+    sha256: dad0e00703fddbafb2c543369984c5f04bc2a3ecd3fc354f4b2e323acb86d94e
+    measured_rows: [A, B, C, D, E, F, G, H]
+    measured_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    measured_well_count: 96
+    reader_temperature_C: 23.9
+    recorded_datetime: '2026-04-01T21:44:47'
+

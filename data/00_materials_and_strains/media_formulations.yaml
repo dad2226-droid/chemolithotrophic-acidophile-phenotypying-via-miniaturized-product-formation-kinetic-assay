@@ -1,0 +1,565 @@
+schema_version: '1.0'
+document_type: study_medium_inventory
+title: Media formulations used in this study
+reading_guide:
+  sources: Paths are repository-root relative; source node records the local medium ID.
+  scope: 13 distinct documented formulations, including basal preparations. Experimental substrate/additive
+    series are not additional base recipes.
+  concentrations: Nominal prepared-medium concentrations with the source recipe precision. Stock mixing,
+    dye/inoculum additions and measured concentrations are specified by each experiment.
+  omissions: An ingredient absent from a recipe is not added by that recipe; this does not describe experimental
+    treatment additions.
+  SM4: SM4_BS_microplate and SM4_BS_tube are deliberately separate even though both source files use the
+    local identifier SM4_BS.
+  pH: Preparation targets are not measured initial-mixture pH. null means no common preparation pH is
+    assigned.
+  references: References identify parent formulations; locally documented ingredient amounts remain controlling.
+media:
+  AFM1:
+    name: AFM1
+    recipe_basis: Nominal 1x prepared medium; before added dye or inoculum, as applicable.
+    ingredients:
+    - name: (NH4)2SO4
+      formula: (NH4)2SO4
+      product: null
+      concentration: 0.8
+      unit: g/L
+    - name: KH2PO4
+      formula: KH2PO4
+      product: null
+      concentration: 0.1
+      unit: g/L
+    - name: MgSO4.7H2O
+      formula: MgSO4.7H2O
+      product: null
+      concentration: 2
+      unit: g/L
+    - name: ATCC Trace Mineral Supplement
+      formula: null
+      product: MD-TMS
+      concentration: 5
+      unit: mL/L
+    - name: FeSO4.7H2O
+      formula: FeSO4.7H2O
+      product: null
+      concentration: 20
+      unit: g/L
+    preparation_pH: 1.8
+    pH_basis: Medium preparation target
+    formulation_reference_ids:
+    - Li2014
+    sources:
+    - path: data/02_media_validation/media_validation.yaml
+      node: media.AFM1
+    - path: data/03_biological_microplates/biological_definitions.yaml
+      node: media.AFM1
+    - path: data/04_flask_validation/flask_validation.yaml
+      node: medium_definition
+    notes: Parent formulation adapted as documented for this dataset; measured mixture pH and experimental
+      additions remain in family metadata.
+  AFM3:
+    name: AFM3
+    recipe_basis: Nominal 1x prepared medium; before added dye or inoculum, as applicable.
+    ingredients:
+    - name: (NH4)2SO4
+      formula: (NH4)2SO4
+      product: null
+      concentration: 0.8
+      unit: g/L
+    - name: KH2PO4
+      formula: KH2PO4
+      product: null
+      concentration: 0.1
+      unit: g/L
+    - name: MgSO4.7H2O
+      formula: MgSO4.7H2O
+      product: null
+      concentration: 2
+      unit: g/L
+    - name: ATCC Trace Mineral Supplement
+      formula: null
+      product: MD-TMS
+      concentration: 5
+      unit: mL/L
+    - name: citric acid
+      formula: C6H8O7
+      product: null
+      concentration: 1.92
+      unit: g/L
+    - name: FeSO4.7H2O
+      formula: FeSO4.7H2O
+      product: null
+      concentration: 27.8
+      unit: g/L
+    preparation_pH: 1.8
+    pH_basis: Medium preparation target
+    formulation_reference_ids:
+    - Li2014
+    - Kernan2017
+    sources:
+    - path: data/02_media_validation/media_validation.yaml
+      node: media.AFM3
+    notes: Parent formulation adapted as documented for this dataset; measured mixture pH and experimental
+      additions remain in family metadata.
+  F2S:
+    name: F2S
+    recipe_basis: Nominal 1x prepared medium; before added dye or inoculum, as applicable.
+    ingredients:
+    - name: (NH4)2SO4
+      formula: (NH4)2SO4
+      product: null
+      concentration: 0.8
+      unit: g/L
+    - name: KH2PO4
+      formula: KH2PO4
+      product: null
+      concentration: 0.1
+      unit: g/L
+    - name: MgSO4.7H2O
+      formula: MgSO4.7H2O
+      product: null
+      concentration: 2
+      unit: g/L
+    - name: ATCC Trace Mineral Supplement
+      formula: null
+      product: MD-TMS
+      concentration: 5
+      unit: mL/L
+    - name: citric acid
+      formula: C6H8O7
+      product: null
+      concentration: 1.92
+      unit: g/L
+    - name: FeSO4.7H2O
+      formula: FeSO4.7H2O
+      product: null
+      concentration: 27.8
+      unit: g/L
+    - name: elemental sulfur, brown
+      formula: S
+      product: null
+      concentration: 1
+      unit: g/L
+    preparation_pH: 1.8
+    pH_basis: Medium preparation target
+    formulation_reference_ids:
+    - Kernan2017
+    - Jung2022
+    sources:
+    - path: data/02_media_validation/media_validation.yaml
+      node: media.F2S
+    notes: Parent formulation adapted as documented for this dataset; measured mixture pH and experimental
+      additions remain in family metadata.
+  AFM4:
+    name: AFM4
+    recipe_basis: Nominal 1x prepared medium; before added dye or inoculum, as applicable.
+    ingredients:
+    - name: (NH4)2SO4
+      formula: (NH4)2SO4
+      product: null
+      concentration: 3.0
+      unit: g/L
+    - name: K2HPO4
+      formula: K2HPO4
+      product: null
+      concentration: 3.0
+      unit: g/L
+    - name: MgSO4.7H2O
+      formula: MgSO4.7H2O
+      product: null
+      concentration: 0.5
+      unit: g/L
+    - name: CaCl2
+      formula: CaCl2
+      product: null
+      concentration: 0.18875
+      unit: g/L
+    - name: Na2S2O3
+      formula: Na2S2O3
+      product: null
+      concentration: 3.1859
+      unit: g/L
+    preparation_pH: 3.5
+    pH_basis: 2x stock target
+    formulation_reference_ids:
+    - Silverman1959
+    sources:
+    - path: data/02_media_validation/media_validation.yaml
+      node: media.AFM4
+    - path: data/03_biological_microplates/biological_definitions.yaml
+      node: media.AFM4
+    notes: Parent formulation adapted as documented for this dataset; measured mixture pH and experimental
+      additions remain in family metadata.
+  AFM5:
+    name: AFM5
+    recipe_basis: Nominal 1x prepared medium; before added dye or inoculum, as applicable.
+    ingredients:
+    - name: (NH4)2SO4
+      formula: (NH4)2SO4
+      product: null
+      concentration: 3.0
+      unit: g/L
+    - name: K2HPO4
+      formula: K2HPO4
+      product: null
+      concentration: 3.0
+      unit: g/L
+    - name: MgSO4.7H2O
+      formula: MgSO4.7H2O
+      product: null
+      concentration: 0.5
+      unit: g/L
+    - name: CaCl2
+      formula: CaCl2
+      product: null
+      concentration: 0.18875
+      unit: g/L
+    - name: K2S4O6
+      formula: K2S4O6
+      product: null
+      concentration: 6.09435
+      unit: g/L
+    preparation_pH: 3.5
+    pH_basis: 2x stock target
+    formulation_reference_ids:
+    - Silverman1959
+    sources:
+    - path: data/02_media_validation/media_validation.yaml
+      node: media.AFM5
+    notes: Parent formulation adapted as documented for this dataset; measured mixture pH and experimental
+      additions remain in family metadata.
+  Starkey_brown:
+    name: Starkey with brown sulfur
+    recipe_basis: Nominal 1x prepared medium; before added dye or inoculum, as applicable.
+    ingredients:
+    - name: (NH4)2SO4
+      formula: (NH4)2SO4
+      product: null
+      concentration: 2.0
+      unit: g/L
+    - name: KH2PO4
+      formula: KH2PO4
+      product: null
+      concentration: 3.0
+      unit: g/L
+    - name: MgSO4.7H2O
+      formula: MgSO4.7H2O
+      product: null
+      concentration: 0.5
+      unit: g/L
+    - name: FeSO4.7H2O
+      formula: FeSO4.7H2O
+      product: null
+      concentration: 0.001
+      unit: g/L
+    - name: CaCl2.2H2O
+      formula: CaCl2.2H2O
+      product: null
+      concentration: 0.25
+      unit: g/L
+    - name: elemental sulfur, brown
+      formula: S
+      product: null
+      concentration: 1
+      unit: g/L
+    preparation_pH: 2.5
+    pH_basis: Medium preparation target
+    formulation_reference_ids:
+    - Starkey1925
+    sources:
+    - path: data/02_media_validation/media_validation.yaml
+      node: media.Starkey_brown
+    notes: Parent formulation adapted as documented for this dataset; measured mixture pH and experimental
+      additions remain in family metadata.
+  Starkey_colloidal:
+    name: Starkey with colloidal sulfur
+    recipe_basis: Nominal 1x prepared medium; before added dye or inoculum, as applicable.
+    ingredients:
+    - name: (NH4)2SO4
+      formula: (NH4)2SO4
+      product: null
+      concentration: 2.0
+      unit: g/L
+    - name: KH2PO4
+      formula: KH2PO4
+      product: null
+      concentration: 3.0
+      unit: g/L
+    - name: MgSO4.7H2O
+      formula: MgSO4.7H2O
+      product: null
+      concentration: 0.5
+      unit: g/L
+    - name: FeSO4.7H2O
+      formula: FeSO4.7H2O
+      product: null
+      concentration: 0.001
+      unit: g/L
+    - name: CaCl2.2H2O
+      formula: CaCl2.2H2O
+      product: null
+      concentration: 0.25
+      unit: g/L
+    - name: elemental sulfur, colloidal
+      formula: S
+      product: null
+      concentration: 1
+      unit: g/L
+    preparation_pH: 2.5
+    pH_basis: Medium preparation target
+    formulation_reference_ids:
+    - Starkey1925
+    sources:
+    - path: data/02_media_validation/media_validation.yaml
+      node: media.Starkey_colloidal
+    notes: Parent formulation adapted as documented for this dataset; measured mixture pH and experimental
+      additions remain in family metadata.
+  AFM1_BS:
+    name: AFM1 basal salts
+    recipe_basis: Nominal 1x prepared medium; before added dye or inoculum, as applicable.
+    ingredients:
+    - name: ammonium sulfate
+      formula: (NH4)2SO4
+      product: null
+      concentration: 0.8
+      unit: g/L
+    - name: potassium phosphate monobasic
+      formula: KH2PO4
+      product: null
+      concentration: 0.1
+      unit: g/L
+    - name: magnesium sulfate heptahydrate
+      formula: MgSO4.7H2O
+      product: null
+      concentration: 2.0
+      unit: g/L
+    - name: ATCC Trace Mineral Supplement
+      formula: null
+      product: MD_TMS
+      concentration: 5
+      unit: mL/L
+    preparation_pH: 1.8
+    pH_basis: Basal-medium preparation target
+    formulation_reference_ids:
+    - Li2014
+    sources:
+    - path: data/03_biological_microplates/biological_definitions.yaml
+      node: media.AFM1_BS
+    notes: AFM1 basal salts without the iron(II) sulfate substrate.
+  HH:
+    name: HH iron medium
+    recipe_basis: Nominal 1x prepared medium; before added dye or inoculum, as applicable.
+    ingredients:
+    - name: ammonium sulfate
+      formula: (NH4)2SO4
+      product: null
+      concentration: 0.132
+      unit: g/L
+    - name: magnesium chloride hexahydrate
+      formula: MgCl2.6H2O
+      product: null
+      concentration: 0.053
+      unit: g/L
+    - name: potassium phosphate monobasic
+      formula: KH2PO4
+      product: null
+      concentration: 0.027
+      unit: g/L
+    - name: calcium chloride dihydrate
+      formula: CaCl2.2H2O
+      product: null
+      concentration: 0.147
+      unit: g/L
+    - name: iron(II) sulfate heptahydrate
+      formula: FeSO4.7H2O
+      product: null
+      concentration: 20
+      unit: g/L
+    - name: ATCC Trace Mineral Supplement
+      formula: null
+      product: MD_TMS
+      concentration: 5
+      unit: mL/L
+    preparation_pH: 1.8
+    pH_basis: Medium preparation target
+    formulation_reference_ids:
+    - DSMZ882
+    sources:
+    - path: data/03_biological_microplates/biological_definitions.yaml
+      node: media.HH
+    - path: data/05_test_tube_validation/test_tube_validation.yaml
+      node: media.HH
+    notes: The tube recipe expresses its first four salts in mg/L (132, 53, 27 and 147 mg/L); these are
+      the same nominal amounts as the g/L values documented for microplates. MD-TMS is the local trace-mineral
+      supplement.
+  SM4_BS_microplate:
+    name: SM4 basal salts with citric acid
+    recipe_basis: Nominal 1x prepared medium; before added dye or inoculum, as applicable.
+    ingredients:
+    - name: ammonium sulfate
+      formula: (NH4)2SO4
+      product: null
+      concentration: 0.8
+      unit: g/L
+    - name: magnesium sulfate heptahydrate
+      formula: MgSO4.7H2O
+      product: null
+      concentration: 2.0
+      unit: g/L
+    - name: potassium phosphate dibasic
+      formula: K2HPO4
+      product: null
+      concentration: 0.1
+      unit: g/L
+    - name: citric acid
+      formula: C6H8O7
+      product: null
+      concentration: 0.19
+      unit: g/L
+    - name: ATCC Trace Mineral Supplement
+      formula: null
+      product: MD_TMS
+      concentration: 5
+      unit: mL/L
+    preparation_pH: null
+    pH_basis: Initial pH specified by experiment when measured
+    formulation_reference_ids:
+    - Inaba2018
+    sources:
+    - path: data/03_biological_microplates/biological_definitions.yaml
+      node: media.SM4_BS
+    notes: 'Contains 0.19 g/L citric acid. Sulfur substrate identities and doses are experiment-specific.
+      Source medium ID: SM4_BS.'
+  SM4_BS_tube:
+    name: SM4 basal salts without citric acid
+    recipe_basis: Nominal 1x prepared medium; before added dye or inoculum, as applicable.
+    ingredients:
+    - name: ammonium sulfate
+      formula: (NH4)2SO4
+      product: null
+      concentration: 0.8
+      unit: g/L
+    - name: magnesium sulfate heptahydrate
+      formula: MgSO4·7H2O
+      product: null
+      concentration: 2
+      unit: g/L
+    - name: potassium phosphate dibasic
+      formula: K2HPO4
+      product: null
+      concentration: 0.1
+      unit: g/L
+    - name: ATCC Trace Mineral Supplement
+      formula: null
+      product: MD-TMS
+      concentration: 5
+      unit: mL/L
+    preparation_pH: 2.2
+    pH_basis: Basal-salt stock target; treatment-solution target is pH 1.8
+    formulation_reference_ids:
+    - Inaba2018
+    sources:
+    - path: data/05_test_tube_validation/test_tube_validation.yaml
+      node: media.SM4_BS
+    notes: 'No citric acid added. Source medium ID: SM4_BS. Recorded initial mixture pH is separate.'
+  SM4_S0:
+    name: SM4 with brown elemental sulfur
+    recipe_basis: Nominal 1x prepared medium; before added dye or inoculum, as applicable.
+    ingredients:
+    - name: ammonium sulfate
+      formula: (NH4)2SO4
+      product: null
+      concentration: 0.8
+      unit: g/L
+    - name: magnesium sulfate heptahydrate
+      formula: MgSO4·7H2O
+      product: null
+      concentration: 2
+      unit: g/L
+    - name: potassium phosphate dibasic
+      formula: K2HPO4
+      product: null
+      concentration: 0.1
+      unit: g/L
+    - name: ATCC Trace Mineral Supplement
+      formula: null
+      product: MD-TMS
+      concentration: 5
+      unit: mL/L
+    - name: brown elemental sulfur
+      formula: S
+      product: null
+      concentration: 1
+      unit: g/L
+    preparation_pH: 2.2
+    pH_basis: Basal-salt stock target; treatment-solution target is pH 1.8
+    formulation_reference_ids:
+    - Inaba2018
+    sources:
+    - path: data/05_test_tube_validation/test_tube_validation.yaml
+      node: media.SM4_S0
+    - path: data/05_test_tube_validation/test_tube_validation.yaml
+      node: media.SM4_BS
+    notes: Uses the complete citrate-free tube basal formulation. Treatment additions are separate from
+      the medium recipe.
+  SM4_tetrathionate:
+    name: SM4 with potassium tetrathionate
+    recipe_basis: Nominal 1x prepared medium; before added dye or inoculum, as applicable.
+    ingredients:
+    - name: ammonium sulfate
+      formula: (NH4)2SO4
+      product: null
+      concentration: 0.8
+      unit: g/L
+    - name: magnesium sulfate heptahydrate
+      formula: MgSO4·7H2O
+      product: null
+      concentration: 2
+      unit: g/L
+    - name: potassium phosphate dibasic
+      formula: K2HPO4
+      product: null
+      concentration: 0.1
+      unit: g/L
+    - name: ATCC Trace Mineral Supplement
+      formula: null
+      product: MD-TMS
+      concentration: 5
+      unit: mL/L
+    - name: potassium tetrathionate
+      formula: K2S4O6
+      product: null
+      concentration: 10
+      unit: mM
+    preparation_pH: 2.2
+    pH_basis: Basal-salt stock target; treatment-solution target is pH 1.8
+    formulation_reference_ids:
+    - Inaba2018
+    sources:
+    - path: data/05_test_tube_validation/test_tube_validation.yaml
+      node: media.SM4_tetrathionate
+    - path: data/05_test_tube_validation/test_tube_validation.yaml
+      node: media.SM4_BS
+    notes: Uses the complete citrate-free tube basal formulation. Treatment additions are separate from
+      the medium recipe.
+references:
+  Li2014: 'Li, X.; Mercado, R.; Kernan, T.; West, A. C.; Banta, S. Addition of Citrate to *Acidithiobacillus
+    ferrooxidans* Cultures Enables Precipitate-Free Growth at Elevated pH and Reduces Ferric Inhibition.
+    *Biotechnol. Bioeng.* 2014, *111* (10), 1940–1948. [DOI: 10.1002/bit.25268](https://doi.org/10.1002/bit.25268).'
+  Kernan2017: 'Kernan, T.; West, A. C.; Banta, S. Characterization of Endogenous Promoters for Control
+    of Recombinant Gene Expression in *Acidithiobacillus ferrooxidans*. *Biotechnol. Appl. Biochem.* 2017,
+    *64* (6), 793–802. [DOI: 10.1002/bab.1546](https://doi.org/10.1002/bab.1546).'
+  Jung2022: 'Jung, H.; Inaba, Y.; Jiang, V.; West, A. C.; Banta, S. Engineering Polyhistidine Tags on
+    Surface Proteins of *Acidithiobacillus ferrooxidans*: Impact of Localization on the Binding and Recovery
+    of Divalent Metal Cations. *ACS Appl. Mater. Interfaces* 2022, *14* (8), 10125–10133. [DOI: 10.1021/acsami.1c23682](https://doi.org/10.1021/acsami.1c23682).'
+  Silverman1959: 'Silverman, M. P.; Lundgren, D. G. Studies on the Chemoautotrophic Iron Bacterium *Ferrobacillus
+    ferrooxidans*. I. An Improved Medium and a Harvesting Procedure for Securing High Cell Yields. *J.
+    Bacteriol.* 1959, *77* (5), 642–647. [DOI: 10.1128/jb.77.5.642-647.1959](https://doi.org/10.1128/jb.77.5.642-647.1959).'
+  Starkey1925: 'Starkey, R. L. Concerning the Physiology of *Thiobacillus thiooxidans*, an Autotrophic
+    Bacterium Oxidizing Sulfur under Acid Conditions. *J. Bacteriol.* 1925, *10* (2), 135–163. [DOI: 10.1128/jb.10.2.135-163.1925](https://doi.org/10.1128/jb.10.2.135-163.1925).'
+  Inaba2018: 'Inaba, Y.; Banerjee, I.; Kernan, T.; Banta, S. Transposase-Mediated Chromosomal Integration
+    of Exogenous Genes in *Acidithiobacillus ferrooxidans*. *Appl. Environ. Microbiol.* 2018, *84* (21),
+    e01381-18. [DOI: 10.1128/AEM.01381-18](https://doi.org/10.1128/AEM.01381-18).'
+  DSMZ882: Leibniz Institute DSMZ–German Collection of Microorganisms and Cell Cultures. *Leptospirillum
+    (HH) Medium*; DSMZ Medium 882, 2024. [Medium formulation](https://www.dsmz.de/microorganisms/medium/pdf/DSMZ_Medium882.pdf)
+    (accessed 2026-09-12).

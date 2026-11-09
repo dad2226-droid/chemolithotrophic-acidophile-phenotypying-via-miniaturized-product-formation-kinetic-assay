@@ -1,0 +1,177 @@
+schema_version: '1.0'
+document_type: chemical_reagent_inventory
+title: Chemical identities and reported reagent information
+scope: Chemical identities and bottle records for tested additives, excluded preparations, basal-medium
+  reagents and analytical reagents. Experimental concentrations and batch assignments remain in family
+  metadata.
+reading_guide:
+  reagent_id: A reagent_id or preparation_reagent_id selects a key under reagents. Chemical identity does
+    not change an experiment concentration basis or numerical value.
+  bottle_scope: Listed bottles are not assigned to individual experiments or families; an identity match
+    does not assign a bottle lot to every experiment.
+  identifiers: Lot and source/catalog values retain their experimenter-reported labels and strings. Source
+    identifiers are not automatically verified catalogs; separately documented catalog identities remain
+    explicit.
+  hydration: not_reported does not mean anhydrous; unspecified_hydrate means that water stoichiometry
+    is not recorded.
+  assay: Reported grade/assay strings preserve their basis and range. Fe-basis and trace-metals-basis
+    values are not whole-compound purity measurements.
+  aliases: Gallium in Ga-basis additions refers to gallium supplied from gallium sulfate. Citrate in experiment
+    identifiers denotes citric acid. Tetrathionate refers to potassium tetrathionate as the preparation
+    reagent. Experiment/group IDs containing potassium_gluconate select sodium gluconate in
+    the experiment metadata.
+reagents:
+  aluminum_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/aluminum_sulfate/reported_record
+  ammonium_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/ammonium_sulfate/reported_record
+  cadmium_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/cadmium_sulfate/reported_record
+  cerium_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/cerium_iii_sulfate/reported_record
+  cerium_iv_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/cerium_iv_sulfate/reported_record
+  chromium_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/chromium_iii_sulfate/reported_record
+  citric_acid:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/citric_acid/reported_record
+  cobalt_ii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/cobalt_ii_sulfate/reported_record
+  copper_ii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/copper_ii_sulfate/reported_record
+  dysprosium_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/dysprosium_iii_sulfate/reported_record
+  erbium_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/erbium_iii_sulfate/reported_record
+  europium_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/europium_iii_sulfate/reported_record
+  gadolinium_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/gadolinium_iii_sulfate/reported_record
+  gallium_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/gallium_sulfate/reported_record
+  indium_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/indium_sulfate/reported_record
+  iron_ii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/iron_ii_sulfate/reported_record
+  iron_iii_chloride:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/iron_iii_chloride/reported_record
+  iron_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/iron_iii_sulfate/reported_record
+  lanthanum_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/lanthanum_iii_sulfate/reported_record
+  lithium_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/lithium_sulfate/reported_record
+  magnesium_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/magnesium_sulfate/reported_record
+  manganese_ii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/manganese_ii_sulfate/reported_record
+  monopotassium_phosphate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/monopotassium_phosphate/reported_record
+  neodymium_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/neodymium_iii_sulfate/reported_record
+  nickel_ii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/nickel_ii_sulfate/reported_record
+  potassium_bromide:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/potassium_bromide/reported_record
+  potassium_chloride:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/potassium_chloride/reported_record
+  potassium_dichromate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/potassium_dichromate/reported_record
+  potassium_fluoride:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/potassium_fluoride/reported_record
+  sodium_gluconate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/sodium_gluconate/reported_record
+  potassium_iodate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/potassium_iodate/reported_record
+  potassium_iodide:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/potassium_iodide/reported_record
+  potassium_nitrate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/potassium_nitrate/reported_record
+  potassium_perrhenate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/potassium_perrhenate/reported_record
+  potassium_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/potassium_sulfate/reported_record
+  potassium_tetrathionate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/potassium_tetrathionate/reported_record
+  potassium_thiocyanate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/potassium_thiocyanate/reported_record
+  praseodymium_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/praseodymium_iii_sulfate/reported_record
+  samarium_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/samarium_iii_sulfate/reported_record
+  silver_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/silver_sulfate/reported_record
+  sodium_chloride:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/sodium_chloride/reported_record
+  sodium_chromate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/sodium_chromate/reported_record
+  sodium_formate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/sodium_formate/reported_record
+  sodium_molybdate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/sodium_molybdate/reported_record
+  sodium_selenite:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/sodium_selenite/reported_record
+  sodium_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/sodium_sulfate/reported_record
+  sodium_sulfite:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/sodium_sulfite/reported_record
+  sodium_thiosulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/sodium_thiosulfate/reported_record
+  sodium_tungstate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/sodium_tungstate/reported_record
+  sucrose:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/sucrose/reported_record
+  sulfuric_acid:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/sulfuric_acid/reported_record
+  terbium_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/terbium_iii_sulfate/reported_record
+  titanyl_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/titanyl_sulfate/reported_record
+  vanadyl_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/vanadyl_sulfate/reported_record
+  ytterbium_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/ytterbium_iii_sulfate/reported_record
+  yttrium_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/yttrium_iii_sulfate/reported_record
+  zinc_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/zinc_sulfate/reported_record
+  zirconium_iv_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/zirconium_iv_sulfate/reported_record
+  ammonium_metavanadate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/ammonium_metavanadate/reported_record
+  tin_ii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/tin_ii_sulfate/reported_record
+  bismuth_iii_sulfate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/bismuth_iii_sulfate/reported_record
+  potassium_phosphate_dibasic:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/potassium_phosphate_dibasic/reported_record
+  calcium_chloride_anhydrous:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/calcium_chloride_anhydrous/reported_record
+  calcium_chloride_dihydrate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/calcium_chloride_dihydrate/reported_record
+  magnesium_chloride_hexahydrate:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/magnesium_chloride_hexahydrate/reported_record
+  elemental_sulfur_brown:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/elemental_sulfur_brown/reported_record
+  elemental_sulfur_colloidal:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/elemental_sulfur_colloidal/reported_record
+  MD_TMS:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/MD_TMS/reported_record
+  thymol_blue:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/thymol_blue/reported_record
+  ethanol:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/ethanol/reported_record
+  sodium_hydroxide:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/sodium_hydroxide/reported_record
+  nitric_acid:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/nitric_acid/reported_record
+  ferroin:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/ferroin/reported_record
+  SYBR_Green_I:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/SYBR_Green_I/reported_record
+  disodium_EDTA:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/disodium_EDTA/reported_record
+  tris_hydrochloride:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/tris_hydrochloride/reported_record
+  cerium_iv_sulfate_titrant_0_1_N:
+    $ref: chemicals_materials_equipment.yaml#/chemicals/cerium_iv_sulfate_titrant_0_1_N/reported_record

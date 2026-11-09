@@ -1,0 +1,975 @@
+# Flask experiments: shared methods, data dictionary and condition/flask assignments.
+# Match condition_ID and flask_ID to the corresponding CSV columns.
+schema_version: '1.0'
+dataset_id: flask_validation
+chemical_reagents_file: ../00_materials_and_strains/chemical_reagents.yaml
+title: Acidithiobacillus ferrooxidans flask growth and abiotic controls
+files:
+  measurements: flask_measurements.csv
+  readme: README.md
+record_definition: One row per physical flask and sampling event, with reported measurements and sampling information.
+counts:
+  conditions: 33
+  flasks: 99
+  biotic_flasks: 84
+  abiotic_flasks: 15
+  inoculum_cultures: 15
+  flask_sampling_records: 1614
+  planktonic_rfu_observations: 1545
+  nonplanktonic_rfu_observations: 588
+  vanadyl_affected_titrations: 51
+  biotic_start_dates: 5
+  negative_planktonic_rfu_observations: 34
+  negative_nonplanktonic_rfu_observations: 11
+  unavailable_cerimetric_results: 9
+common_experimental_conditions:
+  organism: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AF/scientific_name"}
+  organism_abbreviation: AF
+  strain: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AF/strain"}
+  medium: AFM1
+  operator_initials: DAD
+  initial_liquid_volume_mL: 100
+  flask_capacity_mL: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/flask_capacity_ml_250"}
+  flask_product: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/flask_250ml"}
+  flask_closure: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/flask_closure_38mm"}
+  shaker: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/culture_shaker"}
+  flask_mounting: Each flask was held in an individual shaker flask holder.
+  incubation_temperature_C: 30
+  shaking_speed_rpm: 150
+  sample_volume_removed_mL: 1
+  replicates_per_condition: 3
+  initial_target_OD600: 0.001
+  initial_OD600_scope: Preparation target for biotic flask cultures.
+  inoculum_volume_uL_approximate_range: [20, 50]
+  inoculum_volume_recording: Exact volume was not tracked for each flask.
+  inoculum_volume_within_batch: The volume was consistent across tests started in the same batch.
+  abiotic_volume_control: Abiotic controls received the same volume of sterile medium in place of inoculum.
+  cell_pellet_preparation: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/cell_pellet_preparation"}
+medium_definition:
+  {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/media_by_context/flask_validation"}
+initial_chemistry_assignments:
+  sampling_event: 1
+  columns:
+  - measured_pH
+  - measured_ORP_mV
+  - cerimetric_FeII_equivalent_mM
+  - soluble_total_Fe_mM
+  - soluble_Ga_mM
+  - soluble_Cu_mM
+  - soluble_V_mM
+  - soluble_Al_mM
+  source: Measurements of starting-medium reference samples.
+  assignment: All reported initial chemistry values were assigned from measured starting-medium references
+    to represent the starting values in the flasks. No initial chemistry was measured in individual flasks.
+  independently_measured_in_each_flask: false
+  replication: Repeated initial assignments do not constitute independent flask measurements.
+replication:
+  physical_experimental_unit: flask
+  inoculum_unit: culture
+  culture_identity: For each biotic start date, replicates 1, 2 and 3 used different AF cultures. Corresponding
+    replicate numbers across tests started on that same date used the same culture.
+  repeated_observations: Sampling events repeat measurements of the same physical flask; they are not
+    independent flask replicates.
+  abiotic: Abiotic flasks have no inoculum culture and use NA for inoculum_culture_id. Their replicate
+    numbers do not identify or pair them with a biotic starter culture.
+time:
+  date_format: M/D/YY in the CSV; YYYY-MM-DD for condition dates in this YAML.
+  elapsed_time_unit: d
+  elapsed_time_summary_scope: Wider experimental series, including experiments beyond this deposit subset.
+  interpretation: Preserve the reported elapsed-time means and SDs. Do not recompute them from these three-flask
+    groups or interpret them as flask-specific acquisition times.
+  time_zone: unspecified
+  two_digit_year_interpretation: CSV years are in the 2000s; for example, 8/20/25 is 2025-08-20.
+references:
+  Dailey2026:
+    citation: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/method_references/Dailey2026/citation"}
+    citation_style: ACS
+    bibliography: README.md#references
+measurement_methods:
+  pH:
+    instrument: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_oakton_ph_700_benchtop_meter"}
+    meter: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/ph_meter"}
+    electrode: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/ph_electrode"}
+    calibration_standards_pH:
+    - 1.68
+    - 4.01
+    - 7.0
+    calibration_frequency: At least daily
+  orp:
+    unit: mV
+    meter: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/orp_meter"}
+    electrode: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/orp_electrode"}
+    reference_electrode: Ag/AgCl
+    reference_electrolyte: 3 M KCl
+    reported_quantity: Electrode potential in mV versus Ag/AgCl with 3 M KCl reference electrolyte.
+  cerimetry:
+    reported_unit: mM Fe(II) equivalent
+    indicator: ferroin
+    titrant: 0.1 N cerium(IV) sulfate
+    titrant_reagent_id: cerium_iv_sulfate_titrant_0_1_N
+    indicator_reagent_id: ferroin
+    vanadyl_effect: Vanadyl interferes with the Fe(II) titration. All titration results for the vanadyl
+      condition are retained and flagged as unsuitable for quantitative Fe(II) interpretation.
+  elemental_analysis:
+    method: ICP-OES
+    instrument: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_horiba_ultima_expert"}
+    viewing_mode: radial
+    Fe_wavelength_nm: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/ICP_OES_elemental_analysis/emission_wavelengths_nm/Fe"}
+    shared_elemental_method: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/ICP_OES_elemental_analysis"}
+    reported_analytes:
+    - Fe
+    - Ga
+    - Cu
+    - V
+    - Al
+    reported_unit: mM
+    concentration_basis: Soluble elemental concentration in the sampled solution, with analytical dilution
+      already accounted for.
+  fluorescence:
+    method: SYBR Green I dsDNA fluorescence
+    plate_product: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/fluorescence_plate_3915"}
+    instrument: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_molecular_devices_spectramax_m2"}
+    excitation_nm: 497
+    emission_nm: 520
+    fractions:
+    - planktonic
+    - nonplanktonic
+    nonplanktonic_fraction_method_reference_id: Dailey2026
+    nonplanktonic_fraction_method: The nonplanktonic fraction was recovered and its fluorescence measured as previously described.
+    background_corrected: true
+    background_blank: TE Buffer
+    blank_subtracted_before_deposition: true
+    method_description: SYBR Green I dsDNA fluorescence was measured as previously described.
+    method_reference_id: Dailey2026
+    method_reference_location: Supporting Information, protocol for cell density normalization and quantification.
+    reported_unit: RFU
+    interpretation: Each deposited number is a fluorescence result for one flask and sampling event after
+      TE Buffer blank subtraction. Do not subtract the TE Buffer blank again.
+data_format:
+  encoding: UTF-8
+  delimiter: ','
+  header_rows: 1
+  decimal_separator: .
+  missing_numeric_value: NA
+  missing_value_interpretation: Missing measurements and their associated status entries use NA.
+    NA is distinct from numerical zero.
+  precision: Reported numerical precision is preserved.
+  unique_key:
+  - flask_ID
+  - sampling_event
+  sort_order:
+  - condition_ID
+  - sampling_event
+  - replicate
+  missing_culture_id: 'NA: not applicable for an abiotic flask.'
+columns:
+- name: condition_ID
+  type: string
+  role: identifier
+  description: Condition identifier listed in conditions.
+- name: flask_ID
+  type: string
+  role: identifier
+  description: Physical flask identifier; reused across sampling events.
+- name: inoculum_culture_id
+  type: string
+  role: identifier
+  description: Source culture shared by corresponding replicates of biotic experiments started on the
+    same date; NA for abiotic flasks.
+- name: replicate
+  type: integer
+  role: identifier
+  description: Replicate position within a condition.
+  allowed_values:
+  - 1
+  - 2
+  - 3
+- name: sampling_event
+  type: integer
+  role: identifier
+  description: Consecutive sampling-event number within each flask, beginning with 1 for the initial event.
+- name: sample_date
+  type: date
+  role: reported
+  description: Recorded calendar date, formatted M/D/YY, with the two-digit year interpreted in the 2000s;
+    not a timestamp.
+- name: elapsed_days_mean
+  type: number
+  role: series_time_summary
+  description: Reported mean elapsed time across the wider experimental series, which includes experiments
+    beyond the listed flasks.
+  unit: d
+- name: elapsed_days_sd
+  type: number
+  role: series_time_summary
+  description: Reported standard deviation of elapsed time across that wider experimental series; not
+    the SD of the three flasks in this condition.
+  unit: d
+- name: measured_pH
+  type: number
+  role: reported
+  description: At sampling event 1, pH is assigned from measured starting-medium references. Later events contain flask pH measurements.
+  initial_value_basis: initial_chemistry_assignments
+  unit: '1'
+- name: measured_ORP_mV
+  type: number
+  role: reported
+  description: ORP in mV versus Ag/AgCl with 3 M KCl reference electrolyte. At sampling event 1,
+    the value is assigned from measured starting-medium references. Later events contain flask measurements.
+  initial_value_basis: initial_chemistry_assignments
+  unit: mV
+- name: cerimetric_FeII_equivalent_mM
+  type: number
+  role: reported
+  description: Fe(II)-equivalent concentration assigned from measured starting-medium references at sampling event 1;
+    later events contain flask cerimetric results. Check cerimetry_status before interpreting as Fe(II).
+  initial_value_basis: initial_chemistry_assignments
+  unit: mM
+- name: cerimetry_status
+  type: string
+  role: status
+  description: 'reported: numerical Fe(II) estimate present; vanadyl_interference: retained assay
+    response that is not an accurate Fe(II) concentration and must not be used to infer Fe(III);
+    NA accompanies an NA concentration.'
+  allowed_values:
+  - reported
+  - vanadyl_interference
+  - NA
+- name: soluble_total_Fe_mM
+  type: number
+  role: reported
+  description: Soluble total elemental Fe concentration assigned from measured starting-medium references at sampling event 1;
+    later events contain flask ICP-OES results. Analytical dilution is already accounted for.
+  initial_value_basis: initial_chemistry_assignments
+  unit: mM
+- name: soluble_Ga_mM
+  type: number
+  role: reported
+  description: Soluble elemental gallium concentration assigned from measured starting-medium references at sampling event 1;
+    later events contain flask ICP-OES results. Analytical dilution is already accounted for.
+    Elemental analysis does not determine oxidation state.
+  initial_value_basis: initial_chemistry_assignments
+  unit: mM
+- name: soluble_Cu_mM
+  type: number
+  role: reported
+  description: Soluble elemental copper concentration assigned from measured starting-medium references at sampling event 1;
+    later events contain flask ICP-OES results. Analytical dilution is already accounted for.
+    Elemental analysis does not determine oxidation state.
+  initial_value_basis: initial_chemistry_assignments
+  unit: mM
+- name: soluble_V_mM
+  type: number
+  role: reported
+  description: Soluble elemental vanadium concentration assigned from measured starting-medium references at sampling event 1;
+    later events contain flask ICP-OES results. Analytical dilution is already accounted for.
+    Elemental analysis does not determine oxidation state.
+  initial_value_basis: initial_chemistry_assignments
+  unit: mM
+- name: soluble_Al_mM
+  type: number
+  role: reported
+  description: Soluble elemental aluminium concentration assigned from measured starting-medium references at sampling event 1;
+    later events contain flask ICP-OES results. Analytical dilution is already accounted for.
+    Elemental analysis does not determine oxidation state.
+  initial_value_basis: initial_chemistry_assignments
+  unit: mM
+- name: measured_planktonic_fluorescence_RFU
+  type: number
+  role: reported
+  description: Planktonic SYBR Green fluorescence after TE Buffer blank subtraction. Negative numerical readings are retained.
+  unit: RFU
+- name: planktonic_fluorescence_status
+  type: string
+  role: status
+  description: 'reported accompanies a numerical RFU value; NA accompanies an NA RFU value.'
+  allowed_values:
+  - reported
+  - NA
+- name: measured_nonplanktonic_fluorescence_RFU
+  type: number
+  role: reported
+  description: Nonplanktonic SYBR Green fluorescence after TE Buffer blank subtraction. Negative numerical readings are retained.
+  unit: RFU
+- name: nonplanktonic_fluorescence_status
+  type: string
+  role: status
+  description: 'reported accompanies a numerical RFU value; NA accompanies an NA RFU value.'
+  allowed_values:
+  - reported
+  - NA
+conditions:
+- condition_ID: FV01
+  description: AF, AFM1, n = 3
+  biological_status: biotic
+  start_date: '2025-07-11'
+  sampling_events_per_flask: 11
+  flasks:
+  - flask_ID: DD25-4-1
+    replicate: 1
+    inoculum_culture_id: AF_20250711_1
+  - flask_ID: DD25-4-2
+    replicate: 2
+    inoculum_culture_id: AF_20250711_2
+  - flask_ID: DD25-4-3
+    replicate: 3
+    inoculum_culture_id: AF_20250711_3
+  additives: []
+- condition_ID: FV02
+  description: AF, AFM1 + 1 µM Ga3+, n = 3
+  biological_status: biotic
+  start_date: '2025-07-11'
+  sampling_events_per_flask: 11
+  flasks:
+  - flask_ID: DD25-4-4
+    replicate: 1
+    inoculum_culture_id: AF_20250711_1
+  - flask_ID: DD25-4-5
+    replicate: 2
+    inoculum_culture_id: AF_20250711_2
+  - flask_ID: DD25-4-6
+    replicate: 3
+    inoculum_culture_id: AF_20250711_3
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 0.001
+    ion: Ga^3+
+    measured_element: Ga
+- condition_ID: FV03
+  description: AF, AFM1 + 10 µM Ga3+, n = 3
+  biological_status: biotic
+  start_date: '2025-07-11'
+  sampling_events_per_flask: 11
+  flasks:
+  - flask_ID: DD25-4-7
+    replicate: 1
+    inoculum_culture_id: AF_20250711_1
+  - flask_ID: DD25-4-8
+    replicate: 2
+    inoculum_culture_id: AF_20250711_2
+  - flask_ID: DD25-4-9
+    replicate: 3
+    inoculum_culture_id: AF_20250711_3
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 0.01
+    ion: Ga^3+
+    measured_element: Ga
+- condition_ID: FV04
+  description: AF, AFM1 + 100 µM Ga3+, n = 3
+  biological_status: biotic
+  start_date: '2025-07-11'
+  sampling_events_per_flask: 11
+  flasks:
+  - flask_ID: DD25-4-10
+    replicate: 1
+    inoculum_culture_id: AF_20250711_1
+  - flask_ID: DD25-4-11
+    replicate: 2
+    inoculum_culture_id: AF_20250711_2
+  - flask_ID: DD25-4-12
+    replicate: 3
+    inoculum_culture_id: AF_20250711_3
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 0.1
+    ion: Ga^3+
+    measured_element: Ga
+- condition_ID: FV05
+  description: AF, AFM1 + 1 mM Ga3+, n = 3
+  biological_status: biotic
+  start_date: '2025-07-11'
+  sampling_events_per_flask: 11
+  flasks:
+  - flask_ID: DD25-4-13
+    replicate: 1
+    inoculum_culture_id: AF_20250711_1
+  - flask_ID: DD25-4-14
+    replicate: 2
+    inoculum_culture_id: AF_20250711_2
+  - flask_ID: DD25-4-15
+    replicate: 3
+    inoculum_culture_id: AF_20250711_3
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 1.0
+    ion: Ga^3+
+    measured_element: Ga
+- condition_ID: FV06
+  description: AF, AFM1 + 10 mM Ga3+, n = 3
+  biological_status: biotic
+  start_date: '2025-07-11'
+  sampling_events_per_flask: 11
+  flasks:
+  - flask_ID: DD25-4-16
+    replicate: 1
+    inoculum_culture_id: AF_20250711_1
+  - flask_ID: DD25-4-17
+    replicate: 2
+    inoculum_culture_id: AF_20250711_2
+  - flask_ID: DD25-4-18
+    replicate: 3
+    inoculum_culture_id: AF_20250711_3
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 10.0
+    ion: Ga^3+
+    measured_element: Ga
+- condition_ID: FV07
+  description: AF, AFM1 + 100 mM Ga3+, n = 3
+  biological_status: biotic
+  start_date: '2025-07-11'
+  sampling_events_per_flask: 11
+  flasks:
+  - flask_ID: DD25-4-19
+    replicate: 1
+    inoculum_culture_id: AF_20250711_1
+  - flask_ID: DD25-4-20
+    replicate: 2
+    inoculum_culture_id: AF_20250711_2
+  - flask_ID: DD25-4-21
+    replicate: 3
+    inoculum_culture_id: AF_20250711_3
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 100.0
+    ion: Ga^3+
+    measured_element: Ga
+- condition_ID: FV08
+  description: Abiotic, AFM1, n = 3
+  biological_status: abiotic
+  start_date: '2025-12-17'
+  sampling_events_per_flask: 11
+  flasks:
+  - flask_ID: DD25-4-22
+    replicate: 1
+    inoculum_culture_id: NA
+  - flask_ID: DD25-4-23
+    replicate: 2
+    inoculum_culture_id: NA
+  - flask_ID: DD25-4-24
+    replicate: 3
+    inoculum_culture_id: NA
+  additives: []
+- condition_ID: FV09
+  description: Abiotic, AFM1 + 1 mM Ga3+, n = 3
+  biological_status: abiotic
+  start_date: '2025-12-17'
+  sampling_events_per_flask: 11
+  flasks:
+  - flask_ID: DD25-4-25
+    replicate: 1
+    inoculum_culture_id: NA
+  - flask_ID: DD25-4-26
+    replicate: 2
+    inoculum_culture_id: NA
+  - flask_ID: DD25-4-27
+    replicate: 3
+    inoculum_culture_id: NA
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 1.0
+    ion: Ga^3+
+    measured_element: Ga
+- condition_ID: FV10
+  description: Abiotic, AFM1 + 100 mM Ga3+, n = 3
+  biological_status: abiotic
+  start_date: '2025-12-17'
+  sampling_events_per_flask: 11
+  flasks:
+  - flask_ID: DD25-4-28
+    replicate: 1
+    inoculum_culture_id: NA
+  - flask_ID: DD25-4-29
+    replicate: 2
+    inoculum_culture_id: NA
+  - flask_ID: DD25-4-30
+    replicate: 3
+    inoculum_culture_id: NA
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 100.0
+    ion: Ga^3+
+    measured_element: Ga
+- condition_ID: FV11
+  description: AF, AFM1, n = 3
+  biological_status: biotic
+  start_date: '2025-07-16'
+  sampling_events_per_flask: 15
+  flasks:
+  - flask_ID: DD25-4b-1
+    replicate: 1
+    inoculum_culture_id: AF_20250716_1
+  - flask_ID: DD25-4b-2
+    replicate: 2
+    inoculum_culture_id: AF_20250716_2
+  - flask_ID: DD25-4b-3
+    replicate: 3
+    inoculum_culture_id: AF_20250716_3
+  additives: []
+- condition_ID: FV12
+  description: AF, AFM1 + 100 mM Ga3+, n = 3
+  biological_status: biotic
+  start_date: '2025-07-16'
+  sampling_events_per_flask: 15
+  flasks:
+  - flask_ID: DD25-4b-4
+    replicate: 1
+    inoculum_culture_id: AF_20250716_1
+  - flask_ID: DD25-4b-5
+    replicate: 2
+    inoculum_culture_id: AF_20250716_2
+  - flask_ID: DD25-4b-6
+    replicate: 3
+    inoculum_culture_id: AF_20250716_3
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 100.0
+    ion: Ga^3+
+    measured_element: Ga
+- condition_ID: FV13
+  description: AF, AFM1 + 100 mM Cu2+, n = 3
+  biological_status: biotic
+  start_date: '2025-07-16'
+  sampling_events_per_flask: 15
+  flasks:
+  - flask_ID: DD25-4b-7
+    replicate: 1
+    inoculum_culture_id: AF_20250716_1
+  - flask_ID: DD25-4b-8
+    replicate: 2
+    inoculum_culture_id: AF_20250716_2
+  - flask_ID: DD25-4b-9
+    replicate: 3
+    inoculum_culture_id: AF_20250716_3
+  additives:
+  - name: copper(II)
+    preparation_reagent_id: copper_ii_sulfate
+    nominal_concentration_mM: 100.0
+    ion: Cu^2+
+    measured_element: Cu
+- condition_ID: FV14
+  description: AF, AFM1 + 50 mM NaCl, n = 3
+  biological_status: biotic
+  start_date: '2025-07-16'
+  sampling_events_per_flask: 11
+  flasks:
+  - flask_ID: DD25-4b-10
+    replicate: 1
+    inoculum_culture_id: AF_20250716_1
+  - flask_ID: DD25-4b-11
+    replicate: 2
+    inoculum_culture_id: AF_20250716_2
+  - flask_ID: DD25-4b-12
+    replicate: 3
+    inoculum_culture_id: AF_20250716_3
+  additives:
+  - name: sodium chloride
+    preparation_reagent_id: sodium_chloride
+    nominal_concentration_mM: 50.0
+- condition_ID: FV15
+  description: AF, AFM1, n = 3
+  biological_status: biotic
+  start_date: '2025-07-22'
+  sampling_events_per_flask: 17
+  flasks:
+  - flask_ID: DD25-4c-1
+    replicate: 1
+    inoculum_culture_id: AF_20250722_1
+  - flask_ID: DD25-4c-2
+    replicate: 2
+    inoculum_culture_id: AF_20250722_2
+  - flask_ID: DD25-4c-3
+    replicate: 3
+    inoculum_culture_id: AF_20250722_3
+  additives: []
+- condition_ID: FV16
+  description: AF, AFM1 + 50 mM citric acid, n = 3
+  biological_status: biotic
+  start_date: '2025-07-22'
+  sampling_events_per_flask: 24
+  flasks:
+  - flask_ID: DD25-4c-4
+    replicate: 1
+    inoculum_culture_id: AF_20250722_1
+  - flask_ID: DD25-4c-5
+    replicate: 2
+    inoculum_culture_id: AF_20250722_2
+  - flask_ID: DD25-4c-6
+    replicate: 3
+    inoculum_culture_id: AF_20250722_3
+  additives:
+  - name: citric acid
+    preparation_reagent_id: citric_acid
+    nominal_concentration_mM: 50.0
+- condition_ID: FV17
+  description: AF, AFM1 + 100 mM Ga3+, n = 3
+  biological_status: biotic
+  start_date: '2025-07-22'
+  sampling_events_per_flask: 17
+  flasks:
+  - flask_ID: DD25-4c-7
+    replicate: 1
+    inoculum_culture_id: AF_20250722_1
+  - flask_ID: DD25-4c-8
+    replicate: 2
+    inoculum_culture_id: AF_20250722_2
+  - flask_ID: DD25-4c-9
+    replicate: 3
+    inoculum_culture_id: AF_20250722_3
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 100.0
+    ion: Ga^3+
+    measured_element: Ga
+- condition_ID: FV18
+  description: AF, AFM1 + 100 mM vanadyl(IV), n = 3
+  biological_status: biotic
+  start_date: '2025-07-22'
+  sampling_events_per_flask: 17
+  flasks:
+  - flask_ID: DD25-4c-13
+    replicate: 1
+    inoculum_culture_id: AF_20250722_1
+  - flask_ID: DD25-4c-14
+    replicate: 2
+    inoculum_culture_id: AF_20250722_2
+  - flask_ID: DD25-4c-15
+    replicate: 3
+    inoculum_culture_id: AF_20250722_3
+  cerimetry_interpretation: vanadyl_interference
+  additives:
+  - name: vanadyl(IV)
+    preparation_reagent_id: vanadyl_sulfate
+    nominal_concentration_mM: 100.0
+    ion: VO^2+
+    measured_element: V
+- condition_ID: FV19
+  description: AF, AFM1 + 100 mM Al3+, n = 3
+  biological_status: biotic
+  start_date: '2025-07-22'
+  sampling_events_per_flask: 17
+  flasks:
+  - flask_ID: DD25-4c-16
+    replicate: 1
+    inoculum_culture_id: AF_20250722_1
+  - flask_ID: DD25-4c-17
+    replicate: 2
+    inoculum_culture_id: AF_20250722_2
+  - flask_ID: DD25-4c-18
+    replicate: 3
+    inoculum_culture_id: AF_20250722_3
+  additives:
+  - name: aluminium(III)
+    preparation_reagent_id: aluminum_sulfate
+    nominal_concentration_mM: 100.0
+    ion: Al^3+
+    measured_element: Al
+- condition_ID: FV20
+  description: Ab, AFM1 + 1 mM Ga3+, n = 3
+  biological_status: abiotic
+  start_date: '2025-08-20'
+  last_sampling_date: '2025-08-28'
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 1
+    ion: Ga^3+
+    measured_element: Ga
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4e-1
+    replicate: 1
+    inoculum_culture_id: NA
+  - flask_ID: DD25-4e-2
+    replicate: 2
+    inoculum_culture_id: NA
+  - flask_ID: DD25-4e-3
+    replicate: 3
+    inoculum_culture_id: NA
+- condition_ID: FV21
+  description: AF, AFM1, n = 3
+  biological_status: biotic
+  start_date: '2025-08-20'
+  last_sampling_date: '2025-08-28'
+  additives: []
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4e-4
+    replicate: 1
+    inoculum_culture_id: AF_20250820_1
+  - flask_ID: DD25-4e-5
+    replicate: 2
+    inoculum_culture_id: AF_20250820_2
+  - flask_ID: DD25-4e-6
+    replicate: 3
+    inoculum_culture_id: AF_20250820_3
+- condition_ID: FV22
+  description: AF, AFM1 + 1 mM citric acid, n = 3
+  biological_status: biotic
+  start_date: '2025-08-20'
+  last_sampling_date: '2025-08-28'
+  additives:
+  - name: citric acid
+    preparation_reagent_id: citric_acid
+    nominal_concentration_mM: 1
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4e-7
+    replicate: 1
+    inoculum_culture_id: AF_20250820_1
+  - flask_ID: DD25-4e-8
+    replicate: 2
+    inoculum_culture_id: AF_20250820_2
+  - flask_ID: DD25-4e-9
+    replicate: 3
+    inoculum_culture_id: AF_20250820_3
+- condition_ID: FV23
+  description: AF, AFM1 + 6 mM citric acid, n = 3
+  biological_status: biotic
+  start_date: '2025-08-20'
+  last_sampling_date: '2025-08-28'
+  additives:
+  - name: citric acid
+    preparation_reagent_id: citric_acid
+    nominal_concentration_mM: 6
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4e-10
+    replicate: 1
+    inoculum_culture_id: AF_20250820_1
+  - flask_ID: DD25-4e-11
+    replicate: 2
+    inoculum_culture_id: AF_20250820_2
+  - flask_ID: DD25-4e-12
+    replicate: 3
+    inoculum_culture_id: AF_20250820_3
+- condition_ID: FV24
+  description: AF, AFM1 + 1 mM Ga3+, n = 3
+  biological_status: biotic
+  start_date: '2025-08-20'
+  last_sampling_date: '2025-08-28'
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 1
+    ion: Ga^3+
+    measured_element: Ga
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4e-13
+    replicate: 1
+    inoculum_culture_id: AF_20250820_1
+  - flask_ID: DD25-4e-14
+    replicate: 2
+    inoculum_culture_id: AF_20250820_2
+  - flask_ID: DD25-4e-15
+    replicate: 3
+    inoculum_culture_id: AF_20250820_3
+- condition_ID: FV25
+  description: AF, AFM1 + 1 mM Ga3+ + 1 mM citric acid, n = 3
+  biological_status: biotic
+  start_date: '2025-08-20'
+  last_sampling_date: '2025-08-28'
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 1
+    ion: Ga^3+
+    measured_element: Ga
+  - name: citric acid
+    preparation_reagent_id: citric_acid
+    nominal_concentration_mM: 1
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4e-16
+    replicate: 1
+    inoculum_culture_id: AF_20250820_1
+  - flask_ID: DD25-4e-17
+    replicate: 2
+    inoculum_culture_id: AF_20250820_2
+  - flask_ID: DD25-4e-18
+    replicate: 3
+    inoculum_culture_id: AF_20250820_3
+- condition_ID: FV26
+  description: AF, AFM1 + 1 mM Ga3+ + 6 mM citric acid, n = 3
+  biological_status: biotic
+  start_date: '2025-08-20'
+  last_sampling_date: '2025-08-28'
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 1
+    ion: Ga^3+
+    measured_element: Ga
+  - name: citric acid
+    preparation_reagent_id: citric_acid
+    nominal_concentration_mM: 6
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4e-19
+    replicate: 1
+    inoculum_culture_id: AF_20250820_1
+  - flask_ID: DD25-4e-20
+    replicate: 2
+    inoculum_culture_id: AF_20250820_2
+  - flask_ID: DD25-4e-21
+    replicate: 3
+    inoculum_culture_id: AF_20250820_3
+- condition_ID: FV27
+  description: Ab, AFM1, n = 3
+  biological_status: abiotic
+  start_date: '2025-08-29'
+  last_sampling_date: '2025-09-07'
+  additives: []
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4g-1
+    replicate: 1
+    inoculum_culture_id: NA
+  - flask_ID: DD25-4g-2
+    replicate: 2
+    inoculum_culture_id: NA
+  - flask_ID: DD25-4g-3
+    replicate: 3
+    inoculum_culture_id: NA
+- condition_ID: FV28
+  description: AF, AFM1, n = 3
+  biological_status: biotic
+  start_date: '2025-08-29'
+  last_sampling_date: '2025-09-07'
+  additives: []
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4g-4
+    replicate: 1
+    inoculum_culture_id: AF_20250829_1
+  - flask_ID: DD25-4g-5
+    replicate: 2
+    inoculum_culture_id: AF_20250829_2
+  - flask_ID: DD25-4g-6
+    replicate: 3
+    inoculum_culture_id: AF_20250829_3
+- condition_ID: FV29
+  description: AF, AFM1 + 12 mM citric acid, n = 3
+  biological_status: biotic
+  start_date: '2025-08-29'
+  last_sampling_date: '2025-09-07'
+  additives:
+  - name: citric acid
+    preparation_reagent_id: citric_acid
+    nominal_concentration_mM: 12
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4g-7
+    replicate: 1
+    inoculum_culture_id: AF_20250829_1
+  - flask_ID: DD25-4g-8
+    replicate: 2
+    inoculum_culture_id: AF_20250829_2
+  - flask_ID: DD25-4g-9
+    replicate: 3
+    inoculum_culture_id: AF_20250829_3
+- condition_ID: FV30
+  description: AF, AFM1 + 18 mM citric acid, n = 3
+  biological_status: biotic
+  start_date: '2025-08-29'
+  last_sampling_date: '2025-09-07'
+  additives:
+  - name: citric acid
+    preparation_reagent_id: citric_acid
+    nominal_concentration_mM: 18
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4g-10
+    replicate: 1
+    inoculum_culture_id: AF_20250829_1
+  - flask_ID: DD25-4g-11
+    replicate: 2
+    inoculum_culture_id: AF_20250829_2
+  - flask_ID: DD25-4g-12
+    replicate: 3
+    inoculum_culture_id: AF_20250829_3
+- condition_ID: FV31
+  description: AF, AFM1 + 1 mM Ga3+, n = 3
+  biological_status: biotic
+  start_date: '2025-08-29'
+  last_sampling_date: '2025-09-07'
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 1
+    ion: Ga^3+
+    measured_element: Ga
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4g-13
+    replicate: 1
+    inoculum_culture_id: AF_20250829_1
+  - flask_ID: DD25-4g-14
+    replicate: 2
+    inoculum_culture_id: AF_20250829_2
+  - flask_ID: DD25-4g-15
+    replicate: 3
+    inoculum_culture_id: AF_20250829_3
+- condition_ID: FV32
+  description: AF, AFM1 + 1 mM Ga3+ + 12 mM citric acid, n = 3
+  biological_status: biotic
+  start_date: '2025-08-29'
+  last_sampling_date: '2025-09-07'
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 1
+    ion: Ga^3+
+    measured_element: Ga
+  - name: citric acid
+    preparation_reagent_id: citric_acid
+    nominal_concentration_mM: 12
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4g-16
+    replicate: 1
+    inoculum_culture_id: AF_20250829_1
+  - flask_ID: DD25-4g-17
+    replicate: 2
+    inoculum_culture_id: AF_20250829_2
+  - flask_ID: DD25-4g-18
+    replicate: 3
+    inoculum_culture_id: AF_20250829_3
+- condition_ID: FV33
+  description: AF, AFM1 + 1 mM Ga3+ + 18 mM citric acid, n = 3
+  biological_status: biotic
+  start_date: '2025-08-29'
+  last_sampling_date: '2025-09-07'
+  additives:
+  - name: gallium(III)
+    preparation_reagent_id: gallium_sulfate
+    nominal_concentration_mM: 1
+    ion: Ga^3+
+    measured_element: Ga
+  - name: citric acid
+    preparation_reagent_id: citric_acid
+    nominal_concentration_mM: 18
+  sampling_events_per_flask: 20
+  flasks:
+  - flask_ID: DD25-4g-19
+    replicate: 1
+    inoculum_culture_id: AF_20250829_1
+  - flask_ID: DD25-4g-20
+    replicate: 2
+    inoculum_culture_id: AF_20250829_2
+  - flask_ID: DD25-4g-21
+    replicate: 3
+    inoculum_culture_id: AF_20250829_3
+

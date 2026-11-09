@@ -1,0 +1,925 @@
+# Test-tube measurements, conditions and methods. All identifiers are defined here.
+# Column names and capitalization match test_tube_measurements.csv.
+schema_version: '1.0'
+dataset_id: test_tube_validation
+chemical_reagents_file: ../00_materials_and_strains/chemical_reagents.yaml
+title: Acidophile activity in iron, elemental-sulfur and tetrathionate test-tube cultures
+files:
+  measurements: test_tube_measurements.csv
+  readme: README.md
+record_definition: One row per physical tube and sampling event. Event 0 explicitly contains shared initial
+  reference assignments rather than independent tube measurements.
+counts:
+  conditions: 32
+  tubes: 96
+  biotic_tubes: 63
+  abiotic_tubes: 33
+  independent_starter_cultures: 15
+  time_course_rows: 1074
+  shared_initial_reference_rows: 96
+  distinct_initial_reference_assignments: 21
+  total_csv_rows: 1170
+  measured_pH_values: 749
+  measured_orp_values: 323
+  endpoint_rfu_values_reported: 96
+  endpoint_rfu_values_not_recorded: 0
+organisms:
+  AF:
+    name: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AF/scientific_name"}
+    strain: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AF/strain"}
+  AT:
+    name: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AT/scientific_name"}
+    strain: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AT/strain"}
+  LF:
+    name: {$ref: "../00_materials_and_strains/strains.yaml#/strains/LF/scientific_name"}
+    strain: {$ref: "../00_materials_and_strains/strains.yaml#/strains/LF/strain"}
+  AFur:
+    name: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AFur/scientific_name"}
+    strain: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AFur/strain"}
+  AC:
+    name: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AC/scientific_name"}
+    strain: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AC/strain"}
+abiotic_code:
+  code: Ab
+  description: Cell-free control with matching basal-salt addition.
+common_conditions:
+  tube_capacity_mL: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/tube_capacity_ml_14"}
+  tube_material: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/tube_material_polystyrene"}
+  tube_product: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/tube_14ml"}
+  shaker: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/culture_shaker"}
+  tube_mounting: Tubes were held at a 60-degree angle in mounted wire racks.
+  closure: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/closure_cap"}
+  prepared_medium_volume_mL: 6
+  inoculum_volume_uL: 20
+  volume_interpretation: The 20 uL inoculum was added to 6 mL prepared medium. Listed nominal 1x concentrations
+    describe the prepared medium before the small inoculum addition.
+  initial_target_OD600: 0.003
+  shaking_speed_rpm: 150
+  start_datetime: '2026-08-04T18:15:20'
+  incubation_temperature: 30 or 37 degrees Celsius, specified for every condition.
+  evaporation_compensation: Restore evaporated volume with sterile ultrapure Milli-Q water before pH and ORP measurements.
+  measurement_location: pH and ORP were measured directly in the culture tubes.
+  abiotic_addition: Matching cell-free basal-salt solution in place of inoculum.
+  cell_pellet_preparation: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/cell_pellet_preparation"}
+replication:
+  experimental_unit: physical tube
+  replicates_per_condition: 3
+  starter_preparation: Freshly thawed cells; three independent starter cultures per organism, washed and
+    normalized with no growth-medium carryover.
+  culture_id_rule: TT_<organism_code>_<replicate>. The same identifier denotes the same starter culture
+    across treatments.
+  culture_ids:
+    AF:
+    - TT_AF_1
+    - TT_AF_2
+    - TT_AF_3
+    AT:
+    - TT_AT_1
+    - TT_AT_2
+    - TT_AT_3
+    LF:
+    - TT_LF_1
+    - TT_LF_2
+    - TT_LF_3
+    AFur:
+    - TT_AFur_1
+    - TT_AFur_2
+    - TT_AFur_3
+    AC:
+    - TT_AC_1
+    - TT_AC_2
+    - TT_AC_3
+  analysis_pairing: Shared starter identities are retained; paired treatment analyses are not required.
+  repeated_measurements: Successive sampling events observe the same physical tubes.
+  abiotic_identity: Abiotic tubes have no inoculum culture; their replicate numbers do not identify a
+    cell culture.
+  microplate_relationship: These freshly thawed starter cultures are distinct from the unknown-age LF
+    microplate starters described in lf_starter_followup.
+preparation:
+  mixing: Mix the 2x medium and 2x treatment solution in equal volumes to obtain the listed nominal 1x
+    medium and treatment concentrations.
+  medium_volume_fraction: 0.5
+  treatment_solution_volume_fraction: 0.5
+  medium_stock_strength: 2
+  treatment_stock_strength: 2
+  other_solution_target_pH: 1.8
+  pH_interpretation: Preparation pH values describe the component solutions. Actual mixed-medium initial
+    pH is retained in the shared initial references; later pH is recorded in the measurement rows.
+  concentration_basis: Nominal prepared-medium concentrations. Stock and final concentrations are specified
+    separately.
+media:
+  {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/media_by_context/test_tube_validation"}
+treatments:
+  no_added_metal:
+    description: No additional Ga or In treatment; the defined medium ingredients remain present.
+    Ga_final_mM: 0
+    In_final_mM: 0
+  Ga_100mM:
+    preparation_reagent_id: gallium_sulfate
+    ion: Ga(III)
+    stock_concentration_mM: 200
+    stock_volume_fraction: 0.5
+    final_concentration_mM: 100
+  In_10mM:
+    preparation_reagent_id: indium_sulfate
+    ion: In(III)
+    stock_concentration_mM: 20
+    stock_volume_fraction: 0.5
+    final_concentration_mM: 10
+references:
+  Dailey2026:
+    citation: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/method_references/Dailey2026/citation"}
+    citation_style: ACS
+    bibliography: README.md#references
+measurement_methods:
+  pH:
+    instrument: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_oakton_ph_700_benchtop_meter"}
+    meter: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/ph_meter"}
+    electrode: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/ph_electrode"}
+    calibration_standards_pH:
+    - 1.68
+    - 4.01
+    - 7.0
+    calibration_frequency: At least daily
+  orp:
+    unit: mV
+    meter: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/orp_meter"}
+    electrode: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/orp_electrode"}
+    reference_electrode: Ag/AgCl
+    reference_electrolyte: 3 M KCl
+    reported_quantity: Recorded electrode potential; no conversion to a standard hydrogen-electrode scale
+      is applied.
+  fluorescence:
+    fraction: planktonic
+    plate_product: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/fluorescence_plate_3915"}
+    reported_unit: RFU
+    background_corrected: true
+    background_blank: TE Buffer
+    blank_subtracted_before_deposition: true
+    method_description: SYBR Green I dsDNA fluorescence was measured as previously described.
+    method_reference_id: Dailey2026
+    method_reference_location: Supporting Information, protocol for cell density normalization and quantification.
+    instrument: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_molecular_devices_spectramax_m2"}
+    sampling_scope: endpoint
+    data_status: All 96 numerical endpoint measurements are reported, including the 30 brown elemental-sulfur
+      endpoints. Endpoint fluorescence_status is reported; negative numerical readings are retained.
+    method: SYBR Green I dsDNA fluorescence
+    interpretation: The reported RFU values already have the TE Buffer blank subtracted. Do not subtract
+      the blank again or apply an OD600 baseline.
+    coverage:
+    - timing_block_ID: HH
+      reported: 36
+      not_recorded: 0
+    - timing_block_ID: brown_sulfur
+      reported: 30
+      not_recorded: 0
+    - timing_block_ID: tetrathionate
+      reported: 30
+      not_recorded: 0
+timing:
+  datetime_format: YYYY-MM-DDTHH:MM:SS, with fractional seconds for interpolated times when needed.
+  time_zone: unspecified
+  elapsed_time_unit: d
+  seconds_per_day: 86400
+  summary_group:
+  - timing_block_ID
+  - sampling_event
+  summary_scope: All tube times in that block and sampling event, across treatments, organisms and temperatures;
+    do not calculate separate three-replicate time summaries.
+  elapsed_time_expression: (tube_datetime - start_datetime) / one day
+  mean_expression: sum(elapsed_time_d) / n
+  sd_expression: sqrt(sum((elapsed_time_d - mean)^2) / (n - 1))
+  initial_time: Event 0 is assigned time zero, with time_average_d and time_sd_d both 0. No independent
+    tube measurements were taken for these initial reference assignments.
+  interpolation:
+    timing_block_ID: HH
+    sampling_event: 6
+    first_tube_id: GT-S2-1
+    first_datetime: '2026-08-08T06:23:10'
+    last_tube_id: GT-S2-36
+    last_datetime: '2026-08-08T07:34:15'
+    interpolated_tube_ids:
+    - GT-S2-2
+    - GT-S2-3
+    - GT-S2-4
+    - GT-S2-5
+    - GT-S2-6
+    - GT-S2-7
+    - GT-S2-8
+    - GT-S2-9
+    - GT-S2-10
+    - GT-S2-11
+    - GT-S2-12
+    - GT-S2-13
+    - GT-S2-14
+    - GT-S2-15
+    - GT-S2-16
+    - GT-S2-17
+    - GT-S2-18
+    - GT-S2-19
+    - GT-S2-20
+    - GT-S2-21
+    - GT-S2-22
+    - GT-S2-23
+    - GT-S2-24
+    - GT-S2-25
+    - GT-S2-26
+    - GT-S2-27
+    - GT-S2-28
+    - GT-S2-29
+    - GT-S2-30
+    - GT-S2-31
+    - GT-S2-32
+    - GT-S2-33
+    - GT-S2-34
+    - GT-S2-35
+    rule: Assign equal time spacing in ascending tube-number order between the two recorded endpoints.
+    expression: t(k) = t(first) + (k - 1) * (t(last) - t(first)) / 35, for tube numbers k = 2 through
+      35.
+    summary_interpretation: This block/event mean and SD use 2 recorded times plus 34 interpolated times;
+      the SD partly reflects the interpolation assumption.
+    recorded_tube_times: 2
+    interpolated_tube_times: 34
+timing_blocks:
+  HH:
+    first_tube_id: GT-S2-1
+    last_tube_id: GT-S2-36
+    tube_count: 36
+    poststart_event_count: 9
+    final_time_course_date: '2026-08-11'
+  brown_sulfur:
+    first_tube_id: GT-S2-37
+    last_tube_id: GT-S2-66
+    tube_count: 30
+    poststart_event_count: 9
+    final_time_course_date: '2026-08-25'
+  tetrathionate:
+    first_tube_id: GT-S2-67
+    last_tube_id: GT-S2-96
+    tube_count: 30
+    poststart_event_count: 16
+    final_time_course_date: '2026-08-25'
+shared_initial_references:
+  interpretation: Initial values were assumed to apply to comparable medium/treatment mixtures regardless
+    of cell addition. They are repeated in event 0 rows for use with the respective tube series and are
+    not independent observations from those tubes.
+  assignment: Match timing_block_ID, treatment_ID and replicate to the listed reference_index. This preserves
+    the assigned initial values without creating independent baseline replicates for each organism or
+    temperature.
+  values:
+  - initial_reference_ID: initial_HH_no_added_metal_1
+    timing_block_ID: HH
+    treatment_ID: no_added_metal
+    reference_index: 1
+    pH: NA
+    orp_mV: 402
+  - initial_reference_ID: initial_HH_no_added_metal_2
+    timing_block_ID: HH
+    treatment_ID: no_added_metal
+    reference_index: 2
+    pH: NA
+    orp_mV: 409
+  - initial_reference_ID: initial_HH_no_added_metal_3
+    timing_block_ID: HH
+    treatment_ID: no_added_metal
+    reference_index: 3
+    pH: NA
+    orp_mV: 406
+  - initial_reference_ID: initial_HH_Ga_100mM_1
+    timing_block_ID: HH
+    treatment_ID: Ga_100mM
+    reference_index: 1
+    pH: NA
+    orp_mV: 405
+  - initial_reference_ID: initial_HH_Ga_100mM_2
+    timing_block_ID: HH
+    treatment_ID: Ga_100mM
+    reference_index: 2
+    pH: NA
+    orp_mV: 408
+  - initial_reference_ID: initial_HH_Ga_100mM_3
+    timing_block_ID: HH
+    treatment_ID: Ga_100mM
+    reference_index: 3
+    pH: NA
+    orp_mV: 409
+  - initial_reference_ID: initial_HH_In_10mM_1
+    timing_block_ID: HH
+    treatment_ID: In_10mM
+    reference_index: 1
+    pH: NA
+    orp_mV: 408
+  - initial_reference_ID: initial_HH_In_10mM_2
+    timing_block_ID: HH
+    treatment_ID: In_10mM
+    reference_index: 2
+    pH: NA
+    orp_mV: 409
+  - initial_reference_ID: initial_HH_In_10mM_3
+    timing_block_ID: HH
+    treatment_ID: In_10mM
+    reference_index: 3
+    pH: NA
+    orp_mV: 411
+  - initial_reference_ID: initial_elemental_sulfur_no_added_metal_1
+    timing_block_ID: brown_sulfur
+    treatment_ID: no_added_metal
+    reference_index: 1
+    pH: 1.85
+    orp_mV: NA
+  - initial_reference_ID: initial_elemental_sulfur_no_added_metal_2
+    timing_block_ID: brown_sulfur
+    treatment_ID: no_added_metal
+    reference_index: 2
+    pH: 1.89
+    orp_mV: NA
+  - initial_reference_ID: initial_elemental_sulfur_no_added_metal_3
+    timing_block_ID: brown_sulfur
+    treatment_ID: no_added_metal
+    reference_index: 3
+    pH: 1.87
+    orp_mV: NA
+  - initial_reference_ID: initial_elemental_sulfur_Ga_100mM_1
+    timing_block_ID: brown_sulfur
+    treatment_ID: Ga_100mM
+    reference_index: 1
+    pH: 1.81
+    orp_mV: NA
+  - initial_reference_ID: initial_elemental_sulfur_Ga_100mM_2
+    timing_block_ID: brown_sulfur
+    treatment_ID: Ga_100mM
+    reference_index: 2
+    pH: 1.8
+    orp_mV: NA
+  - initial_reference_ID: initial_elemental_sulfur_Ga_100mM_3
+    timing_block_ID: brown_sulfur
+    treatment_ID: Ga_100mM
+    reference_index: 3
+    pH: 1.81
+    orp_mV: NA
+  - initial_reference_ID: initial_tetrathionate_no_added_metal_1
+    timing_block_ID: tetrathionate
+    treatment_ID: no_added_metal
+    reference_index: 1
+    pH: 2.28
+    orp_mV: NA
+  - initial_reference_ID: initial_tetrathionate_no_added_metal_2
+    timing_block_ID: tetrathionate
+    treatment_ID: no_added_metal
+    reference_index: 2
+    pH: 2.27
+    orp_mV: NA
+  - initial_reference_ID: initial_tetrathionate_no_added_metal_3
+    timing_block_ID: tetrathionate
+    treatment_ID: no_added_metal
+    reference_index: 3
+    pH: 2.28
+    orp_mV: NA
+  - initial_reference_ID: initial_tetrathionate_Ga_100mM_1
+    timing_block_ID: tetrathionate
+    treatment_ID: Ga_100mM
+    reference_index: 1
+    pH: 1.92
+    orp_mV: NA
+  - initial_reference_ID: initial_tetrathionate_Ga_100mM_2
+    timing_block_ID: tetrathionate
+    treatment_ID: Ga_100mM
+    reference_index: 2
+    pH: 1.93
+    orp_mV: NA
+  - initial_reference_ID: initial_tetrathionate_Ga_100mM_3
+    timing_block_ID: tetrathionate
+    treatment_ID: Ga_100mM
+    reference_index: 3
+    pH: 1.92
+    orp_mV: NA
+lf_starter_followup:
+  observation_id: LF_starter_HH_followup
+  organism_code: LF
+  record_type: recorded_qualitative_observation
+  record_scope: Triplicate group
+  starter_identity: The original unknown-age starter cultures used in the LF microplate experiments.
+  distinct_from_test_tube_cultures: true
+  replicate_count: 3
+  medium_ID: HH
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 37
+  shaking_speed_rpm: 150
+  start_relation: Started on the day the LF microplate experiments ended, after the plate experiments
+    appeared inactive.
+  incubation_duration_d: 14
+  comparator: Abiotic HH controls
+  readout: Visual red coloration associated with iron biooxidation
+  outcome: The starter-inoculated tubes did not become more red than the abiotic controls after 14 days.
+data_format:
+  encoding: UTF-8
+  delimiter: ','
+  header_rows: 1
+  decimal_separator: .
+  missing_value: NA
+  missing_value_interpretation: No numerical measurement or no applicable value; never zero. FALSE, NA
+    and unrecorded measurements are all represented as NA.
+  unique_key:
+  - tube_ID
+  - sampling_event
+  sort_order:
+  - timing_block_ID (HH, brown_sulfur, tetrathionate)
+  - sampling_event
+  - tube numerical suffix
+  precision: Supplied numerical precision is retained. Fractional seconds on interpolated clocks do not
+    imply measurement precision.
+columns:
+- name: tube_ID
+  type: string
+  description: Physical tube identifier, unchanged across sampling events.
+- name: condition_ID
+  type: string
+  description: Condition identifier defined under conditions.
+- name: timing_block_ID
+  type: string
+  description: Block used to calculate sampling-time means and SDs; defined under timing_blocks.
+- name: organism_code
+  type: string
+  description: Organism identifier defined under organisms; Ab denotes an abiotic control.
+- name: replicate
+  type: integer
+  description: Replicate number 1, 2 or 3 within a condition.
+- name: inoculum_culture_ID
+  type: string
+  description: Shared starter-culture identifier; NA for abiotic tubes.
+- name: medium_ID
+  type: string
+  description: Prepared medium defined under media.
+- name: treatment_ID
+  type: string
+  description: Additional metal treatment defined under treatments.
+- name: incubation_temperature_C
+  type: number
+  description: Tube incubation temperature in degrees Celsius.
+- name: sampling_event
+  type: integer
+  description: Sampling sequence within the timing block. Event 0 contains assigned initial references.
+- name: record_role
+  type: string
+  description: shared_initial_reference, measurement or endpoint. Endpoint is the final time-course event
+    in that block.
+- name: initial_reference_ID
+  type: string
+  description: Shared initial-reference identity defined under shared_initial_references.values; NA for
+    measured time-course events. Repeated identities are one reference assignment, not new measurements.
+- name: time_average_d
+  type: number
+  description: Arithmetic mean elapsed time in days across all tubes in this block and event; use as the
+    common sampling time.
+- name: time_sd_d
+  type: number
+  description: Sample SD of elapsed times within this block and event, with denominator n - 1. Describes
+    timing spread, not biological variability or an SE.
+- name: tube_datetime
+  type: string
+  description: ISO 8601 local date and clock time, without a timezone offset. Retained for reconstructing
+    block timing summaries.
+- name: datetime_basis
+  type: string
+  description: recorded, interpolated or assigned_start. Describes this tube time, not the whole block
+    summary.
+- name: pH
+  type: number
+  description: Recorded pH at measurement/endpoint rows; assigned shared initial pH at event 0. NA means
+    no numeric value.
+- name: orp_mV
+  type: number
+  description: Recorded oxidation-reduction potential in mV at measurement/endpoint rows; assigned shared
+    initial ORP at event 0. NA means no numeric value.
+- name: planktonic_background_corrected_rfu
+  type: number
+  description: Endpoint planktonic SYBR Green fluorescence in RFU after TE Buffer blank subtraction.
+    NA means no available or applicable numerical value; interpret with fluorescence_status.
+- name: fluorescence_status
+  type: string
+  description: 'reported: a numerical endpoint RFU is present; not_recorded: no numerical endpoint fluorescence
+    measurement is available; not_scheduled: this is not an endpoint fluorescence event.'
+  allowed_values:
+  - reported
+  - not_recorded
+  - not_scheduled
+- name: operator_initials
+  type: string
+  description: Recorded operator initials. Event 0 identifies the preparation entry.
+conditions:
+- condition_ID: TT-01
+  organism_code: Ab
+  medium_ID: HH
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-1
+  - GT-S2-2
+  - GT-S2-3
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-02
+  organism_code: Ab
+  medium_ID: HH
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-4
+  - GT-S2-5
+  - GT-S2-6
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-03
+  organism_code: Ab
+  medium_ID: HH
+  treatment_ID: In_10mM
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-7
+  - GT-S2-8
+  - GT-S2-9
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-04
+  organism_code: AF
+  medium_ID: HH
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-10
+  - GT-S2-11
+  - GT-S2-12
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-05
+  organism_code: AF
+  medium_ID: HH
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-13
+  - GT-S2-14
+  - GT-S2-15
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-06
+  organism_code: AF
+  medium_ID: HH
+  treatment_ID: In_10mM
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-16
+  - GT-S2-17
+  - GT-S2-18
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-07
+  organism_code: AFur
+  medium_ID: HH
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-19
+  - GT-S2-20
+  - GT-S2-21
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-08
+  organism_code: AFur
+  medium_ID: HH
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-22
+  - GT-S2-23
+  - GT-S2-24
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-09
+  organism_code: AFur
+  medium_ID: HH
+  treatment_ID: In_10mM
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-25
+  - GT-S2-26
+  - GT-S2-27
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-10
+  organism_code: LF
+  medium_ID: HH
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-28
+  - GT-S2-29
+  - GT-S2-30
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-11
+  organism_code: LF
+  medium_ID: HH
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-31
+  - GT-S2-32
+  - GT-S2-33
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-12
+  organism_code: LF
+  medium_ID: HH
+  treatment_ID: In_10mM
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-34
+  - GT-S2-35
+  - GT-S2-36
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-13
+  organism_code: Ab
+  medium_ID: SM4_S0
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 30
+  tube_ids:
+  - GT-S2-37
+  - GT-S2-38
+  - GT-S2-39
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-14
+  organism_code: Ab
+  medium_ID: SM4_S0
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 30
+  tube_ids:
+  - GT-S2-40
+  - GT-S2-41
+  - GT-S2-42
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-15
+  organism_code: AF
+  medium_ID: SM4_S0
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 30
+  tube_ids:
+  - GT-S2-43
+  - GT-S2-44
+  - GT-S2-45
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-16
+  organism_code: AF
+  medium_ID: SM4_S0
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 30
+  tube_ids:
+  - GT-S2-46
+  - GT-S2-47
+  - GT-S2-48
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-17
+  organism_code: AT
+  medium_ID: SM4_S0
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 30
+  tube_ids:
+  - GT-S2-49
+  - GT-S2-50
+  - GT-S2-51
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-18
+  organism_code: AT
+  medium_ID: SM4_S0
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 30
+  tube_ids:
+  - GT-S2-52
+  - GT-S2-53
+  - GT-S2-54
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-19
+  organism_code: Ab
+  medium_ID: SM4_S0
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-55
+  - GT-S2-56
+  - GT-S2-57
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-20
+  organism_code: Ab
+  medium_ID: SM4_S0
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-58
+  - GT-S2-59
+  - GT-S2-60
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-21
+  organism_code: AC
+  medium_ID: SM4_S0
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-61
+  - GT-S2-62
+  - GT-S2-63
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-22
+  organism_code: AC
+  medium_ID: SM4_S0
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-64
+  - GT-S2-65
+  - GT-S2-66
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-23
+  organism_code: Ab
+  medium_ID: SM4_tetrathionate
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 30
+  tube_ids:
+  - GT-S2-67
+  - GT-S2-68
+  - GT-S2-69
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-24
+  organism_code: Ab
+  medium_ID: SM4_tetrathionate
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 30
+  tube_ids:
+  - GT-S2-70
+  - GT-S2-71
+  - GT-S2-72
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-25
+  organism_code: AF
+  medium_ID: SM4_tetrathionate
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 30
+  tube_ids:
+  - GT-S2-73
+  - GT-S2-74
+  - GT-S2-75
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-26
+  organism_code: AF
+  medium_ID: SM4_tetrathionate
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 30
+  tube_ids:
+  - GT-S2-76
+  - GT-S2-77
+  - GT-S2-78
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-27
+  organism_code: AT
+  medium_ID: SM4_tetrathionate
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 30
+  tube_ids:
+  - GT-S2-79
+  - GT-S2-80
+  - GT-S2-81
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-28
+  organism_code: AT
+  medium_ID: SM4_tetrathionate
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 30
+  tube_ids:
+  - GT-S2-82
+  - GT-S2-83
+  - GT-S2-84
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-29
+  organism_code: Ab
+  medium_ID: SM4_tetrathionate
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-85
+  - GT-S2-86
+  - GT-S2-87
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-30
+  organism_code: Ab
+  medium_ID: SM4_tetrathionate
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-88
+  - GT-S2-89
+  - GT-S2-90
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-31
+  organism_code: AC
+  medium_ID: SM4_tetrathionate
+  treatment_ID: no_added_metal
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-91
+  - GT-S2-92
+  - GT-S2-93
+  replicate_order:
+  - 1
+  - 2
+  - 3
+- condition_ID: TT-32
+  organism_code: AC
+  medium_ID: SM4_tetrathionate
+  treatment_ID: Ga_100mM
+  incubation_temperature_C: 37
+  tube_ids:
+  - GT-S2-94
+  - GT-S2-95
+  - GT-S2-96
+  replicate_order:
+  - 1
+  - 2
+  - 3

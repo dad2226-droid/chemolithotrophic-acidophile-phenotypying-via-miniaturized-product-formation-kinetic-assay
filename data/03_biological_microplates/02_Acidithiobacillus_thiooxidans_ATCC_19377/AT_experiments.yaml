@@ -1,0 +1,146 @@
+# Concentrations and OD600 use the 200 uL preparation basis.
+# Each column condition applies to biotic rows E/F/G and abiotic rows B/C/D.
+# Plate IDs identify the same physical wells across acquisition ordinals.
+schema_version: '1.0'
+document_type: biological_experiments
+definitions_id: biological_definitions
+species_id: AT
+title: Acidithiobacillus thiooxidans microplate experiments
+experiments:
+  - experiment_id: AT_SM4_BS_sulfuric_acid_OD0p001_tetrathionate
+    name: Sulfuric acid series with 20 mM potassium tetrathionate
+    medium_id: SM4_BS
+    initial_OD600_200_uL: 0.001
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      sulfuric_acid:
+        name: sulfuric acid
+        reagent_id: sulfuric_acid
+        concentration_determination: nominal
+      potassium_tetrathionate:
+        name: potassium tetrathionate
+        reagent_id: potassium_tetrathionate
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    initial_pH:
+      value: 3.95
+      reported_plus_minus: 0.03
+      uncertainty_type: standard_deviation
+      measurement_count: 3
+      scope: Reported summary; exact pH was not recorded for each condition.
+    initial_pH_status: reported_summary_without_condition_specific_values
+    fixed_components:
+      - compound_id: potassium_tetrathionate
+        name: potassium tetrathionate
+        concentration: 20
+        unit: mM
+        volume_basis_uL: 200
+        concentration_determination: nominal
+    plate_groups:
+      - group_id: AT_SM4_BS_sulfuric_acid_OD0p001_tetrathionate_G01
+        plate_ids: [L1-10, L1-11, L1-12]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sulfuric_acid: 100
+          3:
+            sulfuric_acid: 37.2
+          4:
+            sulfuric_acid: 14.4
+          5:
+            sulfuric_acid: 5.62
+          6:
+            sulfuric_acid: 2.04
+          7:
+            sulfuric_acid: 0.724
+          8:
+            sulfuric_acid: 0.245
+          9:
+            sulfuric_acid: 0.0813
+          10:
+            sulfuric_acid: 0.0275
+          11:
+            sulfuric_acid: 0.01
+  - experiment_id: AT_SM4_BS_sulfuric_acid_OD0p001_thiosulfate
+    name: Sulfuric acid series with 20 mM sodium thiosulfate
+    medium_id: SM4_BS
+    initial_OD600_200_uL: 0.001
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      sulfuric_acid:
+        name: sulfuric acid
+        reagent_id: sulfuric_acid
+        concentration_determination: nominal
+      sodium_thiosulfate:
+        name: sodium thiosulfate
+        reagent_id: sodium_thiosulfate
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    initial_pH:
+      value: 3.95
+      reported_plus_minus: 0.03
+      uncertainty_type: standard_deviation
+      measurement_count: 3
+      scope: Reported summary; exact pH was not recorded for each condition.
+    initial_pH_status: reported_summary_without_condition_specific_values
+    fixed_components:
+      - compound_id: sodium_thiosulfate
+        name: sodium thiosulfate
+        concentration: 20
+        unit: mM
+        volume_basis_uL: 200
+        concentration_determination: nominal
+    plate_groups:
+      - group_id: AT_SM4_BS_sulfuric_acid_OD0p001_thiosulfate_G01
+        plate_ids: [L1-7, L1-8, L1-9]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sulfuric_acid: 100
+          3:
+            sulfuric_acid: 37.2
+          4:
+            sulfuric_acid: 14.4
+          5:
+            sulfuric_acid: 5.62
+          6:
+            sulfuric_acid: 2.04
+          7:
+            sulfuric_acid: 0.724
+          8:
+            sulfuric_acid: 0.245
+          9:
+            sulfuric_acid: 0.0813
+          10:
+            sulfuric_acid: 0.0275
+          11:
+            sulfuric_acid: 0.01
+plates:
+  L1-10:
+    batch_id: AT_2026-06-12
+    acquisition_series:
+      L1-10: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  L1-11:
+    batch_id: AT_2026-06-12
+    acquisition_series:
+      L1-11: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  L1-12:
+    batch_id: AT_2026-06-12
+    acquisition_series:
+      L1-12: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  L1-7:
+    batch_id: AT_2026-06-12
+    acquisition_series:
+      L1-7: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  L1-8:
+    batch_id: AT_2026-06-12
+    acquisition_series:
+      L1-8: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  L1-9:
+    batch_id: AT_2026-06-12
+    acquisition_series:
+      L1-9: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]

@@ -1,0 +1,2560 @@
+# Ratiometric pH indicator calibration
+# Metadata and reference values for files included in this deposit.
+
+metadata_format: indicator_calibration
+format_version: 1
+family: ratiometric_pH_indicator
+title: Ratiometric pH indicator calibration
+reading_guide:
+  purpose: Experimental documentation and explicit measurement associations; no processing is performed by this
+    file.
+  experiments: Preparation, design and interpretation of each named experiment.
+  reference_sets: Calibration values and well-row assignments. An acquisition names the set that applies to it.
+  readouts: Instrument measurement modes and wavelength settings used by acquisitions.
+  acquisitions: One available reader export or one measured workbook sheet per entry.
+  source_filename: Exact filename only. The analysis is given the data directory separately.
+  run_number: Original numbered run or plate label. Final ferrous plate labels are 4-6 and 7-9. Equal numbers across
+    experiments do not establish the same physical plate.
+  physical_plate_id: Identifies one physical plate. Repeated readings share this identifier; different plate materials
+    and different dye-stock series have different identifiers.
+  missing_values: null means unknown, unavailable or not applicable as explained by the accompanying field. It never
+    means zero.
+  lists: Values in a by_column list correspond in order to plate_columns. Do not sort the values independently.
+  units:
+    M: mol per litre
+    mM: millimol per litre
+    uM: micromol per litre
+    uL: microlitre
+    nm: nanometre
+    C: degrees Celsius
+    pH: dimensionless
+  editing: Use spaces for indentation, true or false for yes/no fields, and null for missing values. Keep identifier
+    strings unchanged when moving files.
+  dye_concentrations: Nominal is the stated target; calculated is the volumetric preparation value. Both refer to
+    dyed wells; no_thymol_blue rows contain zero dye.
+  reference_methods: Reference pH, total-Fe and Fe(II) methods, where applicable. These are distinct from the optical
+    reader settings.
+  well_volumes: Undyed wells contain 200 uL; dyed wells contain 200 uL standard plus 10 uL dye solution. Stored
+    reference Fe and acid concentrations describe the 200 uL standard.
+  self_contained_reference_values: The reference_sets section contains the pH values and well assignments for these
+    experiments.
+  preparation_protocols: Recipes and initial incubation conditions shared by the experiments in this file.
+  physical_plates: Physical plate identities and their reference sets. Repeated entries in acquisitions do not create
+    additional plates.
+  preparation_series_id: Identifies the independently prepared standard series used for a physical plate.
+  incubation_protocols: Ordered incubation and membrane steps. An acquisition identifies the step that preceded
+    its measurement.
+study_design:
+  organisms_present: false
+  measurement_quantity: absorbance
+  plate_rows: [A, B, C, D, E, F, G, H]
+  plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  technical_wells_per_condition_per_plate: 4
+  growth_control_exclusion_enabled: false
+  contamination_control_exclusion_enabled: false
+  well_preparation_by_condition:
+    no_thymol_blue:
+      standard_volume_uL: 200
+      dye_solution_added_uL: 0
+      final_well_volume_uL: 200
+    thymol_blue:
+      standard_volume_uL: 200
+      dye_solution_added_uL: 10
+      final_well_volume_uL: 210
+  reference_standard_volume_uL: 200
+  sulfuric_acid_concentration_basis: 200_uL_standard
+  measurement_lid_rule: Lids were present only for acid-iron.xlsx sheets ending in -lid. All -nolid sheets and all
+    other calibration measurements were measured without lids.
+timestamp_conventions:
+  timezone: null
+  timezone_status: unknown_to_experimenter
+  interpretation: Preserve each recorded clock reading exactly as supplied. No time zone or UTC offset is assigned.
+  elapsed_time: Use timestamps within a documented acquisition sequence without an inferred timezone conversion.
+reference_methods:
+  pH_meter:
+    {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/pH_meter"}
+reference_sets:
+  pH_configuration_run1:
+    description: Reference pH values for the numbered preparation run; the linked optical readings use this reference
+      set.
+    row_groups:
+      - rows: [A, B, C, D]
+        condition: thymol_blue
+        plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        reported_concentration:
+          values_by_column: null
+          unit: mM
+          quantity: sulfuric_acid
+          chemical_basis: null
+          volume_basis: 200_uL_standard
+          status: not_measured_in_this_experiment
+          stoichiometric_or_volume_conversion_applied: false
+        reference_pH_by_column: [5.08, 5.01, 5.07, 5.0, 4.7, 4.59, 4.26, 3.89, 3.7, 3.42, 3.16, 2.93]
+        reference_pH_status: available_with_missing_values_if_null
+        biotic_rows: []
+        standard_volume_uL: 200
+        final_well_volume_uL: 210
+        reference_pH_method_id: pH_meter
+      - rows: [E, F, G, H]
+        condition: thymol_blue
+        plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        reported_concentration:
+          values_by_column: null
+          unit: mM
+          quantity: sulfuric_acid
+          chemical_basis: null
+          volume_basis: 200_uL_standard
+          status: not_measured_in_this_experiment
+          stoichiometric_or_volume_conversion_applied: false
+        reference_pH_by_column: [2.71, 2.5, 2.28, 2.02, 1.81, 1.61, 1.4, 1.19, 0.97, 0.79, 0.56, 0.32]
+        reference_pH_status: available_with_missing_values_if_null
+        biotic_rows: []
+        standard_volume_uL: 200
+        final_well_volume_uL: 210
+        reference_pH_method_id: pH_meter
+  pH_configuration_run2:
+    description: Reference pH values for the numbered preparation run; the linked optical readings use this reference
+      set.
+    row_groups:
+      - rows: [A, B, C, D]
+        condition: thymol_blue
+        plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        reported_concentration:
+          values_by_column: null
+          unit: mM
+          quantity: sulfuric_acid
+          chemical_basis: null
+          volume_basis: 200_uL_standard
+          status: not_measured_in_this_experiment
+          stoichiometric_or_volume_conversion_applied: false
+        reference_pH_by_column: [6.48, 6.94, 6.24, 6.83, 6.6, 5.3, 4.42, 3.9, 3.59, 3.34, 3.11, 2.89]
+        reference_pH_status: available_with_missing_values_if_null
+        biotic_rows: []
+        standard_volume_uL: 200
+        final_well_volume_uL: 210
+        reference_pH_method_id: pH_meter
+      - rows: [E, F, G, H]
+        condition: thymol_blue
+        plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        reported_concentration:
+          values_by_column: null
+          unit: mM
+          quantity: sulfuric_acid
+          chemical_basis: null
+          volume_basis: 200_uL_standard
+          status: not_measured_in_this_experiment
+          stoichiometric_or_volume_conversion_applied: false
+        reference_pH_by_column: [2.65, 2.41, 2.22, 1.99, 1.77, 1.57, 1.37, 1.22, 1.05, 0.88, 0.62, 0.36]
+        reference_pH_status: available_with_missing_values_if_null
+        biotic_rows: []
+        standard_volume_uL: 200
+        final_well_volume_uL: 210
+        reference_pH_method_id: pH_meter
+  pH_configuration_run3:
+    description: Reference pH values for the numbered preparation run; the linked optical readings use this reference
+      set.
+    row_groups:
+      - rows: [A, B, C, D]
+        condition: thymol_blue
+        plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        reported_concentration:
+          values_by_column: null
+          unit: mM
+          quantity: sulfuric_acid
+          chemical_basis: null
+          volume_basis: 200_uL_standard
+          status: not_measured_in_this_experiment
+          stoichiometric_or_volume_conversion_applied: false
+        reference_pH_by_column: [6.05, 5.66, 5.24, 4.95, 4.77, 4.46, 4.24, 3.97, 3.74, 3.5, 3.24, 2.99]
+        reference_pH_status: available_with_missing_values_if_null
+        biotic_rows: []
+        standard_volume_uL: 200
+        final_well_volume_uL: 210
+        reference_pH_method_id: pH_meter
+      - rows: [E, F, G, H]
+        condition: thymol_blue
+        plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        reported_concentration:
+          values_by_column: null
+          unit: mM
+          quantity: sulfuric_acid
+          chemical_basis: null
+          volume_basis: 200_uL_standard
+          status: not_measured_in_this_experiment
+          stoichiometric_or_volume_conversion_applied: false
+        reference_pH_by_column: [2.78, 2.59, 2.31, 2.1, 1.9, 1.67, 1.47, 1.26, 1.07, 0.84, 0.61, 0.4]
+        reference_pH_status: available_with_missing_values_if_null
+        biotic_rows: []
+        standard_volume_uL: 200
+        final_well_volume_uL: 210
+        reference_pH_method_id: pH_meter
+  final_indicator_acid_standards:
+    description: Final calibration reference values; full provenance and measurement basis appear in axis_details.
+    row_groups:
+      - rows: [A, B, C, D]
+        condition: no_thymol_blue
+        plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        reported_concentration:
+          values_by_column: [500, 250, 125, 62.5, 31.2, 15.6, 7.81, 3.91, 1.95, 0.976, 0.488, 0]
+          unit: mM
+          quantity: sulfuric_acid
+          chemical_basis: H2SO4
+          volume_basis: 200_uL_standard
+          status: declared_preparation_label
+          stoichiometric_or_volume_conversion_applied: false
+        reference_pH_by_column: [0.57, 0.77, 0.96, 1.16, 1.36, 1.57, 1.79, 2.02, 2.27, 2.5, 2.77, 4.79]
+        reference_pH_status: associated_dyed_standard_pH_not_directly_measured_in_undyed_wells
+        biotic_rows: []
+        standard_volume_uL: 200
+        final_well_volume_uL: 200
+        reference_pH_method_id: pH_meter
+      - rows: [E, F, G, H]
+        condition: thymol_blue
+        plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        reported_concentration:
+          values_by_column: [500, 250, 125, 62.5, 31.2, 15.6, 7.81, 3.91, 1.95, 0.976, 0.488, 0]
+          unit: mM
+          quantity: sulfuric_acid
+          chemical_basis: H2SO4
+          volume_basis: 200_uL_standard
+          status: declared_preparation_label
+          stoichiometric_or_volume_conversion_applied: false
+        reference_pH_by_column: [0.57, 0.77, 0.96, 1.16, 1.36, 1.57, 1.79, 2.02, 2.27, 2.5, 2.77, 4.79]
+        reference_pH_status: measured_after_dye_addition
+        biotic_rows: []
+        standard_volume_uL: 200
+        final_well_volume_uL: 210
+        reference_pH_method_id: pH_meter
+    axis_details:
+      plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      declared_h2so4_mM: [500, 250, 125, 62.5, 31.2, 15.6, 7.81, 3.91, 1.95, 0.976, 0.488, 0]
+      declared_acid_volume_basis: 200_uL_standard
+      measured_pH_after_dye: [0.57, 0.77, 0.96, 1.16, 1.36, 1.57, 1.79, 2.02, 2.27, 2.5, 2.77, 4.79]
+      directly_measured_for: dyed acid standard solutions
+      no_dye_well_pH_directly_measured: false
+      remeasured_during_storage: false
+      pH_volume_correction_applied: false
+preparation_protocols:
+  thymol_blue_stock:
+    {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/reagent_preparations/thymol_blue_stock"}
+  initial_plate_incubation:
+    temperature_C: 23
+    duration_min: 30
+    measurement_lid_state: absent
+incubation_protocols:
+  configuration_temperature_sequence:
+    same_physical_plates_at_every_step: true
+    steps:
+      - step_id: initial_23_C
+        order: 1
+        temperature_C: 23
+        duration_min: 30
+        gas_exchange_membrane_present: false
+      - step_id: incubation_4_C
+        order: 2
+        temperature_C: 4
+        incubator: {$ref: "../../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/calibration_incubator_4c"}
+        duration_min: 120
+        gas_exchange_membrane_present: false
+      - step_id: incubation_30_C
+        order: 3
+        temperature_C: 30
+        duration_min: 120
+        gas_exchange_membrane_present: false
+      - step_id: incubation_75_C
+        order: 4
+        temperature_C: 75
+        duration_min: 120
+        gas_exchange_membrane_present: false
+      - step_id: overnight_23_C
+        order: 5
+        temperature_C: 23
+        duration_description: overnight
+        exact_duration_min: null
+        storage_lid_state: present
+        storage_seal: Parafilm
+        seal_applied: before_this_incubation
+        gas_exchange_membrane_present: false
+      - step_id: membrane_23_C
+        order: 6
+        temperature_C: 23
+        action: Attach Breathe-Easy gas-exchange membrane after the preceding unmembraned reading and acquire another
+          reading.
+        gas_exchange_membrane_present: true
+        membrane: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/membrane_breathe_easy"}
+    measurement_timing: Read immediately after each incubation before starting the next incubation; the membrane
+      reading follows the final unmembraned reading.
+    measurement_lid_state: absent
+    temperature_basis: Incubation temperatures; actual reader temperatures remain recorded separately for each acquisition.
+    duration_basis: Prescribed incubation durations, not exact elapsed times reconstructed from file timestamps.
+physical_plates:
+  pH_configuration_200uM_UV_run1:
+    plate_type: UV_transparent
+    reference_set_id: pH_configuration_run1
+    preparation_run_number: 1
+    thymol_blue_stock_uM: 200
+    manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+    catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3635"}
+  pH_configuration_200uM_UV_run2:
+    plate_type: UV_transparent
+    reference_set_id: pH_configuration_run2
+    preparation_run_number: 2
+    thymol_blue_stock_uM: 200
+    manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+    catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3635"}
+  pH_configuration_200uM_UV_run3:
+    plate_type: UV_transparent
+    reference_set_id: pH_configuration_run3
+    preparation_run_number: 3
+    thymol_blue_stock_uM: 200
+    manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+    catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3635"}
+  pH_configuration_200uM_nonUV_run1:
+    plate_type: non_UV_transparent
+    reference_set_id: pH_configuration_run1
+    preparation_run_number: 1
+    thymol_blue_stock_uM: 200
+    manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+    catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3370"}
+  pH_configuration_200uM_nonUV_run2:
+    plate_type: non_UV_transparent
+    reference_set_id: pH_configuration_run2
+    preparation_run_number: 2
+    thymol_blue_stock_uM: 200
+    manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+    catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3370"}
+  pH_configuration_200uM_nonUV_run3:
+    plate_type: non_UV_transparent
+    reference_set_id: pH_configuration_run3
+    preparation_run_number: 3
+    thymol_blue_stock_uM: 200
+    manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+    catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3370"}
+  pH_initial_20uM_UV_run1:
+    plate_type: UV_transparent
+    reference_set_id: pH_configuration_run1
+    preparation_run_number: 1
+    thymol_blue_stock_uM: 20
+    manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+    catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3635"}
+  pH_initial_20uM_UV_run2:
+    plate_type: UV_transparent
+    reference_set_id: pH_configuration_run2
+    preparation_run_number: 2
+    thymol_blue_stock_uM: 20
+    manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+    catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3635"}
+  pH_initial_20uM_UV_run3:
+    plate_type: UV_transparent
+    reference_set_id: pH_configuration_run3
+    preparation_run_number: 3
+    thymol_blue_stock_uM: 20
+    manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+    catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3635"}
+  final_indicator_acid_plate1:
+    plate_type: non_UV_transparent
+    manufacturer: {$ref: "../../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/nonuv_plate_unspecified/manufacturer"}
+    catalog_number: {$ref: "../../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/nonuv_plate_unspecified/catalog_number"}
+    reference_set_id: final_indicator_acid_standards
+    preparation_series_id: final_indicator_acid_preparation1
+    preparation_run_number: 1
+    technical_plate_number: 1
+  final_indicator_acid_plate2:
+    plate_type: non_UV_transparent
+    manufacturer: {$ref: "../../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/nonuv_plate_unspecified/manufacturer"}
+    catalog_number: {$ref: "../../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/nonuv_plate_unspecified/catalog_number"}
+    reference_set_id: final_indicator_acid_standards
+    preparation_series_id: final_indicator_acid_preparation2
+    preparation_run_number: 2
+    technical_plate_number: 1
+  final_indicator_acid_plate3:
+    plate_type: non_UV_transparent
+    manufacturer: {$ref: "../../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/nonuv_plate_unspecified/manufacturer"}
+    catalog_number: {$ref: "../../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/nonuv_plate_unspecified/catalog_number"}
+    reference_set_id: final_indicator_acid_standards
+    preparation_series_id: final_indicator_acid_preparation3
+    preparation_run_number: 3
+    technical_plate_number: 1
+experiments:
+  pH_configuration_23_C_UV:
+    title: pH configuration at 23 C, UV plate
+    preparation:
+      medium: H2SO4
+      standard_solute: sulfuric acid
+      declared_h2so4_M: null
+      plate_type: UV_transparent
+      condition_temperature_C: 23
+      temperature_description: Experimental condition temperature; actual reader temperature is recorded separately
+        for each export.
+      gas_permeable_membrane: null
+      membrane_status: absent
+      nominal_dyed_well_thymol_blue_uM: 10
+      thymol_blue_stock_uM: 200
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      dye_stock_protocol_id: thymol_blue_stock
+      calculated_dye_concentration_is_not_a_measurement: true
+      plate_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+      plate_catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3635"}
+    replication:
+      numbered_runs: 3
+      technical_wells_per_condition_per_run: 4
+      independent_standard_preparations: 3
+      physical_plate_identity_across_conditions: same_physical_plates_reused
+      standard_preparations_made_on_separate_days: true
+      standard_solutions_freshly_prepared_for_each_run: true
+      independent_preparation_count_scope: Within this standard series; repeated acquisitions do not increase the
+        count.
+      physical_plates_in_this_experiment: 3
+    timing:
+      date_last_saved_interpretation: Timestamp preserved from the reader export; not relabelled as acquisition
+        start.
+      initial_and_overnight_link: The same physical plates were read before and after the 23 C overnight incubation.
+      initial_incubation_protocol_id: initial_plate_incubation
+      incubation_protocol_id: configuration_temperature_sequence
+      same_plate_reused_across_incubation_steps: true
+    well_layout_note: Both row halves contain dye and represent different pH ranges. The recorded per-run reference
+      pH values apply to the linked readings.
+    calibration_quantities: [pH]
+    reference_sets_by_run:
+      - run_number: 1
+        reference_set_id: pH_configuration_run1
+      - run_number: 2
+        reference_set_id: pH_configuration_run2
+      - run_number: 3
+        reference_set_id: pH_configuration_run3
+    physical_plate_ids:
+      - pH_configuration_200uM_UV_run1
+      - pH_configuration_200uM_UV_run2
+      - pH_configuration_200uM_UV_run3
+  pH_configuration_23_C_UV_membrane:
+    title: pH configuration at 23 C, UV plate, gas-permeable membrane
+    preparation:
+      medium: H2SO4
+      standard_solute: sulfuric acid
+      declared_h2so4_M: null
+      plate_type: UV_transparent
+      condition_temperature_C: 23
+      temperature_description: Experimental condition temperature; actual reader temperature is recorded separately
+        for each export.
+      gas_permeable_membrane: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/membrane_breathe_easy"}
+      membrane_status: present
+      nominal_dyed_well_thymol_blue_uM: 10
+      thymol_blue_stock_uM: 200
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      dye_stock_protocol_id: thymol_blue_stock
+      calculated_dye_concentration_is_not_a_measurement: true
+      plate_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+      plate_catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3635"}
+    replication:
+      numbered_runs: 3
+      technical_wells_per_condition_per_run: 4
+      independent_standard_preparations: 3
+      physical_plate_identity_across_conditions: same_physical_plates_reused
+      standard_preparations_made_on_separate_days: true
+      standard_solutions_freshly_prepared_for_each_run: true
+      independent_preparation_count_scope: Within this standard series; repeated acquisitions do not increase the
+        count.
+      physical_plates_in_this_experiment: 3
+    timing:
+      date_last_saved_interpretation: Timestamp preserved from the reader export; not relabelled as acquisition
+        start.
+      initial_incubation_protocol_id: initial_plate_incubation
+      incubation_protocol_id: configuration_temperature_sequence
+      same_plate_reused_across_incubation_steps: true
+    well_layout_note: Both row halves contain dye and represent different pH ranges. The recorded per-run reference
+      pH values apply to the linked readings.
+    calibration_quantities: [pH]
+    reference_sets_by_run:
+      - run_number: 1
+        reference_set_id: pH_configuration_run1
+      - run_number: 2
+        reference_set_id: pH_configuration_run2
+      - run_number: 3
+        reference_set_id: pH_configuration_run3
+    physical_plate_ids:
+      - pH_configuration_200uM_UV_run1
+      - pH_configuration_200uM_UV_run2
+      - pH_configuration_200uM_UV_run3
+  pH_configuration_23_C_nonUV:
+    title: pH configuration at 23 C, non_UV plate
+    preparation:
+      medium: H2SO4
+      standard_solute: sulfuric acid
+      declared_h2so4_M: null
+      plate_type: non_UV_transparent
+      condition_temperature_C: 23
+      temperature_description: Experimental condition temperature; actual reader temperature is recorded separately
+        for each export.
+      gas_permeable_membrane: null
+      membrane_status: absent
+      nominal_dyed_well_thymol_blue_uM: 10
+      thymol_blue_stock_uM: 200
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      dye_stock_protocol_id: thymol_blue_stock
+      calculated_dye_concentration_is_not_a_measurement: true
+      plate_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+      plate_catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3370"}
+    replication:
+      numbered_runs: 3
+      technical_wells_per_condition_per_run: 4
+      independent_standard_preparations: 3
+      physical_plate_identity_across_conditions: same_physical_plates_reused
+      standard_preparations_made_on_separate_days: true
+      standard_solutions_freshly_prepared_for_each_run: true
+      independent_preparation_count_scope: Within this standard series; repeated acquisitions do not increase the
+        count.
+      physical_plates_in_this_experiment: 3
+    timing:
+      date_last_saved_interpretation: Timestamp preserved from the reader export; not relabelled as acquisition
+        start.
+      initial_and_overnight_link: The same physical plates were read before and after the 23 C overnight incubation.
+      initial_incubation_protocol_id: initial_plate_incubation
+      incubation_protocol_id: configuration_temperature_sequence
+      same_plate_reused_across_incubation_steps: true
+    well_layout_note: Both row halves contain dye and represent different pH ranges. The recorded per-run reference
+      pH values apply to the linked readings.
+    calibration_quantities: [pH]
+    reference_sets_by_run:
+      - run_number: 1
+        reference_set_id: pH_configuration_run1
+      - run_number: 2
+        reference_set_id: pH_configuration_run2
+      - run_number: 3
+        reference_set_id: pH_configuration_run3
+    physical_plate_ids:
+      - pH_configuration_200uM_nonUV_run1
+      - pH_configuration_200uM_nonUV_run2
+      - pH_configuration_200uM_nonUV_run3
+  pH_configuration_23_C_nonUV_membrane:
+    title: pH configuration at 23 C, non_UV plate, gas-permeable membrane
+    preparation:
+      medium: H2SO4
+      standard_solute: sulfuric acid
+      declared_h2so4_M: null
+      plate_type: non_UV_transparent
+      condition_temperature_C: 23
+      temperature_description: Experimental condition temperature; actual reader temperature is recorded separately
+        for each export.
+      gas_permeable_membrane: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/membrane_breathe_easy"}
+      membrane_status: present
+      nominal_dyed_well_thymol_blue_uM: 10
+      thymol_blue_stock_uM: 200
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      dye_stock_protocol_id: thymol_blue_stock
+      calculated_dye_concentration_is_not_a_measurement: true
+      plate_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+      plate_catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3370"}
+    replication:
+      numbered_runs: 3
+      technical_wells_per_condition_per_run: 4
+      independent_standard_preparations: 3
+      physical_plate_identity_across_conditions: same_physical_plates_reused
+      standard_preparations_made_on_separate_days: true
+      standard_solutions_freshly_prepared_for_each_run: true
+      independent_preparation_count_scope: Within this standard series; repeated acquisitions do not increase the
+        count.
+      physical_plates_in_this_experiment: 3
+    timing:
+      date_last_saved_interpretation: Timestamp preserved from the reader export; not relabelled as acquisition
+        start.
+      initial_incubation_protocol_id: initial_plate_incubation
+      incubation_protocol_id: configuration_temperature_sequence
+      same_plate_reused_across_incubation_steps: true
+    well_layout_note: Both row halves contain dye and represent different pH ranges. The recorded per-run reference
+      pH values apply to the linked readings.
+    calibration_quantities: [pH]
+    reference_sets_by_run:
+      - run_number: 1
+        reference_set_id: pH_configuration_run1
+      - run_number: 2
+        reference_set_id: pH_configuration_run2
+      - run_number: 3
+        reference_set_id: pH_configuration_run3
+    physical_plate_ids:
+      - pH_configuration_200uM_nonUV_run1
+      - pH_configuration_200uM_nonUV_run2
+      - pH_configuration_200uM_nonUV_run3
+  pH_configuration_23_C_nonUV_spectrum:
+    title: pH configuration at 23 C, non_UV plate, spectra
+    preparation:
+      medium: H2SO4
+      standard_solute: sulfuric acid
+      declared_h2so4_M: null
+      plate_type: non_UV_transparent
+      condition_temperature_C: 23
+      temperature_description: Experimental condition temperature; actual reader temperature is recorded separately
+        for each export.
+      gas_permeable_membrane: null
+      membrane_status: absent
+      nominal_dyed_well_thymol_blue_uM: 10
+      thymol_blue_stock_uM: 200
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      dye_stock_protocol_id: thymol_blue_stock
+      calculated_dye_concentration_is_not_a_measurement: true
+      plate_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+      plate_catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3370"}
+    replication:
+      numbered_runs: 3
+      technical_wells_per_condition_per_run: 4
+      independent_standard_preparations: 3
+      physical_plate_identity_across_conditions: same_physical_plates_reused
+      standard_preparations_made_on_separate_days: true
+      standard_solutions_freshly_prepared_for_each_run: true
+      independent_preparation_count_scope: Within this standard series; repeated acquisitions do not increase the
+        count.
+      physical_plates_in_this_experiment: 3
+    timing:
+      date_last_saved_interpretation: Timestamp preserved from the reader export; not relabelled as acquisition
+        start.
+      initial_incubation_protocol_id: initial_plate_incubation
+      incubation_protocol_id: configuration_temperature_sequence
+      same_plate_reused_across_incubation_steps: true
+    well_layout_note: Both row halves contain dye and represent different pH ranges. The recorded per-run reference
+      pH values apply to the linked readings.
+    calibration_quantities: [pH]
+    reference_sets_by_run:
+      - run_number: 1
+        reference_set_id: pH_configuration_run1
+      - run_number: 2
+        reference_set_id: pH_configuration_run2
+      - run_number: 3
+        reference_set_id: pH_configuration_run3
+    physical_plate_ids:
+      - pH_configuration_200uM_nonUV_run1
+      - pH_configuration_200uM_nonUV_run2
+      - pH_configuration_200uM_nonUV_run3
+  pH_configuration_30_C_UV:
+    title: pH configuration at 30 C, UV plate
+    preparation:
+      medium: H2SO4
+      standard_solute: sulfuric acid
+      declared_h2so4_M: null
+      plate_type: UV_transparent
+      condition_temperature_C: 30
+      temperature_description: Experimental condition temperature; actual reader temperature is recorded separately
+        for each export.
+      gas_permeable_membrane: null
+      membrane_status: absent
+      nominal_dyed_well_thymol_blue_uM: 10
+      thymol_blue_stock_uM: 200
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      dye_stock_protocol_id: thymol_blue_stock
+      calculated_dye_concentration_is_not_a_measurement: true
+      plate_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+      plate_catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3635"}
+    replication:
+      numbered_runs: 3
+      technical_wells_per_condition_per_run: 4
+      independent_standard_preparations: 3
+      physical_plate_identity_across_conditions: same_physical_plates_reused
+      standard_preparations_made_on_separate_days: true
+      standard_solutions_freshly_prepared_for_each_run: true
+      independent_preparation_count_scope: Within this standard series; repeated acquisitions do not increase the
+        count.
+      physical_plates_in_this_experiment: 3
+    timing:
+      date_last_saved_interpretation: Timestamp preserved from the reader export; not relabelled as acquisition
+        start.
+      initial_incubation_protocol_id: initial_plate_incubation
+      incubation_protocol_id: configuration_temperature_sequence
+      same_plate_reused_across_incubation_steps: true
+    well_layout_note: Both row halves contain dye and represent different pH ranges. The recorded per-run reference
+      pH values apply to the linked readings.
+    calibration_quantities: [pH]
+    reference_sets_by_run:
+      - run_number: 1
+        reference_set_id: pH_configuration_run1
+      - run_number: 2
+        reference_set_id: pH_configuration_run2
+      - run_number: 3
+        reference_set_id: pH_configuration_run3
+    physical_plate_ids:
+      - pH_configuration_200uM_UV_run1
+      - pH_configuration_200uM_UV_run2
+      - pH_configuration_200uM_UV_run3
+  pH_configuration_30_C_nonUV:
+    title: pH configuration at 30 C, non_UV plate
+    preparation:
+      medium: H2SO4
+      standard_solute: sulfuric acid
+      declared_h2so4_M: null
+      plate_type: non_UV_transparent
+      condition_temperature_C: 30
+      temperature_description: Experimental condition temperature; actual reader temperature is recorded separately
+        for each export.
+      gas_permeable_membrane: null
+      membrane_status: absent
+      nominal_dyed_well_thymol_blue_uM: 10
+      thymol_blue_stock_uM: 200
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      dye_stock_protocol_id: thymol_blue_stock
+      calculated_dye_concentration_is_not_a_measurement: true
+      plate_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+      plate_catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3370"}
+    replication:
+      numbered_runs: 3
+      technical_wells_per_condition_per_run: 4
+      independent_standard_preparations: 3
+      physical_plate_identity_across_conditions: same_physical_plates_reused
+      standard_preparations_made_on_separate_days: true
+      standard_solutions_freshly_prepared_for_each_run: true
+      independent_preparation_count_scope: Within this standard series; repeated acquisitions do not increase the
+        count.
+      physical_plates_in_this_experiment: 3
+    timing:
+      date_last_saved_interpretation: Timestamp preserved from the reader export; not relabelled as acquisition
+        start.
+      initial_incubation_protocol_id: initial_plate_incubation
+      incubation_protocol_id: configuration_temperature_sequence
+      same_plate_reused_across_incubation_steps: true
+    well_layout_note: Both row halves contain dye and represent different pH ranges. The recorded per-run reference
+      pH values apply to the linked readings.
+    calibration_quantities: [pH]
+    reference_sets_by_run:
+      - run_number: 1
+        reference_set_id: pH_configuration_run1
+      - run_number: 2
+        reference_set_id: pH_configuration_run2
+      - run_number: 3
+        reference_set_id: pH_configuration_run3
+    physical_plate_ids:
+      - pH_configuration_200uM_nonUV_run1
+      - pH_configuration_200uM_nonUV_run2
+      - pH_configuration_200uM_nonUV_run3
+  pH_configuration_4_C_UV:
+    title: pH configuration at 4 C, UV plate
+    preparation:
+      medium: H2SO4
+      standard_solute: sulfuric acid
+      declared_h2so4_M: null
+      plate_type: UV_transparent
+      condition_temperature_C: 4
+      temperature_description: Experimental condition temperature; actual reader temperature is recorded separately
+        for each export.
+      gas_permeable_membrane: null
+      membrane_status: absent
+      nominal_dyed_well_thymol_blue_uM: 10
+      thymol_blue_stock_uM: 200
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      dye_stock_protocol_id: thymol_blue_stock
+      calculated_dye_concentration_is_not_a_measurement: true
+      plate_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+      plate_catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3635"}
+    replication:
+      numbered_runs: 3
+      technical_wells_per_condition_per_run: 4
+      independent_standard_preparations: 3
+      physical_plate_identity_across_conditions: same_physical_plates_reused
+      standard_preparations_made_on_separate_days: true
+      standard_solutions_freshly_prepared_for_each_run: true
+      independent_preparation_count_scope: Within this standard series; repeated acquisitions do not increase the
+        count.
+      physical_plates_in_this_experiment: 3
+    timing:
+      date_last_saved_interpretation: Timestamp preserved from the reader export; not relabelled as acquisition
+        start.
+      initial_incubation_protocol_id: initial_plate_incubation
+      incubation_protocol_id: configuration_temperature_sequence
+      same_plate_reused_across_incubation_steps: true
+    well_layout_note: Both row halves contain dye and represent different pH ranges. The recorded per-run reference
+      pH values apply to the linked readings.
+    calibration_quantities: [pH]
+    reference_sets_by_run:
+      - run_number: 1
+        reference_set_id: pH_configuration_run1
+      - run_number: 2
+        reference_set_id: pH_configuration_run2
+      - run_number: 3
+        reference_set_id: pH_configuration_run3
+    physical_plate_ids:
+      - pH_configuration_200uM_UV_run1
+      - pH_configuration_200uM_UV_run2
+      - pH_configuration_200uM_UV_run3
+  pH_configuration_4_C_nonUV:
+    title: pH configuration at 4 C, non_UV plate
+    preparation:
+      medium: H2SO4
+      standard_solute: sulfuric acid
+      declared_h2so4_M: null
+      plate_type: non_UV_transparent
+      condition_temperature_C: 4
+      temperature_description: Experimental condition temperature; actual reader temperature is recorded separately
+        for each export.
+      gas_permeable_membrane: null
+      membrane_status: absent
+      nominal_dyed_well_thymol_blue_uM: 10
+      thymol_blue_stock_uM: 200
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      dye_stock_protocol_id: thymol_blue_stock
+      calculated_dye_concentration_is_not_a_measurement: true
+      plate_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+      plate_catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3370"}
+    replication:
+      numbered_runs: 3
+      technical_wells_per_condition_per_run: 4
+      independent_standard_preparations: 3
+      physical_plate_identity_across_conditions: same_physical_plates_reused
+      standard_preparations_made_on_separate_days: true
+      standard_solutions_freshly_prepared_for_each_run: true
+      independent_preparation_count_scope: Within this standard series; repeated acquisitions do not increase the
+        count.
+      physical_plates_in_this_experiment: 3
+    timing:
+      date_last_saved_interpretation: Timestamp preserved from the reader export; not relabelled as acquisition
+        start.
+      initial_incubation_protocol_id: initial_plate_incubation
+      incubation_protocol_id: configuration_temperature_sequence
+      same_plate_reused_across_incubation_steps: true
+    well_layout_note: Both row halves contain dye and represent different pH ranges. The recorded per-run reference
+      pH values apply to the linked readings.
+    calibration_quantities: [pH]
+    reference_sets_by_run:
+      - run_number: 1
+        reference_set_id: pH_configuration_run1
+      - run_number: 2
+        reference_set_id: pH_configuration_run2
+      - run_number: 3
+        reference_set_id: pH_configuration_run3
+    physical_plate_ids:
+      - pH_configuration_200uM_nonUV_run1
+      - pH_configuration_200uM_nonUV_run2
+      - pH_configuration_200uM_nonUV_run3
+  pH_configuration_75_C_UV:
+    title: pH configuration at 75 C, UV plate
+    preparation:
+      medium: H2SO4
+      standard_solute: sulfuric acid
+      declared_h2so4_M: null
+      plate_type: UV_transparent
+      condition_temperature_C: 75
+      temperature_description: Experimental condition temperature; actual reader temperature is recorded separately
+        for each export.
+      gas_permeable_membrane: null
+      membrane_status: absent
+      nominal_dyed_well_thymol_blue_uM: 10
+      thymol_blue_stock_uM: 200
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      dye_stock_protocol_id: thymol_blue_stock
+      calculated_dye_concentration_is_not_a_measurement: true
+      plate_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+      plate_catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3635"}
+    replication:
+      numbered_runs: 3
+      technical_wells_per_condition_per_run: 4
+      independent_standard_preparations: 3
+      physical_plate_identity_across_conditions: same_physical_plates_reused
+      standard_preparations_made_on_separate_days: true
+      standard_solutions_freshly_prepared_for_each_run: true
+      independent_preparation_count_scope: Within this standard series; repeated acquisitions do not increase the
+        count.
+      physical_plates_in_this_experiment: 3
+    timing:
+      date_last_saved_interpretation: Timestamp preserved from the reader export; not relabelled as acquisition
+        start.
+      initial_incubation_protocol_id: initial_plate_incubation
+      incubation_protocol_id: configuration_temperature_sequence
+      same_plate_reused_across_incubation_steps: true
+    well_layout_note: Both row halves contain dye and represent different pH ranges. The recorded per-run reference
+      pH values apply to the linked readings.
+    calibration_quantities: [pH]
+    reference_sets_by_run:
+      - run_number: 1
+        reference_set_id: pH_configuration_run1
+      - run_number: 2
+        reference_set_id: pH_configuration_run2
+      - run_number: 3
+        reference_set_id: pH_configuration_run3
+    physical_plate_ids:
+      - pH_configuration_200uM_UV_run1
+      - pH_configuration_200uM_UV_run2
+      - pH_configuration_200uM_UV_run3
+  pH_configuration_75_C_nonUV:
+    title: pH configuration at 75 C, non_UV plate
+    preparation:
+      medium: H2SO4
+      standard_solute: sulfuric acid
+      declared_h2so4_M: null
+      plate_type: non_UV_transparent
+      condition_temperature_C: 75
+      temperature_description: Experimental condition temperature; actual reader temperature is recorded separately
+        for each export.
+      gas_permeable_membrane: null
+      membrane_status: absent
+      nominal_dyed_well_thymol_blue_uM: 10
+      thymol_blue_stock_uM: 200
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      dye_stock_protocol_id: thymol_blue_stock
+      calculated_dye_concentration_is_not_a_measurement: true
+      plate_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+      plate_catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3370"}
+    replication:
+      numbered_runs: 3
+      technical_wells_per_condition_per_run: 4
+      independent_standard_preparations: 3
+      physical_plate_identity_across_conditions: same_physical_plates_reused
+      standard_preparations_made_on_separate_days: true
+      standard_solutions_freshly_prepared_for_each_run: true
+      independent_preparation_count_scope: Within this standard series; repeated acquisitions do not increase the
+        count.
+      physical_plates_in_this_experiment: 3
+    timing:
+      date_last_saved_interpretation: Timestamp preserved from the reader export; not relabelled as acquisition
+        start.
+      initial_incubation_protocol_id: initial_plate_incubation
+      incubation_protocol_id: configuration_temperature_sequence
+      same_plate_reused_across_incubation_steps: true
+    well_layout_note: Both row halves contain dye and represent different pH ranges. The recorded per-run reference
+      pH values apply to the linked readings.
+    calibration_quantities: [pH]
+    reference_sets_by_run:
+      - run_number: 1
+        reference_set_id: pH_configuration_run1
+      - run_number: 2
+        reference_set_id: pH_configuration_run2
+      - run_number: 3
+        reference_set_id: pH_configuration_run3
+    physical_plate_ids:
+      - pH_configuration_200uM_nonUV_run1
+      - pH_configuration_200uM_nonUV_run2
+      - pH_configuration_200uM_nonUV_run3
+  pH_UV_20uM_stock_initial_and_spectra:
+    title: 'Initial thymol-blue calibration in UV-transparent plates: 20 uM dye stock, endpoints and spectra'
+    preparation:
+      medium: sulfuric_acid
+      species: none
+      incubation_temperature_C: 23
+      acid_solution_uL: 200
+      recipe_basis: 200 uL acid standard plus 10 uL dye solution; the dye-stock concentration is specified for this
+        experiment.
+      all_wells_contain_dye: true
+      plate_type: UV_transparent
+      thymol_blue_stock_uM: 20
+      nominal_dyed_well_thymol_blue_uM: 1
+      calculated_dyed_well_thymol_blue_uM: 0.9523809523809523
+      dye_added_to_dyed_wells_uL: 10
+      condition_temperature_C: 23
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      dye_stock_protocol_id: thymol_blue_stock
+      calculated_dye_concentration_is_not_a_measurement: true
+      plate_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+      plate_catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3635"}
+      gas_permeable_membrane: null
+      membrane_status: absent
+    layout:
+      rows: [A, B, C, D, E, F, G, H]
+      columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      technical_wells_per_level: 4
+      row_blocks_A_D_and_E_H_are_different_pH_ranges_not_dye_states: true
+    mapping_provenance:
+      status: same_plate_for_matched_initial_endpoint_and_spectrum
+      evidence:
+        - Endpoint and spectrum acquisitions were performed on the same prepared plate; the corresponding records
+          share a physical_plate_id.
+      pH_is_not_remeasured_at_each_acquisition: true
+      do_not_average_runs_as_if_pH_grids_were_identical: true
+      do_not_assume_20_and_200_stock_exports_are_the_same_physical_plate: true
+      reference_assignment: Use the explicit reference_sets_by_run entries in this experiment; those reference sets
+        are included in this file.
+    replication:
+      numbered_runs: 3
+      technical_wells_per_pH_level: 4
+      independent_standard_preparations: 3
+      standard_preparations_made_on_separate_days: true
+      standard_solutions_freshly_prepared_for_each_run: true
+      independent_preparation_count_scope: Within this standard series; repeated acquisitions do not increase the
+        count.
+      physical_plates_in_this_experiment: 3
+      physical_plate_identity_across_conditions: same_plate_for_initial_endpoint_and_spectrum
+      preparation_independence_between_dye_stock_series: Not established by matching run labels; do not count the
+        two dye-stock series as six independent acid preparations.
+    readout_notes:
+      - Endpoint wavelengths are 380, 428, 430, 485, 545 and 750 nm.
+      - Spectrum run 1 spans 200-700 nm; runs 2 and 3 span 200-750 nm, in 10 nm steps.
+      - The spectra omit 485 and 545 nm; do not report their ratio as directly measured in these scans.
+      - Date Last Saved is preserved as the source timestamp; it is not relabelled as acquisition start.
+    reference_sets_by_run:
+      - run_number: 1
+        reference_set_id: pH_configuration_run1
+      - run_number: 2
+        reference_set_id: pH_configuration_run2
+      - run_number: 3
+        reference_set_id: pH_configuration_run3
+    well_layout_note: Both row halves contain dye and represent different pH ranges. The recorded per-run reference
+      pH values apply to the linked readings.
+    timing:
+      initial_incubation_protocol_id: initial_plate_incubation
+    physical_plate_ids:
+      - pH_initial_20uM_UV_run1
+      - pH_initial_20uM_UV_run2
+      - pH_initial_20uM_UV_run3
+  pH_UV_200uM_stock_initial_spectra:
+    title: 'Initial thymol-blue calibration in UV-transparent plates: 200 uM dye stock, spectra'
+    preparation:
+      medium: sulfuric_acid
+      species: none
+      incubation_temperature_C: 23
+      acid_solution_uL: 200
+      recipe_basis: 200 uL acid standard plus 10 uL dye solution; the dye-stock concentration is specified for this
+        experiment.
+      all_wells_contain_dye: true
+      plate_type: UV_transparent
+      thymol_blue_stock_uM: 200
+      nominal_dyed_well_thymol_blue_uM: 10
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      condition_temperature_C: 23
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      dye_stock_protocol_id: thymol_blue_stock
+      calculated_dye_concentration_is_not_a_measurement: true
+      plate_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_corning"}
+      plate_catalog_number: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/catalog_number_3635"}
+      gas_permeable_membrane: null
+      membrane_status: absent
+    layout:
+      rows: [A, B, C, D, E, F, G, H]
+      columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      technical_wells_per_level: 4
+      row_blocks_A_D_and_E_H_are_different_pH_ranges_not_dye_states: true
+    mapping_provenance:
+      status: same_plate_for_matched_initial_endpoint_and_spectrum
+      evidence:
+        - Endpoint and spectrum acquisitions were performed on the same prepared plate; the corresponding records
+          share a physical_plate_id.
+      pH_is_not_remeasured_at_each_acquisition: true
+      do_not_average_runs_as_if_pH_grids_were_identical: true
+      do_not_assume_20_and_200_stock_exports_are_the_same_physical_plate: true
+      reference_assignment: Use the explicit reference_sets_by_run entries in this experiment; those reference sets
+        are included in this file.
+    replication:
+      numbered_runs: 3
+      technical_wells_per_pH_level: 4
+      independent_standard_preparations: 3
+      standard_preparations_made_on_separate_days: true
+      standard_solutions_freshly_prepared_for_each_run: true
+      independent_preparation_count_scope: Within this standard series; repeated acquisitions do not increase the
+        count.
+      physical_plates_in_this_experiment: 3
+      physical_plate_identity_across_conditions: same_physical_plates_reused
+    readout_notes:
+      - Endpoint wavelengths are 380, 428, 430, 485, 545 and 750 nm.
+      - Spectrum run 1 spans 200-700 nm; runs 2 and 3 span 200-750 nm, in 10 nm steps.
+      - The spectra omit 485 and 545 nm; do not report their ratio as directly measured in these scans.
+      - Date Last Saved is preserved as the source timestamp; it is not relabelled as acquisition start.
+    reference_sets_by_run:
+      - run_number: 1
+        reference_set_id: pH_configuration_run1
+      - run_number: 2
+        reference_set_id: pH_configuration_run2
+      - run_number: 3
+        reference_set_id: pH_configuration_run3
+    well_layout_note: Both row halves contain dye and represent different pH ranges. The recorded per-run reference
+      pH values apply to the linked readings.
+    timing:
+      initial_incubation_protocol_id: initial_plate_incubation
+      incubation_protocol_id: configuration_temperature_sequence
+      same_plate_reused_across_incubation_steps: true
+    physical_plate_ids:
+      - pH_configuration_200uM_UV_run1
+      - pH_configuration_200uM_UV_run2
+      - pH_configuration_200uM_UV_run3
+  final_indicator_acid:
+    title: 'pH standard spectra and storage series: both dye states'
+    preparation:
+      thymol_blue_stock_uM: 200
+      calculated_dye_concentration_is_not_a_measurement: true
+      incubation_temperature_C: 23
+      incubation_temperature_precision: approximate
+      storage_lid_state: present
+      endpoint_measurement_lid_state: absent
+      spectral_measurement_lid_state: absent
+      intentional_well_modification: false
+      reported_spills: false
+      plate_type: non_UV_transparent
+      nominal_dyed_well_thymol_blue_uM: 10
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      condition_temperature_C: 23
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_state: absent
+      storage_lid_details:
+        lid_type: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/lid_type_low_evaporation"}
+        use: storage_between_time_course_measurements
+        removed_for_time_course_measurements: true
+      dye_stock_protocol_id: thymol_blue_stock
+    replication:
+      independent_standard_preparations: 3
+      physical_plates: 3
+      technical_plates_per_preparation: 1
+      technical_wells_per_plate_per_condition: 4
+    timing:
+      timestamp_field: Date Last Saved
+      timestamp_interpretation: owner_confirmed_actual_measurement_time_for_final_series
+      timezone: null
+      timezone_status: unknown_to_experimenter
+      preparation_timestamp: null
+      endpoint_suffix: sequential_reading_index_not_days
+      time_zero: first_endpoint_export_of_each_physical_plate
+      spectra_share_corresponding_physical_endpoint_plates: true
+      spectrum_endpoint_link_status: owner_confirmed
+      spectra_may_precede_first_endpoint: true
+      initial_incubation_protocol_id: initial_plate_incubation
+      initial_incubation_applies_to: The first measurement after preparation; later storage readings
+        retain their recorded timestamps.
+    quality_notes:
+      - 'Retain numerical absorbance, explicit OVER/OVERFLW/*** tokens and #ERR flags.'
+      - A numeric value at or above 4 AU is an analysis ceiling flag, not a replacement for the original value.
+      - Do not assign reference-replicate numbers to optical-plate numbers.
+      - Retain acid plate 3 well A5; unusually high initial readings require a sensitivity flag, not replacement.
+    availability:
+      endpoint_read_indices:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+      spectra_available: true
+    readout:
+      endpoint_wavelengths_nm: [380, 428, 430, 485, 545, 750]
+      spectrum_grid_nm:
+        first: 200
+        last: 750
+        step: 10
+      spectrum_grid_note: Only when spectra_available is true; no interpolation to 485 or 545 nm.
+      spectrum_ratios_at_545_485_are_not_direct_measurements: true
+    reference_set_id: final_indicator_acid_standards
+    physical_plate_ids:
+      - final_indicator_acid_plate1
+      - final_indicator_acid_plate2
+      - final_indicator_acid_plate3
+readouts:
+  absorbance_endpoint_380_428_430_485_545_750:
+    reader_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_manufacturer_molecular_devices"}
+    reader_model: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_model_spectramax_m2"}
+    reader_identity_basis: confirmed_by_experimenter
+    measurement_mode: endpoint
+    wavelengths_nm: [380, 428, 430, 485, 545, 750]
+  absorbance_spectrum_200_700_step10:
+    reader_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_manufacturer_molecular_devices"}
+    reader_model: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_model_spectramax_m2"}
+    reader_identity_basis: confirmed_by_experimenter
+    measurement_mode: spectrum
+    first_wavelength_nm: 200
+    last_wavelength_nm: 700
+    wavelength_step_nm: 10
+  absorbance_spectrum_200_750_step10:
+    reader_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_manufacturer_molecular_devices"}
+    reader_model: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_model_spectramax_m2"}
+    reader_identity_basis: confirmed_by_experimenter
+    measurement_mode: spectrum
+    first_wavelength_nm: 200
+    last_wavelength_nm: 750
+    wavelength_step_nm: 10
+acquisitions:
+  - source_filename: HTThymol-UV-200-23C-1.xls
+    experiment_id: pH_configuration_23_C_UV
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_UV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: initial
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-09T17:16:42'
+    reader_temperature_C: 21.4
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: initial_23_C
+    incubation_step_order: 1
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-23OVN-1-Nolid.xls
+    experiment_id: pH_configuration_23_C_UV
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_UV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: overnight
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T12:00:25'
+    reader_temperature_C: 21.7
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: overnight_23_C
+    incubation_step_order: 5
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-23C-2.xls
+    experiment_id: pH_configuration_23_C_UV
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_UV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: initial
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T13:58:54'
+    reader_temperature_C: 21.7
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: initial_23_C
+    incubation_step_order: 1
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-23OVN-2-nolid.xls
+    experiment_id: pH_configuration_23_C_UV
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_UV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: overnight
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-11T14:01:24'
+    reader_temperature_C: 23.0
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: overnight_23_C
+    incubation_step_order: 5
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-23C-3.xls
+    experiment_id: pH_configuration_23_C_UV
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_UV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: initial
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-11T12:23:03'
+    reader_temperature_C: 22.3
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: initial_23_C
+    incubation_step_order: 1
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-23OVN-3-NoLid.xls
+    experiment_id: pH_configuration_23_C_UV
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_UV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: overnight
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-12T14:29:47'
+    reader_temperature_C: 22.4
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: overnight_23_C
+    incubation_step_order: 5
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-23OVN-1-Membrane.xls
+    experiment_id: pH_configuration_23_C_UV_membrane
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_UV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: overnight_with_membrane
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T12:08:02'
+    reader_temperature_C: 21.5
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: membrane_23_C
+    incubation_step_order: 6
+    gas_exchange_membrane_present: true
+  - source_filename: HTThymol-UV-200-23OVN-2-Membrane.xls
+    experiment_id: pH_configuration_23_C_UV_membrane
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_UV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: overnight_with_membrane
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-11T14:09:13'
+    reader_temperature_C: 22.8
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: membrane_23_C
+    incubation_step_order: 6
+    gas_exchange_membrane_present: true
+  - source_filename: HTThymol-UV-200-23OVN-3-Membrane.xls
+    experiment_id: pH_configuration_23_C_UV_membrane
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_UV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: overnight_with_membrane
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-12T14:39:06'
+    reader_temperature_C: 22.1
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: membrane_23_C
+    incubation_step_order: 6
+    gas_exchange_membrane_present: true
+  - source_filename: HTThymol-NonUV-200-23C-1.xls
+    experiment_id: pH_configuration_23_C_nonUV
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_nonUV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: initial
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-09T17:20:10'
+    reader_temperature_C: 21.3
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: initial_23_C
+    incubation_step_order: 1
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-23OVN-1-NoLid.xls
+    experiment_id: pH_configuration_23_C_nonUV
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_nonUV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: overnight
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T12:11:33'
+    reader_temperature_C: 21.5
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: overnight_23_C
+    incubation_step_order: 5
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-23C-2.xls
+    experiment_id: pH_configuration_23_C_nonUV
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_nonUV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: initial
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T14:02:12'
+    reader_temperature_C: 21.6
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: initial_23_C
+    incubation_step_order: 1
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-23OVN-2-NoLid.xls
+    experiment_id: pH_configuration_23_C_nonUV
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_nonUV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: overnight
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-11T14:05:52'
+    reader_temperature_C: 22.9
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: overnight_23_C
+    incubation_step_order: 5
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-23C-3.xls
+    experiment_id: pH_configuration_23_C_nonUV
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_nonUV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: initial
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-11T12:20:00'
+    reader_temperature_C: 22.5
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: initial_23_C
+    incubation_step_order: 1
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-23OVN-3-NoLid.xls
+    experiment_id: pH_configuration_23_C_nonUV
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_nonUV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: overnight
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-12T14:26:32'
+    reader_temperature_C: 22.5
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: overnight_23_C
+    incubation_step_order: 5
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-23OVN-1-Membrane.xls
+    experiment_id: pH_configuration_23_C_nonUV_membrane
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_nonUV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: overnight_with_membrane
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T12:18:57'
+    reader_temperature_C: 21.5
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: membrane_23_C
+    incubation_step_order: 6
+    gas_exchange_membrane_present: true
+  - source_filename: HTThymol-NonUV-200-23OVN-2-Membrane.xls
+    experiment_id: pH_configuration_23_C_nonUV_membrane
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_nonUV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: overnight_with_membrane
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-11T14:12:37'
+    reader_temperature_C: 22.7
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: membrane_23_C
+    incubation_step_order: 6
+    gas_exchange_membrane_present: true
+  - source_filename: HTThymol-NonUV-200-23OVN-3-Membrane.xls
+    experiment_id: pH_configuration_23_C_nonUV_membrane
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_nonUV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: overnight_with_membrane
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-12T14:35:50'
+    reader_temperature_C: 22.1
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: membrane_23_C
+    incubation_step_order: 6
+    gas_exchange_membrane_present: true
+  - source_filename: HTThymol-NonUV-200-23C-SPECTRUM-1.xls
+    experiment_id: pH_configuration_23_C_nonUV_spectrum
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_nonUV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: spectrum
+    readout_id: absorbance_spectrum_200_700_step10
+    date_last_saved: '2025-12-09T18:05:25'
+    reader_temperature_C: 21.0
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: initial_23_C
+    incubation_step_order: 1
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-23C-SPECTRUM-2.xls
+    experiment_id: pH_configuration_23_C_nonUV_spectrum
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_nonUV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: spectrum
+    readout_id: absorbance_spectrum_200_750_step10
+    date_last_saved: '2025-12-10T14:51:17'
+    reader_temperature_C: 21.2
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: initial_23_C
+    incubation_step_order: 1
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-23C-SPECTRUM-3.xls
+    experiment_id: pH_configuration_23_C_nonUV_spectrum
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_nonUV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: spectrum
+    readout_id: absorbance_spectrum_200_750_step10
+    date_last_saved: '2025-12-11T13:14:45'
+    reader_temperature_C: 22.4
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: initial_23_C
+    incubation_step_order: 1
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-30C-1.xls
+    experiment_id: pH_configuration_30_C_UV
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_UV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-09T22:29:10'
+    reader_temperature_C: 21.5
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_30_C
+    incubation_step_order: 3
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-30C-2.xls
+    experiment_id: pH_configuration_30_C_UV
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_UV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T19:17:32'
+    reader_temperature_C: 22.5
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_30_C
+    incubation_step_order: 3
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-30C-3.xls
+    experiment_id: pH_configuration_30_C_UV
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_UV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-11T17:15:39'
+    reader_temperature_C: 22.2
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_30_C
+    incubation_step_order: 3
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-30C-1.xls
+    experiment_id: pH_configuration_30_C_nonUV
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_nonUV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-09T22:25:52'
+    reader_temperature_C: 21.6
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_30_C
+    incubation_step_order: 3
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-30C-2.xls
+    experiment_id: pH_configuration_30_C_nonUV
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_nonUV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T19:22:41'
+    reader_temperature_C: 22.4
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_30_C
+    incubation_step_order: 3
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-nonUV-200-30C-3.xls
+    experiment_id: pH_configuration_30_C_nonUV
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_nonUV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-11T17:12:25'
+    reader_temperature_C: 22.3
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_30_C
+    incubation_step_order: 3
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-4C-1.xls
+    experiment_id: pH_configuration_4_C_UV
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_UV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-09T20:12:25'
+    reader_temperature_C: 22.3
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_4_C
+    incubation_step_order: 2
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-4C-2.xls
+    experiment_id: pH_configuration_4_C_UV
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_UV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T17:12:39'
+    reader_temperature_C: 21.9
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_4_C
+    incubation_step_order: 2
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-4C-3.xls
+    experiment_id: pH_configuration_4_C_UV
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_UV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-11T15:18:19'
+    reader_temperature_C: 22.6
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_4_C
+    incubation_step_order: 2
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-4C-1.xls
+    experiment_id: pH_configuration_4_C_nonUV
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_nonUV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-09T20:15:54'
+    reader_temperature_C: 22.2
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_4_C
+    incubation_step_order: 2
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-4C-2.xls
+    experiment_id: pH_configuration_4_C_nonUV
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_nonUV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T17:09:23'
+    reader_temperature_C: 22.0
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_4_C
+    incubation_step_order: 2
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-4C-3.xls
+    experiment_id: pH_configuration_4_C_nonUV
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_nonUV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-11T15:21:28'
+    reader_temperature_C: 22.5
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_4_C
+    incubation_step_order: 2
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-75-1.xls
+    experiment_id: pH_configuration_75_C_UV
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_UV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T00:33:47'
+    reader_temperature_C: 21.6
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_75_C
+    incubation_step_order: 4
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-75-2.xls
+    experiment_id: pH_configuration_75_C_UV
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_UV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T21:31:43'
+    reader_temperature_C: 22.0
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_75_C
+    incubation_step_order: 4
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-75-3.xls
+    experiment_id: pH_configuration_75_C_UV
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_UV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-11T19:22:26'
+    reader_temperature_C: 22.6
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_75_C
+    incubation_step_order: 4
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-75-1.xls
+    experiment_id: pH_configuration_75_C_nonUV
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_nonUV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T00:37:12'
+    reader_temperature_C: 21.6
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_75_C
+    incubation_step_order: 4
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUv-200-75-2.xls
+    experiment_id: pH_configuration_75_C_nonUV
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_nonUV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T21:28:40'
+    reader_temperature_C: 21.9
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_75_C
+    incubation_step_order: 4
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-NonUV-200-75-3.xls
+    experiment_id: pH_configuration_75_C_nonUV
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_nonUV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: after_temperature_incubation
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-11T19:25:52'
+    reader_temperature_C: 22.7
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: incubation_75_C
+    incubation_step_order: 4
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-20-23C-1-Spectrum.xls
+    experiment_id: pH_UV_20uM_stock_initial_and_spectra
+    run_number: 1
+    physical_plate_id: pH_initial_20uM_UV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: spectrum
+    readout_id: absorbance_spectrum_200_700_step10
+    date_last_saved: '2025-12-09T18:26:07'
+    reader_temperature_C: 21.3
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    physical_plate_identity_status: assigned_from_experimental_design
+    associated_endpoint_file: HTThymol-UV-20-23C-1.xls
+    measurement_lid_state: absent
+    initial_incubation_protocol_id: initial_plate_incubation
+  - source_filename: HTThymol-UV-20-23C-1.xls
+    experiment_id: pH_UV_20uM_stock_initial_and_spectra
+    run_number: 1
+    physical_plate_id: pH_initial_20uM_UV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-09T17:23:33'
+    reader_temperature_C: 21.2
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    physical_plate_identity_status: assigned_from_experimental_design
+    associated_endpoint_file: HTThymol-UV-20-23C-1.xls
+    measurement_lid_state: absent
+    initial_incubation_protocol_id: initial_plate_incubation
+  - source_filename: HTThymol-UV-20-23C-2-SPECTRUM.xls
+    experiment_id: pH_UV_20uM_stock_initial_and_spectra
+    run_number: 2
+    physical_plate_id: pH_initial_20uM_UV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: spectrum
+    readout_id: absorbance_spectrum_200_750_step10
+    date_last_saved: '2025-12-10T15:18:26'
+    reader_temperature_C: 21.6
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    physical_plate_identity_status: assigned_from_experimental_design
+    associated_endpoint_file: HTThymol-UV-20-23c-2.xls
+    measurement_lid_state: absent
+    initial_incubation_protocol_id: initial_plate_incubation
+  - source_filename: HTThymol-UV-20-23c-2.xls
+    experiment_id: pH_UV_20uM_stock_initial_and_spectra
+    run_number: 2
+    physical_plate_id: pH_initial_20uM_UV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-10T14:05:38'
+    reader_temperature_C: 21.4
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    physical_plate_identity_status: assigned_from_experimental_design
+    associated_endpoint_file: HTThymol-UV-20-23c-2.xls
+    measurement_lid_state: absent
+    initial_incubation_protocol_id: initial_plate_incubation
+  - source_filename: HTThymol-UV-20-23C-3-SPECTRUM.xls
+    experiment_id: pH_UV_20uM_stock_initial_and_spectra
+    run_number: 3
+    physical_plate_id: pH_initial_20uM_UV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: spectrum
+    readout_id: absorbance_spectrum_200_750_step10
+    date_last_saved: '2025-12-11T13:55:51'
+    reader_temperature_C: 22.3
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    physical_plate_identity_status: assigned_from_experimental_design
+    associated_endpoint_file: HTThymol-UV-20-23C-3.xls
+    measurement_lid_state: absent
+    initial_incubation_protocol_id: initial_plate_incubation
+  - source_filename: HTThymol-UV-20-23C-3.xls
+    experiment_id: pH_UV_20uM_stock_initial_and_spectra
+    run_number: 3
+    physical_plate_id: pH_initial_20uM_UV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2025-12-11T13:18:29'
+    reader_temperature_C: 22.2
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    physical_plate_identity_status: assigned_from_experimental_design
+    associated_endpoint_file: HTThymol-UV-20-23C-3.xls
+    measurement_lid_state: absent
+    initial_incubation_protocol_id: initial_plate_incubation
+  - source_filename: HTThymol-UV-200-23C-SPECTRUM-1.xls
+    experiment_id: pH_UV_200uM_stock_initial_spectra
+    run_number: 1
+    physical_plate_id: pH_configuration_200uM_UV_run1
+    reference_set_id: pH_configuration_run1
+    reading_label: spectrum
+    readout_id: absorbance_spectrum_200_700_step10
+    date_last_saved: '2025-12-09T17:44:48'
+    reader_temperature_C: 21.1
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    physical_plate_identity_status: assigned_from_experimental_design
+    associated_endpoint_file: HTThymol-UV-200-23C-1.xls
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: initial_23_C
+    incubation_step_order: 1
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-23C-SPECTRUM-2.xls
+    experiment_id: pH_UV_200uM_stock_initial_spectra
+    run_number: 2
+    physical_plate_id: pH_configuration_200uM_UV_run2
+    reference_set_id: pH_configuration_run2
+    reading_label: spectrum
+    readout_id: absorbance_spectrum_200_750_step10
+    date_last_saved: '2025-12-10T14:28:16'
+    reader_temperature_C: 21.3
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    physical_plate_identity_status: assigned_from_experimental_design
+    associated_endpoint_file: HTThymol-UV-200-23C-2.xls
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: initial_23_C
+    incubation_step_order: 1
+    gas_exchange_membrane_present: false
+  - source_filename: HTThymol-UV-200-23C-SPECTRUM-3.xls
+    experiment_id: pH_UV_200uM_stock_initial_spectra
+    run_number: 3
+    physical_plate_id: pH_configuration_200uM_UV_run3
+    reference_set_id: pH_configuration_run3
+    reading_label: spectrum
+    readout_id: absorbance_spectrum_200_750_step10
+    date_last_saved: '2025-12-11T12:45:09'
+    reader_temperature_C: 22.2
+    plate_association_status: same_physical_plate_as_recorded_in_experimental_design
+    physical_plate_identity_status: assigned_from_experimental_design
+    associated_endpoint_file: HTThymol-UV-200-23C-3.xls
+    measurement_lid_state: absent
+    incubation_protocol_id: configuration_temperature_sequence
+    incubation_step_id: initial_23_C
+    incubation_step_order: 1
+    gas_exchange_membrane_present: false
+  - source_filename: acid-final-plate1-0.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-12T12:24:19'
+    reader_temperature_C: 24.6
+    plate_association_status: owner_confirmed
+    read_index: 0
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-1.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-12T22:25:07'
+    reader_temperature_C: 24.7
+    plate_association_status: owner_confirmed
+    read_index: 1
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-2.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-13T13:25:32'
+    reader_temperature_C: 24.6
+    plate_association_status: owner_confirmed
+    read_index: 2
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-3.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-13T21:32:16'
+    reader_temperature_C: 24.8
+    plate_association_status: owner_confirmed
+    read_index: 3
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-4.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-14T13:12:04'
+    reader_temperature_C: 24.9
+    plate_association_status: owner_confirmed
+    read_index: 4
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-5.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-15T11:11:50'
+    reader_temperature_C: 24.8
+    plate_association_status: owner_confirmed
+    read_index: 5
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-6.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-16T16:57:52'
+    reader_temperature_C: 25.1
+    plate_association_status: owner_confirmed
+    read_index: 6
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-7.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-17T09:31:25'
+    reader_temperature_C: 25.5
+    plate_association_status: owner_confirmed
+    read_index: 7
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-8.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-20T15:28:19'
+    reader_temperature_C: 24.5
+    plate_association_status: owner_confirmed
+    read_index: 8
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-9.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-21T15:19:35'
+    reader_temperature_C: 24.0
+    plate_association_status: owner_confirmed
+    read_index: 9
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-10.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-22T18:28:00'
+    reader_temperature_C: 24.1
+    plate_association_status: owner_confirmed
+    read_index: 10
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-11.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-23T11:51:27'
+    reader_temperature_C: 24.4
+    plate_association_status: owner_confirmed
+    read_index: 11
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-12.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-25T15:18:24'
+    reader_temperature_C: 24.1
+    plate_association_status: owner_confirmed
+    read_index: 12
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-13.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-26T14:50:32'
+    reader_temperature_C: 24.6
+    plate_association_status: owner_confirmed
+    read_index: 13
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate1-14.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-27T15:19:05'
+    reader_temperature_C: 24.5
+    plate_association_status: owner_confirmed
+    read_index: 14
+    measurement_lid_state: absent
+  - source_filename: acid-final-SPECTRA-plate1.xls
+    experiment_id: final_indicator_acid
+    run_number: 1
+    physical_plate_id: final_indicator_acid_plate1
+    reference_set_id: final_indicator_acid_standards
+    reading_label: spectrum
+    readout_id: absorbance_spectrum_200_750_step10
+    date_last_saved: '2026-07-12T12:52:44'
+    reader_temperature_C: 24.1
+    plate_association_status: owner_confirmed
+    read_index: null
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-0.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-12T12:27:19'
+    reader_temperature_C: 24.4
+    plate_association_status: owner_confirmed
+    read_index: 0
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-1.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-12T22:28:18'
+    reader_temperature_C: 24.5
+    plate_association_status: owner_confirmed
+    read_index: 1
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-2.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-13T13:29:13'
+    reader_temperature_C: 24.4
+    plate_association_status: owner_confirmed
+    read_index: 2
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-3.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-13T21:35:19'
+    reader_temperature_C: 24.6
+    plate_association_status: owner_confirmed
+    read_index: 3
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-4.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-14T13:15:03'
+    reader_temperature_C: 24.8
+    plate_association_status: owner_confirmed
+    read_index: 4
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-5.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-15T11:15:34'
+    reader_temperature_C: 24.6
+    plate_association_status: owner_confirmed
+    read_index: 5
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-6.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-16T17:01:07'
+    reader_temperature_C: 24.9
+    plate_association_status: owner_confirmed
+    read_index: 6
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-7.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-17T09:35:45'
+    reader_temperature_C: 25.0
+    plate_association_status: owner_confirmed
+    read_index: 7
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-8.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-20T15:35:14'
+    reader_temperature_C: 24.5
+    plate_association_status: owner_confirmed
+    read_index: 8
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-9.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-21T15:35:59'
+    reader_temperature_C: 23.9
+    plate_association_status: owner_confirmed
+    read_index: 9
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-10.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-22T18:31:35'
+    reader_temperature_C: 24.0
+    plate_association_status: owner_confirmed
+    read_index: 10
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-11.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-23T11:55:42'
+    reader_temperature_C: 24.4
+    plate_association_status: owner_confirmed
+    read_index: 11
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-12.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-25T15:21:47'
+    reader_temperature_C: 24.0
+    plate_association_status: owner_confirmed
+    read_index: 12
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-13.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-26T14:54:50'
+    reader_temperature_C: 24.4
+    plate_association_status: owner_confirmed
+    read_index: 13
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate2-14.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-27T15:23:19'
+    reader_temperature_C: 24.2
+    plate_association_status: owner_confirmed
+    read_index: 14
+    measurement_lid_state: absent
+  - source_filename: acid-final-SPECTRA-plate2.xls
+    experiment_id: final_indicator_acid
+    run_number: 2
+    physical_plate_id: final_indicator_acid_plate2
+    reference_set_id: final_indicator_acid_standards
+    reading_label: spectrum
+    readout_id: absorbance_spectrum_200_750_step10
+    date_last_saved: '2026-07-12T13:27:32'
+    reader_temperature_C: 23.8
+    plate_association_status: owner_confirmed
+    read_index: null
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-0.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-12T12:30:19'
+    reader_temperature_C: 24.2
+    plate_association_status: owner_confirmed
+    read_index: 0
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-1.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-12T22:49:09'
+    reader_temperature_C: 24.3
+    plate_association_status: owner_confirmed
+    read_index: 1
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-2.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-13T13:32:36'
+    reader_temperature_C: 24.2
+    plate_association_status: owner_confirmed
+    read_index: 2
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-3.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-13T21:38:26'
+    reader_temperature_C: 24.4
+    plate_association_status: owner_confirmed
+    read_index: 3
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-4.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-14T13:18:07'
+    reader_temperature_C: 24.6
+    plate_association_status: owner_confirmed
+    read_index: 4
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-5.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-15T11:19:16'
+    reader_temperature_C: 24.5
+    plate_association_status: owner_confirmed
+    read_index: 5
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-6.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-16T17:04:18'
+    reader_temperature_C: 24.7
+    plate_association_status: owner_confirmed
+    read_index: 6
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-7.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-17T09:39:08'
+    reader_temperature_C: 24.8
+    plate_association_status: owner_confirmed
+    read_index: 7
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-8.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-20T15:39:00'
+    reader_temperature_C: 24.3
+    plate_association_status: owner_confirmed
+    read_index: 8
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-9.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-21T15:39:08'
+    reader_temperature_C: 24.1
+    plate_association_status: owner_confirmed
+    read_index: 9
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-10.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-22T18:34:45'
+    reader_temperature_C: 24.0
+    plate_association_status: owner_confirmed
+    read_index: 10
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-11.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-23T11:58:48'
+    reader_temperature_C: 24.3
+    plate_association_status: owner_confirmed
+    read_index: 11
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-12.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-25T15:25:36'
+    reader_temperature_C: 23.9
+    plate_association_status: owner_confirmed
+    read_index: 12
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-13.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-26T14:58:46'
+    reader_temperature_C: 24.2
+    plate_association_status: owner_confirmed
+    read_index: 13
+    measurement_lid_state: absent
+  - source_filename: acid-final-plate3-14.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: endpoint
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    date_last_saved: '2026-07-27T15:26:37'
+    reader_temperature_C: 24.1
+    plate_association_status: owner_confirmed
+    read_index: 14
+    measurement_lid_state: absent
+  - source_filename: acid-final-SPECTRA-plate3.xls
+    experiment_id: final_indicator_acid
+    run_number: 3
+    physical_plate_id: final_indicator_acid_plate3
+    reference_set_id: final_indicator_acid_standards
+    reading_label: spectrum
+    readout_id: absorbance_spectrum_200_750_step10
+    date_last_saved: '2026-07-12T13:53:14'
+    reader_temperature_C: 24.8
+    plate_association_status: owner_confirmed
+    read_index: null
+    measurement_lid_state: absent
+curation_notes:
+  - The pH standard spectra and storage experiment includes 45 endpoint exports and three spectra from three
+    non-UV-transparent plates, with both dye states.
+  - The initial UV 20 uM dye-stock experiment has a nominal final dye concentration of 1 uM; the calculated value
+    is stated in its preparation metadata.
+  - Exact source filenames retain their capitalization. No filenames are reconstructed from factor labels.
+  - All observations are abiotic absorbance measurements. No measurements are excluded by this metadata.
+  - The three initial reference pH grids differ and are reused across readings of the corresponding preparation
+    run. pH was not remeasured at every optical acquisition.
+  - The 20 uM and 200 uM dye-stock experiments used separate physical plates. The 200 uM UV and non-UV plates were
+    reused across the configuration sequence.

@@ -1,0 +1,65 @@
+schema_version: '1.0'
+document_type: study_strain_inventory
+title: Strains used in this study
+reading_guide:
+  sources: Paths are repository-root relative.
+  culture_collections: ATCC and DSM identifiers are strain designations; acquisition lot or date is not
+    established by those identifiers.
+  abiotic_controls: Ab denotes an abiotic control and is not a strain.
+  starter_identity: Strain identity does not merge culture batches. Keep batch_id, inoculum_culture_ID,
+    physical vessel and replicate identities in their family metadata.
+  LF_cohorts: Unknown-age original LF microplate starters and their qualitative follow-up are distinct
+    from the freshly thawed test-tube starters.
+strains:
+  AF:
+    scientific_name: Acidithiobacillus ferrooxidans
+    strain: ATCC 23270
+    collections:
+    - 03_biological_microplates
+    - 04_flask_validation
+    - 05_test_tube_validation
+    sources:
+    - path: data/03_biological_microplates/biological_definitions.yaml
+      node: species.AF
+    - path: data/05_test_tube_validation/test_tube_validation.yaml
+      node: organisms.AF
+    - path: data/04_flask_validation/flask_validation.yaml
+      node: common_experimental_conditions
+  AT:
+    scientific_name: Acidithiobacillus thiooxidans
+    strain: ATCC 19377
+    collections:
+    - 03_biological_microplates
+    - 05_test_tube_validation
+    sources:
+    - path: data/03_biological_microplates/biological_definitions.yaml
+      node: species.AT
+    - path: data/05_test_tube_validation/test_tube_validation.yaml
+      node: organisms.AT
+  LF:
+    scientific_name: Leptospirillum ferriphilum
+    strain: DSM 14647
+    collections:
+    - 03_biological_microplates
+    - 05_test_tube_validation
+    sources:
+    - path: data/03_biological_microplates/biological_definitions.yaml
+      node: species.LF
+    - path: data/05_test_tube_validation/test_tube_validation.yaml
+      node: organisms.LF
+  AFur:
+    scientific_name: Acidithiobacillus ferridurans
+    strain: DSM 29468
+    collections:
+    - 05_test_tube_validation
+    sources:
+    - path: data/05_test_tube_validation/test_tube_validation.yaml
+      node: organisms.AFur
+  AC:
+    scientific_name: Acidithiobacillus caldus
+    strain: ATCC 51756
+    collections:
+    - 05_test_tube_validation
+    sources:
+    - path: data/05_test_tube_validation/test_tube_validation.yaml
+      node: organisms.AC

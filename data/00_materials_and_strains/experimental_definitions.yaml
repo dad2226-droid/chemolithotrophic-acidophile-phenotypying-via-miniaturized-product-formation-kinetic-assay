@@ -1,0 +1,752 @@
+schema_version: '1.0'
+document_type: shared_experimental_definitions
+reading_guide:
+  scope: Shared source definitions used by experiment-family YAML references. Context-specific schemas,
+    stock recipes, units and qualifications are retained.
+  references: A sole $ref field names a relative YAML path and an optional JSON Pointer. Resolve it before
+    using a field as a value.
+  identities: Tables and study-wide inventories are in the adjacent materials, strains and media files.
+    Experimental doses, acquisitions and culture assignments remain in the family files.
+laboratory_water:
+  grade: ultrapure
+  purification_system: Milli-Q
+  scope: All laboratory water uses; preparation-specific sterility requirements remain as documented.
+  information_source: Experimenter clarification, 2026-09-15.
+media_by_context:
+  media_validation:
+    AFM1:
+      name: AFM1
+      recipe_basis: standard_medium_before_extra_dye_addition
+      starting_pH: 1.8
+      components:
+      - chemical: (NH4)2SO4
+        concentration_g_per_L: 0.8
+      - chemical: KH2PO4
+        concentration_g_per_L: 0.1
+      - chemical: MgSO4.7H2O
+        concentration_g_per_L: 2
+      - component: ATCC Trace Mineral Supplement
+        abbreviation: MD-TMS
+        lot_number: '70071354'
+        addition_mL_per_L: 5
+      - chemical: FeSO4.7H2O
+        concentration_g_per_L: 20
+      nominal_background_FeII_M: 0.072
+      background_Fe_status: nominal_preparation_value_not_a_measured_total_Fe_reference
+      Fe_concentration_note: The recipe contains 20 g/L FeSO4.7H2O, approximately 0.072 M Fe. The mass
+        recipe is retained as the preparation quantity.
+    AFM3:
+      name: AFM3
+      recipe_basis: standard_medium_before_extra_dye_addition
+      starting_pH: 1.8
+      components:
+      - chemical: (NH4)2SO4
+        concentration_g_per_L: 0.8
+      - chemical: KH2PO4
+        concentration_g_per_L: 0.1
+      - chemical: MgSO4.7H2O
+        concentration_g_per_L: 2
+      - component: ATCC Trace Mineral Supplement
+        abbreviation: MD-TMS
+        lot_number: '70071354'
+        addition_mL_per_L: 5
+      - chemical: citric_acid
+        concentration_g_per_L: 1.92
+      - chemical: FeSO4.7H2O
+        concentration_g_per_L: 27.8
+        status: calculated_from_nominal_0.10_M_FeII
+        calculation: 0.10 mol/L * 278 g/mol
+      nominal_background_FeII_M: 0.1
+      background_Fe_status: nominal_preparation_value_not_a_measured_total_Fe_reference
+      description: Complete AFM3 contains nominal 0.10 M Fe(II) and 0.01 M citric acid; the basal formulation
+        alone excludes the Fe addition.
+    F2S:
+      name: F2S
+      recipe_basis: standard_medium_before_extra_dye_addition
+      starting_pH: 1.8
+      components:
+      - chemical: (NH4)2SO4
+        concentration_g_per_L: 0.8
+      - chemical: KH2PO4
+        concentration_g_per_L: 0.1
+      - chemical: MgSO4.7H2O
+        concentration_g_per_L: 2
+      - component: ATCC Trace Mineral Supplement
+        abbreviation: MD-TMS
+        lot_number: '70071354'
+        addition_mL_per_L: 5
+      - chemical: citric_acid
+        concentration_g_per_L: 1.92
+      - chemical: FeSO4.7H2O
+        concentration_g_per_L: 27.8
+      - chemical: elemental_sulfur
+        form: brown
+        concentration_g_per_L: 1
+      nominal_background_FeII_M: 0.1
+      background_Fe_status: nominal_preparation_value_not_a_measured_total_Fe_reference
+    AFM4:
+      name: AFM4
+      aliases:
+      - 9K + S2O32-
+      basal_medium_name: modified 9K
+      recipe_basis: 2x_stock
+      stock_strength_relative_to_standard: 2
+      stock_final_volume_L: 1
+      stock_target_pH: 3.5
+      stock_components:
+      - chemical: (NH4)2SO4
+        mass_mg: 6000.0
+      - chemical: K2HPO4
+        mass_mg: 6000.0
+      - chemical: MgSO4.7H2O
+        mass_mg: 1000.0
+      - chemical: CaCl2
+        form: anhydrous
+        mass_mg: 377.5
+      - chemical: Na2S2O3
+        mass_mg: 6371.8
+      solvent: ultrapure Milli-Q water
+      solvent_instruction: Bring the stock to 1 L final volume.
+      substrate: S2O3^2-
+      substrate_salt_identity: Na2S2O3
+      substrate_concentration_label_M_in_1x_medium: 0.02015
+      standard_medium_components:
+      - chemical: (NH4)2SO4
+        concentration_g_per_L: 3.0
+      - chemical: K2HPO4
+        concentration_g_per_L: 3.0
+      - chemical: MgSO4.7H2O
+        concentration_g_per_L: 0.5
+      - chemical: CaCl2
+        form: anhydrous
+        concentration_g_per_L: 0.18875
+      - chemical: Na2S2O3
+        concentration_g_per_L: 3.1859
+      standard_medium_calculation: stock mass in mg / 1000 / stock final volume in L / 2
+      recipe_note: Stock masses are the preparation quantities. The 20.15 mM substrate label describes
+        the 1x medium after equal-volume mixing, before dye addition.
+    AFM5:
+      name: AFM5
+      aliases:
+      - 9K + S4O62-
+      basal_medium_name: modified 9K
+      recipe_basis: 2x_stock
+      stock_strength_relative_to_standard: 2
+      stock_final_volume_L: 1
+      stock_target_pH: 3.5
+      stock_components:
+      - chemical: (NH4)2SO4
+        mass_mg: 6000.0
+      - chemical: K2HPO4
+        mass_mg: 6000.0
+      - chemical: MgSO4.7H2O
+        mass_mg: 1000.0
+      - chemical: CaCl2
+        form: anhydrous
+        mass_mg: 377.5
+      - chemical: K2S4O6
+        mass_mg: 12188.7
+      solvent: ultrapure Milli-Q water
+      solvent_instruction: Bring the stock to 1 L final volume.
+      substrate: S4O6^2-
+      substrate_salt_identity: K2S4O6
+      substrate_concentration_label_M_in_1x_medium: 0.02015
+      standard_medium_components:
+      - chemical: (NH4)2SO4
+        concentration_g_per_L: 3.0
+      - chemical: K2HPO4
+        concentration_g_per_L: 3.0
+      - chemical: MgSO4.7H2O
+        concentration_g_per_L: 0.5
+      - chemical: CaCl2
+        form: anhydrous
+        concentration_g_per_L: 0.18875
+      - chemical: K2S4O6
+        concentration_g_per_L: 6.09435
+      standard_medium_calculation: stock mass in mg / 1000 / stock final volume in L / 2
+      recipe_note: Stock masses are the preparation quantities. The 20.15 mM substrate label describes
+        the 1x medium after equal-volume mixing, before dye addition.
+    Starkey_brown:
+      name: Starkey with brown sulfur
+      aliases:
+      - Brown Starkey
+      - starkey + b-S0
+      basal_medium_name: Starkey
+      target_pH: 2.5
+      recipe_basis: standard_medium_before_extra_dye_addition
+      basal_components:
+      - chemical: (NH4)2SO4
+        concentration_g_per_L: 2.0
+      - chemical: KH2PO4
+        concentration_g_per_L: 3.0
+      - chemical: MgSO4.7H2O
+        concentration_g_per_L: 0.5
+      - chemical: FeSO4.7H2O
+        concentration_g_per_L: 0.001
+      - chemical: CaCl2.2H2O
+        concentration_g_per_L: 0.25
+      stock_strength_relative_to_standard: 2
+      stock_preparation: Double the standard-medium component concentrations to prepare the 2x stock.
+      sulfur_form: brown
+      sulfur_concentration_g_per_L: 1
+    Starkey_colloidal:
+      name: Starkey with colloidal sulfur
+      aliases:
+      - Yellow Starkey
+      - starkey + c-S0
+      basal_medium_name: Starkey
+      target_pH: 2.5
+      recipe_basis: standard_medium_before_extra_dye_addition
+      basal_components:
+      - chemical: (NH4)2SO4
+        concentration_g_per_L: 2.0
+      - chemical: KH2PO4
+        concentration_g_per_L: 3.0
+      - chemical: MgSO4.7H2O
+        concentration_g_per_L: 0.5
+      - chemical: FeSO4.7H2O
+        concentration_g_per_L: 0.001
+      - chemical: CaCl2.2H2O
+        concentration_g_per_L: 0.25
+      stock_strength_relative_to_standard: 2
+      stock_preparation: Double the standard-medium component concentrations to prepare the 2x stock.
+      sulfur_form: colloidal
+      sulfur_concentration_g_per_L: 1
+  biological_microplates:
+    AFM1:
+      name: AFM1 iron medium
+      recipe_basis: nominal_1x_before_dye_addition
+      nominal_pH: 1.8
+      ingredients:
+      - name: ammonium sulfate
+        formula: (NH4)2SO4
+        concentration: 0.8
+        unit: g_per_L
+      - name: potassium phosphate monobasic
+        formula: KH2PO4
+        concentration: 0.1
+        unit: g_per_L
+      - name: magnesium sulfate heptahydrate
+        formula: MgSO4.7H2O
+        concentration: 2.0
+        unit: g_per_L
+      - name: ATCC Trace Mineral Supplement
+        supplement_id: MD_TMS
+        concentration: 5
+        unit: mL_per_L
+      - name: iron(II) sulfate heptahydrate
+        formula: FeSO4.7H2O
+        concentration: 20
+        unit: g_per_L
+    AFM1_BS:
+      name: AFM1 basal salts
+      recipe_basis: nominal_1x_before_dye_addition
+      nominal_pH: 1.8
+      ingredients:
+      - name: ammonium sulfate
+        formula: (NH4)2SO4
+        concentration: 0.8
+        unit: g_per_L
+      - name: potassium phosphate monobasic
+        formula: KH2PO4
+        concentration: 0.1
+        unit: g_per_L
+      - name: magnesium sulfate heptahydrate
+        formula: MgSO4.7H2O
+        concentration: 2.0
+        unit: g_per_L
+      - name: ATCC Trace Mineral Supplement
+        supplement_id: MD_TMS
+        concentration: 5
+        unit: mL_per_L
+    AFM4:
+      name: AFM4 modified 9K medium with thiosulfate
+      recipe_basis: nominal_1x_before_dye_addition
+      medium_stock_strength: 2
+      medium_stock_target_pH: 3.5
+      ingredients:
+      - name: ammonium sulfate
+        formula: (NH4)2SO4
+        concentration: 3.0
+        unit: g_per_L
+      - name: potassium phosphate dibasic
+        formula: K2HPO4
+        concentration: 3.0
+        unit: g_per_L
+      - name: magnesium sulfate heptahydrate
+        formula: MgSO4.7H2O
+        concentration: 0.5
+        unit: g_per_L
+      - name: calcium chloride anhydrous
+        formula: CaCl2
+        concentration: 0.18875
+        unit: g_per_L
+      - name: sodium thiosulfate
+        formula: Na2S2O3
+        concentration: 3.1859
+        unit: g_per_L
+      nominal_thiosulfate_mM: 20.15
+    SM4_BS:
+      name: SM4 basal salts with citric acid
+      recipe_basis: nominal_1x_before_dye_addition
+      ingredients:
+      - name: ammonium sulfate
+        formula: (NH4)2SO4
+        concentration: 0.8
+        unit: g_per_L
+      - name: magnesium sulfate heptahydrate
+        formula: MgSO4.7H2O
+        concentration: 2.0
+        unit: g_per_L
+      - name: potassium phosphate dibasic
+        formula: K2HPO4
+        concentration: 0.1
+        unit: g_per_L
+      - name: citric acid
+        formula: C6H8O7
+        concentration: 0.19
+        unit: g_per_L
+      - name: ATCC Trace Mineral Supplement
+        supplement_id: MD_TMS
+        concentration: 5
+        unit: mL_per_L
+      sulfur_substrate: specified_by_experiment_and_condition
+      initial_pH: specified_by_experiment_when_measured
+    HH:
+      name: HH iron medium
+      recipe_basis: nominal_1x_before_dye_addition
+      nominal_pH: 1.8
+      ingredients:
+      - name: ammonium sulfate
+        formula: (NH4)2SO4
+        concentration: 0.132
+        unit: g_per_L
+      - name: magnesium chloride hexahydrate
+        formula: MgCl2.6H2O
+        concentration: 0.053
+        unit: g_per_L
+      - name: potassium phosphate monobasic
+        formula: KH2PO4
+        concentration: 0.027
+        unit: g_per_L
+      - name: calcium chloride dihydrate
+        formula: CaCl2.2H2O
+        concentration: 0.147
+        unit: g_per_L
+      - name: iron(II) sulfate heptahydrate
+        formula: FeSO4.7H2O
+        concentration: 20
+        unit: g_per_L
+      - name: ATCC Trace Mineral Supplement
+        supplement_id: MD_TMS
+        concentration: 5
+        unit: mL_per_L
+  flask_validation:
+    name: AFM1
+    target_pH: 1.8
+    ingredients:
+    - name: ammonium sulfate
+      formula: (NH4)2SO4
+      concentration: 0.8
+      unit: g/L
+    - name: potassium phosphate monobasic
+      formula: KH2PO4
+      concentration: 0.1
+      unit: g/L
+    - name: magnesium sulfate heptahydrate
+      formula: MgSO4·7H2O
+      concentration: 2.0
+      unit: g/L
+    - name: ATCC Trace Mineral Supplement
+      product: MD-TMS
+      concentration: 5
+      unit: mL/L
+    - name: iron(II) sulfate heptahydrate
+      formula: FeSO4·7H2O
+      concentration: 20
+      unit: g/L
+    recipe_reference: https://doi.org/10.64898/2026.08.27.747594
+    recipe_reference_id: Dailey2026
+    reference_location: Table S3
+    concentration_interpretation: This is the nominal medium formulation. The CSV reports cerimetric and
+      ICP-OES concentrations separately.
+    nominal_stock_preparation: Stocks were prepared by mass and final solution volume in a 50 mL Environmental
+      Express CertiTube. Treatment concentrations describe the prepared flask culture.
+    treatment_additions: Each condition lists its additives and their nominal concentrations in the prepared
+      flask culture. An empty additives list means no addition to AFM1. Gallium(III) concentrations are
+      on a Ga-ion basis; citric acid concentrations describe the nominal amount of citric acid. Measured
+      soluble elemental concentrations remain separate CSV observations.
+  test_tube_validation:
+    HH:
+      name: HH iron medium
+      target_pH: 1.8
+      recipe_basis: Nominal 1x prepared medium
+      ingredients:
+      - name: ammonium sulfate
+        formula: (NH4)2SO4
+        concentration: 132
+        unit: mg/L
+      - name: magnesium chloride hexahydrate
+        formula: MgCl2·6H2O
+        concentration: 53
+        unit: mg/L
+      - name: potassium phosphate monobasic
+        formula: KH2PO4
+        concentration: 27
+        unit: mg/L
+      - name: calcium chloride dihydrate
+        formula: CaCl2·2H2O
+        concentration: 147
+        unit: mg/L
+      - name: iron(II) sulfate heptahydrate
+        formula: FeSO4·7H2O
+        concentration: 20
+        unit: g/L
+      - name: ATCC Trace Mineral Supplement
+        product: MD-TMS
+        concentration: 5
+        unit: mL/L
+    SM4_BS:
+      name: SM4 basal salts without citric acid
+      stock_target_pH: 2.2
+      recipe_basis: Nominal 1x basal-salt formulation; prepare at 2x for equal-volume mixing.
+      citrate_added: false
+      ingredient_name_note: The field citrate_added refers to citric acid; no citrate salt is implied.
+      ingredients:
+      - name: ammonium sulfate
+        formula: (NH4)2SO4
+        concentration: 0.8
+        unit: g/L
+      - name: magnesium sulfate heptahydrate
+        formula: MgSO4·7H2O
+        concentration: 2
+        unit: g/L
+      - name: potassium phosphate dibasic
+        formula: K2HPO4
+        concentration: 0.1
+        unit: g/L
+      - name: ATCC Trace Mineral Supplement
+        product: MD-TMS
+        concentration: 5
+        unit: mL/L
+    SM4_S0:
+      name: SM4 basal salts with brown elemental sulfur
+      basal_medium_id: SM4_BS
+      substrate:
+        name: brown elemental sulfur
+        formula: S
+        final_concentration: 1
+        unit: g/L
+    SM4_tetrathionate:
+      name: SM4 basal salts with potassium tetrathionate
+      basal_medium_id: SM4_BS
+      substrate:
+        name: potassium tetrathionate
+        preparation_reagent_id: potassium_tetrathionate
+        formula: K2S4O6
+        substrate_ion: S4O6(2-)
+        final_concentration: 10
+        unit: mM
+reference_methods:
+  ICP_OES_elemental_analysis:
+    method: ICP_OES
+    manufacturer: Horiba
+    model: Ultima Expert
+    viewing_mode: radial
+    emission_wavelength_unit: nm
+    emission_wavelength_provenance: experimenter_reported
+    emission_wavelengths_nm:
+      Ag: 328.068
+      Al: 167.018
+      Cd: 214.441
+      Ce: 416.561
+      Co: 228.615
+      Cr: 205.571
+      Cu: 327.395
+      Dy: 338.502
+      Er: 369.265
+      Eu: 412.97
+      Fe: 259.94
+      Ga: 417.204
+      Gd: 342.247
+      In: 230.606
+      K: 766.49
+      La: 379.478
+      Li: 670.791
+      Mg: 280.271
+      Mn: 260.575
+      Na: 588.995
+      Nd: 386.333
+      Ni: 230.3
+      Pr: 417.939
+      Sm: 359.26
+      Tb: 334.942
+      Ti: 334.941
+      V: 309.311
+      Y: 371.029
+      Yb: 328.937
+      Zn: 206.201
+      Zr: 343.823
+    default_sample_diluent:
+      solute: HNO3
+      concentration_percent: 2
+      percent_basis: mass_per_volume
+    sample_diluent_exceptions_by_element:
+      Ti:
+        solute: HCl
+        concentration_percent: 2
+        percent_basis: mass_per_volume
+      Zr:
+        solute: HCl
+        concentration_percent: 2
+        percent_basis: mass_per_volume
+    concentration_processing:
+      input: instrument_reported_elemental_mass_concentration
+      ordered_steps:
+      - subtract_the_corresponding_0_ppm_blank
+      - multiply_by_the_total_analytical_dilution_factor
+      - convert_elemental_mass_concentration_to_elemental_molar_concentration
+      - divide_by_element_atoms_per_formula_unit_where_a_compound_basis_is_reported
+      calculation_for_mg_per_L: (sample_mg_per_L - blank_mg_per_L) * analytical_dilution_factor / (1000 * elemental_molar_mass_g_per_mol)
+      reported_values_already_corrected: true
+      repeat_processing_on_deposited_concentrations: false
+      analytical_dilution_is_distinct_from: stock_serial_dilution_and_medium_or_well_mixing
+    reference_measurements:
+      blank_concentration_ppm: 0
+      one_ppm_reference:
+        concentration_ppm: 1
+        scope: each_reported_element
+        availability: experimenter_confirmed
+        role: reference_or_quality_control
+  cell_pellet_preparation:
+    description: Cell pellets were prepared in 50 mL tubes as previously described.
+    method_reference_id: Dailey2026
+    centrifuge: {$ref: "chemicals_materials_equipment.yaml#/materials_and_equipment/centrifuge_st_plus"}
+    tube_capacity_mL: 50
+    method_reference_doi: 10.64898/2026.08.27.747594
+  pH_meter:
+    method: potentiometric_pH_measurement
+    manufacturer: Oakton
+    model: pH 700
+    meter: {$ref: "chemicals_materials_equipment.yaml#/materials_and_equipment/ph_meter"}
+    electrode: {$ref: "chemicals_materials_equipment.yaml#/materials_and_equipment/ph_electrode"}
+    instrument_type: benchtop_pH_meter
+    calibration_standard_pH:
+    - 1.68
+    - 4.01
+    - 7.0
+    calibration_frequency: at_least_daily
+  total_Fe_ICP_OES:
+    analyte: total_Fe
+    method: ICP_OES
+    manufacturer: Horiba
+    model: Ultima Expert
+    viewing_mode: radial
+    Fe_wavelength_nm: {$ref: "#/reference_methods/ICP_OES_elemental_analysis/emission_wavelengths_nm/Fe"}
+    shared_elemental_method: {$ref: "#/reference_methods/ICP_OES_elemental_analysis"}
+    sample_preparation_method_id: iron_reference_sample_preparation
+    sample_diluent: {$ref: "#/reference_methods/ICP_OES_elemental_analysis/default_sample_diluent"}
+    reference_standard:
+      manufacturer: SPEX CertiPrep
+      product: Iron Standards, CRM for AA and ICP
+      grade: Assurance Grade
+      standard_type: single_element
+      element: Fe
+      certified_concentration_ug_per_mL: 10000
+      matrix: 5% HNO3
+      packaging: plastic_bottle
+      bottle_volume_mL: 125
+    working_calibration_concentrations:
+    - 0
+    - 0.01
+    - 0.05
+    - 0.1
+    - 0.5
+    - 1
+    - 5
+    - 10
+    - 25
+    working_calibration_concentration_unit: ppm
+    quality_control:
+      blank_subtraction: true
+      spike_recovery_acceptance_percent:
+      - 90
+      - 110
+      independent_check_standard_acceptance_percent:
+      - 85
+      - 115
+      randomized_replicate_measurements: true
+      maximum_experimental_samples_between_QC_checks: 20
+    reported_quantity: total_Fe_concentration_in_ferric_stock_before_optical_well_preparation
+    reported_values_are_dilution_adjusted: true
+    repeat_blank_or_instrument_dilution_correction_on_reported_values: false
+    reported_concentrations_are_dilution_adjusted: true
+  iron_reference_sample_preparation:
+    sample_volume_uL: 1000
+    centrifuge: {$ref: "chemicals_materials_equipment.yaml#/materials_and_equipment/centrifuge"}
+    microcentrifuge_tube: {$ref: "chemicals_materials_equipment.yaml#/materials_and_equipment/microcentrifuge_tubes"}
+    steps:
+    - step: 1
+      action: centrifuge
+      relative_centrifugal_force_x_g: 3000
+      duration_s: 10
+    - step: 2
+      action: transfer_supernatant_to_new_microcentrifuge_tube
+      transferred_volume_uL: 750
+    - step: 3
+      action: centrifuge
+      relative_centrifugal_force_x_g: 17000
+      duration_s: 60
+    - step: 4
+      action: dilute_supernatant_for_ICP_OES
+      reported_concentration_basis: Dilution-adjusted stock concentration; do not apply an additional
+        analytical dilution correction.
+    sample_volume_is_not_optical_well_volume: true
+  iron_reference_sample_preparation_2:
+    sample_volume_uL: 1000
+    centrifuge: {$ref: "chemicals_materials_equipment.yaml#/materials_and_equipment/centrifuge"}
+    microcentrifuge_tube: {$ref: "chemicals_materials_equipment.yaml#/materials_and_equipment/microcentrifuge_tubes"}
+    steps:
+    - step: 1
+      action: centrifuge
+      relative_centrifugal_force_x_g: 3000
+      duration_s: 10
+    - step: 2
+      action: transfer_supernatant_to_new_microcentrifuge_tube
+      transferred_volume_uL: 750
+    - step: 3
+      action: centrifuge
+      relative_centrifugal_force_x_g: 17000
+      duration_s: 60
+    - step: 4
+      action: dilute_supernatant_for_ICP_OES_and_FeII_titration
+      dilution_details: Use the separate analytical-method definitions below.
+    sample_volume_is_not_optical_well_volume: true
+  total_Fe_ICP_OES_2:
+    analyte: total_Fe
+    method: ICP_OES
+    manufacturer: Horiba
+    model: Ultima Expert
+    viewing_mode: radial
+    Fe_wavelength_nm: {$ref: "#/reference_methods/ICP_OES_elemental_analysis/emission_wavelengths_nm/Fe"}
+    shared_elemental_method: {$ref: "#/reference_methods/ICP_OES_elemental_analysis"}
+    sample_preparation_method_id: iron_reference_sample_preparation
+    sample_diluent: {$ref: "#/reference_methods/ICP_OES_elemental_analysis/default_sample_diluent"}
+    reference_standard:
+      manufacturer: SPEX CertiPrep
+      product: Iron Standards, CRM for AA and ICP
+      grade: Assurance Grade
+      standard_type: single_element
+      element: Fe
+      certified_concentration_ug_per_mL: 10000
+      matrix: 5% HNO3
+      packaging: plastic_bottle
+      bottle_volume_mL: 125
+    working_calibration_concentrations:
+    - 0
+    - 0.01
+    - 0.05
+    - 0.1
+    - 0.5
+    - 1
+    - 5
+    - 10
+    - 25
+    working_calibration_concentration_unit: ppm
+    quality_control:
+      blank_subtraction: true
+      spike_recovery_acceptance_percent:
+      - 90
+      - 110
+      independent_check_standard_acceptance_percent:
+      - 85
+      - 115
+      randomized_replicate_measurements: true
+      maximum_experimental_samples_between_QC_checks: 20
+    reported_quantity: total_Fe_concentration_in_the_reference_standard
+    reported_values_are_dilution_adjusted: true
+    repeat_blank_or_instrument_dilution_correction_on_reported_values: false
+  FeII_titration:
+    analyte: Fe_II
+    method: ferroin_cerimetry
+    sample_preparation_method_id: iron_reference_sample_preparation
+    clarified_supernatant_aliquot_uL: 250
+    water_added_uL: 750
+    volume_before_indicator_uL: 1000
+    indicator: ferroin
+    indicator_added_uL: 10
+    titrant: Ce(SO4)2
+    titrant_reagent_id: cerium_iv_sulfate_titrant_0_1_N
+    indicator_reagent_id: ferroin
+    titrant_normality_eq_per_L: 0.1
+    titrant_increment_range_uL:
+    - 1
+    - 10
+    mixing: vortexing_during_titration
+    vortex_mixer: {$ref: "chemicals_materials_equipment.yaml#/materials_and_equipment/vortex_mixer"}
+    endpoint_colour_change:
+      from: red
+      to: blue
+    reported_quantity: Fe_II_concentration_in_the_reference_standard
+    repeat_analytical_dilution_correction_on_reported_values: false
+reagent_preparations:
+  thymol_blue:
+    name: thymol blue
+    concentration_uM: 200
+    solvent: aqueous_ethanol
+    ethanol_percent_volume_per_volume: 10
+    stock_pH: 4
+    pH_adjustment_reagent: H2SO4
+    preparation_record:
+      record_id: thymol_blue_200uM
+      mass_g: 0.0047
+      final_volume_mL: 50.0
+      input_provenance: experimenter_reported_preparation_inputs
+      formula_mass_for_nominal_calculation_g_per_mol: 466.592
+      formula_mass_provenance: calculated_from_documented_formula_using_CIAAW_2024_abridged_atomic_weights
+      formula_for_nominal_calculation: C27H30O5S
+      nominal_concentration_from_preparation_M: 0.0002014608051573966
+      nominal_concentration_basis: compound_formula_units
+      purity_correction_applied: false
+      record_status: mass_and_final_volume_reported
+      formula_identity_source: https://www.chemimpex.com/products/01268
+  thymol_blue_stock:
+    solute: thymol_blue
+    solvent:
+      water: ultrapure Milli-Q water
+      ethanol_percent: 10
+      percent_basis: volume_per_volume
+    stock_solution_pH: 4
+    pH_adjusting_reagent: H2SO4
+    stock_concentration: Specified in each experiment as thymol_blue_stock_uM.
+material_values:
+  tube_capacity_ml_14: 14
+  tube_material_polystyrene: polystyrene
+  closure_cap: vented cap
+  instrument_oakton_ph_700_benchtop_meter: Oakton pH 700 benchtop meter
+  instrument_molecular_devices_spectramax_m2: Molecular Devices SpectraMax M2
+  manufacturer_environmental_express: Environmental Express
+  cover_low_evaporation_lid: low_evaporation_lid
+  lid_seal_parafilm: Parafilm
+  instrument_manufacturer_molecular_devices: Molecular Devices
+  instrument_model_spectramax_m2: SpectraMax M2
+  instrument_family_spectramax: SpectraMax
+  instrument_model_m2: M2
+  flask_capacity_ml_250: 250
+  instrument_horiba_ultima_expert: Horiba Ultima Expert
+  lid_type_low_evaporation: low_evaporation
+  reader_manufacturer_tecan: Tecan
+  reader_model_infinite_m_plex: Infinite M Plex
+  membrane_breathe_easy: Breathe-Easy
+  manufacturer_corning: Corning
+  catalog_number_3635: '3635'
+  catalog_number_3370: '3370'
+supplements:
+  MD_TMS:
+    name: Trace Mineral Supplement
+    manufacturer: ATCC
+    product: MD-TMS
+    lot_number: '70071354'
+references:
+  Dailey2026:
+    {$ref: "chemicals_materials_equipment.yaml#/method_references/Dailey2026"}

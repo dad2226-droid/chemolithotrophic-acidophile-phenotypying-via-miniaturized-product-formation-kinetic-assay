@@ -1,0 +1,447 @@
+# Shared definitions for the AF, AT and LF biological microplate experiments.
+# Numbers and units are separate. Identifiers connect the definitions and experiments.
+schema_version: '1.0'
+document_type: biological_definitions
+document_id: biological_definitions
+title: Biological microplate preparation, media and measurement definitions
+chemical_reagents_file: ../00_materials_and_strains/chemical_reagents.yaml
+
+reading_guide:
+  purpose: >-
+    This document defines the preparations, organisms, media, well layout and
+    measurements shared by the biological microplate experiments. Each organism's
+    experiment document supplies the actual plate identities and condition values.
+  identifiers: >-
+    A species_id, medium_id, preparation_id or readout_id selects the matching
+    definition below. Identifiers are labels, and do not encode storage locations.
+  experiments: >-
+    An experiment describes one scientific comparison. Its plate_groups identify
+    the plates and column_conditions belonging to that comparison. A plate can
+    support more than one comparison when different columns contain different
+    conditions.
+  column_conditions: >-
+    Each column condition assigns its listed components to that column in every
+    biotic and abiotic row selected for the plate group. Components under
+    fixed_components apply in addition to these column-specific components and
+    the medium formulation.
+  blank_condition_columns: >-
+    A plate's blank_condition_columns identify columns with no assigned experimental
+    condition in the biotic and abiotic rows. They do not represent zero-dose
+    controls or additional treatments.
+  physical_plates: >-
+    The plates records identify physical plates, their culture batch and the
+    acquisition_series. Each acquisition_series key is a measurement label and its
+    numeric list contains the recorded acquisition ordinals. Match a measurement
+    using both its label and ordinal. Repeated readings retain the same plate and
+    well identities. Order all readings of a plate by their recorded timestamps;
+    elapsed time is measured from the earliest reading.
+  culture_identity: >-
+    The combination of batch_id and biotic row identifies a starter culture.
+    Matching rows on plates in the same batch share that culture. A different
+    species or preparation batch identifies a different culture set. Batch IDs
+    combine the species ID and the calendar date of the plate's first reading.
+  quantities: >-
+    Values in concentration fields are numeric and use the accompanying unit.
+    Initial OD600 and additive concentrations use the 200 uL preparation basis.
+    The preparation definitions specify the additional dye volume and resulting
+    final volume.
+  condition_specific_values: >-
+    Initial OD600, substrate additions, acid additions and measured or nominal pH
+    values are specified at experiment or condition level. An additive stock pH
+    describes that stock before mixing; it does not assign a pH to the finished well.
+  water_quality: >-
+    All water used in these preparations and incubations was ultrapure Milli-Q
+    water, as confirmed by the experimenter. References to sterile water specify
+    its sterility separately from this water grade.
+
+units:
+  uM: micromoles per litre
+  mM: millimoles per litre
+  M: moles per litre
+  uL: microlitres
+  mL: millilitres
+  L: litres
+  g_per_L: grams per litre
+  mL_per_L: millilitres per litre
+  nm: nanometres
+  C: degrees Celsius
+  h: hours
+  absorbance: dimensionless absorbance reported in absorbance units
+  OD600: optical density at 600 nm
+  pH: dimensionless pH
+
+species:
+  AF:
+    scientific_name: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AF/scientific_name"}
+    strain: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AF/strain"}
+    incubation_temperature_C: 30
+  AT:
+    scientific_name: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AT/scientific_name"}
+    strain: {$ref: "../00_materials_and_strains/strains.yaml#/strains/AT/strain"}
+    incubation_temperature_C: 30
+  LF:
+    scientific_name: {$ref: "../00_materials_and_strains/strains.yaml#/strains/LF/scientific_name"}
+    strain: {$ref: "../00_materials_and_strains/strains.yaml#/strains/LF/strain"}
+    incubation_temperature_C: 37
+    starter_culture_age: unknown
+
+concentration_conventions:
+  preparation_basis_volume_uL: 200
+  additive_quantity: compound_formula_units
+  description: >-
+    Biological additive concentrations describe the named compound in the 200 uL
+    medium-plus-additive preparation. Concentrations derived from elemental
+    measurements have already been converted to compound concentrations using
+    the compound stoichiometry.
+  measurement_methods:
+    measured_elemental:
+      method: ICP_OES
+      shared_method: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/ICP_OES_elemental_analysis"}
+      calculation: >-
+        Divide the measured molar concentration of the assayed element by the
+        number of its atoms in one formula unit of the compound, then account for
+        the preparation volumes to express the concentration on the 200 uL basis.
+      reported_values_include_analytical_dilution_correction: true
+    nominal:
+      method: mass_and_final_prepared_volume
+      stock_preparation_container:
+        manufacturer: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/manufacturer_environmental_express"}
+        product: CertiTube
+        capacity_mL: 50
+        catalog_number: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/certitube_50ml/catalog_number"}
+      description: >-
+        All nominal stock concentrations were calculated from the mass added
+        and the final prepared volume in the stated container. Subsequent
+        mixing and dilution volumes determine the concentration on the
+        200 uL preparation basis. This includes citric acid and sucrose.
+      preparation_input_records: >-
+        Supplied mass and final-volume records are stored under preparation_record
+        in the matching stock entries of ../00_materials_and_strains/chemicals_materials_equipment.yaml.
+        Their nominal calculations are distinct from the reported assay doses
+        and concentration classifications.
+  ammonium_salts:
+    concentration_determination: nominal
+  sodium_and_potassium_salts:
+    concentration_determination: measured_elemental
+    assayed_element: corresponding_sodium_or_potassium_cation
+    scope: >-
+      Applies only to additive stocks not listed under nominal_reagents.
+      Sodium or potassium assay compatibility does not establish that a stock
+      was measured. The nominal exceptions also apply to additive screens.
+      The experimenter confirmed that the reported gluconate concentrations
+      came from the supplied sodium gluconate reagent. Those compound molar
+      concentrations have a measured-elemental classification; no sodium/potassium
+      mass conversion is applied.
+    nominal_exceptions:
+      - potassium_fluoride
+      - potassium_thiocyanate
+      - potassium_dichromate
+      - sodium_chromate
+      - sodium_selenite
+      - sodium_thiosulfate
+      - potassium_tetrathionate
+  nominal_reagents:
+    ammonium_sulfate: nominal
+    citric_acid: nominal
+    sucrose: nominal
+    sulfuric_acid: nominal
+    potassium_fluoride: nominal
+    potassium_thiocyanate: nominal
+    potassium_dichromate: nominal
+    sodium_chromate: nominal
+    sodium_selenite: nominal
+    sodium_thiosulfate: nominal
+    potassium_tetrathionate: nominal
+  nominal_provenance:
+    scope: >-
+      The nominal_reagents assignments apply to all uses of these compounds,
+      including additive screens and sulfur-substrate additions. Concentrations
+      and dilution-series values remain as recorded; numerical precision does
+      not establish analytical verification.
+    experimenter_clarification_date: '2026-09-13'
+    not_measured_for_safety_reasons:
+      - potassium_fluoride
+      - potassium_thiocyanate
+      - potassium_dichromate
+      - sodium_chromate
+      - sodium_selenite
+    always_nominal:
+      - sodium_thiosulfate
+      - potassium_tetrathionate
+  confirmed_measured_reagents:
+    titanyl_sulfate:
+      concentration_determination: measured_elemental
+      assayed_element: Ti
+      method: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/ICP_OES_elemental_analysis"}
+    zirconium_iv_sulfate:
+      concentration_determination: measured_elemental
+      assayed_element: Zr
+      method: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/ICP_OES_elemental_analysis"}
+  measured_provenance_clarification: >-
+    The experimenter confirmed that titanyl sulfate and zirconium(IV) sulfate
+    stocks were measured by ICP-OES using 2% (w/v) HCl. Their concentrations and dilution series use a compound molar basis. Unknown hydrate
+    stoichiometry does not require a nominal mass calculation for these
+    elementally measured concentrations.
+  experiment_specific_determination: >-
+    A concentration_determination specified for an experiment or component applies
+    to its listed values, including nominal sulfur substrate and citric acid additions.
+  experiment_specific_basis: >-
+    A component's explicit concentration_basis specifies the chemical quantity for
+    that component. The citric-acid/gallium combinations express gallium on a Ga
+    basis; the other additive series use compound formula units.
+  iron_additions: >-
+    Added iron compounds are additional to the iron already present in the medium.
+    A zero added-iron condition retains the medium's normal iron content.
+  acid_additions:
+    compound: sulfuric acid
+    formula: H2SO4
+    concentration_determination: nominal
+    description: >-
+      H2SO4 concentrations describe acid added on the 200 uL basis. They are not
+      measured hydrogen-ion concentrations and do not determine a measured pH.
+  final_volume_conversion: >-
+    For a component already in the 200 uL preparation, multiply its listed
+    concentration by 200 divided by final_well_volume_uL. The same volume factor
+    applies to the prepared initial OD600. Keep the reported preparation-basis
+    values as distinct quantities from these calculated final-volume values.
+
+culture_preparation:
+  washing: Cells were washed before inoculation.
+  suspension_medium_id: AFM1_BS
+  normalized_cell_suspension_OD600:
+    target: 5.0
+    reported_plus_minus: 0.1
+    uncertainty_type: standard_deviation
+    measurement_count: 3
+  medium_stock_strength: 2
+  additive_stock_strength: 2
+  medium_volume_uL: 100
+  additive_solution_volume_uL: 100
+  preparation_volume_uL: 200
+  inoculation: >-
+    Add washed cell suspension to the 2x medium before dispensing. Its prepared
+    OD600 is twice the experiment's initial_OD600_200_uL so that equal-volume
+    mixing with additive solution gives the stated initial cell density.
+  abiotic_control: >-
+    Add the corresponding volume of sterile AFM1 basal salts solution to the
+    2x medium in place of cell suspension. Abiotic wells otherwise receive the
+    same medium, additive and dye preparation as their condition-matched biotic wells.
+  independent_starter_cultures_per_batch: 3
+  reuse_within_batch: >-
+    Each starter culture supplies its corresponding biotic row across conditions
+    and plates in the same species and preparation batch.
+
+stock_preparation:
+  solvent: ultrapure_Milli_Q_water
+  strength_relative_to_200_uL_preparation: 2
+  default_additive_stock_pH: 1.8
+  metal_stock_pH_in_AFM4_and_SM4_BS: 3.0
+  pH_adjustment_reagents: [H2SO4, NaOH]
+  serial_dilution_solvent: ultrapure_Milli_Q_water_acidified_to_the_target_pH_with_H2SO4
+  filtered_stock_container: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/centrifuge_tube_50ml"}
+  serial_dilution_container: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/centrifuge_tube_15ml"}
+  sterilization: sterile_filtration
+  filter_product: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/sterile_filters"}
+  storage: dark_at_room_temperature
+  pH_scope: >-
+    AFM1 additive stocks, including sodium gluconate, use pH 1.80 unless an
+    experiment explicitly specifies otherwise. Stock pH describes the additive solution. Medium formulations and
+    experiment-specific initial pH values are separate quantities.
+
+
+  solubility_screen:
+    protocol_status: experimenter_reported_method
+    time_points_d: [0, 7]
+    storage_conditions: ambient_laboratory_conditions
+    measured_stocks:
+      analysis_method: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/ICP_OES_elemental_analysis"}
+      reference:
+        preparation: freshly_prepared_2x_stock
+        centrifuged: false
+        filtered: false
+        dilution: element_specific_analytical_matrix_under_shared_method
+      stock_only:
+        aliquot_volume_uL: 1000
+        additional_dilution_factor_for_comparison: 2
+      AFM1_mixture:
+        stock_volume_uL: 500
+        AFM1_2x_volume_uL: 500
+        subtract_AFM1_elemental_contribution: true
+      centrifugation:
+        relative_centrifugal_force_x_g: 17000
+        duration_min: 10
+      supernatant_filter_pore_size_um_as_reported: 0.2
+      analytical_dilution: Shared element-specific matrix; 2% (w/v) HCl for Ti/Zr and 2% (w/v) HNO3 otherwise.
+      comparison_basis: Match preparation dilution between stock-only and AFM1 samples and the fresh reference; remove AFM1 background before comparing.
+      acceptance_criterion:
+        absolute_relative_difference_max_percent: 3
+        denominator: corresponding_fresh_uncentrifuged_unfiltered_stock_reference_on_the_same_dilution_basis
+        required_time_points_d: [0, 7]
+        required_conditions: [stock_only, stock_AFM1_mixture]
+    nominal_stocks:
+      aliquot_volume_uL: 1000
+      centrifugation:
+        relative_centrifugal_force_x_g: 17000
+        duration_min: 10
+      acceptance_criterion:
+        visible_solids: none_before_or_after_centrifugation_at_each_time_point
+        absolute_pH_change_over_7_d_max: 0.05
+
+plate_layout:
+  plate_format: 96_well
+  optical_material: non_UV_transparent
+  plate_product: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/nonuv_plate_unspecified"}
+  rows: [A, B, C, D, E, F, G, H]
+  columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  default_biotic_rows: [E, F, G]
+  default_abiotic_rows: [B, C, D]
+  default_condition_columns: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  biotic_culture_numbers_by_row:
+    E: 1
+    F: 2
+    G: 3
+  abiotic_matching: same_plate_and_column_condition
+  abiotic_replicates_per_condition: 3
+  independent_pairing_between_biotic_and_abiotic_rows: false
+  outer_wells:
+    full_rows: [A, H]
+    outer_columns_in_remaining_rows: [1, 12]
+    contents: sterile_water
+    volume_uL: 300
+
+incubation:
+  mixing: static
+  temperature: Use incubation_temperature_C for the experiment's species.
+  atmosphere: oxic
+  equipment_by_batch_id:
+    AF_2025-11-22: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/biological_incubator_other"}
+    AF_2025-12-03: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/biological_incubator_other"}
+    AF_2025-12-10: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/biological_incubator_other"}
+    AF_2025-12-11: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/biological_incubator_other"}
+    AF_2025-12-17: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/biological_incubator_other"}
+    AF_2026-01-06: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/biological_incubator_kf_set"}
+    AF_2026-05-28: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/biological_incubator_other"}
+    AF_2026-05-29: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/biological_incubator_other"}
+    AF_2026-06-12: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/biological_incubator_other"}
+    AF_2026-06-23: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/biological_incubator_other"}
+    AT_2026-06-12: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/biological_incubator_other"}
+    LF_2026-05-29: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/temperature_incubator"}
+  equipment_assignment_basis: >-
+    The experimenter confirmed that the entire set containing the potassium
+    fluoride additive used the Thermo Scientific Heratherm IMC18, LF plates used the Heratherm General
+    Incubator catalog 51028064, and all other biological plates used the Thermo
+    Scientific MaxQ 6000. The KF-set assignment applies to every plate in AF_2026-01-06,
+    including plates with other additives; existing batch identities are retained.
+  between_readings:
+    cover: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/cover_low_evaporation_lid"}
+    lid_product: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/low_evaporation_lids"}
+    lid_seal: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/lid_seal_parafilm"}
+    seal_product: {$ref: "../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/parafilm"}
+    adjacent_open_water_beaker_volume_mL: 100
+    adjacent_open_water_beaker_contents: sterile_water
+  water_replacement_in_culture_wells: false
+
+acquisition:
+  instrument_manufacturer: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_manufacturer_molecular_devices"}
+  instrument_model: {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/material_values/instrument_model_spectramax_m2"}
+  measurement_mode: endpoint_absorbance
+  repeated_measurements: same_physical_plates_and_wells
+  lid_present_during_reading: false
+  wavelength_assignment: Use the recorded wavelength labels for each acquisition.
+  temperature_assignment: Retain the acquisition temperature recorded by the reader separately from incubation temperature.
+  timestamp:
+    recorded_field: Date Last Saved
+    timezone: unspecified
+    treatment: Preserve the recorded local clock value without assigning a UTC offset.
+  unavailable_exports: >-
+    Gaps in available acquisition ordinals may have resulted from accidental
+    file overwriting. They were not intentional data exclusions. The exact
+    cause is not established; available exports and their identifiers are retained.
+  time_zero: first_recorded_reading_of_each_physical_plate
+  elapsed_time:
+    unit: h
+    calculation: elapsed hours since that plate's first recorded reading
+
+preparations:
+  iron_no_dye:
+    name: Iron readout without dye addition
+    preparation_volume_uL: 200
+    medium_volume_uL: 100
+    additive_solution_volume_uL: 100
+    dye_volume_uL: 0
+    final_well_volume_uL: 200
+    preparation_to_final_concentration_factor:
+      numerator: 200
+      denominator: 200
+    readout_id: iron
+  ph_standard_dye:
+    name: pH readout with 10 uL thymol blue stock
+    preparation_volume_uL: 200
+    medium_volume_uL: 100
+    additive_solution_volume_uL: 100
+    dye_stock_id: thymol_blue
+    dye_volume_uL: 10
+    final_well_volume_uL: 210
+    preparation_to_final_concentration_factor:
+      numerator: 200
+      denominator: 210
+    final_dye_concentration_uM: 9.523809523809524
+    final_dye_concentration_status: calculated_from_stock_and_volumes
+    readout_id: ph
+  ph_threefold_dye:
+    name: pH readout with 30 uL thymol blue stock
+    preparation_volume_uL: 200
+    medium_volume_uL: 100
+    additive_solution_volume_uL: 100
+    dye_stock_id: thymol_blue
+    dye_volume_uL: 30
+    final_well_volume_uL: 230
+    preparation_to_final_concentration_factor:
+      numerator: 200
+      denominator: 230
+    final_dye_concentration_uM: 26.08695652173913
+    final_dye_concentration_status: calculated_from_stock_and_volumes
+    readout_id: ph
+
+dye_stocks:
+  thymol_blue:
+    {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/reagent_preparations/thymol_blue"}
+readouts:
+  iron:
+    name: Ferric iron absorbance indicator
+    measurement: absorbance
+    primary_wavelength_nm: 380
+    scatter_reference_wavelength_nm: 750
+    indicator_dye_added: false
+    signal_definitions:
+      A380: absorbance at 380 nm
+      A380_corrected: absorbance at 380 nm minus absorbance at 750 nm
+  ph:
+    name: Ratiometric thymol blue pH indicator
+    measurement: absorbance
+    numerator_wavelength_nm: 545
+    denominator_wavelength_nm: 485
+    scatter_reference_wavelength_nm: 750
+    signal_definitions:
+      R545_485: absorbance at 545 nm divided by absorbance at 485 nm
+      R545_485_corrected: >-
+        (absorbance at 545 nm minus absorbance at 750 nm) divided by
+        (absorbance at 485 nm minus absorbance at 750 nm)
+
+# Media ingredients below describe nominal 1x composition on the 200 uL basis.
+# Prepare the medium at 2x strength for the 100 uL + 100 uL mixing step.
+media:
+  {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/media_by_context/biological_microplates"}
+supplements:
+  MD_TMS:
+    {$ref: "../00_materials_and_strains/experimental_definitions.yaml#/supplements/MD_TMS"}
+interpretation_of_media:
+  formulation_values: Nominal preparation quantities for the listed ingredients.
+  treatment_additions: Experiment and condition additions are combined with the complete medium formulation.
+  dye_dilution: The preparation-to-final concentration factor applies to all pre-existing medium ingredients.
+  pH_measurement: >-
+    A nominal medium or stock pH is a preparation setting. Use an experiment's
+    initial_pH fields for the reported experimental-mixture pH or summary,
+    with its stated scope. The reported 3.95 +/- 0.03 is a summary; exact pH
+    was not recorded for each condition. nominal_initial_pH and medium or
+    stock settings remain distinct.

@@ -1,0 +1,6097 @@
+# Concentrations and OD600 use the 200 uL preparation basis.
+# Each column condition applies to biotic rows E/F/G and abiotic rows B/C/D.
+# Plate IDs identify the same physical wells across acquisition ordinals.
+schema_version: '1.0'
+document_type: biological_experiments
+definitions_id: biological_definitions
+species_id: AF
+title: Acidithiobacillus ferrooxidans microplate experiments
+experiments:
+  - experiment_id: AF_AFM1_sodium_sulfate_OD0p001
+    name: Sodium sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      sodium_sulfate:
+        name: sodium sulfate
+        reagent_id: sodium_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_sodium_sulfate_OD0p001_G01
+        plate_ids: [HT2-10-A, HT3-10-A, HT4-10-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_sulfate: 0
+          3:
+            sodium_sulfate: 0.00747
+          4:
+            sodium_sulfate: 0.0747
+          5:
+            sodium_sulfate: 0.747
+          6:
+            sodium_sulfate: 7.47
+          7:
+            sodium_sulfate: 74.7
+          8:
+            sodium_sulfate: 747
+          9:
+            sodium_sulfate: 7470
+          10:
+            sodium_sulfate: 74700
+          11:
+            sodium_sulfate: 747000
+      - group_id: AF_AFM1_sodium_sulfate_OD0p001_G02
+        plate_ids: [HT2-10-B, HT3-10-B, HT4-10-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_sulfate: 0
+          3:
+            sodium_sulfate: 0.00224
+          4:
+            sodium_sulfate: 0.0224
+          5:
+            sodium_sulfate: 0.224
+          6:
+            sodium_sulfate: 2.24
+          7:
+            sodium_sulfate: 22.4
+          8:
+            sodium_sulfate: 224
+          9:
+            sodium_sulfate: 2240
+          10:
+            sodium_sulfate: 22400
+          11:
+            sodium_sulfate: 224000
+      - group_id: AF_AFM1_sodium_sulfate_OD0p001_G03
+        plate_ids: [HT2-71-A, HT3-71-A, HT4-71-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_sulfate: 0
+          9:
+            sodium_sulfate: 150000
+          10:
+            sodium_sulfate: 300000
+          11:
+            sodium_sulfate: 500000
+  - experiment_id: AF_AFM1_cobalt_ii_sulfate_OD0p001
+    name: Cobalt(ii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      cobalt_ii_sulfate:
+        name: cobalt(II) sulfate
+        reagent_id: cobalt_ii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_cobalt_ii_sulfate_OD0p001_G01
+        plate_ids: [HT2-11-A, HT3-11-A, HT4-11-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cobalt_ii_sulfate: 0
+          3:
+            cobalt_ii_sulfate: 0.01
+          4:
+            cobalt_ii_sulfate: 0.1
+          5:
+            cobalt_ii_sulfate: 1.0
+          6:
+            cobalt_ii_sulfate: 10.0
+          7:
+            cobalt_ii_sulfate: 100
+          8:
+            cobalt_ii_sulfate: 1000
+          9:
+            cobalt_ii_sulfate: 10000
+          10:
+            cobalt_ii_sulfate: 100000
+          11:
+            cobalt_ii_sulfate: 1000000
+      - group_id: AF_AFM1_cobalt_ii_sulfate_OD0p001_G02
+        plate_ids: [HT2-11-B, HT3-11-B, HT4-11-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cobalt_ii_sulfate: 0
+          3:
+            cobalt_ii_sulfate: 0.00301
+          4:
+            cobalt_ii_sulfate: 0.0301
+          5:
+            cobalt_ii_sulfate: 0.301
+          6:
+            cobalt_ii_sulfate: 3.01
+          7:
+            cobalt_ii_sulfate: 30.1
+          8:
+            cobalt_ii_sulfate: 301
+          9:
+            cobalt_ii_sulfate: 3010
+          10:
+            cobalt_ii_sulfate: 30100
+          11:
+            cobalt_ii_sulfate: 301000
+      - group_id: AF_AFM1_cobalt_ii_sulfate_OD0p001_G03
+        plate_ids: [HT2-75-A, HT3-75-A, HT4-75-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cobalt_ii_sulfate: 0
+          11:
+            cobalt_ii_sulfate: 50000
+      - group_id: AF_AFM1_cobalt_ii_sulfate_OD0p001_G04
+        plate_ids: [HT2-76-A, HT3-76-A, HT4-76-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cobalt_ii_sulfate: 0
+          3:
+            cobalt_ii_sulfate: 200000
+  - experiment_id: AF_AFM1_indium_sulfate_OD0p001
+    name: Indium sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      indium_sulfate:
+        name: indium sulfate
+        reagent_id: indium_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_indium_sulfate_OD0p001_G01
+        plate_ids: [HT2-12-A, HT3-12-A, HT4-12-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            indium_sulfate: 0
+          3:
+            indium_sulfate: 0.00311
+          4:
+            indium_sulfate: 0.0311
+          5:
+            indium_sulfate: 0.311
+          6:
+            indium_sulfate: 3.11
+          7:
+            indium_sulfate: 31.1
+          8:
+            indium_sulfate: 311
+          9:
+            indium_sulfate: 3110
+          10:
+            indium_sulfate: 31100
+          11:
+            indium_sulfate: 311000
+      - group_id: AF_AFM1_indium_sulfate_OD0p001_G02
+        plate_ids: [HT2-12-B, HT3-12-B, HT4-12-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            indium_sulfate: 0
+          3:
+            indium_sulfate: 0.00104
+          4:
+            indium_sulfate: 0.0104
+          5:
+            indium_sulfate: 0.104
+          6:
+            indium_sulfate: 1.04
+          7:
+            indium_sulfate: 10.4
+          8:
+            indium_sulfate: 104
+          9:
+            indium_sulfate: 1040
+          10:
+            indium_sulfate: 10400
+          11:
+            indium_sulfate: 104000
+      - group_id: AF_AFM1_indium_sulfate_OD0p001_G03
+        plate_ids: [HT2-75-A, HT3-75-A, HT4-75-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            indium_sulfate: 0
+          9:
+            indium_sulfate: 69400
+          10:
+            indium_sulfate: 125000
+  - experiment_id: AF_AFM1_iron_iii_sulfate_OD0p001
+    name: Iron(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      iron_iii_sulfate:
+        name: iron(III) sulfate
+        reagent_id: iron_iii_sulfate
+    additive_stock_pH: 1.8
+    dose_definition: Added compound above the iron already present in the medium.
+    plate_groups:
+      - group_id: AF_AFM1_iron_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-13-A, HT3-13-A, HT4-13-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            iron_iii_sulfate: 0
+          3:
+            iron_iii_sulfate: 0.00298
+          4:
+            iron_iii_sulfate: 0.0298
+          5:
+            iron_iii_sulfate: 0.298
+          6:
+            iron_iii_sulfate: 2.98
+          7:
+            iron_iii_sulfate: 29.8
+          8:
+            iron_iii_sulfate: 298
+          9:
+            iron_iii_sulfate: 2980
+          10:
+            iron_iii_sulfate: 29800
+          11:
+            iron_iii_sulfate: 298000
+      - group_id: AF_AFM1_iron_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-13-B, HT3-13-B, HT4-13-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            iron_iii_sulfate: 0
+          3:
+            iron_iii_sulfate: 0.000994
+          4:
+            iron_iii_sulfate: 0.00994
+          5:
+            iron_iii_sulfate: 0.0994
+          6:
+            iron_iii_sulfate: 0.994
+          7:
+            iron_iii_sulfate: 9.94
+          8:
+            iron_iii_sulfate: 99.4
+          9:
+            iron_iii_sulfate: 994
+          10:
+            iron_iii_sulfate: 9940
+          11:
+            iron_iii_sulfate: 99400
+      - group_id: AF_AFM1_iron_iii_sulfate_OD0p001_G03
+        plate_ids: [HT2-75-A, HT3-75-A, HT4-75-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            iron_iii_sulfate: 0
+          7:
+            iron_iii_sulfate: 4970
+          8:
+            iron_iii_sulfate: 14900
+  - experiment_id: AF_AFM1_potassium_bromide_OD0p001
+    name: Potassium bromide concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_bromide:
+        name: potassium bromide
+        reagent_id: potassium_bromide
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_potassium_bromide_OD0p001_G01
+        plate_ids: [HT2-14-A, HT3-14-A, HT4-14-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_bromide: 0
+          3:
+            potassium_bromide: 0.00301
+          4:
+            potassium_bromide: 0.0301
+          5:
+            potassium_bromide: 0.301
+          6:
+            potassium_bromide: 3.01
+          7:
+            potassium_bromide: 30.1
+          8:
+            potassium_bromide: 301
+          9:
+            potassium_bromide: 3010
+          10:
+            potassium_bromide: 30100
+          11:
+            potassium_bromide: 301000
+      - group_id: AF_AFM1_potassium_bromide_OD0p001_G02
+        plate_ids: [HT2-14-B, HT3-14-B, HT4-14-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_bromide: 0
+          3:
+            potassium_bromide: 0.00106
+          4:
+            potassium_bromide: 0.0106
+          5:
+            potassium_bromide: 0.106
+          6:
+            potassium_bromide: 1.06
+          7:
+            potassium_bromide: 10.6
+          8:
+            potassium_bromide: 106
+          9:
+            potassium_bromide: 1060
+          10:
+            potassium_bromide: 10600
+          11:
+            potassium_bromide: 106000
+      - group_id: AF_AFM1_potassium_bromide_OD0p001_G03
+        plate_ids: [HT2-76-A, HT3-76-A, HT4-76-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_bromide: 0
+          10:
+            potassium_bromide: 39800
+          11:
+            potassium_bromide: 45000
+      - group_id: AF_AFM1_potassium_bromide_OD0p001_G04
+        plate_ids: [HT1_10, HT1_11, HT1_12]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_bromide: 0
+          3:
+            potassium_bromide: 0.998
+          4:
+            potassium_bromide: 3.07
+          5:
+            potassium_bromide: 6.14
+          6:
+            potassium_bromide: 9.98
+          7:
+            potassium_bromide: 30.7
+          8:
+            potassium_bromide: 61.4
+          9:
+            potassium_bromide: 99.8
+          10:
+            potassium_bromide: 153
+          11:
+            potassium_bromide: 307
+  - experiment_id: AF_AFM1_titanyl_sulfate_OD0p001
+    name: Titanyl sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      titanyl_sulfate:
+        name: titanyl sulfate
+        reagent_id: titanyl_sulfate
+        concentration_determination: measured_elemental
+        assayed_element: Ti
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_titanyl_sulfate_OD0p001_G01
+        plate_ids: [HT2-16-A, HT3-16-A, HT4-16-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            titanyl_sulfate: 0
+          3:
+            titanyl_sulfate: 0.0108
+          4:
+            titanyl_sulfate: 0.108
+          5:
+            titanyl_sulfate: 1.08
+          6:
+            titanyl_sulfate: 10.8
+          7:
+            titanyl_sulfate: 108
+          8:
+            titanyl_sulfate: 1080
+          9:
+            titanyl_sulfate: 10800
+          10:
+            titanyl_sulfate: 108000
+          11:
+            titanyl_sulfate: 1080000
+      - group_id: AF_AFM1_titanyl_sulfate_OD0p001_G02
+        plate_ids: [HT2-16-B, HT3-16-B, HT4-16-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            titanyl_sulfate: 0
+          3:
+            titanyl_sulfate: 0.00323
+          4:
+            titanyl_sulfate: 0.0323
+          5:
+            titanyl_sulfate: 0.323
+          6:
+            titanyl_sulfate: 3.23
+          7:
+            titanyl_sulfate: 32.3
+          8:
+            titanyl_sulfate: 323
+          9:
+            titanyl_sulfate: 3230
+          10:
+            titanyl_sulfate: 32300
+          11:
+            titanyl_sulfate: 323000
+  - experiment_id: AF_AFM1_zinc_sulfate_OD0p001
+    name: Zinc sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      zinc_sulfate:
+        name: zinc sulfate
+        reagent_id: zinc_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_zinc_sulfate_OD0p001_G01
+        plate_ids: [HT2-17-A, HT3-17-A, HT4-17-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            zinc_sulfate: 0
+          3:
+            zinc_sulfate: 0.0102
+          4:
+            zinc_sulfate: 0.102
+          5:
+            zinc_sulfate: 1.02
+          6:
+            zinc_sulfate: 10.2
+          7:
+            zinc_sulfate: 102
+          8:
+            zinc_sulfate: 1020
+          9:
+            zinc_sulfate: 10200
+          10:
+            zinc_sulfate: 102000
+          11:
+            zinc_sulfate: 1020000
+      - group_id: AF_AFM1_zinc_sulfate_OD0p001_G02
+        plate_ids: [HT2-17-B, HT3-17-B, HT4-17-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            zinc_sulfate: 0
+          3:
+            zinc_sulfate: 0.00305
+          4:
+            zinc_sulfate: 0.0305
+          5:
+            zinc_sulfate: 0.305
+          6:
+            zinc_sulfate: 3.05
+          7:
+            zinc_sulfate: 30.5
+          8:
+            zinc_sulfate: 305
+          9:
+            zinc_sulfate: 3050
+          10:
+            zinc_sulfate: 30500
+          11:
+            zinc_sulfate: 305000
+      - group_id: AF_AFM1_zinc_sulfate_OD0p001_G03
+        plate_ids: [HT2-72-A, HT3-72-A, HT4-72-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            zinc_sulfate: 0
+          3:
+            zinc_sulfate: 351000
+          4:
+            zinc_sulfate: 399000
+          5:
+            zinc_sulfate: 501000
+  - experiment_id: AF_AFM1_vanadyl_sulfate_OD0p001
+    name: Vanadyl sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      vanadyl_sulfate:
+        name: vanadyl sulfate
+        reagent_id: vanadyl_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_vanadyl_sulfate_OD0p001_G01
+        plate_ids: [HT2-19-A, HT3-19-A, HT4-19-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            vanadyl_sulfate: 0
+          3:
+            vanadyl_sulfate: 0.01
+          4:
+            vanadyl_sulfate: 0.1
+          5:
+            vanadyl_sulfate: 1.0
+          6:
+            vanadyl_sulfate: 10.0
+          7:
+            vanadyl_sulfate: 100
+          8:
+            vanadyl_sulfate: 1000
+          9:
+            vanadyl_sulfate: 10000
+          10:
+            vanadyl_sulfate: 100000
+          11:
+            vanadyl_sulfate: 1000000
+      - group_id: AF_AFM1_vanadyl_sulfate_OD0p001_G02
+        plate_ids: [HT2-19-B, HT3-19-B, HT4-19-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            vanadyl_sulfate: 0
+          3:
+            vanadyl_sulfate: 0.00301
+          4:
+            vanadyl_sulfate: 0.0301
+          5:
+            vanadyl_sulfate: 0.301
+          6:
+            vanadyl_sulfate: 3.01
+          7:
+            vanadyl_sulfate: 30.1
+          8:
+            vanadyl_sulfate: 301
+          9:
+            vanadyl_sulfate: 3010
+          10:
+            vanadyl_sulfate: 30100
+          11:
+            vanadyl_sulfate: 301000
+      - group_id: AF_AFM1_vanadyl_sulfate_OD0p001_G03
+        plate_ids: [HT2-72-A, HT3-72-A, HT4-72-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            vanadyl_sulfate: 0
+          6:
+            vanadyl_sulfate: 200000
+          7:
+            vanadyl_sulfate: 401000
+          8:
+            vanadyl_sulfate: 501000
+  - experiment_id: AF_AFM1_ammonium_sulfate_OD0p001
+    name: Ammonium sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      ammonium_sulfate:
+        name: ammonium sulfate
+        reagent_id: ammonium_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_ammonium_sulfate_OD0p001_G01
+        plate_ids: [HT2-1-A, HT3-1-A, HT4-1-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            ammonium_sulfate: 0
+          3:
+            ammonium_sulfate: 0.00471
+          4:
+            ammonium_sulfate: 0.0471
+          5:
+            ammonium_sulfate: 0.471
+          6:
+            ammonium_sulfate: 4.71
+          7:
+            ammonium_sulfate: 47.1
+          8:
+            ammonium_sulfate: 471
+          9:
+            ammonium_sulfate: 4710
+          10:
+            ammonium_sulfate: 47100
+          11:
+            ammonium_sulfate: 471000
+      - group_id: AF_AFM1_ammonium_sulfate_OD0p001_G02
+        plate_ids: [HT2-1-B, HT3-1-B, HT4-1-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            ammonium_sulfate: 0
+          3:
+            ammonium_sulfate: 0.00141
+          4:
+            ammonium_sulfate: 0.0141
+          5:
+            ammonium_sulfate: 0.141
+          6:
+            ammonium_sulfate: 1.41
+          7:
+            ammonium_sulfate: 14.1
+          8:
+            ammonium_sulfate: 141
+          9:
+            ammonium_sulfate: 1410
+          10:
+            ammonium_sulfate: 14100
+          11:
+            ammonium_sulfate: 141000
+      - group_id: AF_AFM1_ammonium_sulfate_OD0p001_G03
+        plate_ids: [HT2-70-A, HT3-70-A, HT4-70-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            ammonium_sulfate: 0
+          3:
+            ammonium_sulfate: 200000
+          4:
+            ammonium_sulfate: 250000
+          5:
+            ammonium_sulfate: 300000
+  - experiment_id: AF_AFM1_gallium_sulfate_OD0p001
+    name: Gallium sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      gallium_sulfate:
+        name: gallium sulfate
+        reagent_id: gallium_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_gallium_sulfate_OD0p001_G01
+        plate_ids: [HT1_4, HT1_5, HT1_6]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            gallium_sulfate: 0
+          3:
+            gallium_sulfate: 984
+          4:
+            gallium_sulfate: 3020
+          5:
+            gallium_sulfate: 6010
+          6:
+            gallium_sulfate: 9840
+          7:
+            gallium_sulfate: 30200
+          8:
+            gallium_sulfate: 60060
+          9:
+            gallium_sulfate: 98400
+          10:
+            gallium_sulfate: 152000
+          11:
+            gallium_sulfate: 303000
+      - group_id: AF_AFM1_gallium_sulfate_OD0p001_G02
+        plate_ids: [HT2-20-A, HT3-20-A, HT4-20-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            gallium_sulfate: 0
+          3:
+            gallium_sulfate: 0.00214
+          4:
+            gallium_sulfate: 0.0214
+          5:
+            gallium_sulfate: 0.214
+          6:
+            gallium_sulfate: 2.14
+          7:
+            gallium_sulfate: 21.4
+          8:
+            gallium_sulfate: 214
+          9:
+            gallium_sulfate: 2140
+          10:
+            gallium_sulfate: 21400
+          11:
+            gallium_sulfate: 214000
+      - group_id: AF_AFM1_gallium_sulfate_OD0p001_G03
+        plate_ids: [HT2-20-B, HT3-20-B, HT4-20-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            gallium_sulfate: 0
+          3:
+            gallium_sulfate: 0.000714
+          4:
+            gallium_sulfate: 0.00714
+          5:
+            gallium_sulfate: 0.0714
+          6:
+            gallium_sulfate: 0.714
+          7:
+            gallium_sulfate: 7.14
+          8:
+            gallium_sulfate: 71.4
+          9:
+            gallium_sulfate: 714
+          10:
+            gallium_sulfate: 7140
+          11:
+            gallium_sulfate: 71400
+      - group_id: AF_AFM1_gallium_sulfate_OD0p001_G04
+        plate_ids: [HT2-72-A, HT3-72-A, HT4-72-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            gallium_sulfate: 0
+          9:
+            gallium_sulfate: 75000
+          10:
+            gallium_sulfate: 100000
+          11:
+            gallium_sulfate: 125000
+  - experiment_id: AF_AFM1_potassium_iodide_OD0p001
+    name: Potassium iodide concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_iodide:
+        name: potassium iodide
+        reagent_id: potassium_iodide
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_potassium_iodide_OD0p001_G01
+        plate_ids: [HT2-21-A, HT3-21-A, HT4-21-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_iodide: 0
+          3:
+            potassium_iodide: 0.00296
+          4:
+            potassium_iodide: 0.0296
+          5:
+            potassium_iodide: 0.296
+          6:
+            potassium_iodide: 2.96
+          7:
+            potassium_iodide: 29.6
+          8:
+            potassium_iodide: 296
+          9:
+            potassium_iodide: 2960
+          10:
+            potassium_iodide: 29600
+          11:
+            potassium_iodide: 296000
+      - group_id: AF_AFM1_potassium_iodide_OD0p001_G02
+        plate_ids: [HT2-21-B, HT3-21-B, HT4-21-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_iodide: 0
+          3:
+            potassium_iodide: 0.000988
+          4:
+            potassium_iodide: 0.00988
+          5:
+            potassium_iodide: 0.0988
+          6:
+            potassium_iodide: 0.988
+          7:
+            potassium_iodide: 9.88
+          8:
+            potassium_iodide: 98.8
+          9:
+            potassium_iodide: 988
+          10:
+            potassium_iodide: 9880
+          11:
+            potassium_iodide: 98800
+  - experiment_id: AF_AFM1_potassium_chloride_OD0p001
+    name: Potassium chloride concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_chloride:
+        name: potassium chloride
+        reagent_id: potassium_chloride
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_potassium_chloride_OD0p001_G01
+        plate_ids: [HT1_7, HT1_8, HT1_9]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_chloride: 0
+          3:
+            potassium_chloride: 984
+          4:
+            potassium_chloride: 3020
+          5:
+            potassium_chloride: 6010
+          6:
+            potassium_chloride: 9840
+          7:
+            potassium_chloride: 30200
+          8:
+            potassium_chloride: 60060
+          9:
+            potassium_chloride: 98400
+          10:
+            potassium_chloride: 152000
+          11:
+            potassium_chloride: 302000
+      - group_id: AF_AFM1_potassium_chloride_OD0p001_G02
+        plate_ids: [HT2-22-A, HT3-22-A, HT4-22-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_chloride: 0
+          3:
+            potassium_chloride: 0.00306
+          4:
+            potassium_chloride: 0.0306
+          5:
+            potassium_chloride: 0.306
+          6:
+            potassium_chloride: 3.06
+          7:
+            potassium_chloride: 30.6
+          8:
+            potassium_chloride: 306
+          9:
+            potassium_chloride: 3060
+          10:
+            potassium_chloride: 30600
+          11:
+            potassium_chloride: 306000
+      - group_id: AF_AFM1_potassium_chloride_OD0p001_G03
+        plate_ids: [HT2-22-B, HT3-22-B, HT4-22-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_chloride: 0
+          3:
+            potassium_chloride: 0.0102
+          4:
+            potassium_chloride: 0.102
+          5:
+            potassium_chloride: 1.02
+          6:
+            potassium_chloride: 10.2
+          7:
+            potassium_chloride: 102
+          8:
+            potassium_chloride: 1020
+          9:
+            potassium_chloride: 10200
+          10:
+            potassium_chloride: 102000
+          11:
+            potassium_chloride: 1020000
+  - experiment_id: AF_AFM1_citric_acid_OD0p001
+    name: Citric acid concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      citric_acid:
+        name: citric acid
+        reagent_id: citric_acid
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_citric_acid_OD0p001_G01
+        plate_ids: [HT2-23-A, HT3-23-A, HT4-23-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            citric_acid: 0
+          3:
+            citric_acid: 0.00296
+          4:
+            citric_acid: 0.0296
+          5:
+            citric_acid: 0.296
+          6:
+            citric_acid: 2.96
+          7:
+            citric_acid: 29.6
+          8:
+            citric_acid: 296
+          9:
+            citric_acid: 2960
+          10:
+            citric_acid: 29600
+          11:
+            citric_acid: 296000
+      - group_id: AF_AFM1_citric_acid_OD0p001_G02
+        plate_ids: [HT2-23-B, HT3-23-B, HT4-23-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            citric_acid: 0
+          3:
+            citric_acid: 0.000988
+          4:
+            citric_acid: 0.00988
+          5:
+            citric_acid: 0.0988
+          6:
+            citric_acid: 0.988
+          7:
+            citric_acid: 9.88
+          8:
+            citric_acid: 98.8
+          9:
+            citric_acid: 988
+          10:
+            citric_acid: 9880
+          11:
+            citric_acid: 98800
+  - experiment_id: AF_AFM1_potassium_chloride_OD0p001_pH1p4
+    name: Potassium chloride concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_chloride:
+        name: potassium chloride
+        reagent_id: potassium_chloride
+    additive_stock_pH: 1.8
+    nominal_initial_pH: 1.4
+    plate_groups:
+      - group_id: AF_AFM1_potassium_chloride_OD0p001_pH1p4_G01
+        plate_ids: [HT2-24-B, HT3-24-B, HT4-24-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_chloride: 0
+          3:
+            potassium_chloride: 0.01
+          4:
+            potassium_chloride: 0.1
+          5:
+            potassium_chloride: 1.0
+          6:
+            potassium_chloride: 10.0
+          7:
+            potassium_chloride: 100
+          8:
+            potassium_chloride: 1000
+          9:
+            potassium_chloride: 10000
+          10:
+            potassium_chloride: 100000
+          11:
+            potassium_chloride: 1000000
+  - experiment_id: AF_AFM1_potassium_gluconate_OD0p001
+    name: Sodium gluconate concentration series
+    identifier_note: Experiment and group identifiers containing potassium_gluconate denote D-gluconic acid sodium salt (sodium gluconate).
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      sodium_gluconate:
+        name: sodium gluconate
+        reagent_id: sodium_gluconate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_potassium_gluconate_OD0p001_G01
+        plate_ids: [HT2-25-B, HT3-25-B, HT4-25-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_gluconate: 0
+          3:
+            sodium_gluconate: 0.000729
+          4:
+            sodium_gluconate: 0.00729
+          5:
+            sodium_gluconate: 0.0729
+          6:
+            sodium_gluconate: 0.729
+          7:
+            sodium_gluconate: 7.29
+          8:
+            sodium_gluconate: 72.9
+          9:
+            sodium_gluconate: 729
+          10:
+            sodium_gluconate: 7290
+          11:
+            sodium_gluconate: 72900
+      - group_id: AF_AFM1_potassium_gluconate_OD0p001_G02
+        plate_ids: [HT2-25-A, HT3-25-A, HT4-25-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_gluconate: 0
+          3:
+            sodium_gluconate: 0.00219
+          4:
+            sodium_gluconate: 0.0219
+          5:
+            sodium_gluconate: 0.219
+          6:
+            sodium_gluconate: 2.19
+          7:
+            sodium_gluconate: 21.9
+          8:
+            sodium_gluconate: 219
+          9:
+            sodium_gluconate: 2190
+          10:
+            sodium_gluconate: 21900
+          11:
+            sodium_gluconate: 219000
+  - experiment_id: AF_AFM1_dysprosium_iii_sulfate_OD0p001
+    name: Dysprosium(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      dysprosium_iii_sulfate:
+        name: dysprosium(III) sulfate
+        reagent_id: dysprosium_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_dysprosium_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-26-A, HT3-26-A, HT4-26-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            dysprosium_iii_sulfate: 0
+          3:
+            dysprosium_iii_sulfate: 0.000934
+          4:
+            dysprosium_iii_sulfate: 0.00934
+          5:
+            dysprosium_iii_sulfate: 0.0934
+          6:
+            dysprosium_iii_sulfate: 0.934
+          7:
+            dysprosium_iii_sulfate: 9.34
+          8:
+            dysprosium_iii_sulfate: 93.4
+          9:
+            dysprosium_iii_sulfate: 934
+          10:
+            dysprosium_iii_sulfate: 9340
+          11:
+            dysprosium_iii_sulfate: 23300
+      - group_id: AF_AFM1_dysprosium_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-26-B, HT3-26-B, HT4-26-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            dysprosium_iii_sulfate: 0
+          3:
+            dysprosium_iii_sulfate: 2.8e-05
+          4:
+            dysprosium_iii_sulfate: 0.00028
+          5:
+            dysprosium_iii_sulfate: 0.0028
+          6:
+            dysprosium_iii_sulfate: 0.028
+          7:
+            dysprosium_iii_sulfate: 0.28
+          8:
+            dysprosium_iii_sulfate: 2.8
+          9:
+            dysprosium_iii_sulfate: 28.0
+          10:
+            dysprosium_iii_sulfate: 280
+          11:
+            dysprosium_iii_sulfate: 2800
+  - experiment_id: AF_AFM1_yttrium_iii_sulfate_OD0p001
+    name: Yttrium(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      yttrium_iii_sulfate:
+        name: yttrium(III) sulfate
+        reagent_id: yttrium_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_yttrium_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-27-A, HT3-27-A, HT4-27-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            yttrium_iii_sulfate: 0
+          3:
+            yttrium_iii_sulfate: 0.000978
+          4:
+            yttrium_iii_sulfate: 0.00978
+          5:
+            yttrium_iii_sulfate: 0.0978
+          6:
+            yttrium_iii_sulfate: 0.978
+          7:
+            yttrium_iii_sulfate: 9.78
+          8:
+            yttrium_iii_sulfate: 97.8
+          9:
+            yttrium_iii_sulfate: 978
+          10:
+            yttrium_iii_sulfate: 9780
+          11:
+            yttrium_iii_sulfate: 48900
+      - group_id: AF_AFM1_yttrium_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-27-B, HT3-27-B, HT4-27-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            yttrium_iii_sulfate: 0
+          3:
+            yttrium_iii_sulfate: 0.000293
+          4:
+            yttrium_iii_sulfate: 0.00293
+          5:
+            yttrium_iii_sulfate: 0.0293
+          6:
+            yttrium_iii_sulfate: 0.293
+          7:
+            yttrium_iii_sulfate: 2.93
+          8:
+            yttrium_iii_sulfate: 29.3
+          9:
+            yttrium_iii_sulfate: 293
+          10:
+            yttrium_iii_sulfate: 2930
+          11:
+            yttrium_iii_sulfate: 29300
+  - experiment_id: AF_AFM1_europium_iii_sulfate_OD0p001
+    name: Europium(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      europium_iii_sulfate:
+        name: europium(III) sulfate
+        reagent_id: europium_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_europium_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-28-A, HT3-28-A, HT4-28-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            europium_iii_sulfate: 0
+          3:
+            europium_iii_sulfate: 0.00098
+          4:
+            europium_iii_sulfate: 0.0098
+          5:
+            europium_iii_sulfate: 0.098
+          6:
+            europium_iii_sulfate: 0.98
+          7:
+            europium_iii_sulfate: 9.8
+          8:
+            europium_iii_sulfate: 98.0
+          9:
+            europium_iii_sulfate: 980
+          10:
+            europium_iii_sulfate: 9800
+          11:
+            europium_iii_sulfate: 14700
+      - group_id: AF_AFM1_europium_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-28-B, HT3-28-B, HT4-28-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            europium_iii_sulfate: 0
+          3:
+            europium_iii_sulfate: 2.94e-05
+          4:
+            europium_iii_sulfate: 0.000294
+          5:
+            europium_iii_sulfate: 0.00294
+          6:
+            europium_iii_sulfate: 0.0294
+          7:
+            europium_iii_sulfate: 0.294
+          8:
+            europium_iii_sulfate: 2.94
+          9:
+            europium_iii_sulfate: 29.4
+          10:
+            europium_iii_sulfate: 294
+          11:
+            europium_iii_sulfate: 2940
+  - experiment_id: AF_AFM1_neodymium_iii_sulfate_OD0p001
+    name: Neodymium(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      neodymium_iii_sulfate:
+        name: neodymium(III) sulfate
+        reagent_id: neodymium_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_neodymium_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-29-A, HT3-29-A, HT4-29-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            neodymium_iii_sulfate: 0
+          3:
+            neodymium_iii_sulfate: 6.79e-05
+          4:
+            neodymium_iii_sulfate: 0.000679
+          5:
+            neodymium_iii_sulfate: 0.00679
+          6:
+            neodymium_iii_sulfate: 0.0679
+          7:
+            neodymium_iii_sulfate: 0.679
+          8:
+            neodymium_iii_sulfate: 6.79
+          9:
+            neodymium_iii_sulfate: 67.9
+          10:
+            neodymium_iii_sulfate: 679
+          11:
+            neodymium_iii_sulfate: 6790
+      - group_id: AF_AFM1_neodymium_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-29-B, HT3-29-B, HT4-29-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            neodymium_iii_sulfate: 0
+          3:
+            neodymium_iii_sulfate: 0.000204
+          4:
+            neodymium_iii_sulfate: 0.00204
+          5:
+            neodymium_iii_sulfate: 0.0204
+          6:
+            neodymium_iii_sulfate: 0.204
+          7:
+            neodymium_iii_sulfate: 2.04
+          8:
+            neodymium_iii_sulfate: 20.4
+          9:
+            neodymium_iii_sulfate: 204
+          10:
+            neodymium_iii_sulfate: 2040
+          11:
+            neodymium_iii_sulfate: 20400
+  - experiment_id: AF_AFM1_magnesium_sulfate_OD0p001
+    name: Magnesium sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      magnesium_sulfate:
+        name: magnesium sulfate
+        reagent_id: magnesium_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_magnesium_sulfate_OD0p001_G01
+        plate_ids: [HT2-2-A, HT3-2-A, HT4-2-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            magnesium_sulfate: 0
+          3:
+            magnesium_sulfate: 0.01
+          4:
+            magnesium_sulfate: 0.1
+          5:
+            magnesium_sulfate: 1
+          6:
+            magnesium_sulfate: 10
+          7:
+            magnesium_sulfate: 100
+          8:
+            magnesium_sulfate: 1000
+          9:
+            magnesium_sulfate: 10000
+          10:
+            magnesium_sulfate: 100000
+          11:
+            magnesium_sulfate: 1000000
+      - group_id: AF_AFM1_magnesium_sulfate_OD0p001_G02
+        plate_ids: [HT2-2-B, HT3-2-B, HT4-2-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            magnesium_sulfate: 0
+          3:
+            magnesium_sulfate: 0.00301
+          4:
+            magnesium_sulfate: 0.0301
+          5:
+            magnesium_sulfate: 0.301
+          6:
+            magnesium_sulfate: 3.01
+          7:
+            magnesium_sulfate: 30.1
+          8:
+            magnesium_sulfate: 301
+          9:
+            magnesium_sulfate: 3010
+          10:
+            magnesium_sulfate: 30100
+          11:
+            magnesium_sulfate: 301000
+      - group_id: AF_AFM1_magnesium_sulfate_OD0p001_G03
+        plate_ids: [HT2-70-A, HT3-70-A, HT4-70-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            magnesium_sulfate: 0
+          6:
+            magnesium_sulfate: 200000
+          7:
+            magnesium_sulfate: 251000
+          8:
+            magnesium_sulfate: 401000
+  - experiment_id: AF_AFM1_terbium_iii_sulfate_OD0p001
+    name: Terbium(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      terbium_iii_sulfate:
+        name: terbium(III) sulfate
+        reagent_id: terbium_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_terbium_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-30-A, HT3-30-A, HT4-30-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            terbium_iii_sulfate: 0
+          3:
+            terbium_iii_sulfate: 0.000941
+          4:
+            terbium_iii_sulfate: 0.00941
+          5:
+            terbium_iii_sulfate: 0.0941
+          6:
+            terbium_iii_sulfate: 0.941
+          7:
+            terbium_iii_sulfate: 9.41
+          8:
+            terbium_iii_sulfate: 94.1
+          9:
+            terbium_iii_sulfate: 941
+          10:
+            terbium_iii_sulfate: 9410
+          11:
+            terbium_iii_sulfate: 16500
+      - group_id: AF_AFM1_terbium_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-30-B, HT3-30-B, HT4-30-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            terbium_iii_sulfate: 0
+          3:
+            terbium_iii_sulfate: 2.82e-05
+          4:
+            terbium_iii_sulfate: 0.000282
+          5:
+            terbium_iii_sulfate: 0.00282
+          6:
+            terbium_iii_sulfate: 0.0282
+          7:
+            terbium_iii_sulfate: 0.282
+          8:
+            terbium_iii_sulfate: 2.82
+          9:
+            terbium_iii_sulfate: 28.2
+          10:
+            terbium_iii_sulfate: 282
+          11:
+            terbium_iii_sulfate: 2820
+  - experiment_id: AF_AFM1_gadolinium_iii_sulfate_OD0p001
+    name: Gadolinium(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      gadolinium_iii_sulfate:
+        name: gadolinium(III) sulfate
+        reagent_id: gadolinium_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_gadolinium_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-31-A, HT3-31-A, HT4-31-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            gadolinium_iii_sulfate: 0
+          3:
+            gadolinium_iii_sulfate: 0.000988
+          4:
+            gadolinium_iii_sulfate: 0.00988
+          5:
+            gadolinium_iii_sulfate: 0.0988
+          6:
+            gadolinium_iii_sulfate: 0.988
+          7:
+            gadolinium_iii_sulfate: 9.88
+          8:
+            gadolinium_iii_sulfate: 98.8
+          9:
+            gadolinium_iii_sulfate: 988
+          10:
+            gadolinium_iii_sulfate: 9880
+          11:
+            gadolinium_iii_sulfate: 17300
+      - group_id: AF_AFM1_gadolinium_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-31-B, HT3-31-B, HT4-31-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            gadolinium_iii_sulfate: 0
+          3:
+            gadolinium_iii_sulfate: 2.96e-05
+          4:
+            gadolinium_iii_sulfate: 0.000296
+          5:
+            gadolinium_iii_sulfate: 0.00296
+          6:
+            gadolinium_iii_sulfate: 0.0296
+          7:
+            gadolinium_iii_sulfate: 0.296
+          8:
+            gadolinium_iii_sulfate: 2.96
+          9:
+            gadolinium_iii_sulfate: 29.6
+          10:
+            gadolinium_iii_sulfate: 296
+          11:
+            gadolinium_iii_sulfate: 2960
+  - experiment_id: AF_AFM1_cerium_iii_sulfate_OD0p001
+    name: Cerium(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      cerium_iii_sulfate:
+        name: cerium(III) sulfate
+        reagent_id: cerium_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_cerium_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-32-A, HT3-32-A, HT4-32-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cerium_iii_sulfate: 0
+          3:
+            cerium_iii_sulfate: 0.000982
+          4:
+            cerium_iii_sulfate: 0.00982
+          5:
+            cerium_iii_sulfate: 0.0982
+          6:
+            cerium_iii_sulfate: 0.982
+          7:
+            cerium_iii_sulfate: 9.82
+          8:
+            cerium_iii_sulfate: 98.2
+          9:
+            cerium_iii_sulfate: 982
+          10:
+            cerium_iii_sulfate: 9820
+          11:
+            cerium_iii_sulfate: 68800
+      - group_id: AF_AFM1_cerium_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-32-B, HT3-32-B, HT4-32-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cerium_iii_sulfate: 0
+          3:
+            cerium_iii_sulfate: 0.000295
+          4:
+            cerium_iii_sulfate: 0.00295
+          5:
+            cerium_iii_sulfate: 0.0295
+          6:
+            cerium_iii_sulfate: 0.295
+          7:
+            cerium_iii_sulfate: 2.95
+          8:
+            cerium_iii_sulfate: 29.5
+          9:
+            cerium_iii_sulfate: 295
+          10:
+            cerium_iii_sulfate: 2950
+          11:
+            cerium_iii_sulfate: 29500
+  - experiment_id: AF_AFM1_samarium_iii_sulfate_OD0p001
+    name: Samarium(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      samarium_iii_sulfate:
+        name: samarium(III) sulfate
+        reagent_id: samarium_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_samarium_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-33-A, HT3-33-A, HT4-33-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            samarium_iii_sulfate: 0
+          3:
+            samarium_iii_sulfate: 0.000981
+          4:
+            samarium_iii_sulfate: 0.00981
+          5:
+            samarium_iii_sulfate: 0.0981
+          6:
+            samarium_iii_sulfate: 0.981
+          7:
+            samarium_iii_sulfate: 9.81
+          8:
+            samarium_iii_sulfate: 98.1
+          9:
+            samarium_iii_sulfate: 981
+          10:
+            samarium_iii_sulfate: 9810
+          11:
+            samarium_iii_sulfate: 14700
+      - group_id: AF_AFM1_samarium_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-33-B, HT3-33-B, HT4-33-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            samarium_iii_sulfate: 0
+          3:
+            samarium_iii_sulfate: 2.94e-05
+          4:
+            samarium_iii_sulfate: 0.000294
+          5:
+            samarium_iii_sulfate: 0.00294
+          6:
+            samarium_iii_sulfate: 0.0294
+          7:
+            samarium_iii_sulfate: 0.294
+          8:
+            samarium_iii_sulfate: 2.94
+          9:
+            samarium_iii_sulfate: 29.4
+          10:
+            samarium_iii_sulfate: 294
+          11:
+            samarium_iii_sulfate: 2940
+  - experiment_id: AF_AFM1_lanthanum_iii_sulfate_OD0p001
+    name: Lanthanum(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      lanthanum_iii_sulfate:
+        name: lanthanum(III) sulfate
+        reagent_id: lanthanum_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_lanthanum_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-34-A, HT3-34-A, HT4-34-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            lanthanum_iii_sulfate: 0
+          3:
+            lanthanum_iii_sulfate: 0.000996
+          4:
+            lanthanum_iii_sulfate: 0.00996
+          5:
+            lanthanum_iii_sulfate: 0.0996
+          6:
+            lanthanum_iii_sulfate: 0.996
+          7:
+            lanthanum_iii_sulfate: 9.96
+          8:
+            lanthanum_iii_sulfate: 99.6
+          9:
+            lanthanum_iii_sulfate: 996
+          10:
+            lanthanum_iii_sulfate: 9960
+          11:
+            lanthanum_iii_sulfate: 14900
+      - group_id: AF_AFM1_lanthanum_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-34-B, HT3-34-B, HT4-34-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            lanthanum_iii_sulfate: 0
+          3:
+            lanthanum_iii_sulfate: 2.99e-05
+          4:
+            lanthanum_iii_sulfate: 0.000299
+          5:
+            lanthanum_iii_sulfate: 0.00299
+          6:
+            lanthanum_iii_sulfate: 0.0299
+          7:
+            lanthanum_iii_sulfate: 0.299
+          8:
+            lanthanum_iii_sulfate: 2.99
+          9:
+            lanthanum_iii_sulfate: 29.9
+          10:
+            lanthanum_iii_sulfate: 299
+          11:
+            lanthanum_iii_sulfate: 2990
+  - experiment_id: AF_AFM1_zirconium_iv_sulfate_OD0p001
+    name: Zirconium(iv) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      zirconium_iv_sulfate:
+        name: zirconium(IV) sulfate
+        reagent_id: zirconium_iv_sulfate
+        concentration_determination: measured_elemental
+        assayed_element: Zr
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_zirconium_iv_sulfate_OD0p001_G01
+        plate_ids: [HT2-35-A, HT3-35-A, HT4-35-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            zirconium_iv_sulfate: 0
+          3:
+            zirconium_iv_sulfate: 0.000961
+          4:
+            zirconium_iv_sulfate: 0.00961
+          5:
+            zirconium_iv_sulfate: 0.0961
+          6:
+            zirconium_iv_sulfate: 0.961
+          7:
+            zirconium_iv_sulfate: 9.61
+          8:
+            zirconium_iv_sulfate: 96.1
+          9:
+            zirconium_iv_sulfate: 961
+          10:
+            zirconium_iv_sulfate: 9610
+          11:
+            zirconium_iv_sulfate: 96100
+      - group_id: AF_AFM1_zirconium_iv_sulfate_OD0p001_G02
+        plate_ids: [HT2-35-B, HT3-35-B, HT4-35-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            zirconium_iv_sulfate: 0
+          3:
+            zirconium_iv_sulfate: 0.00288
+          4:
+            zirconium_iv_sulfate: 0.0288
+          5:
+            zirconium_iv_sulfate: 0.288
+          6:
+            zirconium_iv_sulfate: 2.88
+          7:
+            zirconium_iv_sulfate: 28.8
+          8:
+            zirconium_iv_sulfate: 288
+          9:
+            zirconium_iv_sulfate: 2880
+          10:
+            zirconium_iv_sulfate: 28800
+          11:
+            zirconium_iv_sulfate: 288000
+  - experiment_id: AF_AFM1_erbium_iii_sulfate_OD0p001
+    name: Erbium(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      erbium_iii_sulfate:
+        name: erbium(III) sulfate
+        reagent_id: erbium_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_erbium_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-36-A, HT3-36-A, HT4-36-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            erbium_iii_sulfate: 0
+          3:
+            erbium_iii_sulfate: 0.001
+          4:
+            erbium_iii_sulfate: 0.01
+          5:
+            erbium_iii_sulfate: 0.1
+          6:
+            erbium_iii_sulfate: 1.0
+          7:
+            erbium_iii_sulfate: 10.0
+          8:
+            erbium_iii_sulfate: 100
+          9:
+            erbium_iii_sulfate: 1000
+          10:
+            erbium_iii_sulfate: 10000
+          11:
+            erbium_iii_sulfate: 60100
+      - group_id: AF_AFM1_erbium_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-36-B, HT3-36-B, HT4-36-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            erbium_iii_sulfate: 0
+          3:
+            erbium_iii_sulfate: 0.0003
+          4:
+            erbium_iii_sulfate: 0.003
+          5:
+            erbium_iii_sulfate: 0.03
+          6:
+            erbium_iii_sulfate: 0.3
+          7:
+            erbium_iii_sulfate: 3.0
+          8:
+            erbium_iii_sulfate: 30.0
+          9:
+            erbium_iii_sulfate: 300
+          10:
+            erbium_iii_sulfate: 3000
+          11:
+            erbium_iii_sulfate: 30000
+  - experiment_id: AF_AFM1_potassium_chloride_OD0p001_pH1p2
+    name: Potassium chloride concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_chloride:
+        name: potassium chloride
+        reagent_id: potassium_chloride
+    additive_stock_pH: 1.8
+    nominal_initial_pH: 1.2
+    plate_groups:
+      - group_id: AF_AFM1_potassium_chloride_OD0p001_pH1p2_G01
+        plate_ids: [HT2-37-B, HT3-37-B, HT4-37-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_chloride: 0
+          3:
+            potassium_chloride: 0.0101
+          4:
+            potassium_chloride: 0.101
+          5:
+            potassium_chloride: 1.01
+          6:
+            potassium_chloride: 10.1
+          7:
+            potassium_chloride: 101
+          8:
+            potassium_chloride: 1010
+          9:
+            potassium_chloride: 10100
+          10:
+            potassium_chloride: 101000
+          11:
+            potassium_chloride: 1010000
+  - experiment_id: AF_AFM1_potassium_sulfate_OD0p001
+    name: Potassium sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_sulfate:
+        name: potassium sulfate
+        reagent_id: potassium_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_potassium_sulfate_OD0p001_G01
+        plate_ids: [HT1_1, HT1_2, HT1_3]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_sulfate: 0
+          3:
+            potassium_sulfate: 1030
+          4:
+            potassium_sulfate: 3060
+          5:
+            potassium_sulfate: 6120
+          6:
+            potassium_sulfate: 10300
+          7:
+            potassium_sulfate: 30600
+          8:
+            potassium_sulfate: 61200
+          9:
+            potassium_sulfate: 103000
+          10:
+            potassium_sulfate: 154000
+          11:
+            potassium_sulfate: 306000
+      - group_id: AF_AFM1_potassium_sulfate_OD0p001_G02
+        plate_ids: [HT2-38-A, HT3-38-A, HT4-38-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_sulfate: 0
+          3:
+            potassium_sulfate: 0.001
+          4:
+            potassium_sulfate: 0.01
+          5:
+            potassium_sulfate: 0.1
+          6:
+            potassium_sulfate: 1.0
+          7:
+            potassium_sulfate: 10.0
+          8:
+            potassium_sulfate: 100
+          9:
+            potassium_sulfate: 1000
+          10:
+            potassium_sulfate: 10000
+          11:
+            potassium_sulfate: 100000
+      - group_id: AF_AFM1_potassium_sulfate_OD0p001_G03
+        plate_ids: [HT2-38-B, HT3-38-B, HT4-38-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_sulfate: 0
+          3:
+            potassium_sulfate: 0.003
+          4:
+            potassium_sulfate: 0.03
+          5:
+            potassium_sulfate: 0.3
+          6:
+            potassium_sulfate: 3.0
+          7:
+            potassium_sulfate: 30
+          8:
+            potassium_sulfate: 300
+          9:
+            potassium_sulfate: 3000
+          10:
+            potassium_sulfate: 30000
+          11:
+            potassium_sulfate: 300000
+  - experiment_id: AF_AFM1_sodium_chloride_OD0p001
+    name: Sodium chloride concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      sodium_chloride:
+        name: sodium chloride
+        reagent_id: sodium_chloride
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_sodium_chloride_OD0p001_G01
+        plate_ids: [HT2-39-A, HT3-39-A, HT4-39-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_chloride: 0
+          3:
+            sodium_chloride: 0.0104
+          4:
+            sodium_chloride: 0.104
+          5:
+            sodium_chloride: 1.04
+          6:
+            sodium_chloride: 10.4
+          7:
+            sodium_chloride: 104
+          8:
+            sodium_chloride: 1040
+          9:
+            sodium_chloride: 10400
+          10:
+            sodium_chloride: 104000
+          11:
+            sodium_chloride: 1040000
+      - group_id: AF_AFM1_sodium_chloride_OD0p001_G02
+        plate_ids: [HT2-39-B, HT3-39-B, HT4-39-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_chloride: 0
+          3:
+            sodium_chloride: 0.00311
+          4:
+            sodium_chloride: 0.0311
+          5:
+            sodium_chloride: 0.311
+          6:
+            sodium_chloride: 3.11
+          7:
+            sodium_chloride: 31.1
+          8:
+            sodium_chloride: 311
+          9:
+            sodium_chloride: 3110
+          10:
+            sodium_chloride: 31100
+          11:
+            sodium_chloride: 311000
+  - experiment_id: AF_AFM1_manganese_ii_sulfate_OD0p001
+    name: Manganese(ii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      manganese_ii_sulfate:
+        name: manganese(II) sulfate
+        reagent_id: manganese_ii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_manganese_ii_sulfate_OD0p001_G01
+        plate_ids: [HT2-3-A, HT3-3-A, HT4-3-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            manganese_ii_sulfate: 0
+          3:
+            manganese_ii_sulfate: 0.01
+          4:
+            manganese_ii_sulfate: 0.1
+          5:
+            manganese_ii_sulfate: 1
+          6:
+            manganese_ii_sulfate: 10
+          7:
+            manganese_ii_sulfate: 100
+          8:
+            manganese_ii_sulfate: 1000
+          9:
+            manganese_ii_sulfate: 10000
+          10:
+            manganese_ii_sulfate: 100000
+          11:
+            manganese_ii_sulfate: 1000000
+      - group_id: AF_AFM1_manganese_ii_sulfate_OD0p001_G02
+        plate_ids: [HT2-3-B, HT3-3-B, HT4-3-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            manganese_ii_sulfate: 0
+          3:
+            manganese_ii_sulfate: 0.003
+          4:
+            manganese_ii_sulfate: 0.03
+          5:
+            manganese_ii_sulfate: 0.3
+          6:
+            manganese_ii_sulfate: 3.0
+          7:
+            manganese_ii_sulfate: 30.0
+          8:
+            manganese_ii_sulfate: 300
+          9:
+            manganese_ii_sulfate: 3000
+          10:
+            manganese_ii_sulfate: 30000
+          11:
+            manganese_ii_sulfate: 300000
+      - group_id: AF_AFM1_manganese_ii_sulfate_OD0p001_G03
+        plate_ids: [HT2-70-A, HT3-70-A, HT4-70-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            manganese_ii_sulfate: 0
+          9:
+            manganese_ii_sulfate: 200000
+          10:
+            manganese_ii_sulfate: 250000
+          11:
+            manganese_ii_sulfate: 400000
+  - experiment_id: AF_AFM1_monopotassium_phosphate_OD0p001
+    name: Monopotassium phosphate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      monopotassium_phosphate:
+        name: monopotassium phosphate
+        reagent_id: monopotassium_phosphate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_monopotassium_phosphate_OD0p001_G01
+        plate_ids: [HT2-40-A, HT3-40-A, HT4-40-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            monopotassium_phosphate: 0
+          3:
+            monopotassium_phosphate: 0.000999
+          4:
+            monopotassium_phosphate: 0.00999
+          5:
+            monopotassium_phosphate: 0.0999
+          6:
+            monopotassium_phosphate: 0.999
+          7:
+            monopotassium_phosphate: 9.99
+          8:
+            monopotassium_phosphate: 99.9
+          9:
+            monopotassium_phosphate: 999
+          10:
+            monopotassium_phosphate: 9990
+          11:
+            monopotassium_phosphate: 99900
+      - group_id: AF_AFM1_monopotassium_phosphate_OD0p001_G02
+        plate_ids: [HT2-40-B, HT3-40-B, HT4-40-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            monopotassium_phosphate: 0
+          3:
+            monopotassium_phosphate: 0.003
+          4:
+            monopotassium_phosphate: 0.03
+          5:
+            monopotassium_phosphate: 0.3
+          6:
+            monopotassium_phosphate: 3.0
+          7:
+            monopotassium_phosphate: 30.0
+          8:
+            monopotassium_phosphate: 300
+          9:
+            monopotassium_phosphate: 3000
+          10:
+            monopotassium_phosphate: 30000
+          11:
+            monopotassium_phosphate: 300000
+      - group_id: AF_AFM1_monopotassium_phosphate_OD0p001_G03
+        plate_ids: [HT2-73-A, HT3-73-A, HT4-73-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            monopotassium_phosphate: 0
+          3:
+            monopotassium_phosphate: 40000
+          4:
+            monopotassium_phosphate: 50000
+          5:
+            monopotassium_phosphate: 60000
+  - experiment_id: AF_AFM1_iron_iii_chloride_OD0p001
+    name: Iron(iii) chloride concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      iron_iii_chloride:
+        name: iron(III) chloride
+        reagent_id: iron_iii_chloride
+    additive_stock_pH: 1.8
+    dose_definition: Added compound above the iron already present in the medium.
+    plate_groups:
+      - group_id: AF_AFM1_iron_iii_chloride_OD0p001_G01
+        plate_ids: [HT2-41-A, HT3-41-A, HT4-41-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            iron_iii_chloride: 0
+          3:
+            iron_iii_chloride: 0.00944
+          4:
+            iron_iii_chloride: 0.0944
+          5:
+            iron_iii_chloride: 0.944
+          6:
+            iron_iii_chloride: 9.44
+          7:
+            iron_iii_chloride: 94.4
+          8:
+            iron_iii_chloride: 944
+          9:
+            iron_iii_chloride: 9440
+          10:
+            iron_iii_chloride: 94400
+          11:
+            iron_iii_chloride: 944000
+      - group_id: AF_AFM1_iron_iii_chloride_OD0p001_G02
+        plate_ids: [HT2-41-B, HT3-41-B, HT4-41-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            iron_iii_chloride: 0
+          3:
+            iron_iii_chloride: 0.00283
+          4:
+            iron_iii_chloride: 0.0283
+          5:
+            iron_iii_chloride: 0.283
+          6:
+            iron_iii_chloride: 2.83
+          7:
+            iron_iii_chloride: 28.3
+          8:
+            iron_iii_chloride: 283
+          9:
+            iron_iii_chloride: 2830
+          10:
+            iron_iii_chloride: 28300
+          11:
+            iron_iii_chloride: 283000
+      - group_id: AF_AFM1_iron_iii_chloride_OD0p001_G03
+        plate_ids: [HT2-73-A, HT3-73-A, HT4-73-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            iron_iii_chloride: 0
+          6:
+            iron_iii_chloride: 4950
+          7:
+            iron_iii_chloride: 29700
+          8:
+            iron_iii_chloride: 60200
+  - experiment_id: AF_AFM1_potassium_chloride_OD0p001_pH1p0
+    name: Potassium chloride concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_chloride:
+        name: potassium chloride
+        reagent_id: potassium_chloride
+    additive_stock_pH: 1.8
+    nominal_initial_pH: 1.0
+    plate_groups:
+      - group_id: AF_AFM1_potassium_chloride_OD0p001_pH1p0_G01
+        plate_ids: [HT2-42-B, HT3-42-B, HT4-42-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_chloride: 0
+          3:
+            potassium_chloride: 0.00991
+          4:
+            potassium_chloride: 0.0991
+          5:
+            potassium_chloride: 0.991
+          6:
+            potassium_chloride: 9.91
+          7:
+            potassium_chloride: 99.1
+          8:
+            potassium_chloride: 991
+          9:
+            potassium_chloride: 9910
+          10:
+            potassium_chloride: 99100
+          11:
+            potassium_chloride: 991000
+  - experiment_id: AF_AFM1_praseodymium_iii_sulfate_OD0p001
+    name: Praseodymium(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      praseodymium_iii_sulfate:
+        name: praseodymium(III) sulfate
+        reagent_id: praseodymium_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_praseodymium_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-43-A, HT3-43-A, HT4-43-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            praseodymium_iii_sulfate: 0
+          3:
+            praseodymium_iii_sulfate: 0.000979
+          4:
+            praseodymium_iii_sulfate: 0.00979
+          5:
+            praseodymium_iii_sulfate: 0.0979
+          6:
+            praseodymium_iii_sulfate: 0.979
+          7:
+            praseodymium_iii_sulfate: 9.79
+          8:
+            praseodymium_iii_sulfate: 97.9
+          9:
+            praseodymium_iii_sulfate: 979
+          10:
+            praseodymium_iii_sulfate: 9790
+          11:
+            praseodymium_iii_sulfate: 49000
+      - group_id: AF_AFM1_praseodymium_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-43-B, HT3-43-B, HT4-43-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            praseodymium_iii_sulfate: 0
+          3:
+            praseodymium_iii_sulfate: 0.000294
+          4:
+            praseodymium_iii_sulfate: 0.00294
+          5:
+            praseodymium_iii_sulfate: 0.0294
+          6:
+            praseodymium_iii_sulfate: 0.294
+          7:
+            praseodymium_iii_sulfate: 2.94
+          8:
+            praseodymium_iii_sulfate: 29.4
+          9:
+            praseodymium_iii_sulfate: 294
+          10:
+            praseodymium_iii_sulfate: 2940
+          11:
+            praseodymium_iii_sulfate: 29400
+      - group_id: AF_AFM1_praseodymium_iii_sulfate_OD0p001_G03
+        plate_ids: [HT2-75-A, HT3-75-A, HT4-75-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            praseodymium_iii_sulfate: 0
+          3:
+            praseodymium_iii_sulfate: 20000
+          4:
+            praseodymium_iii_sulfate: 40000
+  - experiment_id: AF_AFM1_ytterbium_iii_sulfate_OD0p001
+    name: Ytterbium(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      ytterbium_iii_sulfate:
+        name: ytterbium(III) sulfate
+        reagent_id: ytterbium_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_ytterbium_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-44-A, HT3-44-A, HT4-44-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            ytterbium_iii_sulfate: 0
+          3:
+            ytterbium_iii_sulfate: 0.01
+          4:
+            ytterbium_iii_sulfate: 0.1
+          5:
+            ytterbium_iii_sulfate: 1.0
+          6:
+            ytterbium_iii_sulfate: 10.0
+          7:
+            ytterbium_iii_sulfate: 100
+          8:
+            ytterbium_iii_sulfate: 1000
+          9:
+            ytterbium_iii_sulfate: 10000
+          10:
+            ytterbium_iii_sulfate: 100000
+          11:
+            ytterbium_iii_sulfate: 150000
+      - group_id: AF_AFM1_ytterbium_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-44-B, HT3-44-B, HT4-44-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            ytterbium_iii_sulfate: 0
+          3:
+            ytterbium_iii_sulfate: 0.0003
+          4:
+            ytterbium_iii_sulfate: 0.003
+          5:
+            ytterbium_iii_sulfate: 0.03
+          6:
+            ytterbium_iii_sulfate: 0.3
+          7:
+            ytterbium_iii_sulfate: 3.0
+          8:
+            ytterbium_iii_sulfate: 30.0
+          9:
+            ytterbium_iii_sulfate: 300
+          10:
+            ytterbium_iii_sulfate: 3000
+          11:
+            ytterbium_iii_sulfate: 30000
+      - group_id: AF_AFM1_ytterbium_iii_sulfate_OD0p001_G03
+        plate_ids: [HT2-73-A, HT3-73-A, HT4-73-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            ytterbium_iii_sulfate: 0
+          9:
+            ytterbium_iii_sulfate: 40100
+          10:
+            ytterbium_iii_sulfate: 49900
+          11:
+            ytterbium_iii_sulfate: 60000
+  - experiment_id: AF_AFM1_sucrose_OD0p001
+    name: Sucrose concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      sucrose:
+        name: sucrose
+        reagent_id: sucrose
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_sucrose_OD0p001_G01
+        plate_ids: [HT2-46-A, HT3-46-A, HT4-46-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sucrose: 0
+          3:
+            sucrose: 0.00999
+          4:
+            sucrose: 0.0999
+          5:
+            sucrose: 0.999
+          6:
+            sucrose: 9.99
+          7:
+            sucrose: 99.9
+          8:
+            sucrose: 999
+          9:
+            sucrose: 9990
+          10:
+            sucrose: 99900
+          11:
+            sucrose: 999000
+      - group_id: AF_AFM1_sucrose_OD0p001_G02
+        plate_ids: [HT2-46-B, HT3-46-B, HT4-46-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sucrose: 0
+          3:
+            sucrose: 0.003
+          4:
+            sucrose: 0.03
+          5:
+            sucrose: 0.3
+          6:
+            sucrose: 3.0
+          7:
+            sucrose: 30.0
+          8:
+            sucrose: 300
+          9:
+            sucrose: 3000
+          10:
+            sucrose: 30000
+          11:
+            sucrose: 300000
+      - group_id: AF_AFM1_sucrose_OD0p001_G03
+        plate_ids: [HT2-74-A, HT3-74-A, HT4-74-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sucrose: 0
+          3:
+            sucrose: 399000
+          4:
+            sucrose: 599000
+          5:
+            sucrose: 699000
+  - experiment_id: AF_AFM1_cerium_iv_sulfate_OD0p001
+    name: Cerium(iv) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      cerium_iv_sulfate:
+        name: cerium(IV) sulfate
+        reagent_id: cerium_iv_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_cerium_iv_sulfate_OD0p001_G01
+        plate_ids: [HT2-47-A, HT3-47-A, HT4-47-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cerium_iv_sulfate: 0
+          3:
+            cerium_iv_sulfate: 0.0005
+          4:
+            cerium_iv_sulfate: 0.005
+          5:
+            cerium_iv_sulfate: 0.05
+          6:
+            cerium_iv_sulfate: 0.5
+          7:
+            cerium_iv_sulfate: 5.0
+          8:
+            cerium_iv_sulfate: 50.0
+          9:
+            cerium_iv_sulfate: 500
+          10:
+            cerium_iv_sulfate: 5000
+          11:
+            cerium_iv_sulfate: 50000
+      - group_id: AF_AFM1_cerium_iv_sulfate_OD0p001_G02
+        plate_ids: [HT2-47-B, HT3-47-B, HT4-47-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cerium_iv_sulfate: 0
+          3:
+            cerium_iv_sulfate: 0.00015
+          4:
+            cerium_iv_sulfate: 0.0015
+          5:
+            cerium_iv_sulfate: 0.015
+          6:
+            cerium_iv_sulfate: 0.15
+          7:
+            cerium_iv_sulfate: 1.5
+          8:
+            cerium_iv_sulfate: 15.0
+          9:
+            cerium_iv_sulfate: 150
+          10:
+            cerium_iv_sulfate: 1500
+          11:
+            cerium_iv_sulfate: 15000
+      - group_id: AF_AFM1_cerium_iv_sulfate_OD0p001_G03
+        plate_ids: [HT2-74-A, HT3-74-A, HT4-74-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cerium_iv_sulfate: 0
+          9:
+            cerium_iv_sulfate: 20000
+          10:
+            cerium_iv_sulfate: 30000
+  - experiment_id: AF_AFM1_potassium_nitrate_OD0p001
+    name: Potassium nitrate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_nitrate:
+        name: potassium nitrate
+        reagent_id: potassium_nitrate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_potassium_nitrate_OD0p001_G01
+        plate_ids: [HT2-48-A, HT3-48-A, HT4-48-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_nitrate: 0
+          3:
+            potassium_nitrate: 0.00982
+          4:
+            potassium_nitrate: 0.0982
+          5:
+            potassium_nitrate: 0.982
+          6:
+            potassium_nitrate: 9.82
+          7:
+            potassium_nitrate: 98.2
+          8:
+            potassium_nitrate: 982
+          9:
+            potassium_nitrate: 9820
+          10:
+            potassium_nitrate: 98200
+          11:
+            potassium_nitrate: 982000
+      - group_id: AF_AFM1_potassium_nitrate_OD0p001_G02
+        plate_ids: [HT2-48-B, HT3-48-B, HT4-48-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_nitrate: 0
+          3:
+            potassium_nitrate: 0.00295
+          4:
+            potassium_nitrate: 0.0295
+          5:
+            potassium_nitrate: 0.295
+          6:
+            potassium_nitrate: 2.95
+          7:
+            potassium_nitrate: 29.5
+          8:
+            potassium_nitrate: 295
+          9:
+            potassium_nitrate: 2950
+          10:
+            potassium_nitrate: 29500
+          11:
+            potassium_nitrate: 295000
+      - group_id: AF_AFM1_potassium_nitrate_OD0p001_G03
+        plate_ids: [HT2-74-A, HT3-74-A, HT4-74-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_nitrate: 0
+          6:
+            potassium_nitrate: 199000
+          7:
+            potassium_nitrate: 250000
+          8:
+            potassium_nitrate: 275000
+  - experiment_id: AF_AFM1_cadmium_sulfate_OD0p001
+    name: Cadmium sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      cadmium_sulfate:
+        name: cadmium sulfate
+        reagent_id: cadmium_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_cadmium_sulfate_OD0p001_G01
+        plate_ids: [HT2-49-A, HT3-49-A, HT4-49-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cadmium_sulfate: 0
+          3:
+            cadmium_sulfate: 0.00957
+          4:
+            cadmium_sulfate: 0.0957
+          5:
+            cadmium_sulfate: 0.957
+          6:
+            cadmium_sulfate: 9.57
+          7:
+            cadmium_sulfate: 95.7
+          8:
+            cadmium_sulfate: 957
+          9:
+            cadmium_sulfate: 9570
+          10:
+            cadmium_sulfate: 95700
+          11:
+            cadmium_sulfate: 957000
+      - group_id: AF_AFM1_cadmium_sulfate_OD0p001_G02
+        plate_ids: [HT2-49-B, HT3-49-B, HT4-49-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cadmium_sulfate: 0
+          3:
+            cadmium_sulfate: 0.00287
+          4:
+            cadmium_sulfate: 0.0287
+          5:
+            cadmium_sulfate: 0.287
+          6:
+            cadmium_sulfate: 2.87
+          7:
+            cadmium_sulfate: 28.7
+          8:
+            cadmium_sulfate: 287
+          9:
+            cadmium_sulfate: 2870
+          10:
+            cadmium_sulfate: 28700
+          11:
+            cadmium_sulfate: 287000
+  - experiment_id: AF_AFM1_nickel_ii_sulfate_OD0p001
+    name: Nickel(ii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      nickel_ii_sulfate:
+        name: nickel(II) sulfate
+        reagent_id: nickel_ii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_nickel_ii_sulfate_OD0p001_G01
+        plate_ids: [HT2-4-A, HT3-4-A, HT4-4-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            nickel_ii_sulfate: 0
+          3:
+            nickel_ii_sulfate: 0.00961
+          4:
+            nickel_ii_sulfate: 0.0961
+          5:
+            nickel_ii_sulfate: 0.961
+          6:
+            nickel_ii_sulfate: 9.61
+          7:
+            nickel_ii_sulfate: 96.1
+          8:
+            nickel_ii_sulfate: 961
+          9:
+            nickel_ii_sulfate: 9610
+          10:
+            nickel_ii_sulfate: 96100
+          11:
+            nickel_ii_sulfate: 961000
+      - group_id: AF_AFM1_nickel_ii_sulfate_OD0p001_G02
+        plate_ids: [HT2-4-B, HT3-4-B, HT4-4-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            nickel_ii_sulfate: 0
+          3:
+            nickel_ii_sulfate: 0.00288
+          4:
+            nickel_ii_sulfate: 0.0288
+          5:
+            nickel_ii_sulfate: 0.288
+          6:
+            nickel_ii_sulfate: 2.88
+          7:
+            nickel_ii_sulfate: 28.8
+          8:
+            nickel_ii_sulfate: 288
+          9:
+            nickel_ii_sulfate: 2880
+          10:
+            nickel_ii_sulfate: 28800
+          11:
+            nickel_ii_sulfate: 288000
+      - group_id: AF_AFM1_nickel_ii_sulfate_OD0p001_G03
+        plate_ids: [HT2-71-A, HT3-71-A, HT4-71-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            nickel_ii_sulfate: 0
+          3:
+            nickel_ii_sulfate: 199000
+          4:
+            nickel_ii_sulfate: 240000
+          5:
+            nickel_ii_sulfate: 400000
+  - experiment_id: AF_AFM1_chromium_iii_sulfate_OD0p001
+    name: Chromium(iii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      chromium_iii_sulfate:
+        name: chromium(III) sulfate
+        reagent_id: chromium_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_chromium_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-50-A, HT3-50-A, HT4-50-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            chromium_iii_sulfate: 0
+          3:
+            chromium_iii_sulfate: 0.005
+          4:
+            chromium_iii_sulfate: 0.05
+          5:
+            chromium_iii_sulfate: 0.5
+          6:
+            chromium_iii_sulfate: 5.0
+          7:
+            chromium_iii_sulfate: 50.0
+          8:
+            chromium_iii_sulfate: 500
+          9:
+            chromium_iii_sulfate: 5000
+          10:
+            chromium_iii_sulfate: 50000
+          11:
+            chromium_iii_sulfate: 250000
+      - group_id: AF_AFM1_chromium_iii_sulfate_OD0p001_G02
+        plate_ids: [HT2-50-B, HT3-50-B, HT4-50-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            chromium_iii_sulfate: 0
+          3:
+            chromium_iii_sulfate: 0.0015
+          4:
+            chromium_iii_sulfate: 0.015
+          5:
+            chromium_iii_sulfate: 0.15
+          6:
+            chromium_iii_sulfate: 1.5
+          7:
+            chromium_iii_sulfate: 15.0
+          8:
+            chromium_iii_sulfate: 150
+          9:
+            chromium_iii_sulfate: 1500
+          10:
+            chromium_iii_sulfate: 15000
+          11:
+            chromium_iii_sulfate: 150000
+  - experiment_id: AF_AFM1_potassium_fluoride_OD0p001
+    name: Potassium fluoride concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_fluoride:
+        name: potassium fluoride
+        reagent_id: potassium_fluoride
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_potassium_fluoride_OD0p001_G01
+        plate_ids: [HT2-51-A, HT3-51-A, HT4-51-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_fluoride: 0
+          3:
+            potassium_fluoride: 0.000284
+          4:
+            potassium_fluoride: 0.00284
+          5:
+            potassium_fluoride: 0.0284
+          6:
+            potassium_fluoride: 0.284
+          7:
+            potassium_fluoride: 2.84
+          8:
+            potassium_fluoride: 28.4
+          9:
+            potassium_fluoride: 284
+          10:
+            potassium_fluoride: 2840
+          11:
+            potassium_fluoride: 28400
+      - group_id: AF_AFM1_potassium_fluoride_OD0p001_G02
+        plate_ids: [HT2-51-B, HT3-51-B, HT4-51-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_fluoride: 0
+          3:
+            potassium_fluoride: 9.48e-05
+          4:
+            potassium_fluoride: 0.000948
+          5:
+            potassium_fluoride: 0.00948
+          6:
+            potassium_fluoride: 0.0948
+          7:
+            potassium_fluoride: 0.948
+          8:
+            potassium_fluoride: 9.48
+          9:
+            potassium_fluoride: 94.8
+          10:
+            potassium_fluoride: 948
+          11:
+            potassium_fluoride: 9480
+  - experiment_id: AF_AFM1_potassium_thiocyanate_OD0p001
+    name: Potassium thiocyanate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_thiocyanate:
+        name: potassium thiocyanate
+        reagent_id: potassium_thiocyanate
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_potassium_thiocyanate_OD0p001_G01
+        plate_ids: [HT2-52-A, HT3-52-A, HT4-52-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_thiocyanate: 0
+          3:
+            potassium_thiocyanate: 0.0162
+          4:
+            potassium_thiocyanate: 0.162
+          5:
+            potassium_thiocyanate: 1.62
+          6:
+            potassium_thiocyanate: 16.2
+          7:
+            potassium_thiocyanate: 48.7
+          8:
+            potassium_thiocyanate: 162
+          9:
+            potassium_thiocyanate: 487
+          10:
+            potassium_thiocyanate: 1620
+          11:
+            potassium_thiocyanate: 16200
+  - experiment_id: AF_AFM1_potassium_dichromate_OD0p001
+    name: Potassium dichromate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_dichromate:
+        name: potassium dichromate
+        reagent_id: potassium_dichromate
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_potassium_dichromate_OD0p001_G01
+        plate_ids: [HT2-53-A, HT3-53-A, HT4-53-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_dichromate: 0
+          3:
+            potassium_dichromate: 0.0146
+          4:
+            potassium_dichromate: 0.146
+          5:
+            potassium_dichromate: 1.46
+          6:
+            potassium_dichromate: 4.39
+          7:
+            potassium_dichromate: 14.6
+          8:
+            potassium_dichromate: 43.9
+          9:
+            potassium_dichromate: 146
+          10:
+            potassium_dichromate: 439
+          11:
+            potassium_dichromate: 1460
+  - experiment_id: AF_AFM1_potassium_perrhenate_OD0p001
+    name: Potassium perrhenate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_perrhenate:
+        name: potassium perrhenate
+        reagent_id: potassium_perrhenate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_potassium_perrhenate_OD0p001_G01
+        plate_ids: [HT2-55-A, HT3-55-A, HT4-55-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_perrhenate: 0
+          3:
+            potassium_perrhenate: 0.000333
+          4:
+            potassium_perrhenate: 0.00333
+          5:
+            potassium_perrhenate: 0.0333
+          6:
+            potassium_perrhenate: 0.333
+          7:
+            potassium_perrhenate: 3.33
+          8:
+            potassium_perrhenate: 987
+          9:
+            potassium_perrhenate: 2960
+          10:
+            potassium_perrhenate: 9870
+          11:
+            potassium_perrhenate: 19700
+  - experiment_id: AF_AFM1_potassium_tetrathionate_OD0p001
+    name: Potassium tetrathionate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_tetrathionate:
+        name: potassium tetrathionate
+        reagent_id: potassium_tetrathionate
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_potassium_tetrathionate_OD0p001_G01
+        plate_ids: [HT2-56-A, HT3-56-A, HT4-56-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_tetrathionate: 0
+          3:
+            potassium_tetrathionate: 0.00306
+          4:
+            potassium_tetrathionate: 0.0306
+          5:
+            potassium_tetrathionate: 0.306
+          6:
+            potassium_tetrathionate: 3.06
+          7:
+            potassium_tetrathionate: 30.6
+          8:
+            potassium_tetrathionate: 306
+          9:
+            potassium_tetrathionate: 3060
+          10:
+            potassium_tetrathionate: 30600
+          11:
+            potassium_tetrathionate: 306000
+      - group_id: AF_AFM1_potassium_tetrathionate_OD0p001_G02
+        plate_ids: [HT2-56-B, HT3-56-B, HT4-56-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_tetrathionate: 0
+          3:
+            potassium_tetrathionate: 0.00102
+          4:
+            potassium_tetrathionate: 0.0102
+          5:
+            potassium_tetrathionate: 0.102
+          6:
+            potassium_tetrathionate: 1.02
+          7:
+            potassium_tetrathionate: 10.2
+          8:
+            potassium_tetrathionate: 102
+          9:
+            potassium_tetrathionate: 1020
+          10:
+            potassium_tetrathionate: 10200
+          11:
+            potassium_tetrathionate: 102000
+  - experiment_id: AF_AFM1_sodium_selenate_OD0p001
+    name: Sodium selenite concentration series
+    identifier_note: Experiment and group identifiers containing selenate denote sodium selenite.
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      sodium_selenite:
+        name: sodium selenite
+        reagent_id: sodium_selenite
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_sodium_selenate_OD0p001_G01
+        plate_ids: [HT2-57-A, HT3-57-A, HT4-57-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_selenite: 0
+          3:
+            sodium_selenite: 0.101
+          4:
+            sodium_selenite: 1.01
+          5:
+            sodium_selenite: 3.04
+          6:
+            sodium_selenite: 10.1
+          7:
+            sodium_selenite: 30.4
+          8:
+            sodium_selenite: 101
+          9:
+            sodium_selenite: 304
+          10:
+            sodium_selenite: 1010
+          11:
+            sodium_selenite: 10100
+  - experiment_id: AF_AFM1_sodium_sulfite_OD0p001
+    name: Sodium sulfite concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      sodium_sulfite:
+        name: sodium sulfite
+        reagent_id: sodium_sulfite
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_sodium_sulfite_OD0p001_G01
+        plate_ids: [HT2-58-A, HT3-58-A, HT4-58-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_sulfite: 0
+          3:
+            sodium_sulfite: 0.0101
+          4:
+            sodium_sulfite: 0.101
+          5:
+            sodium_sulfite: 1.01
+          6:
+            sodium_sulfite: 10.1
+          7:
+            sodium_sulfite: 101
+          8:
+            sodium_sulfite: 1010
+          9:
+            sodium_sulfite: 10100
+          10:
+            sodium_sulfite: 101000
+          11:
+            sodium_sulfite: 1010000
+  - experiment_id: AF_AFM1_sodium_formate_OD0p001
+    name: Sodium formate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      sodium_formate:
+        name: sodium formate
+        reagent_id: sodium_formate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_sodium_formate_OD0p001_G01
+        plate_ids: [HT2-59-A, HT3-59-A, HT4-59-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_formate: 0
+          3:
+            sodium_formate: 0.00101
+          4:
+            sodium_formate: 0.0101
+          5:
+            sodium_formate: 0.101
+          6:
+            sodium_formate: 1.01
+          7:
+            sodium_formate: 10.1
+          8:
+            sodium_formate: 101
+          9:
+            sodium_formate: 1010
+          10:
+            sodium_formate: 10100
+          11:
+            sodium_formate: 101000
+  - experiment_id: AF_AFM1_iron_ii_sulfate_OD0p001
+    name: Iron(ii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      iron_ii_sulfate:
+        name: iron(II) sulfate
+        reagent_id: iron_ii_sulfate
+    additive_stock_pH: 1.8
+    dose_definition: Added compound above the iron already present in the medium.
+    plate_groups:
+      - group_id: AF_AFM1_iron_ii_sulfate_OD0p001_G01
+        plate_ids: [HT2-5-A, HT3-5-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            iron_ii_sulfate: 0
+          3:
+            iron_ii_sulfate: 0.0018
+          4:
+            iron_ii_sulfate: 0.018
+          5:
+            iron_ii_sulfate: 0.18
+          6:
+            iron_ii_sulfate: 1.8
+          7:
+            iron_ii_sulfate: 18.0
+          8:
+            iron_ii_sulfate: 180
+          9:
+            iron_ii_sulfate: 1800
+          10:
+            iron_ii_sulfate: 18000
+          11:
+            iron_ii_sulfate: 180000
+      - group_id: AF_AFM1_iron_ii_sulfate_OD0p001_G02
+        plate_ids: [HT2-5-B, HT3-5-B, HT4-5-B, HT5-5-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            iron_ii_sulfate: 0
+          3:
+            iron_ii_sulfate: 0.00601
+          4:
+            iron_ii_sulfate: 0.0601
+          5:
+            iron_ii_sulfate: 0.601
+          6:
+            iron_ii_sulfate: 6.01
+          7:
+            iron_ii_sulfate: 60.1
+          8:
+            iron_ii_sulfate: 601
+          9:
+            iron_ii_sulfate: 6010
+          10:
+            iron_ii_sulfate: 60100
+          11:
+            iron_ii_sulfate: 297000
+      - group_id: AF_AFM1_iron_ii_sulfate_OD0p001_G03
+        plate_ids: [HT2-76-A, HT3-76-A, HT4-76-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            iron_ii_sulfate: 0
+          8:
+            iron_ii_sulfate: 152000
+          9:
+            iron_ii_sulfate: 256000
+  - experiment_id: AF_AFM1_sodium_molybdate_OD0p001
+    name: Sodium molybdate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      sodium_molybdate:
+        name: sodium molybdate
+        reagent_id: sodium_molybdate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_sodium_molybdate_OD0p001_G01
+        plate_ids: [HT2-60-A, HT3-60-A, HT4-60-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_molybdate: 0
+          3:
+            sodium_molybdate: 0.332
+          4:
+            sodium_molybdate: 1.11
+          5:
+            sodium_molybdate: 3.32
+          6:
+            sodium_molybdate: 11.1
+          7:
+            sodium_molybdate: 33.2
+          8:
+            sodium_molybdate: 111
+          9:
+            sodium_molybdate: 332
+          10:
+            sodium_molybdate: 1110
+          11:
+            sodium_molybdate: 3320
+  - experiment_id: AF_AFM1_sodium_tungstate_OD0p001
+    name: Sodium tungstate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      sodium_tungstate:
+        name: sodium tungstate
+        reagent_id: sodium_tungstate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_sodium_tungstate_OD0p001_G01
+        plate_ids: [HT2-61-A, HT3-61-A, HT4-61-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_tungstate: 0
+          3:
+            sodium_tungstate: 0.11
+          4:
+            sodium_tungstate: 1.1
+          5:
+            sodium_tungstate: 3.3
+          6:
+            sodium_tungstate: 11.0
+          7:
+            sodium_tungstate: 33.0
+          8:
+            sodium_tungstate: 110
+          9:
+            sodium_tungstate: 330
+          10:
+            sodium_tungstate: 1100
+          11:
+            sodium_tungstate: 3300
+  - experiment_id: AF_AFM1_sodium_chromate_OD0p001
+    name: Sodium chromate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      sodium_chromate:
+        name: sodium chromate
+        reagent_id: sodium_chromate
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_sodium_chromate_OD0p001_G01
+        plate_ids: [HT2-62-A, HT3-62-A, HT4-62-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_chromate: 0
+          3:
+            sodium_chromate: 0.0109
+          4:
+            sodium_chromate: 0.109
+          5:
+            sodium_chromate: 1.09
+          6:
+            sodium_chromate: 3.26
+          7:
+            sodium_chromate: 10.9
+          8:
+            sodium_chromate: 32.6
+          9:
+            sodium_chromate: 109
+          10:
+            sodium_chromate: 326
+          11:
+            sodium_chromate: 1090
+  - experiment_id: AF_AFM1_lithium_sulfate_OD0p001
+    name: Lithium sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      lithium_sulfate:
+        name: lithium sulfate
+        reagent_id: lithium_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_lithium_sulfate_OD0p001_G01
+        plate_ids: [HT2-6-A, HT3-6-A, HT4-6-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            lithium_sulfate: 0
+          3:
+            lithium_sulfate: 0.0832
+          4:
+            lithium_sulfate: 0.832
+          5:
+            lithium_sulfate: 8.32
+          6:
+            lithium_sulfate: 83.2
+          7:
+            lithium_sulfate: 832
+          8:
+            lithium_sulfate: 8320
+          9:
+            lithium_sulfate: 83200
+          10:
+            lithium_sulfate: 832000
+          11:
+            lithium_sulfate: 1250000
+      - group_id: AF_AFM1_lithium_sulfate_OD0p001_G02
+        plate_ids: [HT2-6-B, HT3-6-B, HT4-6-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            lithium_sulfate: 0
+          3:
+            lithium_sulfate: 0.0025
+          4:
+            lithium_sulfate: 0.025
+          5:
+            lithium_sulfate: 0.25
+          6:
+            lithium_sulfate: 2.5
+          7:
+            lithium_sulfate: 25.0
+          8:
+            lithium_sulfate: 250
+          9:
+            lithium_sulfate: 2500
+          10:
+            lithium_sulfate: 25000
+          11:
+            lithium_sulfate: 250000
+      - group_id: AF_AFM1_lithium_sulfate_OD0p001_G03
+        plate_ids: [HT2-76-A, HT3-76-A, HT4-76-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            lithium_sulfate: 0
+          6:
+            lithium_sulfate: 150000
+          7:
+            lithium_sulfate: 400000
+  - experiment_id: AF_AFM1_gallium_sulfate_OD0p001_citrate_ratios
+    name: Citric acid and gallium combinations
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      citric_acid:
+        name: citric acid
+        reagent_id: citric_acid
+        concentration_determination: nominal
+      gallium:
+        name: gallium
+        reagent_id: gallium_sulfate
+        concentration_basis: Ga
+        added_as: gallium sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_gallium_sulfate_OD0p001_citrate_ratios_G01
+        plate_ids: [HT2-7-A, HT3-7-A, HT4-7-A]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            citric_acid: 0
+            gallium: 0
+          3:
+            citric_acid: 0
+            gallium: 1
+          4:
+            citric_acid: 1
+            gallium: 0
+          5:
+            citric_acid: 1
+            gallium: 1
+          6:
+            citric_acid: 6
+            gallium: 0
+          7:
+            citric_acid: 6
+            gallium: 1
+          8:
+            citric_acid: 12
+            gallium: 0
+          9:
+            citric_acid: 12
+            gallium: 1
+          10:
+            citric_acid: 18
+            gallium: 0
+          11:
+            citric_acid: 18
+            gallium: 1
+      - group_id: AF_AFM1_gallium_sulfate_OD0p001_citrate_ratios_G02
+        plate_ids: [HT2-7-B, HT3-7-B, HT4-7-B]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            citric_acid: 0
+            gallium: 0
+          3:
+            citric_acid: 0
+            gallium: 1
+          4:
+            citric_acid: 3
+            gallium: 0
+          5:
+            citric_acid: 3
+            gallium: 1
+          6:
+            citric_acid: 24
+            gallium: 0
+          7:
+            citric_acid: 24
+            gallium: 1
+          8:
+            citric_acid: 30
+            gallium: 0
+          9:
+            citric_acid: 30
+            gallium: 1
+          10:
+            citric_acid: 36
+            gallium: 0
+          11:
+            citric_acid: 36
+            gallium: 1
+  - experiment_id: AF_AFM1_silver_sulfate_OD0p001
+    name: Silver sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      silver_sulfate:
+        name: silver sulfate
+        reagent_id: silver_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_silver_sulfate_OD0p001_G01
+        plate_ids: [HT2-8-A, HT3-8-A, HT4-8-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            silver_sulfate: 0
+          3:
+            silver_sulfate: 0.000108
+          4:
+            silver_sulfate: 0.00108
+          5:
+            silver_sulfate: 0.0108
+          6:
+            silver_sulfate: 0.108
+          7:
+            silver_sulfate: 1.08
+          8:
+            silver_sulfate: 10.8
+          9:
+            silver_sulfate: 108
+          10:
+            silver_sulfate: 1080
+          11:
+            silver_sulfate: 5410
+      - group_id: AF_AFM1_silver_sulfate_OD0p001_G02
+        plate_ids: [HT2-8-B, HT3-8-B, HT4-8-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            silver_sulfate: 0
+          3:
+            silver_sulfate: 3.24e-05
+          4:
+            silver_sulfate: 0.000324
+          5:
+            silver_sulfate: 0.00324
+          6:
+            silver_sulfate: 0.0324
+          7:
+            silver_sulfate: 0.324
+          8:
+            silver_sulfate: 3.24
+          9:
+            silver_sulfate: 32.4
+          10:
+            silver_sulfate: 324
+          11:
+            silver_sulfate: 3240
+      - group_id: AF_AFM1_silver_sulfate_OD0p001_G03
+        plate_ids: [HT2-76-A, HT3-76-A, HT4-76-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            silver_sulfate: 0
+          4:
+            silver_sulfate: 0.0676
+          5:
+            silver_sulfate: 0.203
+  - experiment_id: AF_AFM1_aluminum_sulfate_OD0p001
+    name: Aluminum sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      aluminum_sulfate:
+        name: aluminum sulfate
+        reagent_id: aluminum_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_aluminum_sulfate_OD0p001_G01
+        plate_ids: [HT2-9-A, HT3-9-A, HT4-9-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            aluminum_sulfate: 0
+          3:
+            aluminum_sulfate: 0.00476
+          4:
+            aluminum_sulfate: 0.0476
+          5:
+            aluminum_sulfate: 0.476
+          6:
+            aluminum_sulfate: 4.76
+          7:
+            aluminum_sulfate: 47.6
+          8:
+            aluminum_sulfate: 476
+          9:
+            aluminum_sulfate: 4760
+          10:
+            aluminum_sulfate: 47600
+          11:
+            aluminum_sulfate: 476000
+      - group_id: AF_AFM1_aluminum_sulfate_OD0p001_G02
+        plate_ids: [HT2-9-B, HT3-9-B, HT4-9-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            aluminum_sulfate: 0
+          3:
+            aluminum_sulfate: 0.00143
+          4:
+            aluminum_sulfate: 0.0143
+          5:
+            aluminum_sulfate: 0.143
+          6:
+            aluminum_sulfate: 1.43
+          7:
+            aluminum_sulfate: 14.3
+          8:
+            aluminum_sulfate: 143
+          9:
+            aluminum_sulfate: 1430
+          10:
+            aluminum_sulfate: 14300
+          11:
+            aluminum_sulfate: 143000
+      - group_id: AF_AFM1_aluminum_sulfate_OD0p001_G03
+        plate_ids: [HT2-71-A, HT3-71-A, HT4-71-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            aluminum_sulfate: 0
+          6:
+            aluminum_sulfate: 75000
+          7:
+            aluminum_sulfate: 100000
+          8:
+            aluminum_sulfate: 250000
+  - experiment_id: AF_AFM1_BS_potassium_tetrathionate_OD0p001
+    name: Potassium tetrathionate concentration series
+    medium_id: AFM1_BS
+    initial_OD600_200_uL: 0.001
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      potassium_tetrathionate:
+        name: potassium tetrathionate
+        reagent_id: potassium_tetrathionate
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_BS_potassium_tetrathionate_OD0p001_G01
+        plate_ids: [L2-1, L2-2, L2-3]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_tetrathionate: 0
+          3:
+            potassium_tetrathionate: 1.5
+          4:
+            potassium_tetrathionate: 3
+          5:
+            potassium_tetrathionate: 5
+          6:
+            potassium_tetrathionate: 15
+          7:
+            potassium_tetrathionate: 30
+          8:
+            potassium_tetrathionate: 50
+          9:
+            potassium_tetrathionate: 150
+          10:
+            potassium_tetrathionate: 200
+          11:
+            potassium_tetrathionate: 300
+  - experiment_id: AF_AFM4_aluminum_sulfate_OD0p1
+    name: Aluminum sulfate concentration series
+    medium_id: AFM4
+    initial_OD600_200_uL: 0.1
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      aluminum_sulfate:
+        name: aluminum sulfate
+        reagent_id: aluminum_sulfate
+    additive_stock_pH: 3.0
+    plate_groups:
+      - group_id: AF_AFM4_aluminum_sulfate_OD0p1_G01
+        plate_ids: [HT2-63-A, HT3-63-A, HT4-63-A]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            aluminum_sulfate: 0
+          3:
+            aluminum_sulfate: 0.05
+          4:
+            aluminum_sulfate: 0.3
+          5:
+            aluminum_sulfate: 0.5
+          6:
+            aluminum_sulfate: 3.0
+          7:
+            aluminum_sulfate: 5.0
+          8:
+            aluminum_sulfate: 30
+          9:
+            aluminum_sulfate: 50
+          10:
+            aluminum_sulfate: 300
+          11:
+            aluminum_sulfate: 500
+  - experiment_id: AF_AFM4_zinc_sulfate_OD0p1
+    name: Zinc sulfate concentration series
+    medium_id: AFM4
+    initial_OD600_200_uL: 0.1
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      zinc_sulfate:
+        name: zinc sulfate
+        reagent_id: zinc_sulfate
+    additive_stock_pH: 3.0
+    plate_groups:
+      - group_id: AF_AFM4_zinc_sulfate_OD0p1_G01
+        plate_ids: [HT2-64-A, HT3-64-A, HT4-64-A]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            zinc_sulfate: 0
+          3:
+            zinc_sulfate: 0.1
+          4:
+            zinc_sulfate: 0.602
+          5:
+            zinc_sulfate: 1.0
+          6:
+            zinc_sulfate: 6.02
+          7:
+            zinc_sulfate: 10.0
+          8:
+            zinc_sulfate: 60.2
+          9:
+            zinc_sulfate: 100
+          10:
+            zinc_sulfate: 602
+          11:
+            zinc_sulfate: 1000
+  - experiment_id: AF_AFM4_cobalt_ii_sulfate_OD0p1
+    name: Cobalt(ii) sulfate concentration series
+    medium_id: AFM4
+    initial_OD600_200_uL: 0.1
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      cobalt_ii_sulfate:
+        name: cobalt(II) sulfate
+        reagent_id: cobalt_ii_sulfate
+    additive_stock_pH: 3.0
+    plate_groups:
+      - group_id: AF_AFM4_cobalt_ii_sulfate_OD0p1_G01
+        plate_ids: [HT2-65-A, HT3-65-A, HT4-65-A]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cobalt_ii_sulfate: 0
+          3:
+            cobalt_ii_sulfate: 0.1
+          4:
+            cobalt_ii_sulfate: 0.6
+          5:
+            cobalt_ii_sulfate: 1.0
+          6:
+            cobalt_ii_sulfate: 6.0
+          7:
+            cobalt_ii_sulfate: 10.0
+          8:
+            cobalt_ii_sulfate: 60.0
+          9:
+            cobalt_ii_sulfate: 100
+          10:
+            cobalt_ii_sulfate: 600
+          11:
+            cobalt_ii_sulfate: 1000
+  - experiment_id: AF_AFM4_potassium_sulfate_OD0p1
+    name: Potassium sulfate concentration series
+    medium_id: AFM4
+    initial_OD600_200_uL: 0.1
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      potassium_sulfate:
+        name: potassium sulfate
+        reagent_id: potassium_sulfate
+    additive_stock_pH: 3.0
+    plate_groups:
+      - group_id: AF_AFM4_potassium_sulfate_OD0p1_G01
+        plate_ids: [HT2-66-A, HT3-66-A, HT4-66-A]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_sulfate: 0
+          3:
+            potassium_sulfate: 0.06
+          4:
+            potassium_sulfate: 0.0999
+          5:
+            potassium_sulfate: 0.6
+          6:
+            potassium_sulfate: 0.999
+          7:
+            potassium_sulfate: 6.0
+          8:
+            potassium_sulfate: 9.99
+          9:
+            potassium_sulfate: 60.0
+          10:
+            potassium_sulfate: 99.9
+          11:
+            potassium_sulfate: 500
+  - experiment_id: AF_AFM4_potassium_sulfate_OD0p01
+    name: Potassium sulfate concentration series
+    medium_id: AFM4
+    initial_OD600_200_uL: 0.01
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      potassium_sulfate:
+        name: potassium sulfate
+        reagent_id: potassium_sulfate
+    additive_stock_pH: 3.0
+    plate_groups:
+      - group_id: AF_AFM4_potassium_sulfate_OD0p01_G01
+        plate_ids: [HT2-68-A, HT3-68-A, HT4-68-A]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_sulfate: 0
+          3:
+            potassium_sulfate: 0.06
+          4:
+            potassium_sulfate: 0.0999
+          5:
+            potassium_sulfate: 0.6
+          6:
+            potassium_sulfate: 0.999
+          7:
+            potassium_sulfate: 6.0
+          8:
+            potassium_sulfate: 9.99
+          9:
+            potassium_sulfate: 60.0
+          10:
+            potassium_sulfate: 99.9
+          11:
+            potassium_sulfate: 500
+  - experiment_id: AF_AFM4_potassium_sulfate_OD0p001
+    name: Potassium sulfate concentration series
+    medium_id: AFM4
+    initial_OD600_200_uL: 0.001
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      potassium_sulfate:
+        name: potassium sulfate
+        reagent_id: potassium_sulfate
+    additive_stock_pH: 3.0
+    plate_groups:
+      - group_id: AF_AFM4_potassium_sulfate_OD0p001_G01
+        plate_ids: [HT2-69-A, HT3-69-A, HT4-69-A]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_sulfate: 0
+          3:
+            potassium_sulfate: 0.06
+          4:
+            potassium_sulfate: 0.0999
+          5:
+            potassium_sulfate: 0.6
+          6:
+            potassium_sulfate: 0.999
+          7:
+            potassium_sulfate: 6.0
+          8:
+            potassium_sulfate: 9.99
+          9:
+            potassium_sulfate: 60.0
+          10:
+            potassium_sulfate: 99.9
+          11:
+            potassium_sulfate: 500
+  - experiment_id: AF_AFM4_gallium_sulfate_OD0p1
+    name: Gallium sulfate concentration series
+    medium_id: AFM4
+    initial_OD600_200_uL: 0.1
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      gallium_sulfate:
+        name: gallium sulfate
+        reagent_id: gallium_sulfate
+    additive_stock_pH: 3.0
+    plate_groups:
+      - group_id: AF_AFM4_gallium_sulfate_OD0p1_G01
+        plate_ids: [HT2-88-A, HT3-88-A, HT4-88-A]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            gallium_sulfate: 0
+          3:
+            gallium_sulfate: 1.0
+          4:
+            gallium_sulfate: 3.0
+          5:
+            gallium_sulfate: 6.0
+          6:
+            gallium_sulfate: 10.0
+          7:
+            gallium_sulfate: 30.0
+          8:
+            gallium_sulfate: 60.0
+          9:
+            gallium_sulfate: 100
+          10:
+            gallium_sulfate: 150
+          11:
+            gallium_sulfate: 300
+  - experiment_id: AF_SM4_BS_sulfuric_acid_OD0p001_thiosulfate
+    name: Sulfuric acid series with 20 mM sodium thiosulfate
+    medium_id: SM4_BS
+    initial_OD600_200_uL: 0.001
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      sulfuric_acid:
+        name: sulfuric acid
+        reagent_id: sulfuric_acid
+        concentration_determination: nominal
+      sodium_thiosulfate:
+        name: sodium thiosulfate
+        reagent_id: sodium_thiosulfate
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    initial_pH:
+      value: 3.95
+      reported_plus_minus: 0.03
+      uncertainty_type: standard_deviation
+      measurement_count: 3
+      scope: Reported summary; exact pH was not recorded for each condition.
+    initial_pH_status: reported_summary_without_condition_specific_values
+    fixed_components:
+      - compound_id: sodium_thiosulfate
+        name: sodium thiosulfate
+        concentration: 20
+        unit: mM
+        volume_basis_uL: 200
+        concentration_determination: nominal
+    plate_groups:
+      - group_id: AF_SM4_BS_sulfuric_acid_OD0p001_thiosulfate_G01
+        plate_ids: [L1-1, L1-2, L1-3]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sulfuric_acid: 100
+          3:
+            sulfuric_acid: 37.2
+          4:
+            sulfuric_acid: 14.4
+          5:
+            sulfuric_acid: 5.62
+          6:
+            sulfuric_acid: 2.04
+          7:
+            sulfuric_acid: 0.724
+          8:
+            sulfuric_acid: 0.245
+          9:
+            sulfuric_acid: 0.0813
+          10:
+            sulfuric_acid: 0.0275
+          11:
+            sulfuric_acid: 0.01
+  - experiment_id: AF_SM4_BS_sulfuric_acid_OD0p001_tetrathionate
+    name: Sulfuric acid series with 20 mM potassium tetrathionate
+    medium_id: SM4_BS
+    initial_OD600_200_uL: 0.001
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      sulfuric_acid:
+        name: sulfuric acid
+        reagent_id: sulfuric_acid
+        concentration_determination: nominal
+      potassium_tetrathionate:
+        name: potassium tetrathionate
+        reagent_id: potassium_tetrathionate
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    initial_pH:
+      value: 3.95
+      reported_plus_minus: 0.03
+      uncertainty_type: standard_deviation
+      measurement_count: 3
+      scope: Reported summary; exact pH was not recorded for each condition.
+    initial_pH_status: reported_summary_without_condition_specific_values
+    fixed_components:
+      - compound_id: potassium_tetrathionate
+        name: potassium tetrathionate
+        concentration: 20
+        unit: mM
+        volume_basis_uL: 200
+        concentration_determination: nominal
+    plate_groups:
+      - group_id: AF_SM4_BS_sulfuric_acid_OD0p001_tetrathionate_G01
+        plate_ids: [L1-4, L1-5, L1-6]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sulfuric_acid: 100
+          3:
+            sulfuric_acid: 37.2
+          4:
+            sulfuric_acid: 14.4
+          5:
+            sulfuric_acid: 5.62
+          6:
+            sulfuric_acid: 2.04
+          7:
+            sulfuric_acid: 0.724
+          8:
+            sulfuric_acid: 0.245
+          9:
+            sulfuric_acid: 0.0813
+          10:
+            sulfuric_acid: 0.0275
+          11:
+            sulfuric_acid: 0.01
+  - experiment_id: AF_SM4_BS_sodium_thiosulfate_OD0p001_threefold_dye
+    name: Sodium thiosulfate concentration series
+    medium_id: SM4_BS
+    initial_OD600_200_uL: 0.001
+    preparation_id: ph_threefold_dye
+    readout_id: ph
+    compounds:
+      sodium_thiosulfate:
+        name: sodium thiosulfate
+        reagent_id: sodium_thiosulfate
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    initial_pH:
+      value: 3.95
+      reported_plus_minus: 0.03
+      uncertainty_type: standard_deviation
+      measurement_count: 3
+      scope: Reported summary; exact pH was not recorded for each condition.
+    initial_pH_status: reported_summary_without_condition_specific_values
+    plate_groups:
+      - group_id: AF_SM4_BS_sodium_thiosulfate_OD0p001_threefold_dye_G01
+        plate_ids: [L2-10, L2-11, L2-12]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_thiosulfate: 0
+          3:
+            sodium_thiosulfate: 1.5
+          4:
+            sodium_thiosulfate: 3
+          5:
+            sodium_thiosulfate: 5
+          6:
+            sodium_thiosulfate: 15
+          7:
+            sodium_thiosulfate: 30
+          8:
+            sodium_thiosulfate: 50
+          9:
+            sodium_thiosulfate: 150
+          10:
+            sodium_thiosulfate: 200
+          11:
+            sodium_thiosulfate: 300
+  - experiment_id: AF_SM4_BS_sodium_thiosulfate_OD0p001_and_potassium_tetrathionate
+    name: Sodium thiosulfate and potassium tetrathionate mixtures
+    medium_id: SM4_BS
+    initial_OD600_200_uL: 0.001
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      sodium_thiosulfate:
+        name: sodium thiosulfate
+        reagent_id: sodium_thiosulfate
+        concentration_determination: nominal
+      potassium_tetrathionate:
+        name: potassium tetrathionate
+        reagent_id: potassium_tetrathionate
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    initial_pH:
+      value: 3.95
+      reported_plus_minus: 0.03
+      uncertainty_type: standard_deviation
+      measurement_count: 3
+      scope: Reported summary; exact pH was not recorded for each condition.
+    initial_pH_status: reported_summary_without_condition_specific_values
+    mixture_definition: Equal molar concentrations of the two compounds; total concentration is their sum.
+    plate_groups:
+      - group_id: AF_SM4_BS_sodium_thiosulfate_OD0p001_and_potassium_tetrathionate_G01
+        plate_ids: [L2-13, L2-14, L2-15]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_thiosulfate: 0.0
+            potassium_tetrathionate: 0.0
+          3:
+            sodium_thiosulfate: 0.75
+            potassium_tetrathionate: 0.75
+          4:
+            sodium_thiosulfate: 1.5
+            potassium_tetrathionate: 1.5
+          5:
+            sodium_thiosulfate: 2.5
+            potassium_tetrathionate: 2.5
+          6:
+            sodium_thiosulfate: 7.5
+            potassium_tetrathionate: 7.5
+          7:
+            sodium_thiosulfate: 15.0
+            potassium_tetrathionate: 15.0
+          8:
+            sodium_thiosulfate: 25.0
+            potassium_tetrathionate: 25.0
+          9:
+            sodium_thiosulfate: 75.0
+            potassium_tetrathionate: 75.0
+          10:
+            sodium_thiosulfate: 100.0
+            potassium_tetrathionate: 100.0
+          11:
+            sodium_thiosulfate: 150.0
+            potassium_tetrathionate: 150.0
+  - experiment_id: AF_SM4_BS_potassium_tetrathionate_OD0p001
+    name: Potassium tetrathionate concentration series
+    medium_id: SM4_BS
+    initial_OD600_200_uL: 0.001
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      potassium_tetrathionate:
+        name: potassium tetrathionate
+        reagent_id: potassium_tetrathionate
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    initial_pH:
+      value: 3.95
+      reported_plus_minus: 0.03
+      uncertainty_type: standard_deviation
+      measurement_count: 3
+      scope: Reported summary; exact pH was not recorded for each condition.
+    initial_pH_status: reported_summary_without_condition_specific_values
+    plate_groups:
+      - group_id: AF_SM4_BS_potassium_tetrathionate_OD0p001_G01
+        plate_ids: [L2-4, L2-5, L2-6]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_tetrathionate: 0
+          3:
+            potassium_tetrathionate: 1.5
+          4:
+            potassium_tetrathionate: 3
+          5:
+            potassium_tetrathionate: 5
+          6:
+            potassium_tetrathionate: 15
+          7:
+            potassium_tetrathionate: 30
+          8:
+            potassium_tetrathionate: 50
+          9:
+            potassium_tetrathionate: 150
+          10:
+            potassium_tetrathionate: 200
+          11:
+            potassium_tetrathionate: 300
+  - experiment_id: AF_SM4_BS_sodium_thiosulfate_OD0p001
+    name: Sodium thiosulfate concentration series
+    medium_id: SM4_BS
+    initial_OD600_200_uL: 0.001
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      sodium_thiosulfate:
+        name: sodium thiosulfate
+        reagent_id: sodium_thiosulfate
+        concentration_determination: nominal
+    additive_stock_pH: 1.8
+    initial_pH:
+      value: 3.95
+      reported_plus_minus: 0.03
+      uncertainty_type: standard_deviation
+      measurement_count: 3
+      scope: Reported summary; exact pH was not recorded for each condition.
+    initial_pH_status: reported_summary_without_condition_specific_values
+    plate_groups:
+      - group_id: AF_SM4_BS_sodium_thiosulfate_OD0p001_G01
+        plate_ids: [L2-7, L2-8, L2-9]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            sodium_thiosulfate: 0
+          3:
+            sodium_thiosulfate: 1.5
+          4:
+            sodium_thiosulfate: 3
+          5:
+            sodium_thiosulfate: 5
+          6:
+            sodium_thiosulfate: 15
+          7:
+            sodium_thiosulfate: 30
+          8:
+            sodium_thiosulfate: 50
+          9:
+            sodium_thiosulfate: 150
+          10:
+            sodium_thiosulfate: 200
+          11:
+            sodium_thiosulfate: 300
+  - experiment_id: AF_AFM1_potassium_iodate_OD0p001
+    name: Potassium iodate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_iodate:
+        name: potassium iodate
+        reagent_id: potassium_iodate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_potassium_iodate_OD0p001_G01
+        plate_ids: [HT2-54-A, HT3-54-A, HT4-54-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_iodate: 0
+          3:
+            potassium_iodate: 0.000333
+          4:
+            potassium_iodate: 0.00333
+          5:
+            potassium_iodate: 0.0333
+          6:
+            potassium_iodate: 0.333
+          7:
+            potassium_iodate: 3.33
+          8:
+            potassium_iodate: 33.3
+          9:
+            potassium_iodate: 333
+          10:
+            potassium_iodate: 3330
+          11:
+            potassium_iodate: 33300
+  - experiment_id: AF_AFM1_copper_ii_sulfate_OD0p001
+    name: Copper(ii) sulfate concentration series
+    medium_id: AFM1
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      copper_ii_sulfate:
+        name: copper(II) sulfate
+        reagent_id: copper_ii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: AF_AFM1_copper_ii_sulfate_OD0p001_G01
+        plate_ids: [HT2-18-A, HT3-18-A, HT4-18-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            copper_ii_sulfate: 0
+          3:
+            copper_ii_sulfate: 0.00515
+          4:
+            copper_ii_sulfate: 0.0515
+          5:
+            copper_ii_sulfate: 0.515
+          6:
+            copper_ii_sulfate: 5.15
+          7:
+            copper_ii_sulfate: 51.5
+          8:
+            copper_ii_sulfate: 515
+          9:
+            copper_ii_sulfate: 5150
+          10:
+            copper_ii_sulfate: 51500
+          11:
+            copper_ii_sulfate: 515000
+      - group_id: AF_AFM1_copper_ii_sulfate_OD0p001_G02
+        plate_ids: [HT2-18-B, HT3-18-B, HT4-18-B]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            copper_ii_sulfate: 0
+          3:
+            copper_ii_sulfate: 0.00155
+          4:
+            copper_ii_sulfate: 0.0155
+          5:
+            copper_ii_sulfate: 0.155
+          6:
+            copper_ii_sulfate: 1.55
+          7:
+            copper_ii_sulfate: 15.5
+          8:
+            copper_ii_sulfate: 155
+          9:
+            copper_ii_sulfate: 1550
+          10:
+            copper_ii_sulfate: 15500
+          11:
+            copper_ii_sulfate: 155000
+      - group_id: AF_AFM1_copper_ii_sulfate_OD0p001_G03
+        plate_ids: [HT2-75-A, HT3-75-A, HT4-75-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            copper_ii_sulfate: 0
+          5:
+            copper_ii_sulfate: 200000
+          6:
+            copper_ii_sulfate: 300000
+  - experiment_id: AF_AFM4_copper_ii_sulfate_OD0p1
+    name: Copper(ii) sulfate concentration series
+    medium_id: AFM4
+    initial_OD600_200_uL: 0.1
+    preparation_id: ph_standard_dye
+    readout_id: ph
+    compounds:
+      copper_ii_sulfate:
+        name: copper(II) sulfate
+        reagent_id: copper_ii_sulfate
+    additive_stock_pH: 3.0
+    plate_groups:
+      - group_id: AF_AFM4_copper_ii_sulfate_OD0p1_G01
+        plate_ids: [HT2-67-A, HT3-67-A, HT4-67-A]
+        concentration_unit: mM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            copper_ii_sulfate: 0
+          3:
+            copper_ii_sulfate: 0.0612
+          4:
+            copper_ii_sulfate: 0.102
+          5:
+            copper_ii_sulfate: 0.612
+          6:
+            copper_ii_sulfate: 1.02
+          7:
+            copper_ii_sulfate: 6.12
+          8:
+            copper_ii_sulfate: 10.2
+          9:
+            copper_ii_sulfate: 61.2
+          10:
+            copper_ii_sulfate: 102
+          11:
+            copper_ii_sulfate: 306
+plates:
+  HT1_1:
+    batch_id: AF_2025-11-22
+    acquisition_series:
+      HT1_1: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  HT1_10:
+    batch_id: AF_2025-11-22
+    acquisition_series:
+      HT1_10: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  HT1_11:
+    batch_id: AF_2025-11-22
+    acquisition_series:
+      HT1_11: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  HT1_12:
+    batch_id: AF_2025-11-22
+    acquisition_series:
+      HT1_12: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  HT1_2:
+    batch_id: AF_2025-11-22
+    acquisition_series:
+      HT1_2: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  HT1_3:
+    batch_id: AF_2025-11-22
+    acquisition_series:
+      HT1_3: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  HT1_4:
+    batch_id: AF_2025-11-22
+    acquisition_series:
+      HT1_4: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  HT1_5:
+    batch_id: AF_2025-11-22
+    acquisition_series:
+      HT1_5: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  HT1_6:
+    batch_id: AF_2025-11-22
+    acquisition_series:
+      HT1_6: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  HT1_7:
+    batch_id: AF_2025-11-22
+    acquisition_series:
+      HT1_7: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  HT1_8:
+    batch_id: AF_2025-11-22
+    acquisition_series:
+      HT1_8: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  HT1_9:
+    batch_id: AF_2025-11-22
+    acquisition_series:
+      HT1_9: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  HT2-1-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-1-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-1-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-1-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-10-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-10-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-10-B:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT2-10-B: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-11-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-11-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-11-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-11-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-12-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-12-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-12-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-12-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-13-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-13-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-13-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-13-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-14-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-14-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-14-B:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-14-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-16-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-16-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-16-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-16-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-17-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-17-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-17-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-17-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-18-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-18-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-18-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-18-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-19-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-19-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-19-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-19-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-2-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-2-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-2-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-2-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-20-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-20-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-20-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-20-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-21-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT2-21-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-21-B:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT2-21-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-22-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-22-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-22-B:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-22-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-23-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-23-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-23-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-23-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-24-B:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-24-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-25-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-25-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-25-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-25-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-26-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-26-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-26-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-26-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-27-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-27-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-27-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-27-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-28-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-28-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-28-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-28-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-29-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-29-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-29-B:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-29-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-3-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-3-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-3-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-3-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-30-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-30-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-30-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-30-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-31-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-31-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-31-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-31-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-32-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-32-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-32-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-32-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-33-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-33-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-33-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-33-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-34-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-34-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-34-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-34-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-35-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-35-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-35-B:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-35-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-36-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-36-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-36-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-36-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-37-B:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-37-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-38-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-38-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-38-B:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-38-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-39-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-39-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-39-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-39-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-4-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-4-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-4-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-4-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-40-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-40-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-40-B:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-40-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-41-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-41-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-41-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-41-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-42-B:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-42-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-43-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-43-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-43-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-43-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-44-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-44-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-44-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-44-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-46-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-46-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-46-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-46-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-47-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-47-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-47-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-47-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-48-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-48-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-48-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-48-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-49-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-49-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-49-B:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-49-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-5-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT2-5-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-5-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-5-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-50-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-50-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-50-B:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-50-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-51-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-51-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-51-B:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-51-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-52-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-52-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-53-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-53-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-54-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-54-A: [0, 1, 2, 3, 4, 5, 6]
+  HT2-55-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-55-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-56-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-56-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-56-B:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-56-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-57-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-57-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-58-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-58-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-59-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-59-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-6-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-6-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-6-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-6-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-60-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-60-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-61-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-61-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-62-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT2-62-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-63-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT2-63-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT2-64-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT2-64-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT2-65-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT2-65-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT2-66-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT2-66-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT2-67-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT2-67-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT2-68-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT2-68-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT2-69-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT2-69-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT2-7-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-7-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-7-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-7-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-70-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-70-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-71-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-71-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-72-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-72-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-73-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-73-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-74-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-74-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    blank_condition_columns: [11]
+  HT2-75-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-75-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-76-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-76-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+      HT2-76-A2: [0]
+  HT2-8-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-8-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-8-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-8-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-88-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT2-88-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT2-9-A:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT2-9-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT2-9-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT2-9-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-1-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-1-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-1-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-1-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-10-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-10-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-10-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-10-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-11-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-11-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-11-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-11-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-12-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-12-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-12-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-12-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-13-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-13-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-13-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-13-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-14-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-14-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-14-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-14-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-16-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-16-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-16-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-16-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-17-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-17-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-17-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-17-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-18-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-18-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-18-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-18-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-19-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-19-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-19-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-19-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-2-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-2-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-2-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-2-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-20-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-20-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-20-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-20-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-21-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-21-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-21-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-21-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-22-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-22-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-22-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-22-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-23-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-23-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-23-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-23-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-24-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-24-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-25-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-25-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-25-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-25-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-26-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-26-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-26-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-26-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-27-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-27-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-27-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-27-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-28-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-28-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-28-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-28-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-29-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-29-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-29-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-29-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-3-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-3-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-3-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-3-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-30-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-30-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-30-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-30-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-31-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-31-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-31-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-31-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-32-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-32-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-32-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-32-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-33-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-33-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-33-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-33-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-34-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-34-A: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+      HT3-A-34: [0]
+  HT3-34-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-34-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-35-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-35-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-35-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-35-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-36-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-36-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-36-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-36-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-37-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-37-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-38-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-38-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-38-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-38-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-39-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-39-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-39-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-39-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-4-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-4-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-4-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-4-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-40-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-40-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-40-B:
+    batch_id: AF_2025-12-10
+    unavailable_acquisition_ordinals: [9]
+    acquisition_series:
+      HT3-40-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16]
+  HT3-41-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-41-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-41-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-41-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-42-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-42-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-43-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-43-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-43-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-43-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-44-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-44-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-44-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-44-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-46-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-46-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-46-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-46-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-47-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-47-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-47-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-47-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-48-A:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-48-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-48-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-48-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-49-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-49-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-49-B:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-49-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-5-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT3-5-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-5-B:
+    batch_id: AF_2025-12-11
+    acquisition_series:
+      HT3-5-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-50-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-50-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-50-B:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-50-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-51-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-51-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-51-B:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-51-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-52-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-52-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-53-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-53-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-54-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-54-A: [0, 1, 2, 3, 4, 5, 6]
+  HT3-55-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-55-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-56-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-56-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-56-B:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-56-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-57-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-57-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-58-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-58-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-59-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-59-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-6-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-6-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-6-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-6-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-60-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-60-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-61-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-61-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-62-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT3-62-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-63-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT3-63-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT3-64-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT3-64-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT3-65-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT3-65-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT3-66-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT3-66-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT3-67-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT3-67-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT3-68-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT3-68-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT3-69-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT3-69-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT3-7-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-7-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-7-B:
+    batch_id: AF_2025-12-10
+    unavailable_acquisition_ordinals: [9]
+    acquisition_series:
+      HT3-7-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16]
+  HT3-70-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT3-70-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-71-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT3-71-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-72-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT3-72-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-73-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT3-73-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-74-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT3-74-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    blank_condition_columns: [11]
+  HT3-75-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT3-75-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-76-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT3-76-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-8-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-8-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-8-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-8-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-88-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT3-88-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT3-9-A:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-9-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT3-9-B:
+    batch_id: AF_2025-12-10
+    acquisition_series:
+      HT3-9-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-1-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-1-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-1-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-1-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-10-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-10-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-10-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-10-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-11-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-11-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-11-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-11-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-12-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-12-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-12-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-12-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-13-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-13-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-13-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-13-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-14-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-14-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-14-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-14-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-16-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-16-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-16-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-16-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-17-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-17-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-17-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-17-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-18-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-18-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-18-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-18-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-19-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-19-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-19-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-19-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-2-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-2-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-2-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-2-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-20-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-20-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-20-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-20-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-21-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-21-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-21-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-21-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-22-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-22-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-22-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-22-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-23-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-23-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-23-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-23-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-24-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-24-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-25-A:
+    batch_id: AF_2025-12-17
+    unavailable_acquisition_ordinals: [11]
+    acquisition_series:
+      HT4-25-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16]
+  HT4-25-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-25-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-26-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-26-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-26-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-26-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-27-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-27-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-27-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-27-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-28-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-28-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-28-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-28-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-29-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-29-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-29-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-29-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-3-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-3-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-3-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-3-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-30-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-30-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-30-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-30-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-31-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-31-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-31-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-31-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-32-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-32-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-32-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-32-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-33-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-33-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-33-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-33-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-34-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-34-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-34-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-34-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-35-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-35-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-35-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-35-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-36-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-36-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-36-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-36-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-37-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-37-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-38-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-38-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-38-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-38-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-39-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-39-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-39-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-39-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-4-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-4-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-4-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-4-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-40-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-40-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-40-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-40-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-41-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-41-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-41-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-41-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-42-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-42-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-43-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-43-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-43-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-43-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-44-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-44-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-44-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-44-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-46-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-46-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-46-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-46-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-47-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-47-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-47-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-47-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-48-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-48-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-48-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-48-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-49-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-49-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-49-B:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-49-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-5-B:
+    batch_id: AF_2025-12-03
+    acquisition_series:
+      HT4-5-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-50-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-50-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-50-B:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-50-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-51-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-51-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT4-51-B:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-51-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-52-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-52-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-53-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-53-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-54-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-54-A: [0, 1, 2, 3, 4, 5, 6]
+  HT4-55-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-55-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16]
+      HT4-55-B: [15]
+  HT4-56-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-56-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-56-B:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-56-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-57-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-57-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-58-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-58-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-59-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-59-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-6-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-6-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-6-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-6-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-60-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-60-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-61-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-61-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-62-A:
+    batch_id: AF_2026-01-06
+    acquisition_series:
+      HT4-62-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-63-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT4-63-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT4-64-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT4-64-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT4-65-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT4-65-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT4-66-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT4-66-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT4-67-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT4-67-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT4-68-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT4-68-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT4-69-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT4-69-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT4-7-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-7-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-7-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-7-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-70-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT4-70-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-71-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT4-71-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-72-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT4-72-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-73-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT4-73-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-74-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT4-74-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    blank_condition_columns: [11]
+  HT4-75-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT4-75-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-76-A:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT4-76-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-8-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-8-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-8-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-8-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-88-A:
+    batch_id: AF_2026-05-29
+    acquisition_series:
+      HT4-88-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  HT4-9-A:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-9-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT4-9-B:
+    batch_id: AF_2025-12-17
+    acquisition_series:
+      HT4-9-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  HT5-5-B:
+    batch_id: AF_2026-05-28
+    acquisition_series:
+      HT5-5-B: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  L1-1:
+    batch_id: AF_2026-06-12
+    acquisition_series:
+      L1-1: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  L1-2:
+    batch_id: AF_2026-06-12
+    acquisition_series:
+      L1-2: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  L1-3:
+    batch_id: AF_2026-06-12
+    acquisition_series:
+      L1-3: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  L1-4:
+    batch_id: AF_2026-06-12
+    acquisition_series:
+      L1-4: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  L1-5:
+    batch_id: AF_2026-06-12
+    acquisition_series:
+      L1-5: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  L1-6:
+    batch_id: AF_2026-06-12
+    acquisition_series:
+      L1-6: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  L2-1:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-1: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  L2-10:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-10: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  L2-11:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-11: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  L2-12:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-12: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  L2-13:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-13: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  L2-14:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-14: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  L2-15:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-15: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  L2-2:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-2: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  L2-3:
+    batch_id: AF_2026-06-23
+    unavailable_acquisition_ordinals: [7, 11]
+    acquisition_series:
+      L2-3: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 13]
+  L2-4:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-4: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  L2-5:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-5: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  L2-6:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-6: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  L2-7:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-7: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  L2-8:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-8: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  L2-9:
+    batch_id: AF_2026-06-23
+    acquisition_series:
+      L2-9: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]

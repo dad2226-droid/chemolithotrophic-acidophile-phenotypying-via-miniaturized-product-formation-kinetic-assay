@@ -1,0 +1,551 @@
+# Concentrations and OD600 use the 200 uL preparation basis.
+# Each column condition applies to biotic rows E/F/G and abiotic rows B/C/D.
+# Plate IDs identify the same physical wells across acquisition ordinals.
+schema_version: '1.0'
+document_type: biological_experiments
+definitions_id: biological_definitions
+species_id: LF
+title: Leptospirillum ferriphilum microplate experiments
+experiments:
+  - experiment_id: LF_HH_potassium_sulfate_OD0p001
+    name: Potassium sulfate concentration series
+    medium_id: HH
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      potassium_sulfate:
+        name: potassium sulfate
+        reagent_id: potassium_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: LF_HH_potassium_sulfate_OD0p001_G01
+        plate_ids: [HT2-77-A, HT3-77-A, HT4-77-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            potassium_sulfate: 0
+          3:
+            potassium_sulfate: 30.0
+          4:
+            potassium_sulfate: 100
+          5:
+            potassium_sulfate: 300
+          6:
+            potassium_sulfate: 1000
+          7:
+            potassium_sulfate: 3000
+          8:
+            potassium_sulfate: 10000
+          9:
+            potassium_sulfate: 30000
+          10:
+            potassium_sulfate: 100000
+          11:
+            potassium_sulfate: 300000
+  - experiment_id: LF_HH_zinc_sulfate_OD0p001
+    name: Zinc sulfate concentration series
+    medium_id: HH
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      zinc_sulfate:
+        name: zinc sulfate
+        reagent_id: zinc_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: LF_HH_zinc_sulfate_OD0p001_G01
+        plate_ids: [HT2-78-A, HT3-78-A, HT4-78-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            zinc_sulfate: 0
+          3:
+            zinc_sulfate: 102
+          4:
+            zinc_sulfate: 305
+          5:
+            zinc_sulfate: 1020
+          6:
+            zinc_sulfate: 3050
+          7:
+            zinc_sulfate: 10200
+          8:
+            zinc_sulfate: 30500
+          9:
+            zinc_sulfate: 102000
+          10:
+            zinc_sulfate: 305000
+          11:
+            zinc_sulfate: 1020000
+  - experiment_id: LF_HH_iron_ii_sulfate_OD0p001
+    name: Iron(ii) sulfate concentration series
+    medium_id: HH
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      iron_ii_sulfate:
+        name: iron(II) sulfate
+        reagent_id: iron_ii_sulfate
+    additive_stock_pH: 1.8
+    dose_definition: Added compound above the iron already present in the medium.
+    plate_groups:
+      - group_id: LF_HH_iron_ii_sulfate_OD0p001_G01
+        plate_ids: [HT2-79-A, HT3-79-A, HT4-79-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            iron_ii_sulfate: 0
+          3:
+            iron_ii_sulfate: 600
+          4:
+            iron_ii_sulfate: 1800
+          5:
+            iron_ii_sulfate: 6000
+          6:
+            iron_ii_sulfate: 18000
+          7:
+            iron_ii_sulfate: 60000
+          8:
+            iron_ii_sulfate: 150000
+          9:
+            iron_ii_sulfate: 180000
+          10:
+            iron_ii_sulfate: 250000
+          11:
+            iron_ii_sulfate: 300000
+  - experiment_id: LF_HH_iron_iii_sulfate_OD0p001
+    name: Iron(iii) sulfate concentration series
+    medium_id: HH
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      iron_iii_sulfate:
+        name: iron(III) sulfate
+        reagent_id: iron_iii_sulfate
+    additive_stock_pH: 1.8
+    dose_definition: Added compound above the iron already present in the medium.
+    plate_groups:
+      - group_id: LF_HH_iron_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-80-A, HT3-80-A, HT4-80-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            iron_iii_sulfate: 0
+          3:
+            iron_iii_sulfate: 298
+          4:
+            iron_iii_sulfate: 994
+          5:
+            iron_iii_sulfate: 2980
+          6:
+            iron_iii_sulfate: 4970
+          7:
+            iron_iii_sulfate: 9940
+          8:
+            iron_iii_sulfate: 14900
+          9:
+            iron_iii_sulfate: 29800
+          10:
+            iron_iii_sulfate: 99400
+          11:
+            iron_iii_sulfate: 298000
+  - experiment_id: LF_HH_gallium_sulfate_OD0p001
+    name: Gallium sulfate concentration series
+    medium_id: HH
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      gallium_sulfate:
+        name: gallium sulfate
+        reagent_id: gallium_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: LF_HH_gallium_sulfate_OD0p001_G01
+        plate_ids: [HT2-81-A, HT3-81-A, HT4-81-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            gallium_sulfate: 0
+          3:
+            gallium_sulfate: 713
+          4:
+            gallium_sulfate: 2140
+          5:
+            gallium_sulfate: 7140
+          6:
+            gallium_sulfate: 21400
+          7:
+            gallium_sulfate: 71400
+          8:
+            gallium_sulfate: 75000
+          9:
+            gallium_sulfate: 100000
+          10:
+            gallium_sulfate: 125000
+          11:
+            gallium_sulfate: 214000
+  - experiment_id: LF_HH_indium_sulfate_OD0p001
+    name: Indium sulfate concentration series
+    medium_id: HH
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      indium_sulfate:
+        name: indium sulfate
+        reagent_id: indium_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: LF_HH_indium_sulfate_OD0p001_G01
+        plate_ids: [HT2-82-A, HT3-82-A, HT4-82-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            indium_sulfate: 0
+          3:
+            indium_sulfate: 311
+          4:
+            indium_sulfate: 1040
+          5:
+            indium_sulfate: 3110
+          6:
+            indium_sulfate: 10400
+          7:
+            indium_sulfate: 31100
+          8:
+            indium_sulfate: 69400
+          9:
+            indium_sulfate: 104000
+          10:
+            indium_sulfate: 125000
+          11:
+            indium_sulfate: 311000
+  - experiment_id: LF_HH_aluminum_sulfate_OD0p001
+    name: Aluminum sulfate concentration series
+    medium_id: HH
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      aluminum_sulfate:
+        name: aluminum sulfate
+        reagent_id: aluminum_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: LF_HH_aluminum_sulfate_OD0p001_G01
+        plate_ids: [HT2-83-A, HT3-83-A, HT4-83-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            aluminum_sulfate: 0
+          3:
+            aluminum_sulfate: 1430
+          4:
+            aluminum_sulfate: 4760
+          5:
+            aluminum_sulfate: 14300
+          6:
+            aluminum_sulfate: 47600
+          7:
+            aluminum_sulfate: 75000
+          8:
+            aluminum_sulfate: 143000
+          9:
+            aluminum_sulfate: 100000
+          10:
+            aluminum_sulfate: 250000
+          11:
+            aluminum_sulfate: 476000
+  - experiment_id: LF_HH_cobalt_ii_sulfate_OD0p001
+    name: Cobalt(ii) sulfate concentration series
+    medium_id: HH
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      cobalt_ii_sulfate:
+        name: cobalt(II) sulfate
+        reagent_id: cobalt_ii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: LF_HH_cobalt_ii_sulfate_OD0p001_G01
+        plate_ids: [HT2-84-A, HT3-84-A, HT4-84-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cobalt_ii_sulfate: 0
+          3:
+            cobalt_ii_sulfate: 1000
+          4:
+            cobalt_ii_sulfate: 3010
+          5:
+            cobalt_ii_sulfate: 10000
+          6:
+            cobalt_ii_sulfate: 30100
+          7:
+            cobalt_ii_sulfate: 50000
+          8:
+            cobalt_ii_sulfate: 100000
+          9:
+            cobalt_ii_sulfate: 200000
+          10:
+            cobalt_ii_sulfate: 301000
+          11:
+            cobalt_ii_sulfate: 1000000
+  - experiment_id: LF_HH_vanadyl_sulfate_OD0p001
+    name: Vanadyl sulfate concentration series
+    medium_id: HH
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      vanadyl_sulfate:
+        name: vanadyl sulfate
+        reagent_id: vanadyl_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: LF_HH_vanadyl_sulfate_OD0p001_G01
+        plate_ids: [HT2-85-A, HT3-85-A, HT4-85-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            vanadyl_sulfate: 0
+          3:
+            vanadyl_sulfate: 301
+          4:
+            vanadyl_sulfate: 1000
+          5:
+            vanadyl_sulfate: 3010
+          6:
+            vanadyl_sulfate: 10000
+          7:
+            vanadyl_sulfate: 30100
+          8:
+            vanadyl_sulfate: 100000
+          9:
+            vanadyl_sulfate: 200000
+          10:
+            vanadyl_sulfate: 301000
+          11:
+            vanadyl_sulfate: 501000
+  - experiment_id: LF_HH_cerium_iii_sulfate_OD0p001
+    name: Cerium(iii) sulfate concentration series
+    medium_id: HH
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      cerium_iii_sulfate:
+        name: cerium(III) sulfate
+        reagent_id: cerium_iii_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: LF_HH_cerium_iii_sulfate_OD0p001_G01
+        plate_ids: [HT2-86-A, HT3-86-A, HT4-86-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cerium_iii_sulfate: 0
+          3:
+            cerium_iii_sulfate: 9.82
+          4:
+            cerium_iii_sulfate: 29.5
+          5:
+            cerium_iii_sulfate: 98.2
+          6:
+            cerium_iii_sulfate: 295
+          7:
+            cerium_iii_sulfate: 982
+          8:
+            cerium_iii_sulfate: 2950
+          9:
+            cerium_iii_sulfate: 9820
+          10:
+            cerium_iii_sulfate: 29500
+          11:
+            cerium_iii_sulfate: 68800
+  - experiment_id: LF_HH_cerium_iv_sulfate_OD0p001
+    name: Cerium(iv) sulfate concentration series
+    medium_id: HH
+    initial_OD600_200_uL: 0.001
+    preparation_id: iron_no_dye
+    readout_id: iron
+    compounds:
+      cerium_iv_sulfate:
+        name: cerium(IV) sulfate
+        reagent_id: cerium_iv_sulfate
+    additive_stock_pH: 1.8
+    plate_groups:
+      - group_id: LF_HH_cerium_iv_sulfate_OD0p001_G01
+        plate_ids: [HT2-87-A, HT3-87-A, HT4-87-A]
+        concentration_unit: uM
+        volume_basis_uL: 200
+        column_conditions:
+          2:
+            cerium_iv_sulfate: 0
+          3:
+            cerium_iv_sulfate: 0.5
+          4:
+            cerium_iv_sulfate: 1.5
+          5:
+            cerium_iv_sulfate: 5.0
+          6:
+            cerium_iv_sulfate: 15.0
+          7:
+            cerium_iv_sulfate: 50.0
+          8:
+            cerium_iv_sulfate: 150
+          9:
+            cerium_iv_sulfate: 500
+          10:
+            cerium_iv_sulfate: 1500
+          11:
+            cerium_iv_sulfate: 5000
+plates:
+  HT2-77-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT2-77-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT2-78-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT2-78-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT2-79-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT2-79-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT2-80-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT2-80-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT2-81-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT2-81-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT2-82-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT2-82-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT2-83-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT2-83-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT2-84-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT2-84-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT2-85-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT2-85-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT2-86-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT2-86-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT2-87-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT2-87-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT3-77-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT3-77-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT3-78-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT3-78-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT3-79-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT3-79-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT3-80-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT3-80-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT3-81-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT3-81-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT3-82-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT3-82-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT3-83-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT3-83-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT3-84-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT3-84-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT3-85-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT3-85-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT3-86-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT3-86-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT3-87-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT3-87-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT4-77-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT4-77-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT4-78-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT4-78-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT4-79-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT4-79-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT4-80-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT4-80-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT4-81-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT4-81-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT4-82-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT4-82-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT4-83-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT4-83-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT4-84-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT4-84-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT4-85-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT4-85-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT4-86-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT4-86-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  HT4-87-A:
+    batch_id: LF_2026-05-29
+    acquisition_series:
+      HT4-87-A: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]

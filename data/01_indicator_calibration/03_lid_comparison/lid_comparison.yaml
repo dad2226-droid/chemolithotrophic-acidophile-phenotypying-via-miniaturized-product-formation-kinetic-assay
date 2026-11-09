@@ -1,0 +1,725 @@
+# Paired lid and no-lid readings of pH and iron(III) standards
+# Metadata and reference values for files included in this deposit.
+
+metadata_format: indicator_calibration
+format_version: 1
+family: lid_comparison
+title: Paired lid and no-lid readings of pH and iron(III) standards
+reading_guide:
+  purpose: Experimental documentation and explicit measurement associations; no processing is performed by this
+    file.
+  experiments: Preparation, design and interpretation of each named experiment.
+  reference_sets: Calibration values and well-row assignments. An acquisition names the set that applies to it.
+  readouts: Instrument measurement modes and wavelength settings used by acquisitions.
+  acquisitions: One available reader export or one measured workbook sheet per entry.
+  source_filename: Exact filename only. The analysis is given the data directory separately.
+  run_number: Original numbered run or plate label. Final ferrous plate labels are 4-6 and 7-9. Equal numbers across
+    experiments do not establish the same physical plate.
+  physical_plate_id: Identifies one physical plate. Repeated readings share this identifier; different plate materials
+    and different dye-stock series have different identifiers.
+  missing_values: null means unknown, unavailable or not applicable as explained by the accompanying field. It never
+    means zero.
+  lists: Values in a by_column list correspond in order to plate_columns. Do not sort the values independently.
+  units:
+    M: mol per litre
+    mM: millimol per litre
+    uM: micromol per litre
+    uL: microlitre
+    nm: nanometre
+    C: degrees Celsius
+    pH: dimensionless
+  editing: Use spaces for indentation, true or false for yes/no fields, and null for missing values. Keep identifier
+    strings unchanged when moving files.
+  dye_concentrations: Nominal is the stated target; calculated is the volumetric preparation value. Both refer to
+    dyed wells; no_thymol_blue rows contain zero dye.
+  reference_methods: Reference pH, total-Fe and Fe(II) methods, where applicable. These are distinct from the optical
+    reader settings.
+  well_volumes: Undyed wells contain 200 uL; dyed wells contain 200 uL standard plus 10 uL dye solution. Stored
+    reference Fe and acid concentrations describe the 200 uL standard.
+  self_contained_reference_values: The reference_sets section and reference_measurements.csv contain the calibration
+    concentrations and their well assignments.
+  preparation_protocols: Reagent recipes used by the experiments in this file.
+  physical_plates: Physical plate identities and their reference sets. Repeated entries in acquisitions do not create
+    additional plates.
+  preparation_series_id: Identifies the independently prepared standard series used for a physical plate.
+study_design:
+  organisms_present: false
+  measurement_quantity: absorbance
+  plate_rows: [A, B, C, D, E, F, G, H]
+  plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  technical_wells_per_condition_per_plate: 4
+  growth_control_exclusion_enabled: false
+  contamination_control_exclusion_enabled: false
+  well_preparation_by_condition:
+    no_thymol_blue:
+      standard_volume_uL: 200
+      dye_solution_added_uL: 0
+      final_well_volume_uL: 200
+    thymol_blue:
+      standard_volume_uL: 200
+      dye_solution_added_uL: 10
+      final_well_volume_uL: 210
+  reference_standard_volume_uL: 200
+  sulfuric_acid_concentration_basis: 200_uL_standard
+  measurement_lid_rule: Lids were present only for acid-iron.xlsx sheets ending in -lid. All -nolid sheets and all
+    other calibration measurements were measured without lids.
+timestamp_conventions:
+  timezone: null
+  timezone_status: unknown_to_experimenter
+  interpretation: Preserve each recorded clock reading exactly as supplied. No time zone or UTC offset is assigned.
+  elapsed_time: Use timestamps within a documented acquisition sequence without an inferred timezone conversion.
+reference_methods:
+  pH_meter:
+    {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/pH_meter"}
+  iron_reference_sample_preparation:
+    {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/iron_reference_sample_preparation_2"}
+  total_Fe_ICP_OES:
+    {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/total_Fe_ICP_OES_2"}
+  FeII_titration:
+    {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/reference_methods/FeII_titration"}
+reference_sets:
+  lid_acid_standards:
+    description: Final calibration reference values; full provenance and measurement basis appear in axis_details.
+    row_groups:
+      - rows: [A, B, C, D]
+        condition: no_thymol_blue
+        plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        reported_concentration:
+          values_by_column: [500, 250, 125, 62.5, 31.2, 15.6, 7.81, 3.91, 1.95, 0.976, 0.488, 0]
+          unit: mM
+          quantity: sulfuric_acid
+          chemical_basis: H2SO4
+          volume_basis: 200_uL_standard
+          status: declared_preparation_label
+          stoichiometric_or_volume_conversion_applied: false
+        reference_pH_by_column: [0.57, 0.77, 0.96, 1.16, 1.36, 1.57, 1.79, 2.02, 2.27, 2.5, 2.77, 4.79]
+        reference_pH_status: associated_dyed_standard_pH_not_directly_measured_in_undyed_wells
+        biotic_rows: []
+        standard_volume_uL: 200
+        final_well_volume_uL: 200
+        reference_pH_method_id: pH_meter
+      - rows: [E, F, G, H]
+        condition: thymol_blue
+        plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        reported_concentration:
+          values_by_column: [500, 250, 125, 62.5, 31.2, 15.6, 7.81, 3.91, 1.95, 0.976, 0.488, 0]
+          unit: mM
+          quantity: sulfuric_acid
+          chemical_basis: H2SO4
+          volume_basis: 200_uL_standard
+          status: declared_preparation_label
+          stoichiometric_or_volume_conversion_applied: false
+        reference_pH_by_column: [0.57, 0.77, 0.96, 1.16, 1.36, 1.57, 1.79, 2.02, 2.27, 2.5, 2.77, 4.79]
+        reference_pH_status: measured_after_dye_addition
+        biotic_rows: []
+        standard_volume_uL: 200
+        final_well_volume_uL: 210
+        reference_pH_method_id: pH_meter
+    axis_details:
+      plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      declared_h2so4_mM: [500, 250, 125, 62.5, 31.2, 15.6, 7.81, 3.91, 1.95, 0.976, 0.488, 0]
+      declared_acid_volume_basis: 200_uL_standard
+      measured_pH_after_dye: [0.57, 0.77, 0.96, 1.16, 1.36, 1.57, 1.79, 2.02, 2.27, 2.5, 2.77, 4.79]
+      directly_measured_for: dyed acid standard solutions
+      no_dye_well_pH_directly_measured: false
+      remeasured_during_storage: false
+      pH_volume_correction_applied: false
+    shared_reference_set_id: final_indicator_acid_standards
+    shared_reference_metadata_filename: ratiometric_pH_indicator.yaml
+  lid_iron_standards:
+    description: Final calibration reference values; full provenance and measurement basis appear in axis_details.
+    row_groups:
+      - rows: [A, B, C, D]
+        condition: no_thymol_blue
+        plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        reported_concentration:
+          values_by_column: [0.0976, 0.0488, 0.0244, 0.0122, 0.0061, 0.00305, 0.001525, 0.0007625, 0.00038125, 0.00019063,
+            9.5313e-05, 0.0]
+          unit: M
+          quantity: total_Fe
+          chemical_basis: elemental_Fe
+          volume_basis: 200_uL_standard
+          status: measured_reference
+          stoichiometric_or_volume_conversion_applied: false
+          reference_method_id: total_Fe_ICP_OES
+          final_well_concentration_multiplier: 1.0
+          final_well_volume_correction_already_applied: false
+        reference_pH_by_column: null
+        reference_pH_status: not_reported
+        biotic_rows: []
+        standard_volume_uL: 200
+        final_well_volume_uL: 200
+      - rows: [E, F, G, H]
+        condition: thymol_blue
+        plate_columns: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        reported_concentration:
+          values_by_column: [0.0976, 0.0488, 0.0244, 0.0122, 0.0061, 0.00305, 0.001525, 0.0007625, 0.00038125, 0.00019063,
+            9.5313e-05, 0.0]
+          unit: M
+          quantity: total_Fe
+          chemical_basis: elemental_Fe
+          volume_basis: 200_uL_standard
+          status: measured_reference
+          stoichiometric_or_volume_conversion_applied: false
+          reference_method_id: total_Fe_ICP_OES
+          final_well_concentration_multiplier: 0.9523809523809523
+          final_well_volume_correction_already_applied: false
+        reference_pH_by_column: null
+        reference_pH_status: not_reported
+        biotic_rows: []
+        standard_volume_uL: 200
+        final_well_volume_uL: 210
+    axis_details:
+      reference_filename: reference_measurements.csv
+      plate_column_field: plate_column
+      analyte: total_Fe
+      concentration_provenance: See reference_concentration_provenance in iron_III_indicator.yaml;
+        the ferric lid experiment uses the same recorded reference concentrations. Its stock-preparation relationship
+        to the final ferric series is not independently documented.
+      measured_total_Fe_before_final_addition_M_by_column: [0.0976, 0.0488, 0.0244, 0.0122, 0.0061, 0.00305, 0.001525,
+        0.0007625, 0.00038125, 0.00019063, 9.5313e-05, 0.0]
+      reference_solution_volume_uL: 200
+      axis_is_total_Fe_not_salt_formula_units: true
+      reference_replicates_paired_to_optical_plates: false
+      independently_measured_pH: null
+      reference_metadata_filename: iron_III_indicator.yaml
+      reference_metadata_section: reference_measurements
+      series_ID: ferric
+      reference_sample_ID_pattern: iron_ref_ferric_cNN
+      measurement_ID_field: measurement_ID
+      reference_sample_ID_field: reference_sample_ID
+      series_field: series_ID
+      concentration_field: measured_concentration_M
+      analyte_field: analyte
+      reference_replicate_field: reference_replicate
+      nominal_acid_field: nominal_H2SO4_concentration_M
+      csv_selection:
+        series_ID: ferric
+        analyte: total_Fe
+      optical_final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      final_well_concentration_multiplier_by_condition:
+        no_thymol_blue: 1.0
+        thymol_blue: 0.9523809523809523
+    shared_reference_set_id: final_indicator_ferric_standards
+    shared_reference_metadata_filename: iron_III_indicator.yaml
+    shared_stock_preparation_with_final_series: null
+    stock_preparation_relationship_status: not_independently_documented
+preparation_protocols:
+  thymol_blue_stock:
+    {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/reagent_preparations/thymol_blue_stock"}
+physical_plates:
+  lid_acid_plate1:
+    plate_type: UV_transparent
+    manufacturer: {$ref: "../../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/uv_plate_unspecified/manufacturer"}
+    catalog_number: {$ref: "../../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/uv_plate_unspecified/catalog_number"}
+    reference_set_id: lid_acid_standards
+    preparation_series_id: lid_acid_preparation1
+  lid_acid_plate2:
+    plate_type: UV_transparent
+    manufacturer: {$ref: "../../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/uv_plate_unspecified/manufacturer"}
+    catalog_number: {$ref: "../../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/uv_plate_unspecified/catalog_number"}
+    reference_set_id: lid_acid_standards
+    preparation_series_id: lid_acid_preparation2
+  lid_acid_plate3:
+    plate_type: UV_transparent
+    manufacturer: {$ref: "../../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/uv_plate_unspecified/manufacturer"}
+    catalog_number: {$ref: "../../00_materials_and_strains/chemicals_materials_equipment.yaml#/materials_and_equipment/uv_plate_unspecified/catalog_number"}
+    reference_set_id: lid_acid_standards
+    preparation_series_id: lid_acid_preparation3
+  lid_iron_plate1:
+    plate_type: UV_transparent
+    reference_set_id: lid_iron_standards
+  lid_iron_plate2:
+    plate_type: UV_transparent
+    reference_set_id: lid_iron_standards
+  lid_iron_plate3:
+    plate_type: UV_transparent
+    reference_set_id: lid_iron_standards
+experiments:
+  paired_lid_comparison:
+    title: Paired lid/no-lid measurements of pH and iron(III) standards
+    preparation:
+      thymol_blue_stock_uM: 200
+      calculated_dye_concentration_is_not_a_measurement: true
+      incubation_temperature_C: 23
+      incubation_temperature_precision: approximate
+      intentional_well_modification: false
+      reported_spills: false
+      measurement_lid_state: specified_per_acquisition
+      plate_type_by_family:
+        acid: UV_transparent
+        ferric: UV_transparent
+      nominal_dyed_well_thymol_blue_uM: 10
+      calculated_dyed_well_thymol_blue_uM: 9.523809523809524
+      dye_added_to_dyed_wells_uL: 10
+      condition_temperature_C: 23
+      reference_standard_volume_uL: 200
+      final_well_volume_uL_by_condition:
+        no_thymol_blue: 200
+        thymol_blue: 210
+      declared_h2so4_basis: 200_uL_standard
+      measurement_lid_type: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/lid_type_low_evaporation"}
+      dye_stock_protocol_id: thymol_blue_stock
+    replication:
+      independent_standard_preparations_by_family:
+        acid: 3
+        ferric: 1
+      physical_plates_by_family:
+        acid: 3
+        ferric: 3
+      technical_plates_per_preparation_by_family:
+        acid: 1
+        ferric: 3
+      technical_wells_per_plate_level: 4
+    physical_plate_association:
+      acid:
+        plate_set: dedicated_lid_comparison
+        nominal_standard_levels_match: final_indicator_acid_standards
+        preparation_series_ids: [lid_acid_preparation1, lid_acid_preparation2, lid_acid_preparation3]
+        shared_reference_metadata_filename: ratiometric_pH_indicator.yaml
+        shared_reference_set_id: final_indicator_acid_standards
+      ferric:
+        plate_set: dedicated_lid_comparison
+        physical_plate_identity_basis: confirmed_by_experimenter
+        nominal_standard_levels_match: final_indicator_ferric_standards
+        shared_reference_metadata_filename: iron_III_indicator.yaml
+        shared_reference_set_id: final_indicator_ferric_standards
+      physical_plate_identifier_cells_in_workbook: null
+      programmed_plate_profile_is_not_physical_plate_identity: true
+    readout:
+      wavelengths_nm: [380, 428, 430, 485, 545, 750]
+      pairing: same family, plate number, well and wavelength across lid states
+      comparison_scope: within-reader technical comparison including sequential read delay
+      isolated_lid_effect_or_cross_reader_equivalence_established: false
+    timing:
+      paired_measurements: Each plate was measured without and with its lid on the same day; channel_start_times
+        record the sequential acquisition times.
+      initial_incubation_protocol_by_family:
+        ferric: null
+      initial_incubation_status_by_family:
+        ferric: not_independently_documented
+    physical_plate_ids:
+      - lid_acid_plate1
+      - lid_acid_plate2
+      - lid_acid_plate3
+      - lid_iron_plate1
+      - lid_iron_plate2
+      - lid_iron_plate3
+readouts:
+  absorbance_endpoint_380_428_430_485_545_750:
+    reader_manufacturer: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/reader_manufacturer_tecan"}
+    reader_model: {$ref: "../../00_materials_and_strains/experimental_definitions.yaml#/material_values/reader_model_infinite_m_plex"}
+    reader_identity_basis: confirmed_by_experimenter
+    measurement_mode: endpoint
+    wavelengths_nm: [380, 428, 430, 485, 545, 750]
+acquisitions:
+  - source_filename: acid-iron.xlsx
+    source_sheet: acid-1-lid
+    experiment_id: paired_lid_comparison
+    run_number: 1
+    physical_plate_id: lid_acid_plate1
+    reference_set_id: lid_acid_standards
+    reading_label: lid_present
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    lid_state: present
+    family: acid
+    channel_start_times:
+      - wavelength_nm: 380
+        measurement_start: '2026-07-14T16:50:47'
+        source_cell: B21
+      - wavelength_nm: 428
+        measurement_start: '2026-07-14T16:52:09'
+        source_cell: B48
+      - wavelength_nm: 430
+        measurement_start: '2026-07-14T16:53:31'
+        source_cell: B75
+      - wavelength_nm: 485
+        measurement_start: '2026-07-14T16:54:52'
+        source_cell: B102
+      - wavelength_nm: 545
+        measurement_start: '2026-07-14T16:56:13'
+        source_cell: B129
+      - wavelength_nm: 750
+        measurement_start: '2026-07-14T16:57:35'
+        source_cell: B156
+    reader_label_as_exported: 'Device: infinite 200Pro'
+    reader_serial: 'Serial number: 1807007310'
+    programmed_plate_profile: 'Greiner 96 Flat Bottom Transparent Polystyrene Cat. No.: 655101/655161/655192'
+    measurement_lid_state: present
+  - source_filename: acid-iron.xlsx
+    source_sheet: acid-1-nolid
+    experiment_id: paired_lid_comparison
+    run_number: 1
+    physical_plate_id: lid_acid_plate1
+    reference_set_id: lid_acid_standards
+    reading_label: lid_absent
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    lid_state: absent
+    family: acid
+    channel_start_times:
+      - wavelength_nm: 380
+        measurement_start: '2026-07-14T16:41:26'
+        source_cell: B21
+      - wavelength_nm: 428
+        measurement_start: '2026-07-14T16:42:48'
+        source_cell: B48
+      - wavelength_nm: 430
+        measurement_start: '2026-07-14T16:44:10'
+        source_cell: B75
+      - wavelength_nm: 485
+        measurement_start: '2026-07-14T16:45:31'
+        source_cell: B102
+      - wavelength_nm: 545
+        measurement_start: '2026-07-14T16:46:53'
+        source_cell: B129
+      - wavelength_nm: 750
+        measurement_start: '2026-07-14T16:48:14'
+        source_cell: B156
+    reader_label_as_exported: 'Device: infinite 200Pro'
+    reader_serial: 'Serial number: 1807007310'
+    programmed_plate_profile: 'Greiner 96 Flat Bottom Transparent Polystyrene Cat. No.: 655101/655161/655192'
+    measurement_lid_state: absent
+  - source_filename: acid-iron.xlsx
+    source_sheet: acid-2-lid
+    experiment_id: paired_lid_comparison
+    run_number: 2
+    physical_plate_id: lid_acid_plate2
+    reference_set_id: lid_acid_standards
+    reading_label: lid_present
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    lid_state: present
+    family: acid
+    channel_start_times:
+      - wavelength_nm: 380
+        measurement_start: '2026-07-14T17:09:16'
+        source_cell: B21
+      - wavelength_nm: 428
+        measurement_start: '2026-07-14T17:10:38'
+        source_cell: B48
+      - wavelength_nm: 430
+        measurement_start: '2026-07-14T17:12:00'
+        source_cell: B75
+      - wavelength_nm: 485
+        measurement_start: '2026-07-14T17:13:21'
+        source_cell: B102
+      - wavelength_nm: 545
+        measurement_start: '2026-07-14T17:14:42'
+        source_cell: B129
+      - wavelength_nm: 750
+        measurement_start: '2026-07-14T17:16:04'
+        source_cell: B156
+    reader_label_as_exported: 'Device: infinite 200Pro'
+    reader_serial: 'Serial number: 1807007310'
+    programmed_plate_profile: 'Greiner 96 Flat Bottom Transparent Polystyrene Cat. No.: 655101/655161/655192'
+    measurement_lid_state: present
+  - source_filename: acid-iron.xlsx
+    source_sheet: acid-2-nolid
+    experiment_id: paired_lid_comparison
+    run_number: 2
+    physical_plate_id: lid_acid_plate2
+    reference_set_id: lid_acid_standards
+    reading_label: lid_absent
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    lid_state: absent
+    family: acid
+    channel_start_times:
+      - wavelength_nm: 380
+        measurement_start: '2026-07-14T16:59:54'
+        source_cell: B21
+      - wavelength_nm: 428
+        measurement_start: '2026-07-14T17:01:16'
+        source_cell: B48
+      - wavelength_nm: 430
+        measurement_start: '2026-07-14T17:02:37'
+        source_cell: B75
+      - wavelength_nm: 485
+        measurement_start: '2026-07-14T17:03:58'
+        source_cell: B102
+      - wavelength_nm: 545
+        measurement_start: '2026-07-14T17:05:20'
+        source_cell: B129
+      - wavelength_nm: 750
+        measurement_start: '2026-07-14T17:06:41'
+        source_cell: B156
+    reader_label_as_exported: 'Device: infinite 200Pro'
+    reader_serial: 'Serial number: 1807007310'
+    programmed_plate_profile: 'Greiner 96 Flat Bottom Transparent Polystyrene Cat. No.: 655101/655161/655192'
+    measurement_lid_state: absent
+  - source_filename: acid-iron.xlsx
+    source_sheet: acid-3-lid
+    experiment_id: paired_lid_comparison
+    run_number: 3
+    physical_plate_id: lid_acid_plate3
+    reference_set_id: lid_acid_standards
+    reading_label: lid_present
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    lid_state: present
+    family: acid
+    channel_start_times:
+      - wavelength_nm: 380
+        measurement_start: '2026-07-14T17:39:05'
+        source_cell: B21
+      - wavelength_nm: 428
+        measurement_start: '2026-07-14T17:40:27'
+        source_cell: B48
+      - wavelength_nm: 430
+        measurement_start: '2026-07-14T17:41:48'
+        source_cell: B75
+      - wavelength_nm: 485
+        measurement_start: '2026-07-14T17:43:10'
+        source_cell: B102
+      - wavelength_nm: 545
+        measurement_start: '2026-07-14T17:44:31'
+        source_cell: B129
+      - wavelength_nm: 750
+        measurement_start: '2026-07-14T17:45:52'
+        source_cell: B156
+    reader_label_as_exported: 'Device: infinite 200Pro'
+    reader_serial: 'Serial number: 1807007310'
+    programmed_plate_profile: 'Greiner 96 Flat Bottom Transparent Polystyrene Cat. No.: 655101/655161/655192'
+    measurement_lid_state: present
+  - source_filename: acid-iron.xlsx
+    source_sheet: acid-3-nolid
+    experiment_id: paired_lid_comparison
+    run_number: 3
+    physical_plate_id: lid_acid_plate3
+    reference_set_id: lid_acid_standards
+    reading_label: lid_absent
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    lid_state: absent
+    family: acid
+    channel_start_times:
+      - wavelength_nm: 380
+        measurement_start: '2026-07-14T17:27:03'
+        source_cell: B21
+      - wavelength_nm: 428
+        measurement_start: '2026-07-14T17:28:25'
+        source_cell: B48
+      - wavelength_nm: 430
+        measurement_start: '2026-07-14T17:29:47'
+        source_cell: B75
+      - wavelength_nm: 485
+        measurement_start: '2026-07-14T17:31:08'
+        source_cell: B102
+      - wavelength_nm: 545
+        measurement_start: '2026-07-14T17:32:29'
+        source_cell: B129
+      - wavelength_nm: 750
+        measurement_start: '2026-07-14T17:33:51'
+        source_cell: B156
+    reader_label_as_exported: 'Device: infinite 200Pro'
+    reader_serial: 'Serial number: 1807007310'
+    programmed_plate_profile: 'Greiner 96 Flat Bottom Transparent Polystyrene Cat. No.: 655101/655161/655192'
+    measurement_lid_state: absent
+  - source_filename: acid-iron.xlsx
+    source_sheet: iron-1-lid
+    experiment_id: paired_lid_comparison
+    run_number: 1
+    physical_plate_id: lid_iron_plate1
+    reference_set_id: lid_iron_standards
+    reading_label: lid_present
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    lid_state: present
+    family: ferric
+    channel_start_times:
+      - wavelength_nm: 380
+        measurement_start: '2026-07-14T18:00:41'
+        source_cell: B21
+      - wavelength_nm: 428
+        measurement_start: '2026-07-14T18:02:04'
+        source_cell: B48
+      - wavelength_nm: 430
+        measurement_start: '2026-07-14T18:03:25'
+        source_cell: B75
+      - wavelength_nm: 485
+        measurement_start: '2026-07-14T18:04:46'
+        source_cell: B102
+      - wavelength_nm: 545
+        measurement_start: '2026-07-14T18:06:08'
+        source_cell: B129
+      - wavelength_nm: 750
+        measurement_start: '2026-07-14T18:07:29'
+        source_cell: B156
+    reader_label_as_exported: 'Device: infinite 200Pro'
+    reader_serial: 'Serial number: 1807007310'
+    programmed_plate_profile: 'Greiner 96 Flat Bottom Transparent Polystyrene Cat. No.: 655101/655161/655192'
+    measurement_lid_state: present
+  - source_filename: acid-iron.xlsx
+    source_sheet: iron-1-nolid
+    experiment_id: paired_lid_comparison
+    run_number: 1
+    physical_plate_id: lid_iron_plate1
+    reference_set_id: lid_iron_standards
+    reading_label: lid_absent
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    lid_state: absent
+    family: ferric
+    channel_start_times:
+      - wavelength_nm: 380
+        measurement_start: '2026-07-14T17:49:56'
+        source_cell: B21
+      - wavelength_nm: 428
+        measurement_start: '2026-07-14T17:51:19'
+        source_cell: B48
+      - wavelength_nm: 430
+        measurement_start: '2026-07-14T17:52:41'
+        source_cell: B75
+      - wavelength_nm: 485
+        measurement_start: '2026-07-14T17:54:02'
+        source_cell: B102
+      - wavelength_nm: 545
+        measurement_start: '2026-07-14T17:55:23'
+        source_cell: B129
+      - wavelength_nm: 750
+        measurement_start: '2026-07-14T17:56:45'
+        source_cell: B156
+    reader_label_as_exported: 'Device: infinite 200Pro'
+    reader_serial: 'Serial number: 1807007310'
+    programmed_plate_profile: 'Greiner 96 Flat Bottom Transparent Polystyrene Cat. No.: 655101/655161/655192'
+    measurement_lid_state: absent
+  - source_filename: acid-iron.xlsx
+    source_sheet: iron-2-lid
+    experiment_id: paired_lid_comparison
+    run_number: 2
+    physical_plate_id: lid_iron_plate2
+    reference_set_id: lid_iron_standards
+    reading_label: lid_present
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    lid_state: present
+    family: ferric
+    channel_start_times:
+      - wavelength_nm: 380
+        measurement_start: '2026-07-14T18:26:18'
+        source_cell: B21
+      - wavelength_nm: 428
+        measurement_start: '2026-07-14T18:27:40'
+        source_cell: B48
+      - wavelength_nm: 430
+        measurement_start: '2026-07-14T18:29:01'
+        source_cell: B75
+      - wavelength_nm: 485
+        measurement_start: '2026-07-14T18:30:23'
+        source_cell: B102
+      - wavelength_nm: 545
+        measurement_start: '2026-07-14T18:31:44'
+        source_cell: B129
+      - wavelength_nm: 750
+        measurement_start: '2026-07-14T18:33:05'
+        source_cell: B156
+    reader_label_as_exported: 'Device: infinite 200Pro'
+    reader_serial: 'Serial number: 1807007310'
+    programmed_plate_profile: 'Greiner 96 Flat Bottom Transparent Polystyrene Cat. No.: 655101/655161/655192'
+    measurement_lid_state: present
+  - source_filename: acid-iron.xlsx
+    source_sheet: iron-2-nolid
+    experiment_id: paired_lid_comparison
+    run_number: 2
+    physical_plate_id: lid_iron_plate2
+    reference_set_id: lid_iron_standards
+    reading_label: lid_absent
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    lid_state: absent
+    family: ferric
+    channel_start_times:
+      - wavelength_nm: 380
+        measurement_start: '2026-07-14T18:10:06'
+        source_cell: B21
+      - wavelength_nm: 428
+        measurement_start: '2026-07-14T18:11:28'
+        source_cell: B48
+      - wavelength_nm: 430
+        measurement_start: '2026-07-14T18:12:50'
+        source_cell: B75
+      - wavelength_nm: 485
+        measurement_start: '2026-07-14T18:14:11'
+        source_cell: B102
+      - wavelength_nm: 545
+        measurement_start: '2026-07-14T18:15:32'
+        source_cell: B129
+      - wavelength_nm: 750
+        measurement_start: '2026-07-14T18:16:54'
+        source_cell: B156
+    reader_label_as_exported: 'Device: infinite 200Pro'
+    reader_serial: 'Serial number: 1807007310'
+    programmed_plate_profile: 'Greiner 96 Flat Bottom Transparent Polystyrene Cat. No.: 655101/655161/655192'
+    measurement_lid_state: absent
+  - source_filename: acid-iron.xlsx
+    source_sheet: iron-3-lid
+    experiment_id: paired_lid_comparison
+    run_number: 3
+    physical_plate_id: lid_iron_plate3
+    reference_set_id: lid_iron_standards
+    reading_label: lid_present
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    lid_state: present
+    family: ferric
+    channel_start_times:
+      - wavelength_nm: 380
+        measurement_start: '2026-07-14T18:46:07'
+        source_cell: B21
+      - wavelength_nm: 428
+        measurement_start: '2026-07-14T18:47:29'
+        source_cell: B48
+      - wavelength_nm: 430
+        measurement_start: '2026-07-14T18:48:51'
+        source_cell: B75
+      - wavelength_nm: 485
+        measurement_start: '2026-07-14T18:50:12'
+        source_cell: B102
+      - wavelength_nm: 545
+        measurement_start: '2026-07-14T18:51:33'
+        source_cell: B129
+      - wavelength_nm: 750
+        measurement_start: '2026-07-14T18:52:55'
+        source_cell: B156
+    reader_label_as_exported: 'Device: infinite 200Pro'
+    reader_serial: 'Serial number: 1807007310'
+    programmed_plate_profile: 'Greiner 96 Flat Bottom Transparent Polystyrene Cat. No.: 655101/655161/655192'
+    measurement_lid_state: present
+  - source_filename: acid-iron.xlsx
+    source_sheet: iron-3-nolid
+    experiment_id: paired_lid_comparison
+    run_number: 3
+    physical_plate_id: lid_iron_plate3
+    reference_set_id: lid_iron_standards
+    reading_label: lid_absent
+    readout_id: absorbance_endpoint_380_428_430_485_545_750
+    lid_state: absent
+    family: ferric
+    channel_start_times:
+      - wavelength_nm: 380
+        measurement_start: '2026-07-14T18:36:08'
+        source_cell: B21
+      - wavelength_nm: 428
+        measurement_start: '2026-07-14T18:37:30'
+        source_cell: B48
+      - wavelength_nm: 430
+        measurement_start: '2026-07-14T18:38:52'
+        source_cell: B75
+      - wavelength_nm: 485
+        measurement_start: '2026-07-14T18:40:13'
+        source_cell: B102
+      - wavelength_nm: 545
+        measurement_start: '2026-07-14T18:41:35'
+        source_cell: B129
+      - wavelength_nm: 750
+        measurement_start: '2026-07-14T18:42:56'
+        source_cell: B156
+    reader_label_as_exported: 'Device: infinite 200Pro'
+    reader_serial: 'Serial number: 1807007310'
+    programmed_plate_profile: 'Greiner 96 Flat Bottom Transparent Polystyrene Cat. No.: 655101/655161/655192'
+    measurement_lid_state: absent
+curation_notes:
+  - The workbook is one source file containing 12 measured sheets. Each sheet is one acquisition; the six wavelength
+    times are retained individually.
+  - Lid and no-lid measurements are paired by confirmed physical plate and well, not treated as independent plates.
+  - The experimenter confirmed that the ferric lid-comparison plates are distinct from the final ferric calibration
+    and storage plates. Matching numbered labels across these experiments do not identify the same physical plates.
+  - The ferric lid experiment retains one recorded standard preparation and the shared recorded reference values;
+    its stock-preparation relationship to the final ferric series is not independently documented.
+  - The programmed plate profile records instrument settings. The physical_plates section identifies the material
+    of each plate.
+  - All Fe calibration concentrations use measured total Fe except records explicitly identified as Fe_II titrations.
+    Reference values are on the 200 uL standard basis; final-well volume adjustment is condition-specific.
